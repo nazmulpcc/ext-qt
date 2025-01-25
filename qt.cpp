@@ -15,17 +15,23 @@
 */
 
 #ifdef HAVE_CONFIG_H
-# include <config.h>
+#include <config.h>
 #endif
 
+extern "C"
+{
 #include "php.h"
 #include "ext/standard/info.h"
+}
 #include "php_qt.h"
 #include "qt_arginfo.h"
 
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMainWindow>
+
 /* For compatibility with older PHP versions */
 #ifndef ZEND_PARSE_PARAMETERS_NONE
-#define ZEND_PARSE_PARAMETERS_NONE() \
+#define ZEND_PARSE_PARAMETERS_NONE()  \
 	ZEND_PARSE_PARAMETERS_START(0, 0) \
 	ZEND_PARSE_PARAMETERS_END()
 #endif
@@ -33,24 +39,13 @@
 PHP_FUNCTION(test1)
 {
 	ZEND_PARSE_PARAMETERS_NONE();
-
-	php_printf("The extension %s is loaded and working!\r\n", "qt");
-}
-
-PHP_FUNCTION(test2)
-{
-	char *var = "World";
-	size_t var_len = sizeof("World") - 1;
-	zend_string *retval;
-
-	ZEND_PARSE_PARAMETERS_START(0, 1)
-		Z_PARAM_OPTIONAL
-		Z_PARAM_STRING(var, var_len)
-	ZEND_PARSE_PARAMETERS_END();
-
-	retval = strpprintf(0, "Hello %s", var);
-
-	RETURN_STR(retval);
+	int argc = 1;
+	char *argv[] = {(char *)"app"};
+	QApplication app(argc, argv);
+	QMainWindow window;
+	window.setWindowTitle("Hello, world!");
+	window.show();
+	app.exec();
 }
 
 PHP_RINIT_FUNCTION(qt)
@@ -71,20 +66,19 @@ PHP_MINFO_FUNCTION(qt)
 
 zend_module_entry qt_module_entry = {
 	STANDARD_MODULE_HEADER,
-	"qt",					/* Extension name */
-	ext_functions,					/* zend_function_entry */
-	NULL,							/* PHP_MINIT - Module initialization */
-	NULL,							/* PHP_MSHUTDOWN - Module shutdown */
-	PHP_RINIT(qt),			/* PHP_RINIT - Request initialization */
-	NULL,							/* PHP_RSHUTDOWN - Request shutdown */
-	PHP_MINFO(qt),			/* PHP_MINFO - Module info */
-	PHP_QT_VERSION,		/* Version */
-	STANDARD_MODULE_PROPERTIES
-};
+	"qt",			/* Extension name */
+	ext_functions,	/* zend_function_entry */
+	NULL,			/* PHP_MINIT - Module initialization */
+	NULL,			/* PHP_MSHUTDOWN - Module shutdown */
+	PHP_RINIT(qt),	/* PHP_RINIT - Request initialization */
+	NULL,			/* PHP_RSHUTDOWN - Request shutdown */
+	PHP_MINFO(qt),	/* PHP_MINFO - Module info */
+	PHP_QT_VERSION, /* Version */
+	STANDARD_MODULE_PROPERTIES};
 
 #ifdef COMPILE_DL_QT
-# ifdef ZTS
+#ifdef ZTS
 ZEND_TSRMLS_CACHE_DEFINE()
-# endif
+#endif
 ZEND_GET_MODULE(qt)
 #endif
