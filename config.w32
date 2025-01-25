@@ -1,0 +1,7 @@
+ARG_ENABLE('qt', 'qt support', 'no');
+
+if (PHP_QT != 'no') {
+	AC_DEFINE('HAVE_QT', 1, "Define to 1 if the PHP extension 'qt' is available.");
+
+	EXTENSION('qt', 'qt.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
