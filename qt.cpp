@@ -49,6 +49,7 @@ PHP_MINIT_FUNCTION(qt)
 	register_class_Qt_Widgets_QApplication();
 	ce_widget_QWidget = register_class_Qt_Widgets_QWidget();
 	register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
+	register_class_Qt_Widgets_QLabel(ce_widget_QWidget);
 
 	return SUCCESS;
 }

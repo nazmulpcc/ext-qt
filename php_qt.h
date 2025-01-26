@@ -28,6 +28,7 @@ struct qt_container_t
    T *native;
    zend_object std{};
 };
+
 #define QT_Object_P(zv, type) \
    ((qt_container_t<type> *)((char *)(Z_OBJ_P(zv)) - XtOffsetOf(qt_container_t<type>, std)))
 
