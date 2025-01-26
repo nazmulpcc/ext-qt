@@ -31,23 +31,16 @@ ZEND_METHOD(Qt_Widgets_QPushButton, __construct)
         container->native->setText(text->val);
     }
 }
-ZEND_METHOD(Qt_Widgets_QPushButton, setText)
-{
-    zend_string *text = nullptr;
+QT_METHOD_FORWARD_STRING(Qt_Widgets_QPushButton, QPushButton, setText)
 
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_STR(text)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(getThis(), QPushButton);
-    container->native->setText(text->val);
-}
 ZEND_METHOD(Qt_Widgets_QPushButton, text)
 {
+    ZEND_PARSE_PARAMETERS_NONE();
+
     auto *container = QT_Object_P(getThis(), QPushButton);
     auto text = container->native->text();
     zval retval;
-    ZVAL_STRING(&retval, text.toUtf8().constData());
+    qt_cpp_to_zval(&retval, text);
     RETURN_ZVAL(&retval, 0, 1);
 }
 

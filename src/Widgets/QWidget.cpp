@@ -34,49 +34,10 @@ ZEND_METHOD(Qt_Widgets_QWidget, __construct)
     }
 }
 
-ZEND_METHOD(Qt_Widgets_QWidget, setWindowTitle)
-{
-    zend_string *title;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_STR(title)
-    ZEND_PARSE_PARAMETERS_END();
+QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setWindowTitle)
 
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-
-    container->native->setWindowTitle(ZSTR_VAL(title));
-}
-
-ZEND_METHOD(Qt_Widgets_QWidget, show)
-{
-    ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    container->native->show();
-}
-
-ZEND_METHOD(Qt_Widgets_QWidget, showFullScreen)
-{
-    ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    container->native->showFullScreen();
-}
-
-ZEND_METHOD(Qt_Widgets_QWidget, showMaximized)
-{
-    ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    container->native->showMaximized();
-}
-
-ZEND_METHOD(Qt_Widgets_QWidget, showMinimized)
-{
-    ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    container->native->showMinimized();
-}
-
-ZEND_METHOD(Qt_Widgets_QWidget, showNormal)
-{
-    ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    container->native->showNormal();
-}
+QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, show)
+QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showFullScreen)
+QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showMaximized)
+QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showMinimized)
+QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showNormal)

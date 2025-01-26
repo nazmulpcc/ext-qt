@@ -44,19 +44,5 @@ ZEND_METHOD(Qt_Widgets_QLabel, __construct)
         container->native->setText(text->val);
     }
 }
-ZEND_METHOD(Qt_Widgets_QLabel, setText)
-{
-    zend_string *text = nullptr;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_STR(text)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QLabel);
-    container->native->setText(text->val);
-}
-ZEND_METHOD(Qt_Widgets_QLabel, text)
-{
-    ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QLabel);
-    RETURN_STRING(container->native->text().toStdString().c_str());
-}
+QT_METHOD_FORWARD_STRING(Qt_Widgets_QLabel, QLabel, setText)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QLabel, QLabel, text)
