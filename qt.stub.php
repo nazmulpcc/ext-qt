@@ -22,16 +22,24 @@ namespace Qt\Widgets {
         public function showNormal(): void {}
     }
 
+    class QLabel extends QWidget
+    {
+        public function __construct(?string $text = null, ?QWidget $parent = null, int $windowFlags = 0) {}
+        public function setText(string $text): void {}
+        public function text(): string {}
+    }
+
     class QMainWindow extends QWidget
     {
         public function __construct(?QWidget $parent = null, int $windowFlags = 0) {}
         public function setCentralWidget(QWidget $widget): void {}
     }
 
-    class QLabel extends QWidget
+    class QPushButton extends QWidget
     {
-        public function __construct(?string $text = null, ?QWidget $parent = null, int $windowFlags = 0) {}
+        public function __construct(?string $text = null, ?QWidget $parent = null) {}
         public function setText(string $text): void {}
         public function text(): string {}
+        public function onClicked(callable $callback): void {}
     }
 }
