@@ -26,8 +26,7 @@ extern "C"
 #include "php_qt.h"
 #include "qt_arginfo.h"
 
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
+zend_class_entry *ce_widget_QWidget = nullptr;
 
 /* For compatibility with older PHP versions */
 #ifndef ZEND_PARSE_PARAMETERS_NONE
@@ -36,23 +35,20 @@ extern "C"
 	ZEND_PARSE_PARAMETERS_END()
 #endif
 
-PHP_FUNCTION(test1)
-{
-	ZEND_PARSE_PARAMETERS_NONE();
-	int argc = 1;
-	char *argv[] = {(char *)"app"};
-	QApplication app(argc, argv);
-	QMainWindow window;
-	window.setWindowTitle("Hello, world!");
-	window.show();
-	app.exec();
-}
-
 PHP_RINIT_FUNCTION(qt)
 {
 #if defined(ZTS) && defined(COMPILE_DL_QT)
 	ZEND_TSRMLS_CACHE_UPDATE();
 #endif
+
+	return SUCCESS;
+}
+
+PHP_MINIT_FUNCTION(qt)
+{
+	register_class_Qt_Widgets_QApplication();
+	ce_widget_QWidget = register_class_Qt_Widgets_QWidget();
+	register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 
 	return SUCCESS;
 }
@@ -67,8 +63,8 @@ PHP_MINFO_FUNCTION(qt)
 zend_module_entry qt_module_entry = {
 	STANDARD_MODULE_HEADER,
 	"qt",			/* Extension name */
-	ext_functions,	/* zend_function_entry */
-	NULL,			/* PHP_MINIT - Module initialization */
+	NULL,			/* zend_function_entry */
+	PHP_MINIT(qt),	/* PHP_MINIT - Module initialization */
 	NULL,			/* PHP_MSHUTDOWN - Module shutdown */
 	PHP_RINIT(qt),	/* PHP_RINIT - Request initialization */
 	NULL,			/* PHP_RSHUTDOWN - Request shutdown */

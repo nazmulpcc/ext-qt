@@ -22,6 +22,18 @@ extern zend_module_entry qt_module_entry;
 
 #define PHP_QT_VERSION "0.1.0"
 
+template <typename T>
+struct qt_container_t
+{
+   T *native;
+   zend_object std{};
+};
+#define QT_Object_P(zv, type) \
+   ((qt_container_t<type> *)((char *)(Z_OBJ_P(zv)) - XtOffsetOf(qt_container_t<type>, std)))
+
+// global variables
+extern zend_class_entry *ce_widget_QWidget;
+
 #if defined(ZTS) && defined(COMPILE_DL_QT)
 ZEND_TSRMLS_CACHE_EXTERN()
 #endif
