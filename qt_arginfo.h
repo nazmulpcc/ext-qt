@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 9e352517463db15fcc61edbd91613db2e2b1ef37 */
+ * Stub hash: 48fc15f65e64d92ba2cba116fb0fcbfbddb417d1 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 0)
 ZEND_END_ARG_INFO()
@@ -54,6 +54,8 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_showNormal arginfo_class_Qt_Widgets_QWidget_show
 
+#define arginfo_class_Qt_Widgets_QWidget___destruct arginfo_class_Qt_Widgets_QApplication___construct
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLabel___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -78,6 +80,8 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_setSpac
 ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QLayout___destruct arginfo_class_Qt_Widgets_QApplication___construct
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
@@ -205,6 +209,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, showFullScreen);
 ZEND_METHOD(Qt_Widgets_QWidget, showMaximized);
 ZEND_METHOD(Qt_Widgets_QWidget, showMinimized);
 ZEND_METHOD(Qt_Widgets_QWidget, showNormal);
+ZEND_METHOD(Qt_Widgets_QWidget, __destruct);
 ZEND_METHOD(Qt_Widgets_QLabel, __construct);
 ZEND_METHOD(Qt_Widgets_QLabel, setText);
 ZEND_METHOD(Qt_Widgets_QLabel, text);
@@ -212,6 +217,7 @@ ZEND_METHOD(Qt_Widgets_QLayout, addWidget);
 ZEND_METHOD(Qt_Widgets_QLayout, removeWidget);
 ZEND_METHOD(Qt_Widgets_QLayout, setSpacing);
 ZEND_METHOD(Qt_Widgets_QLayout, spacing);
+ZEND_METHOD(Qt_Widgets_QLayout, __destruct);
 ZEND_METHOD(Qt_Widgets_QLineEdit, __construct);
 ZEND_METHOD(Qt_Widgets_QLineEdit, backspace);
 ZEND_METHOD(Qt_Widgets_QLineEdit, cursorPosition);
@@ -293,6 +299,7 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, showMaximized, arginfo_class_Qt_Widgets_QWidget_showMaximized, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, showMinimized, arginfo_class_Qt_Widgets_QWidget_showMinimized, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, showNormal, arginfo_class_Qt_Widgets_QWidget_showNormal, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, __destruct, arginfo_class_Qt_Widgets_QWidget___destruct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -310,6 +317,7 @@ static const zend_function_entry class_Qt_Widgets_QLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QLayout, removeWidget, arginfo_class_Qt_Widgets_QLayout_removeWidget, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLayout, setSpacing, arginfo_class_Qt_Widgets_QLayout_setSpacing, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLayout, spacing, arginfo_class_Qt_Widgets_QLayout_spacing, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QLayout, __destruct, arginfo_class_Qt_Widgets_QLayout___destruct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
