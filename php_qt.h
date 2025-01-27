@@ -28,6 +28,8 @@ extern zend_module_entry qt_module_entry;
 
 #define PHP_QT_VERSION "0.1.0"
 
+static zend_object_handlers qt_object_handlers;
+
 template <typename T>
 struct qt_container_t
 {
@@ -48,6 +50,20 @@ struct qt_callback_wrapper
 
 #define QT_Object_P(zv, type) \
    ((qt_container_t<type> *)((char *)(Z_OBJ_P(zv)) - XtOffsetOf(qt_container_t<type>, std)))
+
+static zend_object *qt_obj_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QObject> *container = (qt_container_t<QObject> *)zend_object_alloc(sizeof(qt_container_t<QObject>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_object_handlers;
+   return &container->std;
+}
+static void qt_obj_free_handler(zend_object *object)
+{
+   auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
+   zend_object_std_dtor(object);
+}
 
 // Helper function to convert C++ values to zval
 template <typename T>

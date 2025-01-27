@@ -26,6 +26,8 @@ extern "C"
 #include "php_qt.h"
 #include "qt_arginfo.h"
 
+#include <QtWidgets/QWidget>
+
 zend_class_entry *ce_widget_QWidget = nullptr;
 zend_class_entry *ce_widget_QLayout = nullptr;
 
@@ -47,17 +49,38 @@ PHP_RINIT_FUNCTION(qt)
 
 PHP_MINIT_FUNCTION(qt)
 {
-	register_class_Qt_Widgets_QApplication();
+	memcpy(&qt_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_object_handlers.offset = XtOffsetOf(qt_container_t<QObject>, std);
+	qt_object_handlers.free_obj = qt_obj_free_handler;
+
+	auto ce_widget_QApplication = register_class_Qt_Widgets_QApplication();
+	ce_widget_QApplication->create_object = qt_obj_create_handler;
+
 	ce_widget_QWidget = register_class_Qt_Widgets_QWidget();
-	register_class_Qt_Widgets_QLabel(ce_widget_QWidget);
-	register_class_Qt_Widgets_QLineEdit(ce_widget_QWidget);
-	register_class_Qt_Widgets_QPushButton(ce_widget_QWidget);
-	register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
+	ce_widget_QWidget->create_object = qt_obj_create_handler;
+
+	auto ce_qlabel = register_class_Qt_Widgets_QLabel(ce_widget_QWidget);
+	ce_qlabel->create_object = qt_obj_create_handler;
+
+	auto ce_qlineedit = register_class_Qt_Widgets_QLineEdit(ce_widget_QWidget);
+	ce_qlineedit->create_object = qt_obj_create_handler;
+
+	auto ce_qpushbutton = register_class_Qt_Widgets_QPushButton(ce_widget_QWidget);
+	ce_qpushbutton->create_object = qt_obj_create_handler;
+
+	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
+	ce_qmainwindow->create_object = qt_obj_create_handler;
 
 	ce_widget_QLayout = register_class_Qt_Widgets_QLayout();
+	ce_widget_QLayout->create_object = qt_obj_create_handler;
+
 	auto ce_widget_QBoxLayout = register_class_Qt_Widgets_QBoxLayout(ce_widget_QLayout);
-	register_class_Qt_Widgets_QHBoxLayout(ce_widget_QBoxLayout);
-	register_class_Qt_Widgets_QVBoxLayout(ce_widget_QBoxLayout);
+	ce_widget_QBoxLayout->create_object = qt_obj_create_handler;
+
+	auto ce_qhboxlayout = register_class_Qt_Widgets_QHBoxLayout(ce_widget_QBoxLayout);
+	ce_qhboxlayout->create_object = qt_obj_create_handler;
+	auto ce_qvboxlayout = register_class_Qt_Widgets_QVBoxLayout(ce_widget_QBoxLayout);
+	ce_qvboxlayout->create_object = qt_obj_create_handler;
 
 	return SUCCESS;
 }
