@@ -53,3 +53,9 @@ QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showFullScreen)
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showMaximized)
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showMinimized)
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, showNormal)
+
+ZEND_METHOD(Qt_Widgets_QWidget, __destruct)
+{
+    auto *container = QT_Object_P(ZEND_THIS, QWidget);
+    container->native->deleteLater();
+}

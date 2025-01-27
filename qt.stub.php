@@ -44,6 +44,7 @@ namespace Qt\Widgets {
         public function showMaximized(): void {}
         public function showMinimized(): void {}
         public function showNormal(): void {}
+        public function __destruct() {}
     }
 
     class QLabel extends QWidget
@@ -59,6 +60,7 @@ namespace Qt\Widgets {
         public function removeWidget(QWidget $widget): void {}
         public function setSpacing(int $spacing): void {}
         public function spacing(): int {}
+        public function __destruct() {}
     }
 
     class QLineEdit extends QWidget
