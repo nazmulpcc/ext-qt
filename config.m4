@@ -33,7 +33,7 @@ AS_VAR_IF([PHP_QT], [no],, [
 
   dnl Configure extension sources and compilation flags.
   PHP_NEW_EXTENSION([qt],
-    [src/Widgets/QApplication.cpp src/Widgets/QWidget.cpp src/Widgets/QLabel.cpp src/Widgets/QMainWindow.cpp src/Widgets/QPushButton.cpp qt.cpp],
+    [src/Widgets/QApplication.cpp src/Widgets/QBoxLayout.cpp src/Widgets/QWidget.cpp src/Widgets/QLabel.cpp src/Widgets/QLineEdit.cpp src/Widgets/QLayout.cpp src/Widgets/QMainWindow.cpp src/Widgets/QPushButton.cpp qt.cpp],
     [$ext_shared],,
     [-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -std=c++17])
 ])

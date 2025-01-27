@@ -34,6 +34,18 @@ ZEND_METHOD(Qt_Widgets_QWidget, __construct)
     }
 }
 
+ZEND_METHOD(Qt_Widgets_QWidget, setLayout)
+{
+    zval *layout_zval = nullptr;
+    ZEND_PARSE_PARAMETERS_START(1, 1)
+    Z_PARAM_OBJECT_OF_CLASS(layout_zval, ce_widget_QLayout)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QWidget);
+    auto *layout_container = QT_Object_P(layout_zval, QLayout);
+    container->native->setLayout(layout_container->native);
+}
+
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setWindowTitle)
 
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, show)

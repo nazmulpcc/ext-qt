@@ -27,6 +27,7 @@ extern "C"
 #include "qt_arginfo.h"
 
 zend_class_entry *ce_widget_QWidget = nullptr;
+zend_class_entry *ce_widget_QLayout = nullptr;
 
 /* For compatibility with older PHP versions */
 #ifndef ZEND_PARSE_PARAMETERS_NONE
@@ -49,8 +50,14 @@ PHP_MINIT_FUNCTION(qt)
 	register_class_Qt_Widgets_QApplication();
 	ce_widget_QWidget = register_class_Qt_Widgets_QWidget();
 	register_class_Qt_Widgets_QLabel(ce_widget_QWidget);
+	register_class_Qt_Widgets_QLineEdit(ce_widget_QWidget);
 	register_class_Qt_Widgets_QPushButton(ce_widget_QWidget);
 	register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
+
+	ce_widget_QLayout = register_class_Qt_Widgets_QLayout();
+	auto ce_widget_QBoxLayout = register_class_Qt_Widgets_QBoxLayout(ce_widget_QLayout);
+	register_class_Qt_Widgets_QHBoxLayout(ce_widget_QBoxLayout);
+	register_class_Qt_Widgets_QVBoxLayout(ce_widget_QBoxLayout);
 
 	return SUCCESS;
 }

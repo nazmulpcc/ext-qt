@@ -125,12 +125,43 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
    {                                                                  \
       auto *container = QT_Object_P(ZEND_THIS, native_type);          \
       zend_string *text;                                              \
-                                                                      \
       ZEND_PARSE_PARAMETERS_START(1, 1)                               \
       Z_PARAM_STR(text)                                               \
       ZEND_PARSE_PARAMETERS_END();                                    \
-                                                                      \
       container->native->method_name(ZSTR_VAL(text));                 \
+   }
+
+#define QT_METHOD_FORWARD_BOOL(classname, native_type, method_name) \
+   PHP_METHOD(classname, method_name)                               \
+   {                                                                \
+      auto *container = QT_Object_P(ZEND_THIS, native_type);        \
+      bool value;                                                   \
+      ZEND_PARSE_PARAMETERS_START(1, 1)                             \
+      Z_PARAM_BOOL(value)                                           \
+      ZEND_PARSE_PARAMETERS_END();                                  \
+      container->native->method_name(value);                        \
+   }
+
+#define QT_METHOD_FORWARD_INT(classname, native_type, method_name) \
+   PHP_METHOD(classname, method_name)                              \
+   {                                                               \
+      auto *container = QT_Object_P(ZEND_THIS, native_type);       \
+      zend_long value;                                             \
+      ZEND_PARSE_PARAMETERS_START(1, 1)                            \
+      Z_PARAM_LONG(value)                                          \
+      ZEND_PARSE_PARAMETERS_END();                                 \
+      container->native->method_name(value);                       \
+   }
+
+#define QT_METHOD_FORWARD_INT_ENUM(classname, native_type, method_name, enum) \
+   PHP_METHOD(classname, method_name)                                         \
+   {                                                                          \
+      auto *container = QT_Object_P(ZEND_THIS, native_type);                  \
+      zend_long value;                                                        \
+      ZEND_PARSE_PARAMETERS_START(1, 1)                                       \
+      Z_PARAM_LONG(value)                                                     \
+      ZEND_PARSE_PARAMETERS_END();                                            \
+      container->native->method_name(static_cast<enum>(value));               \
    }
 
 #define QT_METHOD_FORWARD_SIGNAL(classname, native_type, method_name, signal_name)           \
@@ -223,6 +254,7 @@ inline void qt_connect_signal_to_callback(typename QtPrivate::FunctionPointer<Fu
 
 // global variables
 extern zend_class_entry *ce_widget_QWidget;
+extern zend_class_entry *ce_widget_QLayout;
 
 #if defined(ZTS) && defined(COMPILE_DL_QT)
 ZEND_TSRMLS_CACHE_EXTERN()
