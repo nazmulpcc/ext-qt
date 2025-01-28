@@ -20,7 +20,7 @@ namespace Qt\Core {
         public function setObjectName(string $name): void {}
         public function setParent(QObject $parent): void {}
         public function signalsBlocked(): bool {}
-        public function startTimer(int $interval): int {}
+        public function startTimer(callable $callback, int $interval, int $timerType = 1): int {}
     }
 }
 
