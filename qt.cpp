@@ -69,7 +69,9 @@ PHP_MINIT_FUNCTION(qt)
 	auto ce_qlineedit = register_class_Qt_Widgets_QLineEdit(ce_widget_QWidget);
 	ce_qlineedit->create_object = qt_obj_create_handler;
 
-	auto ce_qpushbutton = register_class_Qt_Widgets_QPushButton(ce_widget_QWidget);
+	auto ce_qabstractbutton = register_class_Qt_Widgets_QAbstractButton(ce_widget_QWidget);
+	ce_qabstractbutton->create_object = qt_obj_create_handler;
+	auto ce_qpushbutton = register_class_Qt_Widgets_QPushButton(ce_qabstractbutton);
 	ce_qpushbutton->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);

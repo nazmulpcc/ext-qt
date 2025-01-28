@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 0db62990930979a603692f6cc9ba08f360c767cb */
+ * Stub hash: 726b71b3561407d5108c70303cbdf7b866794cb4 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -49,6 +49,46 @@ ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QApplication_exec, 0, 0, IS_LONG, 0)
 ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Widgets_QApplication_exec
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, enable, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatDelay, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, duration, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatInterval, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, interval, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setText, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, text, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_text arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_animateClick arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_click arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_toggle arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_onClicked, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_onPressed arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_onReleased arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QBoxLayout___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
@@ -104,9 +144,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLabel___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, windowFlags, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLabel_setText, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, text, IS_STRING, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLabel_setText arginfo_class_Qt_Widgets_QAbstractButton_setText
 
 #define arginfo_class_Qt_Widgets_QLabel_text arginfo_class_Qt_Core_QObject_objectName
 
@@ -165,9 +203,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_selectedText arginfo_class_Qt_Core_QObject_objectName
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setClearButtonEnabled, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, enable, _IS_BOOL, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_setClearButtonEnabled arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setCursorPosition, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, position, IS_LONG, 0)
@@ -194,17 +230,15 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setSe
 	ZEND_ARG_TYPE_INFO(0, length, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLineEdit_setText arginfo_class_Qt_Widgets_QLabel_setText
+#define arginfo_class_Qt_Widgets_QLineEdit_setText arginfo_class_Qt_Widgets_QAbstractButton_setText
 
 #define arginfo_class_Qt_Widgets_QLineEdit_text arginfo_class_Qt_Core_QObject_objectName
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onReturnPressed arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
+#define arginfo_class_Qt_Widgets_QLineEdit_onReturnPressed arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
+#define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 #define arginfo_class_Qt_Widgets_QLineEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -226,12 +260,6 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QPushButton___construct arginfo_class_Qt_Widgets_QLineEdit___construct
 
-#define arginfo_class_Qt_Widgets_QPushButton_setText arginfo_class_Qt_Widgets_QLabel_setText
-
-#define arginfo_class_Qt_Widgets_QPushButton_text arginfo_class_Qt_Core_QObject_objectName
-
-#define arginfo_class_Qt_Widgets_QPushButton_onClicked arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
-
 
 ZEND_METHOD(Qt_Core_QObject, __construct);
 ZEND_METHOD(Qt_Core_QObject, blockSignals);
@@ -248,6 +276,21 @@ ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
 ZEND_METHOD(Qt_Core_QObject, startTimer);
 ZEND_METHOD(Qt_Widgets_QApplication, __construct);
 ZEND_METHOD(Qt_Widgets_QApplication, exec);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeat);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeatDelay);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeatInterval);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, setAutoRepeat);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, setAutoRepeatDelay);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, setAutoRepeatInterval);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, setText);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, text);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, animateClick);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, click);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, toggle);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, onClicked);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, onPressed);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, onReleased);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, onToggled);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, addStretch);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, addSpacing);
@@ -310,9 +353,6 @@ ZEND_METHOD(Qt_Widgets_QLineEdit, undo);
 ZEND_METHOD(Qt_Widgets_QMainWindow, __construct);
 ZEND_METHOD(Qt_Widgets_QMainWindow, setCentralWidget);
 ZEND_METHOD(Qt_Widgets_QPushButton, __construct);
-ZEND_METHOD(Qt_Widgets_QPushButton, setText);
-ZEND_METHOD(Qt_Widgets_QPushButton, text);
-ZEND_METHOD(Qt_Widgets_QPushButton, onClicked);
 
 
 static const zend_function_entry class_Qt_Core_QObject_methods[] = {
@@ -335,7 +375,27 @@ static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 
 static const zend_function_entry class_Qt_Widgets_QApplication_methods[] = {
 	ZEND_ME(Qt_Widgets_QApplication, __construct, arginfo_class_Qt_Widgets_QApplication___construct, ZEND_ACC_PUBLIC)
-	ZEND_ME(Qt_Widgets_QApplication, exec, arginfo_class_Qt_Widgets_QApplication_exec, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QApplication, exec, arginfo_class_Qt_Widgets_QApplication_exec, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
+	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeat, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeatDelay, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeatInterval, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, setAutoRepeat, arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, setAutoRepeatDelay, arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatDelay, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, setAutoRepeatInterval, arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatInterval, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, setText, arginfo_class_Qt_Widgets_QAbstractButton_setText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, text, arginfo_class_Qt_Widgets_QAbstractButton_text, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, animateClick, arginfo_class_Qt_Widgets_QAbstractButton_animateClick, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, click, arginfo_class_Qt_Widgets_QAbstractButton_click, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, toggle, arginfo_class_Qt_Widgets_QAbstractButton_toggle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, onClicked, arginfo_class_Qt_Widgets_QAbstractButton_onClicked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, onPressed, arginfo_class_Qt_Widgets_QAbstractButton_onPressed, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, onReleased, arginfo_class_Qt_Widgets_QAbstractButton_onReleased, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, onToggled, arginfo_class_Qt_Widgets_QAbstractButton_onToggled, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -443,9 +503,6 @@ static const zend_function_entry class_Qt_Widgets_QMainWindow_methods[] = {
 
 static const zend_function_entry class_Qt_Widgets_QPushButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QPushButton, __construct, arginfo_class_Qt_Widgets_QPushButton___construct, ZEND_ACC_PUBLIC)
-	ZEND_ME(Qt_Widgets_QPushButton, setText, arginfo_class_Qt_Widgets_QPushButton_setText, ZEND_ACC_PUBLIC)
-	ZEND_ME(Qt_Widgets_QPushButton, text, arginfo_class_Qt_Widgets_QPushButton_text, ZEND_ACC_PUBLIC)
-	ZEND_ME(Qt_Widgets_QPushButton, onClicked, arginfo_class_Qt_Widgets_QPushButton_onClicked, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -465,6 +522,17 @@ static zend_class_entry *register_class_Qt_Widgets_QApplication(void)
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QApplication", class_Qt_Widgets_QApplication_methods);
 	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QAbstractButton(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractButton", class_Qt_Widgets_QAbstractButton_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	return class_entry;
 }
@@ -598,12 +666,12 @@ static zend_class_entry *register_class_Qt_Widgets_QMainWindow(zend_class_entry 
 	return class_entry;
 }
 
-static zend_class_entry *register_class_Qt_Widgets_QPushButton(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+static zend_class_entry *register_class_Qt_Widgets_QPushButton(zend_class_entry *class_entry_Qt_Widgets_QAbstractButton)
 {
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QPushButton", class_Qt_Widgets_QPushButton_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
 
 	return class_entry;
 }

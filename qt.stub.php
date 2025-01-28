@@ -28,8 +28,32 @@ namespace Qt\Widgets {
     class QApplication
     {
         public function __construct() {}
-        public function exec(): int {}
+        static public function exec(): int {}
     }
+
+    abstract class QAbstractButton extends QWidget
+    {
+        public function autoRepeat(): bool {}
+        public function autoRepeatDelay(): int {}
+        public function autoRepeatInterval(): int {}
+        public function setAutoRepeat(bool $enable): void {}
+        public function setAutoRepeatDelay(int $duration): void {}
+        public function setAutoRepeatInterval(int $interval): void {}
+        public function setText(string $text): void {}
+        public function text(): string {}
+
+        // Slots
+        public function animateClick(): void {}
+        public function click(): void {}
+        public function toggle(): void {}
+
+        // Signals
+        public function onClicked(callable $callback): void {}
+        public function onPressed(callable $callback): void {}
+        public function onReleased(callable $callback): void {}
+        public function onToggled(callable $callback): void {}
+    }
+
     class QBoxLayout extends QLayout
     {
         public const int LeftToRight = 0;
@@ -137,11 +161,8 @@ namespace Qt\Widgets {
         public function setCentralWidget(QWidget $widget): void {}
     }
 
-    class QPushButton extends QWidget
+    class QPushButton extends QAbstractButton
     {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
-        public function setText(string $text): void {}
-        public function text(): string {}
-        public function onClicked(callable $callback): void {}
     }
 }

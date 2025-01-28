@@ -20,7 +20,5 @@ ZEND_METHOD(Qt_Widgets_QApplication, __construct)
 ZEND_METHOD(Qt_Widgets_QApplication, exec)
 {
     ZEND_PARSE_PARAMETERS_NONE();
-    auto *container = QT_Object_P(ZEND_THIS, QApplication);
-    int exit = container->native->exec();
-    RETURN_LONG(exit);
+    RETURN_LONG(QApplication::exec());
 }
