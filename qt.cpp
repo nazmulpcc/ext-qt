@@ -57,6 +57,9 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qobject = register_class_Qt_Core_QObject();
 	ce_qobject->create_object = qt_obj_create_handler;
 
+	auto ce_qthread = register_class_Qt_Core_QThread(ce_qobject);
+	ce_qthread->create_object = qt_obj_create_handler;
+
 	auto ce_widget_QApplication = register_class_Qt_Widgets_QApplication();
 	ce_widget_QApplication->create_object = qt_obj_create_handler;
 

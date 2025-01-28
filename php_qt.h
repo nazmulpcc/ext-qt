@@ -236,36 +236,16 @@ inline void qt_connect_signal_to_callback(typename QtPrivate::FunctionPointer<Fu
 
    QObject::connect(sender, signal, [cb_wrapper, cb, sender, paramCount](auto... args)
                     {
-        if (QThread::currentThread() != QCoreApplication::instance()->thread()) {
-            php_printf("Not in GUI thread\n");
-            // If we are not in the GUI thread
-            QMetaObject::invokeMethod(qobject_cast<QObject *>(sender), [cb_wrapper, cb, paramCount, args...]() {
-                zval retval, params[paramCount];
-                int i = 0;
-                (void) std::initializer_list<int>{
-                    (qt_cpp_to_zval(&params[i], args), ++i)...
-                };
+                       zval retval, params[paramCount];
+                       int i = 0;
+                       (void)std::initializer_list<int>{
+                           (qt_cpp_to_zval(&params[i], args), ++i)...};
 
-                cb_wrapper->callback->fci.retval = &retval;
-                cb_wrapper->callback->fci.params = params;
-                cb_wrapper->callback->fci.param_count = paramCount;
-                zend_call_function(&cb_wrapper->callback->fci, &cb_wrapper->callback->fci_cache);
-                zval_ptr_dtor(&retval);
-            }, Qt::QueuedConnection);
-        } else {
-            // If we are in the GUI thread
-            zval retval, params[paramCount];
-            int i = 0;
-            (void) std::initializer_list<int>{
-                (qt_cpp_to_zval(&params[i], args), ++i)...
-            };
-
-            cb->fci.retval = &retval;
-            cb->fci.params = params;
-            cb->fci.param_count = paramCount;
-            zend_call_function(&cb->fci, &cb->fci_cache);
-            zval_ptr_dtor(&retval);
-        } });
+                       cb->fci.retval = &retval;
+                       cb->fci.params = params;
+                       cb->fci.param_count = paramCount;
+                       zend_call_function(&cb->fci, &cb->fci_cache);
+                       zval_ptr_dtor(&retval); });
 }
 
 // global variables

@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 0db62990930979a603692f6cc9ba08f360c767cb */
+ * Stub hash: 4ab492de6189ce885254605912dbcb97bb5d992e */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -44,11 +44,65 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, timerType, IS_LONG, 0, "1")
 ZEND_END_ARG_INFO()
 
+#define arginfo_class_Qt_Core_QThread___construct arginfo_class_Qt_Core_QObject___construct
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_idealThreadCount, 0, 0, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_msleep, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, msecs, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_sleep, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, secs, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_usleep, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, usecs, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QThread_yieldCurrentThread arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Core_QThread_isFinished arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Core_QThread_isInterruptionRequested arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Core_QThread_isRunning arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Core_QThread_loopLevel arginfo_class_Qt_Core_QThread_idealThreadCount
+
+#define arginfo_class_Qt_Core_QThread_priority arginfo_class_Qt_Core_QThread_idealThreadCount
+
+#define arginfo_class_Qt_Core_QThread_requestInterruption arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_setPriority, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, priority, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_wait, 0, 0, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, time, IS_LONG, 0, "-1")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_exit, 0, 0, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, returnCode, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QThread_quit arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Core_QThread_start arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Core_QThread_terminate arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QThread_onFinished, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QThread_onStarted arginfo_class_Qt_Core_QThread_onFinished
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QApplication_exec, 0, 0, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QThread_idealThreadCount
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QBoxLayout___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
@@ -120,7 +174,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_setSpac
 	ZEND_ARG_TYPE_INFO(0, spacing, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QThread_idealThreadCount
 
 #define arginfo_class_Qt_Widgets_QLayout___destruct arginfo_class_Qt_Widgets_QApplication___construct
 
@@ -131,7 +185,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Core_QThread_idealThreadCount
 
 #define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -139,7 +193,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_displayText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Core_QThread_idealThreadCount
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_end, 0, 0, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, mark, _IS_BOOL, 0, "false")
@@ -159,7 +213,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Core_QObject_isQuickItemType
 
-#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Core_QThread_idealThreadCount
 
 #define arginfo_class_Qt_Widgets_QLineEdit_placeholderText arginfo_class_Qt_Core_QObject_objectName
 
@@ -198,13 +252,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_text arginfo_class_Qt_Core_QObject_objectName
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished arginfo_class_Qt_Core_QThread_onFinished
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onReturnPressed arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
+#define arginfo_class_Qt_Widgets_QLineEdit_onReturnPressed arginfo_class_Qt_Core_QThread_onFinished
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
+#define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Core_QThread_onFinished
 
 #define arginfo_class_Qt_Widgets_QLineEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -230,7 +282,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QPushButton_text arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QPushButton_onClicked arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
+#define arginfo_class_Qt_Widgets_QPushButton_onClicked arginfo_class_Qt_Core_QThread_onFinished
 
 
 ZEND_METHOD(Qt_Core_QObject, __construct);
@@ -246,6 +298,26 @@ ZEND_METHOD(Qt_Core_QObject, setObjectName);
 ZEND_METHOD(Qt_Core_QObject, setParent);
 ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
 ZEND_METHOD(Qt_Core_QObject, startTimer);
+ZEND_METHOD(Qt_Core_QThread, __construct);
+ZEND_METHOD(Qt_Core_QThread, idealThreadCount);
+ZEND_METHOD(Qt_Core_QThread, msleep);
+ZEND_METHOD(Qt_Core_QThread, sleep);
+ZEND_METHOD(Qt_Core_QThread, usleep);
+ZEND_METHOD(Qt_Core_QThread, yieldCurrentThread);
+ZEND_METHOD(Qt_Core_QThread, isFinished);
+ZEND_METHOD(Qt_Core_QThread, isInterruptionRequested);
+ZEND_METHOD(Qt_Core_QThread, isRunning);
+ZEND_METHOD(Qt_Core_QThread, loopLevel);
+ZEND_METHOD(Qt_Core_QThread, priority);
+ZEND_METHOD(Qt_Core_QThread, requestInterruption);
+ZEND_METHOD(Qt_Core_QThread, setPriority);
+ZEND_METHOD(Qt_Core_QThread, wait);
+ZEND_METHOD(Qt_Core_QThread, exit);
+ZEND_METHOD(Qt_Core_QThread, quit);
+ZEND_METHOD(Qt_Core_QThread, start);
+ZEND_METHOD(Qt_Core_QThread, terminate);
+ZEND_METHOD(Qt_Core_QThread, onFinished);
+ZEND_METHOD(Qt_Core_QThread, onStarted);
 ZEND_METHOD(Qt_Widgets_QApplication, __construct);
 ZEND_METHOD(Qt_Widgets_QApplication, exec);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, __construct);
@@ -329,6 +401,31 @@ static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_ME(Qt_Core_QObject, setParent, arginfo_class_Qt_Core_QObject_setParent, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, signalsBlocked, arginfo_class_Qt_Core_QObject_signalsBlocked, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, startTimer, arginfo_class_Qt_Core_QObject_startTimer, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Core_QThread_methods[] = {
+	ZEND_ME(Qt_Core_QThread, __construct, arginfo_class_Qt_Core_QThread___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, idealThreadCount, arginfo_class_Qt_Core_QThread_idealThreadCount, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+	ZEND_ME(Qt_Core_QThread, msleep, arginfo_class_Qt_Core_QThread_msleep, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+	ZEND_ME(Qt_Core_QThread, sleep, arginfo_class_Qt_Core_QThread_sleep, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+	ZEND_ME(Qt_Core_QThread, usleep, arginfo_class_Qt_Core_QThread_usleep, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+	ZEND_ME(Qt_Core_QThread, yieldCurrentThread, arginfo_class_Qt_Core_QThread_yieldCurrentThread, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+	ZEND_ME(Qt_Core_QThread, isFinished, arginfo_class_Qt_Core_QThread_isFinished, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, isInterruptionRequested, arginfo_class_Qt_Core_QThread_isInterruptionRequested, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, isRunning, arginfo_class_Qt_Core_QThread_isRunning, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, loopLevel, arginfo_class_Qt_Core_QThread_loopLevel, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, priority, arginfo_class_Qt_Core_QThread_priority, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, requestInterruption, arginfo_class_Qt_Core_QThread_requestInterruption, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, setPriority, arginfo_class_Qt_Core_QThread_setPriority, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, wait, arginfo_class_Qt_Core_QThread_wait, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, exit, arginfo_class_Qt_Core_QThread_exit, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, quit, arginfo_class_Qt_Core_QThread_quit, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, start, arginfo_class_Qt_Core_QThread_start, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, terminate, arginfo_class_Qt_Core_QThread_terminate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, onFinished, arginfo_class_Qt_Core_QThread_onFinished, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QThread, onStarted, arginfo_class_Qt_Core_QThread_onStarted, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -455,6 +552,64 @@ static zend_class_entry *register_class_Qt_Core_QObject(void)
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QObject", class_Qt_Core_QObject_methods);
 	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QThread(zend_class_entry *class_entry_Qt_Core_QObject)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QThread", class_Qt_Core_QThread_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
+
+	zval const_IdlePriority_value;
+	ZVAL_LONG(&const_IdlePriority_value, 0);
+	zend_string *const_IdlePriority_name = zend_string_init_interned("IdlePriority", sizeof("IdlePriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_IdlePriority_name, &const_IdlePriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_IdlePriority_name);
+
+	zval const_LowestPriority_value;
+	ZVAL_LONG(&const_LowestPriority_value, 1);
+	zend_string *const_LowestPriority_name = zend_string_init_interned("LowestPriority", sizeof("LowestPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_LowestPriority_name, &const_LowestPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_LowestPriority_name);
+
+	zval const_LowPriority_value;
+	ZVAL_LONG(&const_LowPriority_value, 2);
+	zend_string *const_LowPriority_name = zend_string_init_interned("LowPriority", sizeof("LowPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_LowPriority_name, &const_LowPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_LowPriority_name);
+
+	zval const_NormalPriority_value;
+	ZVAL_LONG(&const_NormalPriority_value, 3);
+	zend_string *const_NormalPriority_name = zend_string_init_interned("NormalPriority", sizeof("NormalPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_NormalPriority_name, &const_NormalPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_NormalPriority_name);
+
+	zval const_HighPriority_value;
+	ZVAL_LONG(&const_HighPriority_value, 4);
+	zend_string *const_HighPriority_name = zend_string_init_interned("HighPriority", sizeof("HighPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_HighPriority_name, &const_HighPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_HighPriority_name);
+
+	zval const_HighestPriority_value;
+	ZVAL_LONG(&const_HighestPriority_value, 5);
+	zend_string *const_HighestPriority_name = zend_string_init_interned("HighestPriority", sizeof("HighestPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_HighestPriority_name, &const_HighestPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_HighestPriority_name);
+
+	zval const_TimeCriticalPriority_value;
+	ZVAL_LONG(&const_TimeCriticalPriority_value, 6);
+	zend_string *const_TimeCriticalPriority_name = zend_string_init_interned("TimeCriticalPriority", sizeof("TimeCriticalPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TimeCriticalPriority_name, &const_TimeCriticalPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TimeCriticalPriority_name);
+
+	zval const_InheritPriority_value;
+	ZVAL_LONG(&const_InheritPriority_value, 7);
+	zend_string *const_InheritPriority_name = zend_string_init_interned("InheritPriority", sizeof("InheritPriority") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InheritPriority_name, &const_InheritPriority_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InheritPriority_name);
 
 	return class_entry;
 }

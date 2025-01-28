@@ -22,6 +22,46 @@ namespace Qt\Core {
         public function signalsBlocked(): bool {}
         public function startTimer(callable $callback, int $interval, int $timerType = 1): int {}
     }
+    class QThread extends QObject
+    {
+        public const int IdlePriority = 0;
+        public const int LowestPriority = 1;
+        public const int LowPriority = 2;
+        public const int NormalPriority = 3;
+        public const int HighPriority = 4;
+        public const int HighestPriority = 5;
+        public const int TimeCriticalPriority = 6;
+        public const int InheritPriority = 7;
+
+        public function __construct(?QObject $parent = null) {}
+
+        public static function idealThreadCount(): int {}
+        // public static function isMainThread(): bool {}
+        public static function msleep(int $msecs): void {}
+        public static function sleep(int $secs): void {}
+        public static function usleep(int $usecs): void {}
+        public static function yieldCurrentThread(): void {}
+
+        // public function isCurrentThread(): bool {}
+        public function isFinished(): bool {}
+        public function isInterruptionRequested(): bool {}
+        public function isRunning(): bool {}
+        public function loopLevel(): int {}
+        public function priority(): int {}
+        public function requestInterruption(): void {}
+        public function setPriority(int $priority): void {}
+        public function wait(int $time = -1): bool {}
+
+        // slots
+        public function exit(int $returnCode = 0): void {}
+        public function quit(): void {}
+        public function start(): void {}
+        public function terminate(): void {}
+
+        // signals
+        public function onFinished(callable $callback): void {}
+        public function onStarted(callable $callback): void {}
+    }
 }
 
 namespace Qt\Widgets {
