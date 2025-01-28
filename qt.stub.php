@@ -36,9 +36,11 @@ namespace Qt\Widgets {
         public function autoRepeat(): bool {}
         public function autoRepeatDelay(): int {}
         public function autoRepeatInterval(): int {}
+        public function isChecked(): bool {}
         public function setAutoRepeat(bool $enable): void {}
         public function setAutoRepeatDelay(int $duration): void {}
         public function setAutoRepeatInterval(int $interval): void {}
+        public function setChecked(bool $checked): void {}
         public function setText(string $text): void {}
         public function text(): string {}
 
@@ -65,6 +67,18 @@ namespace Qt\Widgets {
         public function addStretch(int $stretch = 0): void {}
         public function addSpacing(int $size): void {}
         public function setDirection(int $direction): void {}
+    }
+
+    class QCheckBox extends QAbstractButton
+    {
+        public function __construct(?string $text = null, ?QWidget $parent = null) {}
+        public function checkState(): int {}
+        public function isTristate(): bool {}
+        public function setCheckState(int $state): void {}
+        public function setTristate(bool $tristate): void {}
+
+        // Signals
+        public function onCheckStateChanged(callable $callback): void {}
     }
 
     class QHBoxLayout extends QBoxLayout

@@ -71,6 +71,8 @@ PHP_MINIT_FUNCTION(qt)
 
 	auto ce_qabstractbutton = register_class_Qt_Widgets_QAbstractButton(ce_widget_QWidget);
 	ce_qabstractbutton->create_object = qt_obj_create_handler;
+	auto ce_qcheckbox = register_class_Qt_Widgets_QCheckBox(ce_qabstractbutton);
+	ce_qcheckbox->create_object = qt_obj_create_handler;
 	auto ce_qpushbutton = register_class_Qt_Widgets_QPushButton(ce_qabstractbutton);
 	ce_qpushbutton->create_object = qt_obj_create_handler;
 

@@ -18,6 +18,7 @@ public:
     TimerObject(std::shared_ptr<qt_callback_t> cb, QObject *parent = nullptr) : QObject(parent)
     {
         this->cb = cb;
+        // @todo: delete cb when this object is destroyed
     }
 
 protected:

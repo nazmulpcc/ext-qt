@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 726b71b3561407d5108c70303cbdf7b866794cb4 */
+ * Stub hash: 4073e2fc5a7c432c5a54598e82148f156fcb1ad4 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -56,6 +56,8 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Widgets_QApplication_exec
 
+#define arginfo_class_Qt_Widgets_QAbstractButton_isChecked arginfo_class_Qt_Core_QObject_isQuickItemType
+
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, enable, _IS_BOOL, 0)
 ZEND_END_ARG_INFO()
@@ -66,6 +68,10 @@ ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatInterval, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, interval, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setChecked, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, checked, _IS_BOOL, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setText, 0, 1, IS_VOID, 0)
@@ -106,6 +112,25 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QBoxLayout_setDirection, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
 ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox___construct, 0, 0, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QCheckBox_isTristate arginfo_class_Qt_Core_QObject_isQuickItemType
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox_setCheckState, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, state, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox_setTristate, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, tristate, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QHBoxLayout___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -162,10 +187,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLayout___destruct arginfo_class_Qt_Widgets_QApplication___construct
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit___construct, 0, 0, 0)
-	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
-	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 #define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -258,7 +280,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget arginfo_class_Qt_Widgets_QLayout_addWidget
 
-#define arginfo_class_Qt_Widgets_QPushButton___construct arginfo_class_Qt_Widgets_QLineEdit___construct
+#define arginfo_class_Qt_Widgets_QPushButton___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 
 ZEND_METHOD(Qt_Core_QObject, __construct);
@@ -279,9 +301,11 @@ ZEND_METHOD(Qt_Widgets_QApplication, exec);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeat);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeatDelay);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeatInterval);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, isChecked);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, setAutoRepeat);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, setAutoRepeatDelay);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, setAutoRepeatInterval);
+ZEND_METHOD(Qt_Widgets_QAbstractButton, setChecked);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, setText);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, text);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, animateClick);
@@ -295,6 +319,12 @@ ZEND_METHOD(Qt_Widgets_QBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, addStretch);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, addSpacing);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, setDirection);
+ZEND_METHOD(Qt_Widgets_QCheckBox, __construct);
+ZEND_METHOD(Qt_Widgets_QCheckBox, checkState);
+ZEND_METHOD(Qt_Widgets_QCheckBox, isTristate);
+ZEND_METHOD(Qt_Widgets_QCheckBox, setCheckState);
+ZEND_METHOD(Qt_Widgets_QCheckBox, setTristate);
+ZEND_METHOD(Qt_Widgets_QCheckBox, onCheckStateChanged);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QVBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, __construct);
@@ -384,9 +414,11 @@ static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeat, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeatDelay, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeatInterval, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, isChecked, arginfo_class_Qt_Widgets_QAbstractButton_isChecked, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, setAutoRepeat, arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, setAutoRepeatDelay, arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatDelay, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, setAutoRepeatInterval, arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeatInterval, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractButton, setChecked, arginfo_class_Qt_Widgets_QAbstractButton_setChecked, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, setText, arginfo_class_Qt_Widgets_QAbstractButton_setText, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, text, arginfo_class_Qt_Widgets_QAbstractButton_text, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractButton, animateClick, arginfo_class_Qt_Widgets_QAbstractButton_animateClick, ZEND_ACC_PUBLIC)
@@ -405,6 +437,17 @@ static const zend_function_entry class_Qt_Widgets_QBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QBoxLayout, addStretch, arginfo_class_Qt_Widgets_QBoxLayout_addStretch, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QBoxLayout, addSpacing, arginfo_class_Qt_Widgets_QBoxLayout_addSpacing, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QBoxLayout, setDirection, arginfo_class_Qt_Widgets_QBoxLayout_setDirection, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
+	ZEND_ME(Qt_Widgets_QCheckBox, __construct, arginfo_class_Qt_Widgets_QCheckBox___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QCheckBox, checkState, arginfo_class_Qt_Widgets_QCheckBox_checkState, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QCheckBox, isTristate, arginfo_class_Qt_Widgets_QCheckBox_isTristate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QCheckBox, setCheckState, arginfo_class_Qt_Widgets_QCheckBox_setCheckState, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QCheckBox, setTristate, arginfo_class_Qt_Widgets_QCheckBox_setTristate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QCheckBox, onCheckStateChanged, arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -567,6 +610,16 @@ static zend_class_entry *register_class_Qt_Widgets_QBoxLayout(zend_class_entry *
 	zend_string *const_BottomToTop_name = zend_string_init_interned("BottomToTop", sizeof("BottomToTop") - 1, 1);
 	zend_declare_typed_class_constant(class_entry, const_BottomToTop_name, &const_BottomToTop_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
 	zend_string_release(const_BottomToTop_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QCheckBox(zend_class_entry *class_entry_Qt_Widgets_QAbstractButton)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QCheckBox", class_Qt_Widgets_QCheckBox_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
 
 	return class_entry;
 }
