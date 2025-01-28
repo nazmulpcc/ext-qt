@@ -269,6 +269,7 @@ inline void qt_connect_signal_to_callback(typename QtPrivate::FunctionPointer<Fu
 }
 
 // global variables
+extern zend_class_entry *ce_qobject;
 extern zend_class_entry *ce_widget_QWidget;
 extern zend_class_entry *ce_widget_QLayout;
 

@@ -5,6 +5,25 @@
  * @undocumentable
  */
 
+namespace Qt\Core {
+    class QObject
+    {
+        public function __construct(?QObject $parent = null) {}
+        public function blockSignals(bool $block): void {}
+        public function dumpObjectInfo(): void {}
+        public function dumpObjectTree(): void {}
+        public function isQuickItemType(): bool {}
+        public function isWidgetType(): bool {}
+        public function isWindowType(): bool {}
+        public function killTimer(int $id): void {}
+        public function objectName(): string {}
+        public function setObjectName(string $name): void {}
+        public function setParent(QObject $parent): void {}
+        public function signalsBlocked(): bool {}
+        public function startTimer(int $interval): int {}
+    }
+}
+
 namespace Qt\Widgets {
     class QApplication
     {
@@ -34,7 +53,7 @@ namespace Qt\Widgets {
         public function __construct(?QWidget $parent = null) {}
     }
 
-    class QWidget
+    class QWidget extends \Qt\Core\QObject
     {
         public function __construct(?QWidget $parent = null, int $windowFlags = 0) {}
         public function setLayout(QLayout $layout): void {}
@@ -54,7 +73,7 @@ namespace Qt\Widgets {
         public function text(): string {}
     }
 
-    abstract class QLayout
+    abstract class QLayout extends \Qt\Core\QObject
     {
         public function addWidget(QWidget $widget): void {}
         public function removeWidget(QWidget $widget): void {}

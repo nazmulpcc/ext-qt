@@ -1,5 +1,46 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 48fc15f65e64d92ba2cba116fb0fcbfbddb417d1 */
+ * Stub hash: 28fe776351082c656c38e072744cdad4b922bc71 */
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_blockSignals, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, block, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_dumpObjectInfo, 0, 0, IS_VOID, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QObject_dumpObjectTree arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_isQuickItemType, 0, 0, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QObject_isWidgetType arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Core_QObject_isWindowType arginfo_class_Qt_Core_QObject_isQuickItemType
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_killTimer, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, id, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_objectName, 0, 0, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_setObjectName, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, name, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_setParent, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, parent, Qt\\Core\\QObject, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QObject_signalsBlocked arginfo_class_Qt_Core_QObject_isQuickItemType
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer, 0, 1, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, interval, IS_LONG, 0)
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 0)
 ZEND_END_ARG_INFO()
@@ -43,16 +84,15 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWind
 	ZEND_ARG_TYPE_INFO(0, title, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_show, 0, 0, IS_VOID, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QWidget_show arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QWidget_showFullScreen arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QWidget_showFullScreen arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QWidget_showMaximized arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QWidget_showMaximized arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QWidget_showMinimized arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QWidget_showMinimized arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QWidget_showNormal arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QWidget_showNormal arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
 #define arginfo_class_Qt_Widgets_QWidget___destruct arginfo_class_Qt_Widgets_QApplication___construct
 
@@ -66,8 +106,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLabel_setText,
 	ZEND_ARG_TYPE_INFO(0, text, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLabel_text, 0, 0, IS_STRING, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLabel_text arginfo_class_Qt_Core_QObject_objectName
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_addWidget, 0, 1, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, widget, Qt\\Widgets\\QWidget, 0)
@@ -88,15 +127,15 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
 #define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Widgets_QApplication_exec
 
-#define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_deselect arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_deselect arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_displayText arginfo_class_Qt_Widgets_QLabel_text
+#define arginfo_class_Qt_Widgets_QLineEdit_displayText arginfo_class_Qt_Core_QObject_objectName
 
 #define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Widgets_QApplication_exec
 
@@ -104,8 +143,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_end, 
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, mark, _IS_BOOL, 0, "false")
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText, 0, 0, _IS_BOOL, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText arginfo_class_Qt_Core_QObject_isQuickItemType
 
 #define arginfo_class_Qt_Widgets_QLineEdit_home arginfo_class_Qt_Widgets_QLineEdit_end
 
@@ -113,17 +151,17 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_inser
 	ZEND_ARG_TYPE_INFO(0, newText, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLineEdit_isClearButtonEnabled arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText
+#define arginfo_class_Qt_Widgets_QLineEdit_isClearButtonEnabled arginfo_class_Qt_Core_QObject_isQuickItemType
 
-#define arginfo_class_Qt_Widgets_QLineEdit_isModified arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText
+#define arginfo_class_Qt_Widgets_QLineEdit_isModified arginfo_class_Qt_Core_QObject_isQuickItemType
 
-#define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText
+#define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Core_QObject_isQuickItemType
 
 #define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Widgets_QApplication_exec
 
-#define arginfo_class_Qt_Widgets_QLineEdit_placeholderText arginfo_class_Qt_Widgets_QLabel_text
+#define arginfo_class_Qt_Widgets_QLineEdit_placeholderText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QLineEdit_selectedText arginfo_class_Qt_Widgets_QLabel_text
+#define arginfo_class_Qt_Widgets_QLineEdit_selectedText arginfo_class_Qt_Core_QObject_objectName
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setClearButtonEnabled, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, enable, _IS_BOOL, 0)
@@ -156,7 +194,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_setText arginfo_class_Qt_Widgets_QLabel_setText
 
-#define arginfo_class_Qt_Widgets_QLineEdit_text arginfo_class_Qt_Widgets_QLabel_text
+#define arginfo_class_Qt_Widgets_QLineEdit_text arginfo_class_Qt_Core_QObject_objectName
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
@@ -166,19 +204,19 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
 
-#define arginfo_class_Qt_Widgets_QLineEdit_clear arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_copy arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_copy arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_cut arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_cut arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_paste arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_paste arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_redo arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_redo arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_selectAll arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_selectAll arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_undo arginfo_class_Qt_Widgets_QWidget_show
+#define arginfo_class_Qt_Widgets_QLineEdit_undo arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
 #define arginfo_class_Qt_Widgets_QMainWindow___construct arginfo_class_Qt_Widgets_QWidget___construct
 
@@ -188,11 +226,24 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QPushButton_setText arginfo_class_Qt_Widgets_QLabel_setText
 
-#define arginfo_class_Qt_Widgets_QPushButton_text arginfo_class_Qt_Widgets_QLabel_text
+#define arginfo_class_Qt_Widgets_QPushButton_text arginfo_class_Qt_Core_QObject_objectName
 
 #define arginfo_class_Qt_Widgets_QPushButton_onClicked arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished
 
 
+ZEND_METHOD(Qt_Core_QObject, __construct);
+ZEND_METHOD(Qt_Core_QObject, blockSignals);
+ZEND_METHOD(Qt_Core_QObject, dumpObjectInfo);
+ZEND_METHOD(Qt_Core_QObject, dumpObjectTree);
+ZEND_METHOD(Qt_Core_QObject, isQuickItemType);
+ZEND_METHOD(Qt_Core_QObject, isWidgetType);
+ZEND_METHOD(Qt_Core_QObject, isWindowType);
+ZEND_METHOD(Qt_Core_QObject, killTimer);
+ZEND_METHOD(Qt_Core_QObject, objectName);
+ZEND_METHOD(Qt_Core_QObject, setObjectName);
+ZEND_METHOD(Qt_Core_QObject, setParent);
+ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
+ZEND_METHOD(Qt_Core_QObject, startTimer);
 ZEND_METHOD(Qt_Widgets_QApplication, __construct);
 ZEND_METHOD(Qt_Widgets_QApplication, exec);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, __construct);
@@ -260,6 +311,24 @@ ZEND_METHOD(Qt_Widgets_QPushButton, __construct);
 ZEND_METHOD(Qt_Widgets_QPushButton, setText);
 ZEND_METHOD(Qt_Widgets_QPushButton, text);
 ZEND_METHOD(Qt_Widgets_QPushButton, onClicked);
+
+
+static const zend_function_entry class_Qt_Core_QObject_methods[] = {
+	ZEND_ME(Qt_Core_QObject, __construct, arginfo_class_Qt_Core_QObject___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, blockSignals, arginfo_class_Qt_Core_QObject_blockSignals, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, dumpObjectInfo, arginfo_class_Qt_Core_QObject_dumpObjectInfo, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, dumpObjectTree, arginfo_class_Qt_Core_QObject_dumpObjectTree, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, isQuickItemType, arginfo_class_Qt_Core_QObject_isQuickItemType, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, isWidgetType, arginfo_class_Qt_Core_QObject_isWidgetType, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, isWindowType, arginfo_class_Qt_Core_QObject_isWindowType, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, killTimer, arginfo_class_Qt_Core_QObject_killTimer, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, objectName, arginfo_class_Qt_Core_QObject_objectName, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, setObjectName, arginfo_class_Qt_Core_QObject_setObjectName, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, setParent, arginfo_class_Qt_Core_QObject_setParent, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, signalsBlocked, arginfo_class_Qt_Core_QObject_signalsBlocked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, startTimer, arginfo_class_Qt_Core_QObject_startTimer, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
 
 
 static const zend_function_entry class_Qt_Widgets_QApplication_methods[] = {
@@ -378,6 +447,16 @@ static const zend_function_entry class_Qt_Widgets_QPushButton_methods[] = {
 	ZEND_FE_END
 };
 
+static zend_class_entry *register_class_Qt_Core_QObject(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QObject", class_Qt_Core_QObject_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
 static zend_class_entry *register_class_Qt_Widgets_QApplication(void)
 {
 	zend_class_entry ce, *class_entry;
@@ -442,12 +521,12 @@ static zend_class_entry *register_class_Qt_Widgets_QVBoxLayout(zend_class_entry 
 	return class_entry;
 }
 
-static zend_class_entry *register_class_Qt_Widgets_QWidget(void)
+static zend_class_entry *register_class_Qt_Widgets_QWidget(zend_class_entry *class_entry_Qt_Core_QObject)
 {
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QWidget", class_Qt_Widgets_QWidget_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
 
 	return class_entry;
 }
@@ -462,12 +541,12 @@ static zend_class_entry *register_class_Qt_Widgets_QLabel(zend_class_entry *clas
 	return class_entry;
 }
 
-static zend_class_entry *register_class_Qt_Widgets_QLayout(void)
+static zend_class_entry *register_class_Qt_Widgets_QLayout(zend_class_entry *class_entry_Qt_Core_QObject)
 {
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLayout", class_Qt_Widgets_QLayout_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
 	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	return class_entry;
