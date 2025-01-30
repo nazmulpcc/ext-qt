@@ -262,10 +262,8 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
    {                                                                                                                          \
       type *obj = new type(value);                                                                                            \
       qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
-      zend_object_std_init(&container->std, class_entry);                                                                     \
-      object_properties_init(&container->std, class_entry);                                                                   \
-      container->native = obj;                                                                                                \
-      ZVAL_OBJ(z, &container->std);                                                                                           \
+      object_init_ex(z, class_entry);                                                                                         \
+      QT_Object_P(z, type)->native = new type(value);                                                                         \
    }
 
 // Helper functions
