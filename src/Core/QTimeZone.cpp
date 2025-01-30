@@ -19,4 +19,4 @@ ZEND_METHOD(Qt_Core_QTimeZone, __construct)
     auto container = QT_Object_P(getThis(), QTimeZone);
     container->native = new QTimeZone(offsetSeconds);
 }
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTimeZone, QTimeZone, isValid);
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTimeZone, QTimeZone, isValid)

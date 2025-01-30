@@ -211,6 +211,57 @@ namespace Qt\Widgets {
     class QDateTimeEdit extends QAbstractSpinbox
     {
         public function __construct(\Qt\Core\QDate|\Qt\Core\QTime|\Qt\Core\QDateTime|null $dateTime = null, ?QWidget $parent = null) {}
+        public function calendar(): \Qt\Core\QCalendar {}
+        public function calendarPopup(): bool {}
+        public function clear(): void {}
+        public function clearMaximumDate(): void {}
+        public function clearMaximumDateTime(): void {}
+        public function clearMaximumTime(): void {}
+        public function clearMinimumDate(): void {}
+        public function clearMinimumDateTime(): void {}
+        public function clearMinimumTime(): void {}
+        public function currentSection(): int {}
+        public function currentSectionIndex(): int {}
+        public function date(): \Qt\Core\QDate {}
+        public function dateTime(): \Qt\Core\QDateTime {}
+        public function displayFormat(): string {}
+        public function maximumDate(): \Qt\Core\QDate {}
+        public function maximumDateTime(): \Qt\Core\QDateTime {}
+        public function maximumTime(): \Qt\Core\QTime {}
+        public function minimumDate(): \Qt\Core\QDate {}
+        public function minimumDateTime(): \Qt\Core\QDateTime {}
+        public function minimumTime(): \Qt\Core\QTime {}
+        public function sectionAt(int $index): int {}
+        public function sectionCount(): int {}
+        public function sectionText(int $section): string {}
+        public function setCalendar(\Qt\Core\QCalendar $calendar): void {}
+        public function setCalendarPopup(bool $enable): void {}
+        public function setCurrentSection(int $section): void {}
+        public function setCurrentSectionIndex(int $index): void {}
+        public function setDateRange(\Qt\Core\QDate $min, \Qt\Core\QDate $max): void {}
+        public function setDateTimeRange(\Qt\Core\QDateTime $min, \Qt\Core\QDateTime $max): void {}
+        public function setDisplayFormat(string $format): void {}
+        public function setMaximumDate(\Qt\Core\QDate $max): void {}
+        public function setMaximumDateTime(\Qt\Core\QDateTime $dt): void {}
+        public function setMaximumTime(\Qt\Core\QTime $max): void {}
+        public function setMinimumDate(\Qt\Core\QDate $min): void {}
+        public function setMinimumDateTime(\Qt\Core\QDateTime $dt): void {}
+        public function setMinimumTime(\Qt\Core\QTime $min): void {}
+        public function setSelectedSection(int $section): void {}
+        public function setTimeRange(\Qt\Core\QTime $min, \Qt\Core\QTime $max): void {}
+        public function setTimeZone(\Qt\Core\QTimeZone $timeZone): void {}
+        public function time(): \Qt\Core\QTime {}
+        public function timeZone(): \Qt\Core\QTimeZone {}
+
+        // Slots
+        public function setDate(\Qt\Core\QDate $date): void {}
+        public function setDateTime(\Qt\Core\QDateTime $dateTime): void {}
+        public function setTime(\Qt\Core\QTime $time): void {}
+
+        // Signals
+        public function onDateChanged(callable $callback): void {}
+        public function onDateTimeChanged(callable $callback): void {}
+        public function onTimeChanged(callable $callback): void {}
     }
 
     class QHBoxLayout extends QBoxLayout

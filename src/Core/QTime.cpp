@@ -27,9 +27,9 @@ ZEND_METHOD(Qt_Core_QTime, __construct)
     container->native = new QTime(h, m, s, ms);
 }
 
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, hour);
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, isNull);
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, isValid);
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, minute);
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, msec);
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, second);
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, hour)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, isNull)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, isValid)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, minute)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, msec)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QTime, QTime, second)

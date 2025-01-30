@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 621c73935be86ebe8e8ea3920913f58ed3d54d37 */
+ * Stub hash: 4ef649c30abba63e9a7c7791bebebb4d3ad9b92b */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -265,6 +265,144 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit___construct, 0, 0,
 	ZEND_ARG_OBJ_TYPE_MASK(0, dateTime, Qt\\Core\\QDate|Qt\\Core\\QTime|Qt\\Core\\QDateTime, MAY_BE_NULL, "null")
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
 ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_calendar, 0, 0, Qt\\Core\\QCalendar, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_calendarPopup arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDate arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDateTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDate arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDateTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSection arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSectionIndex arginfo_class_Qt_Core_QTime_hour
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_date, 0, 0, Qt\\Core\\QDate, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_dateTime, 0, 0, Qt\\Core\\QDateTime, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_displayFormat arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_maximumDate arginfo_class_Qt_Widgets_QDateTimeEdit_date
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_maximumDateTime arginfo_class_Qt_Widgets_QDateTimeEdit_dateTime
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_maximumTime, 0, 0, Qt\\Core\\QTime, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_minimumDate arginfo_class_Qt_Widgets_QDateTimeEdit_date
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_minimumDateTime arginfo_class_Qt_Widgets_QDateTimeEdit_dateTime
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_minimumTime arginfo_class_Qt_Widgets_QDateTimeEdit_maximumTime
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_sectionAt, 0, 1, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_sectionCount arginfo_class_Qt_Core_QTime_hour
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_sectionText, 0, 1, IS_STRING, 0)
+	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setCalendar, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, calendar, Qt\\Core\\QCalendar, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_setCalendarPopup arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSection, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSectionIndex, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setDateRange, 0, 2, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, min, Qt\\Core\\QDate, 0)
+	ZEND_ARG_OBJ_INFO(0, max, Qt\\Core\\QDate, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setDateTimeRange, 0, 2, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, min, Qt\\Core\\QDateTime, 0)
+	ZEND_ARG_OBJ_INFO(0, max, Qt\\Core\\QDateTime, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setDisplayFormat, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, format, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumDate, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, max, Qt\\Core\\QDate, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumDateTime, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, dt, Qt\\Core\\QDateTime, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumTime, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, max, Qt\\Core\\QTime, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setMinimumDate, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, min, Qt\\Core\\QDate, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_setMinimumDateTime arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumDateTime
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setMinimumTime, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, min, Qt\\Core\\QTime, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_setSelectedSection arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSection
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setTimeRange, 0, 2, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, min, Qt\\Core\\QTime, 0)
+	ZEND_ARG_OBJ_INFO(0, max, Qt\\Core\\QTime, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setTimeZone, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, timeZone, Qt\\Core\\QTimeZone, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_time arginfo_class_Qt_Widgets_QDateTimeEdit_maximumTime
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_timeZone, 0, 0, Qt\\Core\\QTimeZone, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setDate, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, date, Qt\\Core\\QDate, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setDateTime, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, dateTime, Qt\\Core\\QDateTime, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setTime, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, time, Qt\\Core\\QTime, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_onDateChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_onDateTimeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_onTimeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QHBoxLayout___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -570,6 +708,53 @@ ZEND_METHOD(Qt_Widgets_QCheckBox, setCheckState);
 ZEND_METHOD(Qt_Widgets_QCheckBox, setTristate);
 ZEND_METHOD(Qt_Widgets_QCheckBox, onCheckStateChanged);
 ZEND_METHOD(Qt_Widgets_QDateTimeEdit, __construct);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, calendar);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, calendarPopup);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clear);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clearMaximumDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clearMaximumDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clearMaximumTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clearMinimumDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clearMinimumDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, clearMinimumTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, currentSection);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, currentSectionIndex);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, date);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, dateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, displayFormat);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, maximumDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, maximumDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, maximumTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, minimumDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, minimumDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, minimumTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, sectionAt);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, sectionCount);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, sectionText);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setCalendar);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setCalendarPopup);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setCurrentSection);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setCurrentSectionIndex);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDateRange);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDateTimeRange);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDisplayFormat);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setMaximumDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setMaximumDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setMaximumTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setMinimumDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setMinimumDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setMinimumTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setSelectedSection);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setTimeRange);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setTimeZone);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, time);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, timeZone);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDate);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDateTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setTime);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onDateChanged);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onDateTimeChanged);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onTimeChanged);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QVBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, __construct);
@@ -815,6 +1000,53 @@ static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 
 static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QDateTimeEdit, __construct, arginfo_class_Qt_Widgets_QDateTimeEdit___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, calendar, arginfo_class_Qt_Widgets_QDateTimeEdit_calendar, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, calendarPopup, arginfo_class_Qt_Widgets_QDateTimeEdit_calendarPopup, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clear, arginfo_class_Qt_Widgets_QDateTimeEdit_clear, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clearMaximumDate, arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clearMaximumDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clearMaximumTime, arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clearMinimumDate, arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clearMinimumDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, clearMinimumTime, arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, currentSection, arginfo_class_Qt_Widgets_QDateTimeEdit_currentSection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, currentSectionIndex, arginfo_class_Qt_Widgets_QDateTimeEdit_currentSectionIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, date, arginfo_class_Qt_Widgets_QDateTimeEdit_date, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, dateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_dateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, displayFormat, arginfo_class_Qt_Widgets_QDateTimeEdit_displayFormat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, maximumDate, arginfo_class_Qt_Widgets_QDateTimeEdit_maximumDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, maximumDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_maximumDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, maximumTime, arginfo_class_Qt_Widgets_QDateTimeEdit_maximumTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, minimumDate, arginfo_class_Qt_Widgets_QDateTimeEdit_minimumDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, minimumDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_minimumDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, minimumTime, arginfo_class_Qt_Widgets_QDateTimeEdit_minimumTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, sectionAt, arginfo_class_Qt_Widgets_QDateTimeEdit_sectionAt, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, sectionCount, arginfo_class_Qt_Widgets_QDateTimeEdit_sectionCount, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, sectionText, arginfo_class_Qt_Widgets_QDateTimeEdit_sectionText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setCalendar, arginfo_class_Qt_Widgets_QDateTimeEdit_setCalendar, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setCalendarPopup, arginfo_class_Qt_Widgets_QDateTimeEdit_setCalendarPopup, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setCurrentSection, arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setCurrentSectionIndex, arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSectionIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setDateRange, arginfo_class_Qt_Widgets_QDateTimeEdit_setDateRange, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setDateTimeRange, arginfo_class_Qt_Widgets_QDateTimeEdit_setDateTimeRange, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setDisplayFormat, arginfo_class_Qt_Widgets_QDateTimeEdit_setDisplayFormat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setMaximumDate, arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setMaximumDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setMaximumTime, arginfo_class_Qt_Widgets_QDateTimeEdit_setMaximumTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setMinimumDate, arginfo_class_Qt_Widgets_QDateTimeEdit_setMinimumDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setMinimumDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_setMinimumDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setMinimumTime, arginfo_class_Qt_Widgets_QDateTimeEdit_setMinimumTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setSelectedSection, arginfo_class_Qt_Widgets_QDateTimeEdit_setSelectedSection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setTimeRange, arginfo_class_Qt_Widgets_QDateTimeEdit_setTimeRange, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setTimeZone, arginfo_class_Qt_Widgets_QDateTimeEdit_setTimeZone, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, time, arginfo_class_Qt_Widgets_QDateTimeEdit_time, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, timeZone, arginfo_class_Qt_Widgets_QDateTimeEdit_timeZone, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setDate, arginfo_class_Qt_Widgets_QDateTimeEdit_setDate, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setDateTime, arginfo_class_Qt_Widgets_QDateTimeEdit_setDateTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, setTime, arginfo_class_Qt_Widgets_QDateTimeEdit_setTime, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, onDateChanged, arginfo_class_Qt_Widgets_QDateTimeEdit_onDateChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, onDateTimeChanged, arginfo_class_Qt_Widgets_QDateTimeEdit_onDateTimeChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, onTimeChanged, arginfo_class_Qt_Widgets_QDateTimeEdit_onTimeChanged, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 

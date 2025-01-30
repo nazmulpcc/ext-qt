@@ -44,3 +44,109 @@ ZEND_METHOD(Qt_Widgets_QDateTimeEdit, __construct)
         RETURN_THROWS();
     }
 }
+
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, calendar)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, calendarPopup)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clear)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clearMaximumDate)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clearMaximumDateTime)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clearMaximumTime)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clearMinimumDate)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clearMinimumDateTime)
+QT_METHOD_FORWARD(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, clearMinimumTime)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, currentSection)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, currentSectionIndex)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, date)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, dateTime)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, displayFormat)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, maximumDate)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, maximumDateTime)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, maximumTime)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, minimumDate)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, minimumDateTime)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, minimumTime)
+
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, sectionAt)
+{
+    zend_long index;
+    ZEND_PARSE_PARAMETERS_START(1, 1)
+    Z_PARAM_LONG(index)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QDateTimeEdit);
+    RETURN_LONG(container->native->sectionAt(index));
+}
+
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, sectionCount)
+
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, sectionText)
+{
+    zend_long section;
+    ZEND_PARSE_PARAMETERS_START(1, 1)
+    Z_PARAM_LONG(section)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QDateTimeEdit);
+    RETURN_STRING(container->native->sectionText(static_cast<QDateTimeEdit::Section>(section)).toUtf8().data());
+}
+
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setCalendar, QCalendar, ce_qcalendar)
+QT_METHOD_FORWARD_BOOL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setCalendarPopup)
+QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setCurrentSection, QDateTimeEdit::Section)
+QT_METHOD_FORWARD_INT(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setCurrentSectionIndex)
+
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDateRange)
+{
+    zval *min, *max;
+    ZEND_PARSE_PARAMETERS_START(2, 2)
+    Z_PARAM_OBJECT_OF_CLASS(min, ce_qdate)
+    Z_PARAM_OBJECT_OF_CLASS(max, ce_qdate)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QDateTimeEdit);
+    container->native->setDateRange(*QT_Object_P(min, QDate)->native, *QT_Object_P(max, QDate)->native);
+}
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setDateTimeRange)
+{
+    zval *min, *max;
+    ZEND_PARSE_PARAMETERS_START(2, 2)
+    Z_PARAM_OBJECT_OF_CLASS(min, ce_qdatetime)
+    Z_PARAM_OBJECT_OF_CLASS(max, ce_qdatetime)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QDateTimeEdit);
+    container->native->setDateTimeRange(*QT_Object_P(min, QDateTime)->native, *QT_Object_P(max, QDateTime)->native);
+}
+
+QT_METHOD_FORWARD_STRING(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setDisplayFormat)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setMaximumDate, QDate, ce_qdate)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setMaximumDateTime, QDateTime, ce_qdatetime)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setMaximumTime, QTime, ce_qtime)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setMinimumDate, QDate, ce_qdate)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setMinimumDateTime, QDateTime, ce_qdatetime)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setMinimumTime, QTime, ce_qtime)
+QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setSelectedSection, QDateTimeEdit::Section)
+
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, setTimeRange)
+{
+    zval *min, *max;
+    ZEND_PARSE_PARAMETERS_START(2, 2)
+    Z_PARAM_OBJECT_OF_CLASS(min, ce_qtime)
+    Z_PARAM_OBJECT_OF_CLASS(max, ce_qtime)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QDateTimeEdit);
+    container->native->setTimeRange(*QT_Object_P(min, QTime)->native, *QT_Object_P(max, QTime)->native);
+}
+
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setTimeZone, QTimeZone, ce_qtimezone)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, time)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, timeZone)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setDate, QDate, ce_qdate)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setDateTime, QDateTime, ce_qdatetime)
+QT_METHOD_FORWARD_NATIVE(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, setTime, QTime, ce_qtime)
+
+// Signals
+QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, onDateChanged, dateChanged)
+QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, onDateTimeChanged, dateTimeChanged)
+QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QDateTimeEdit, QDateTimeEdit, onTimeChanged, timeChanged)

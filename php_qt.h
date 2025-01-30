@@ -119,10 +119,10 @@ static void qt_generic_free_handler(zend_object *object)
    zend_object_std_dtor(object);
 }
 
-// Helper function to convert C++ values to zval
 template <typename T>
 inline void qt_cpp_to_zval(zval *z, const T &value)
 {
+   php_printf("qt_cpp_to_zval not implemented for this type\n");
    ZVAL_NULL(z);
 }
 template <>
@@ -141,9 +141,9 @@ inline void qt_cpp_to_zval<QString>(zval *z, const QString &value)
    zend_string *ztext = zend_string_init(value.toUtf8().data(), value.size(), 0);
    ZVAL_STR(z, ztext);
 }
+
 template <typename Func1>
 struct SignalParameterTypes;
-
 // For Regular functions
 template <typename R, typename... Args>
 struct SignalParameterTypes<R(Args...)>
@@ -188,6 +188,17 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       auto ret = container->native->method_name();                         \
       qt_cpp_to_zval(&retval, ret);                                        \
       RETURN_ZVAL(&retval, 0, 1);                                          \
+   }
+
+#define QT_METHOD_FORWARD_NATIVE(classname, native_type, method_name, forward_type, ce) \
+   ZEND_METHOD(classname, method_name)                                                  \
+   {                                                                                    \
+      zval *zv;                                                                         \
+      ZEND_PARSE_PARAMETERS_START(1, 1)                                                 \
+      Z_PARAM_OBJECT_OF_CLASS(zv, ce)                                                   \
+      ZEND_PARSE_PARAMETERS_END();                                                      \
+      auto *container = QT_Object_P(ZEND_THIS, native_type);                            \
+      container->native->method_name(*QT_Object_P(zv, forward_type)->native);           \
    }
 
 #define QT_METHOD_FORWARD_STRING(classname, native_type, method_name) \
@@ -243,6 +254,18 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       ZEND_PARSE_PARAMETERS_END();                                                           \
       const auto *container = QT_Object_P(ZEND_THIS, native_type);                           \
       qt_connect_signal_to_callback(container->native, &native_type::signal_name, callback); \
+   }
+
+#define QT_REGISRER_NATIVE_TO_ZVAL(type, class_entry)                                                                         \
+   template <>                                                                                                                \
+   inline void qt_cpp_to_zval<type>(zval * z, const type &value)                                                              \
+   {                                                                                                                          \
+      type *obj = new type(value);                                                                                            \
+      qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
+      zend_object_std_init(&container->std, class_entry);                                                                     \
+      object_properties_init(&container->std, class_entry);                                                                   \
+      container->native = obj;                                                                                                \
+      ZVAL_OBJ(z, &container->std);                                                                                           \
    }
 
 // Helper functions
@@ -331,6 +354,12 @@ extern zend_class_entry *ce_qtime;
 extern zend_class_entry *ce_qtimezone;
 extern zend_class_entry *ce_widget_QWidget;
 extern zend_class_entry *ce_widget_QLayout;
+
+QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar);
+QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
+QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
+QT_REGISRER_NATIVE_TO_ZVAL(QTime, ce_qtime)
+QT_REGISRER_NATIVE_TO_ZVAL(QTimeZone, ce_qtimezone)
 
 #if defined(ZTS) && defined(COMPILE_DL_QT)
 ZEND_TSRMLS_CACHE_EXTERN()
