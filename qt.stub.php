@@ -57,6 +57,7 @@ namespace Qt\Core {
         public const int IslamicCivil = 11;
 
         public function __construct(int $system) {}
+        public function isValid(): bool {}
     }
 
     class QDate
@@ -67,6 +68,11 @@ namespace Qt\Core {
         public function isValid(): bool {}
         public function month(?QCalendar $calendar = null): int {}
         public function year(?QCalendar $calendar = null): int {}
+    }
+
+    class QDateTime
+    {
+        public function __construct(QDate $date, QTime $time, QTimeZone $timeZone) {}
     }
 
     class QObject
@@ -95,6 +101,12 @@ namespace Qt\Core {
         public function minute(): int {}
         public function msec(): int {}
         public function second(): int {}
+    }
+
+    class QTimeZone
+    {
+        public function __construct(int $offsetSeconds) {}
+        public function isValid(): bool {}
     }
 }
 

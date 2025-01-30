@@ -7,7 +7,7 @@ PHP_ARG_ENABLE([qt],
 
 AS_VAR_IF([PHP_QT], [no],, [
   PHP_REQUIRE_CXX()
-  PKG_CHECK_MODULES([QT], [Qt6Widgets >= 6])
+  PKG_CHECK_MODULES([QT], [Qt6Widgets >= 6.7])
   PHP_EVAL_INCLINE([$QT_CFLAGS])
   PHP_EVAL_LIBLINE([$QT_LIBS], [QT_SHARED_LIBADD])
 
@@ -32,8 +32,31 @@ AS_VAR_IF([PHP_QT], [no],, [
     [Define to 1 if the PHP extension 'qt' is available.])
 
   dnl Configure extension sources and compilation flags.
+
+  qt_source_files="qt.cpp \
+    src/Core/QCalendar.cpp \
+    src/Core/QDate.cpp \
+    src/Core/QDateTime.cpp \
+    src/Core/QObject.cpp \
+    src/Core/QTime.cpp \
+    src/Core/QTimeZone.cpp \
+    src/Widgets/QApplication.cpp \
+    src/Widgets/QAbstractButton.cpp \
+    src/Widgets/QAbstractSpinBox.cpp \
+    src/Widgets/QBoxLayout.cpp \
+    src/Widgets/QCheckbox.cpp \
+    src/Widgets/QDateTimeEdit.cpp \
+    src/Widgets/QWidget.cpp \
+    src/Widgets/QLabel.cpp \
+    src/Widgets/QLineEdit.cpp \
+    src/Widgets/QLayout.cpp \
+    src/Widgets/QMainWindow.cpp \
+    src/Widgets/QPushButton.cpp \
+    src/Widgets/QRadioButton.cpp \
+    src/Widgets/QSpinBox.cpp"
+
   PHP_NEW_EXTENSION([qt],
-    [src/Core/QObject.cpp src/Widgets/QApplication.cpp src/Widgets/QAbstractButton.cpp src/Widgets/QAbstractSpinBox.cpp src/Widgets/QBoxLayout.cpp src/Widgets/QCheckbox.cpp src/Widgets/QWidget.cpp src/Widgets/QLabel.cpp src/Widgets/QLineEdit.cpp src/Widgets/QLayout.cpp src/Widgets/QMainWindow.cpp src/Widgets/QPushButton.cpp src/Widgets/QRadioButton.cpp src/Widgets/QSpinBox.cpp qt.cpp],
+    $qt_source_files,
     [$ext_shared],,
     [-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -std=c++17])
 ])

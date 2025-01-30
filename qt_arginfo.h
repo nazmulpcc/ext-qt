@@ -1,5 +1,36 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: cb194ab0041a253f802424e47197d5db7be3b727 */
+ * Stub hash: ee5f82240ded5daac45bb2223b0078467d3aab43 */
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
+	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QCalendar_isValid, 0, 0, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QDate___construct, 0, 0, 3)
+	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, m, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, d, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QDate_day, 0, 0, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, calendar, Qt\\Core\\QCalendar, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QDate_isNull arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Core_QDate_isValid arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Core_QDate_month arginfo_class_Qt_Core_QDate_day
+
+#define arginfo_class_Qt_Core_QDate_year arginfo_class_Qt_Core_QDate_day
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QDateTime___construct, 0, 0, 3)
+	ZEND_ARG_OBJ_INFO(0, date, Qt\\Core\\QDate, 0)
+	ZEND_ARG_OBJ_INFO(0, time, Qt\\Core\\QTime, 0)
+	ZEND_ARG_OBJ_INFO(0, timeZone, Qt\\Core\\QTimeZone, 0)
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -14,12 +45,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Core_QObject_dumpObjectTree arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_isQuickItemType, 0, 0, _IS_BOOL, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Core_QObject_isQuickItemType arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Core_QObject_isWidgetType arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Core_QObject_isWidgetType arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Core_QObject_isWindowType arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Core_QObject_isWindowType arginfo_class_Qt_Core_QCalendar_isValid
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_killTimer, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, id, IS_LONG, 0)
@@ -36,7 +66,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_setParent,
 	ZEND_ARG_OBJ_INFO(0, parent, Qt\\Core\\QObject, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Core_QObject_signalsBlocked arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Core_QObject_signalsBlocked arginfo_class_Qt_Core_QCalendar_isValid
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer, 0, 2, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
@@ -44,19 +74,44 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, timerType, IS_LONG, 0, "1")
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTime___construct, 0, 0, 2)
+	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, m, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, s, IS_LONG, 0, "0")
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, ms, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QTime_hour, 0, 0, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QTime_isNull arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Core_QTime_isValid arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Core_QTime_minute arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Core_QTime_msec arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Core_QTime_second arginfo_class_Qt_Core_QTime_hour
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTimeZone___construct, 0, 0, 1)
+	ZEND_ARG_TYPE_INFO(0, offsetSeconds, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QTimeZone_isValid arginfo_class_Qt_Core_QCalendar_isValid
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QApplication_exec, 0, 0, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_isChecked arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractButton_isChecked arginfo_class_Qt_Core_QCalendar_isValid
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, enable, _IS_BOOL, 0)
@@ -96,25 +151,25 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasAcceptableInput arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasAcceptableInput arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasFrame arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasFrame arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_interpretText arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isAccelerated arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isAccelerated arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isGroupSeparatorShown arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isGroupSeparatorShown arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isReadOnly arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isReadOnly arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_keyboardTracking arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_keyboardTracking arginfo_class_Qt_Core_QCalendar_isValid
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, on, _IS_BOOL, 0)
@@ -158,7 +213,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_text arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_wrapping arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_wrapping arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_onEditingFinished arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
@@ -192,9 +247,9 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QCheckBox_isTristate arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QCheckBox_isTristate arginfo_class_Qt_Core_QCalendar_isValid
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox_setCheckState, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, state, IS_LONG, 0)
@@ -217,7 +272,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QWidget___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, windowFlags, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_isWindowModified arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QWidget_isWindowModified arginfo_class_Qt_Core_QCalendar_isValid
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setLayout, 0, 1, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, layout, Qt\\Widgets\\QLayout, 0)
@@ -263,7 +318,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_setSpac
 	ZEND_ARG_TYPE_INFO(0, spacing, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QTime_hour
 
 #define arginfo_class_Qt_Widgets_QLayout___destruct arginfo_class_Qt_Widgets_QApplication___construct
 
@@ -271,7 +326,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Core_QTime_hour
 
 #define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -279,13 +334,13 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_displayText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Core_QTime_hour
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_end, 0, 0, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, mark, _IS_BOOL, 0, "false")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QLineEdit_hasSelectedText arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QLineEdit_home arginfo_class_Qt_Widgets_QLineEdit_end
 
@@ -293,13 +348,13 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_inser
 	ZEND_ARG_TYPE_INFO(0, newText, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLineEdit_isClearButtonEnabled arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QLineEdit_isClearButtonEnabled arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QLineEdit_isModified arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QLineEdit_isModified arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Core_QObject_isQuickItemType
+#define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Core_QTime_hour
 
 #define arginfo_class_Qt_Widgets_QLineEdit_placeholderText arginfo_class_Qt_Core_QObject_objectName
 
@@ -364,11 +419,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSpinBox_cleanText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Core_QTime_hour
 
 #define arginfo_class_Qt_Widgets_QSpinBox_prefix arginfo_class_Qt_Core_QObject_objectName
 
@@ -405,13 +460,13 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setSuf
 	ZEND_ARG_TYPE_INFO(0, suffix, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Core_QTime_hour
 
-#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Core_QTime_hour
 
 #define arginfo_class_Qt_Widgets_QSpinBox_suffix arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Widgets_QApplication_exec
+#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Core_QTime_hour
 
 #define arginfo_class_Qt_Widgets_QSpinBox_setValue arginfo_class_Qt_Widgets_QSpinBox_setSingleStep
 
@@ -420,6 +475,15 @@ ZEND_END_ARG_INFO()
 #define arginfo_class_Qt_Widgets_QSpinBox_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 
+ZEND_METHOD(Qt_Core_QCalendar, __construct);
+ZEND_METHOD(Qt_Core_QCalendar, isValid);
+ZEND_METHOD(Qt_Core_QDate, __construct);
+ZEND_METHOD(Qt_Core_QDate, day);
+ZEND_METHOD(Qt_Core_QDate, isNull);
+ZEND_METHOD(Qt_Core_QDate, isValid);
+ZEND_METHOD(Qt_Core_QDate, month);
+ZEND_METHOD(Qt_Core_QDate, year);
+ZEND_METHOD(Qt_Core_QDateTime, __construct);
 ZEND_METHOD(Qt_Core_QObject, __construct);
 ZEND_METHOD(Qt_Core_QObject, blockSignals);
 ZEND_METHOD(Qt_Core_QObject, dumpObjectInfo);
@@ -433,6 +497,15 @@ ZEND_METHOD(Qt_Core_QObject, setObjectName);
 ZEND_METHOD(Qt_Core_QObject, setParent);
 ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
 ZEND_METHOD(Qt_Core_QObject, startTimer);
+ZEND_METHOD(Qt_Core_QTime, __construct);
+ZEND_METHOD(Qt_Core_QTime, hour);
+ZEND_METHOD(Qt_Core_QTime, isNull);
+ZEND_METHOD(Qt_Core_QTime, isValid);
+ZEND_METHOD(Qt_Core_QTime, minute);
+ZEND_METHOD(Qt_Core_QTime, msec);
+ZEND_METHOD(Qt_Core_QTime, second);
+ZEND_METHOD(Qt_Core_QTimeZone, __construct);
+ZEND_METHOD(Qt_Core_QTimeZone, isValid);
 ZEND_METHOD(Qt_Widgets_QApplication, __construct);
 ZEND_METHOD(Qt_Widgets_QApplication, exec);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, autoRepeat);
@@ -590,6 +663,30 @@ static const zend_function_entry class_Qt_AlignmentFlag_methods[] = {
 };
 
 
+static const zend_function_entry class_Qt_Core_QCalendar_methods[] = {
+	ZEND_ME(Qt_Core_QCalendar, __construct, arginfo_class_Qt_Core_QCalendar___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QCalendar, isValid, arginfo_class_Qt_Core_QCalendar_isValid, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Core_QDate_methods[] = {
+	ZEND_ME(Qt_Core_QDate, __construct, arginfo_class_Qt_Core_QDate___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QDate, day, arginfo_class_Qt_Core_QDate_day, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QDate, isNull, arginfo_class_Qt_Core_QDate_isNull, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QDate, isValid, arginfo_class_Qt_Core_QDate_isValid, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QDate, month, arginfo_class_Qt_Core_QDate_month, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QDate, year, arginfo_class_Qt_Core_QDate_year, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Core_QDateTime_methods[] = {
+	ZEND_ME(Qt_Core_QDateTime, __construct, arginfo_class_Qt_Core_QDateTime___construct, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
 static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_ME(Qt_Core_QObject, __construct, arginfo_class_Qt_Core_QObject___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, blockSignals, arginfo_class_Qt_Core_QObject_blockSignals, ZEND_ACC_PUBLIC)
@@ -604,6 +701,25 @@ static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_ME(Qt_Core_QObject, setParent, arginfo_class_Qt_Core_QObject_setParent, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, signalsBlocked, arginfo_class_Qt_Core_QObject_signalsBlocked, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, startTimer, arginfo_class_Qt_Core_QObject_startTimer, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Core_QTime_methods[] = {
+	ZEND_ME(Qt_Core_QTime, __construct, arginfo_class_Qt_Core_QTime___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTime, hour, arginfo_class_Qt_Core_QTime_hour, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTime, isNull, arginfo_class_Qt_Core_QTime_isNull, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTime, isValid, arginfo_class_Qt_Core_QTime_isValid, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTime, minute, arginfo_class_Qt_Core_QTime_minute, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTime, msec, arginfo_class_Qt_Core_QTime_msec, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTime, second, arginfo_class_Qt_Core_QTime_second, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Core_QTimeZone_methods[] = {
+	ZEND_ME(Qt_Core_QTimeZone, __construct, arginfo_class_Qt_Core_QTimeZone___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QTimeZone, isValid, arginfo_class_Qt_Core_QTimeZone_isValid, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -687,6 +803,11 @@ static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QCheckBox, setCheckState, arginfo_class_Qt_Widgets_QCheckBox_setCheckState, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QCheckBox, setTristate, arginfo_class_Qt_Widgets_QCheckBox_setTristate, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QCheckBox, onCheckStateChanged, arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
 	ZEND_FE_END
 };
 
@@ -1026,11 +1147,91 @@ static zend_class_entry *register_class_Qt_AlignmentFlag(void)
 	return class_entry;
 }
 
+static zend_class_entry *register_class_Qt_Core_QCalendar(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QCalendar", class_Qt_Core_QCalendar_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	zval const_Gregorian_value;
+	ZVAL_LONG(&const_Gregorian_value, 0);
+	zend_string *const_Gregorian_name = zend_string_init_interned("Gregorian", sizeof("Gregorian") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Gregorian_name, &const_Gregorian_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Gregorian_name);
+
+	zval const_Julian_value;
+	ZVAL_LONG(&const_Julian_value, 8);
+	zend_string *const_Julian_name = zend_string_init_interned("Julian", sizeof("Julian") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Julian_name, &const_Julian_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Julian_name);
+
+	zval const_Milankovic_value;
+	ZVAL_LONG(&const_Milankovic_value, 9);
+	zend_string *const_Milankovic_name = zend_string_init_interned("Milankovic", sizeof("Milankovic") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Milankovic_name, &const_Milankovic_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Milankovic_name);
+
+	zval const_Jalali_value;
+	ZVAL_LONG(&const_Jalali_value, 10);
+	zend_string *const_Jalali_name = zend_string_init_interned("Jalali", sizeof("Jalali") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Jalali_name, &const_Jalali_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Jalali_name);
+
+	zval const_IslamicCivil_value;
+	ZVAL_LONG(&const_IslamicCivil_value, 11);
+	zend_string *const_IslamicCivil_name = zend_string_init_interned("IslamicCivil", sizeof("IslamicCivil") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_IslamicCivil_name, &const_IslamicCivil_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_IslamicCivil_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QDate(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDate", class_Qt_Core_QDate_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QDateTime(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDateTime", class_Qt_Core_QDateTime_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
 static zend_class_entry *register_class_Qt_Core_QObject(void)
 {
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QObject", class_Qt_Core_QObject_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QTime(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QTime", class_Qt_Core_QTime_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QTimeZone(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QTimeZone", class_Qt_Core_QTimeZone_methods);
 	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
@@ -1126,6 +1327,16 @@ static zend_class_entry *register_class_Qt_Widgets_QCheckBox(zend_class_entry *c
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QCheckBox", class_Qt_Widgets_QCheckBox_methods);
 	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QDateTimeEdit(zend_class_entry *class_entry_Qt_Widgets_QAbstractSpinbox)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QDateTimeEdit", class_Qt_Widgets_QDateTimeEdit_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSpinbox);
 
 	return class_entry;
 }

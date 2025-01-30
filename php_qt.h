@@ -22,13 +22,17 @@
 #include <QtCore/QMetaObject>
 #include <QtCore/QThread>
 #include <QtCore/QCoreApplication>
+#include <QtCore/QDateTime>
+#include <QtCore/QTimeZone>
+#include <QtCore/QCalendar>
+#include <QtCore/QDate>
 
 extern zend_module_entry qt_module_entry;
 #define phpext_qt_ptr &qt_module_entry
 
 #define PHP_QT_VERSION "0.1.0"
 
-static zend_object_handlers qt_object_handlers;
+static zend_object_handlers qt_object_handlers, qt_qcalendar_handler, qt_qdate_handler, qt_qtime_handler, qt_qdatetime_handler, qt_qtimezone_handler;
 
 template <typename T>
 struct qt_container_t
@@ -59,9 +63,59 @@ static zend_object *qt_obj_create_handler(zend_class_entry *ce)
    container->std.handlers = &qt_object_handlers;
    return &container->std;
 }
+static zend_object *qt_qcalendar_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QCalendar> *container = (qt_container_t<QCalendar> *)zend_object_alloc(sizeof(qt_container_t<QCalendar>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qcalendar_handler;
+   return &container->std;
+}
+static zend_object *qt_qdate_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QDate> *container = (qt_container_t<QDate> *)zend_object_alloc(sizeof(qt_container_t<QDate>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qdate_handler;
+   return &container->std;
+}
+static zend_object *qt_qtime_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QTime> *container = (qt_container_t<QTime> *)zend_object_alloc(sizeof(qt_container_t<QTime>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qtime_handler;
+   return &container->std;
+}
+static zend_object *qt_qdatetime_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QDateTime> *container = (qt_container_t<QDateTime> *)zend_object_alloc(sizeof(qt_container_t<QDateTime>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qdatetime_handler;
+   return &container->std;
+}
+static zend_object *qt_qtimezone_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QTimeZone> *container = (qt_container_t<QTimeZone> *)zend_object_alloc(sizeof(qt_container_t<QTimeZone>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qtimezone_handler;
+   return &container->std;
+}
+
 static void qt_obj_free_handler(zend_object *object)
 {
    auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
+   obj->native->deleteLater();
+   zend_object_std_dtor(object);
+}
+
+template <typename T>
+static void qt_generic_free_handler(zend_object *object)
+{
+   auto *obj = (qt_container_t<T> *)((char *)object - XtOffsetOf(qt_container_t<T>, std));
+   // @todo: delete native object
    zend_object_std_dtor(object);
 }
 
@@ -269,7 +323,12 @@ inline void qt_connect_signal_to_callback(typename QtPrivate::FunctionPointer<Fu
 }
 
 // global variables
+extern zend_class_entry *ce_qcalendar;
+extern zend_class_entry *ce_qdate;
+extern zend_class_entry *ce_qdatetime;
 extern zend_class_entry *ce_qobject;
+extern zend_class_entry *ce_qtime;
+extern zend_class_entry *ce_qtimezone;
 extern zend_class_entry *ce_widget_QWidget;
 extern zend_class_entry *ce_widget_QLayout;
 

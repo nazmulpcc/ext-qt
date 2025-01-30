@@ -28,7 +28,12 @@ extern "C"
 
 #include <QtWidgets/QWidget>
 
+zend_class_entry *ce_qcalendar = nullptr;
+zend_class_entry *ce_qdate = nullptr;
+zend_class_entry *ce_qdatetime = nullptr;
 zend_class_entry *ce_qobject = nullptr;
+zend_class_entry *ce_qtime = nullptr;
+zend_class_entry *ce_qtimezone = nullptr;
 zend_class_entry *ce_widget_QWidget = nullptr;
 zend_class_entry *ce_widget_QLayout = nullptr;
 
@@ -55,10 +60,42 @@ PHP_MINIT_FUNCTION(qt)
 
 	memcpy(&qt_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
 	qt_object_handlers.offset = XtOffsetOf(qt_container_t<QObject>, std);
+	qt_object_handlers.clone_obj = nullptr;
 	qt_object_handlers.free_obj = qt_obj_free_handler;
+
+	memcpy(&qt_qcalendar_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qcalendar_handler.offset = XtOffsetOf(qt_container_t<QCalendar>, std);
+	qt_qcalendar_handler.free_obj = qt_generic_free_handler<QCalendar>;
+
+	memcpy(&qt_qdate_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qdate_handler.offset = XtOffsetOf(qt_container_t<QDate>, std);
+	qt_qdate_handler.free_obj = qt_generic_free_handler<QDate>;
+
+	memcpy(&qt_qtime_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qtime_handler.offset = XtOffsetOf(qt_container_t<QTime>, std);
+	qt_qtime_handler.free_obj = qt_generic_free_handler<QTime>;
+
+	memcpy(&qt_qdatetime_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qdatetime_handler.offset = XtOffsetOf(qt_container_t<QDateTime>, std);
+	qt_qdatetime_handler.free_obj = qt_generic_free_handler<QDateTime>;
+
+	memcpy(&qt_qtimezone_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qtimezone_handler.offset = XtOffsetOf(qt_container_t<QTimeZone>, std);
+	qt_qtimezone_handler.free_obj = qt_generic_free_handler<QTimeZone>;
 
 	ce_qobject = register_class_Qt_Core_QObject();
 	ce_qobject->create_object = qt_obj_create_handler;
+
+	ce_qcalendar = register_class_Qt_Core_QCalendar();
+	ce_qcalendar->create_object = qt_qcalendar_create_handler;
+	ce_qdate = register_class_Qt_Core_QDate();
+	ce_qdate->create_object = qt_qdate_create_handler;
+	ce_qdatetime = register_class_Qt_Core_QDateTime();
+	ce_qdatetime->create_object = qt_qdatetime_create_handler;
+	ce_qtime = register_class_Qt_Core_QTime();
+	ce_qtime->create_object = qt_qtime_create_handler;
+	ce_qtimezone = register_class_Qt_Core_QTimeZone();
+	ce_qtimezone->create_object = qt_qtimezone_create_handler;
 
 	auto ce_widget_QApplication = register_class_Qt_Widgets_QApplication();
 	ce_widget_QApplication->create_object = qt_obj_create_handler;
@@ -85,6 +122,8 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qabstractspinbox->create_object = qt_obj_create_handler;
 	auto ce_qspinbox = register_class_Qt_Widgets_QSpinBox(ce_qabstractspinbox);
 	ce_qspinbox->create_object = qt_obj_create_handler;
+	auto ce_qdatetimeedit = register_class_Qt_Widgets_QDateTimeEdit(ce_qabstractspinbox);
+	ce_qdatetimeedit->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;
