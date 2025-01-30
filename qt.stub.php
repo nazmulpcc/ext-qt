@@ -210,7 +210,7 @@ namespace Qt\Widgets {
 
     class QDateTimeEdit extends QAbstractSpinbox
     {
-        //
+        public function __construct(\Qt\Core\QDate|\Qt\Core\QTime|\Qt\Core\QDateTime|null $dateTime = null, ?QWidget $parent = null) {}
     }
 
     class QHBoxLayout extends QBoxLayout

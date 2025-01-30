@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: ee5f82240ded5daac45bb2223b0078467d3aab43 */
+ * Stub hash: 621c73935be86ebe8e8ea3920913f58ed3d54d37 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -260,6 +260,11 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox_setTr
 ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit___construct, 0, 0, 0)
+	ZEND_ARG_OBJ_TYPE_MASK(0, dateTime, Qt\\Core\\QDate|Qt\\Core\\QTime|Qt\\Core\\QDateTime, MAY_BE_NULL, "null")
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QHBoxLayout___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -564,6 +569,7 @@ ZEND_METHOD(Qt_Widgets_QCheckBox, isTristate);
 ZEND_METHOD(Qt_Widgets_QCheckBox, setCheckState);
 ZEND_METHOD(Qt_Widgets_QCheckBox, setTristate);
 ZEND_METHOD(Qt_Widgets_QCheckBox, onCheckStateChanged);
+ZEND_METHOD(Qt_Widgets_QDateTimeEdit, __construct);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QVBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, __construct);
@@ -808,6 +814,7 @@ static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 
 
 static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
+	ZEND_ME(Qt_Widgets_QDateTimeEdit, __construct, arginfo_class_Qt_Widgets_QDateTimeEdit___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
