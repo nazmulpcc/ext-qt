@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 4073e2fc5a7c432c5a54598e82148f156fcb1ad4 */
+ * Stub hash: cb194ab0041a253f802424e47197d5db7be3b727 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -96,6 +96,80 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasAcceptableInput arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasFrame arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_interpretText arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isAccelerated arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isGroupSeparatorShown arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_isReadOnly arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_keyboardTracking arginfo_class_Qt_Core_QObject_isQuickItemType
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, on, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setAlignment, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, alignment, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setButtonSymbols, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, buttonSymbols, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setCorrectionMode, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, mode, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setFrame, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, frame, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setGroupSeparatorShown, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, show, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_setKeyboardTracking arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_setReadOnly, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, readOnly, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_setSpecialValueText arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_setWrapping arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_specialValueText arginfo_class_Qt_Core_QObject_objectName
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSpinBox_stepBy, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, steps, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_text arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_wrapping arginfo_class_Qt_Core_QObject_isQuickItemType
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_onEditingFinished arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_selectAll arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_stepDown arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_stepUp arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QBoxLayout___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -143,8 +217,14 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QWidget___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, windowFlags, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
+#define arginfo_class_Qt_Widgets_QWidget_isWindowModified arginfo_class_Qt_Core_QObject_isQuickItemType
+
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setLayout, 0, 1, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, layout, Qt\\Widgets\\QLayout, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowModified, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, modified, _IS_BOOL, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowTitle, 0, 1, IS_VOID, 0)
@@ -231,9 +311,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setCu
 	ZEND_ARG_TYPE_INFO(0, position, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setEchoMode, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, mode, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_setEchoMode arginfo_class_Qt_Widgets_QAbstractSpinBox_setCorrectionMode
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setMaxLength, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, length, IS_LONG, 0)
@@ -243,9 +321,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setPl
 	ZEND_ARG_TYPE_INFO(0, placeholderText, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setReadOnly, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, readOnly, _IS_BOOL, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_setReadOnly arginfo_class_Qt_Widgets_QAbstractSpinBox_setReadOnly
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setSelection, 0, 2, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, start, IS_LONG, 0)
@@ -282,6 +358,67 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QPushButton___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
+#define arginfo_class_Qt_Widgets_QRadioButton___construct arginfo_class_Qt_Widgets_QCheckBox___construct
+
+#define arginfo_class_Qt_Widgets_QSpinBox___construct arginfo_class_Qt_Widgets_QHBoxLayout___construct
+
+#define arginfo_class_Qt_Widgets_QSpinBox_cleanText arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QSpinBox_prefix arginfo_class_Qt_Core_QObject_objectName
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setDisplayIntegerBase, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, base, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setMaximum, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setMinimum, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setPrefix, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, prefix, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setRange, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setSingleStep, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, val, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setStepType, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, stepType, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setSuffix, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, suffix, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QSpinBox_suffix arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Widgets_QApplication_exec
+
+#define arginfo_class_Qt_Widgets_QSpinBox_setValue arginfo_class_Qt_Widgets_QSpinBox_setSingleStep
+
+#define arginfo_class_Qt_Widgets_QSpinBox_onTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QSpinBox_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
 
 ZEND_METHOD(Qt_Core_QObject, __construct);
 ZEND_METHOD(Qt_Core_QObject, blockSignals);
@@ -315,6 +452,35 @@ ZEND_METHOD(Qt_Widgets_QAbstractButton, onClicked);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, onPressed);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, onReleased);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, onToggled);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, alignment);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, buttonSymbols);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, correctionMode);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, hasAcceptableInput);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, hasFrame);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, interpretText);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, isAccelerated);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, isGroupSeparatorShown);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, isReadOnly);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, keyboardTracking);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setAccelerated);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setAlignment);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setButtonSymbols);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setCorrectionMode);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setFrame);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setGroupSeparatorShown);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setKeyboardTracking);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setReadOnly);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setSpecialValueText);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, setWrapping);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, specialValueText);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, stepBy);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, text);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, wrapping);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, onEditingFinished);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, clear);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, selectAll);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, stepDown);
+ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, stepUp);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, addStretch);
 ZEND_METHOD(Qt_Widgets_QBoxLayout, addSpacing);
@@ -328,7 +494,9 @@ ZEND_METHOD(Qt_Widgets_QCheckBox, onCheckStateChanged);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QVBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, __construct);
+ZEND_METHOD(Qt_Widgets_QWidget, isWindowModified);
 ZEND_METHOD(Qt_Widgets_QWidget, setLayout);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowModified);
 ZEND_METHOD(Qt_Widgets_QWidget, setWindowTitle);
 ZEND_METHOD(Qt_Widgets_QWidget, show);
 ZEND_METHOD(Qt_Widgets_QWidget, showFullScreen);
@@ -383,6 +551,43 @@ ZEND_METHOD(Qt_Widgets_QLineEdit, undo);
 ZEND_METHOD(Qt_Widgets_QMainWindow, __construct);
 ZEND_METHOD(Qt_Widgets_QMainWindow, setCentralWidget);
 ZEND_METHOD(Qt_Widgets_QPushButton, __construct);
+ZEND_METHOD(Qt_Widgets_QRadioButton, __construct);
+ZEND_METHOD(Qt_Widgets_QSpinBox, __construct);
+ZEND_METHOD(Qt_Widgets_QSpinBox, cleanText);
+ZEND_METHOD(Qt_Widgets_QSpinBox, displayIntegerBase);
+ZEND_METHOD(Qt_Widgets_QSpinBox, maximum);
+ZEND_METHOD(Qt_Widgets_QSpinBox, minimum);
+ZEND_METHOD(Qt_Widgets_QSpinBox, prefix);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setDisplayIntegerBase);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setMaximum);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setMinimum);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setPrefix);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setRange);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setSingleStep);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setStepType);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setSuffix);
+ZEND_METHOD(Qt_Widgets_QSpinBox, singleStep);
+ZEND_METHOD(Qt_Widgets_QSpinBox, stepType);
+ZEND_METHOD(Qt_Widgets_QSpinBox, suffix);
+ZEND_METHOD(Qt_Widgets_QSpinBox, value);
+ZEND_METHOD(Qt_Widgets_QSpinBox, setValue);
+ZEND_METHOD(Qt_Widgets_QSpinBox, onTextChanged);
+ZEND_METHOD(Qt_Widgets_QSpinBox, onValueChanged);
+
+
+static const zend_function_entry class_Qt_CheckState_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_WindowType_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_AlignmentFlag_methods[] = {
+	ZEND_FE_END
+};
 
 
 static const zend_function_entry class_Qt_Core_QObject_methods[] = {
@@ -432,6 +637,40 @@ static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 };
 
 
+static const zend_function_entry class_Qt_Widgets_QAbstractSpinBox_methods[] = {
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, alignment, arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, buttonSymbols, arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, correctionMode, arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, hasAcceptableInput, arginfo_class_Qt_Widgets_QAbstractSpinBox_hasAcceptableInput, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, hasFrame, arginfo_class_Qt_Widgets_QAbstractSpinBox_hasFrame, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, interpretText, arginfo_class_Qt_Widgets_QAbstractSpinBox_interpretText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, isAccelerated, arginfo_class_Qt_Widgets_QAbstractSpinBox_isAccelerated, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, isGroupSeparatorShown, arginfo_class_Qt_Widgets_QAbstractSpinBox_isGroupSeparatorShown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, isReadOnly, arginfo_class_Qt_Widgets_QAbstractSpinBox_isReadOnly, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, keyboardTracking, arginfo_class_Qt_Widgets_QAbstractSpinBox_keyboardTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setAccelerated, arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setAlignment, arginfo_class_Qt_Widgets_QAbstractSpinBox_setAlignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setButtonSymbols, arginfo_class_Qt_Widgets_QAbstractSpinBox_setButtonSymbols, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setCorrectionMode, arginfo_class_Qt_Widgets_QAbstractSpinBox_setCorrectionMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setFrame, arginfo_class_Qt_Widgets_QAbstractSpinBox_setFrame, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setGroupSeparatorShown, arginfo_class_Qt_Widgets_QAbstractSpinBox_setGroupSeparatorShown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setKeyboardTracking, arginfo_class_Qt_Widgets_QAbstractSpinBox_setKeyboardTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setReadOnly, arginfo_class_Qt_Widgets_QAbstractSpinBox_setReadOnly, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setSpecialValueText, arginfo_class_Qt_Widgets_QAbstractSpinBox_setSpecialValueText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, setWrapping, arginfo_class_Qt_Widgets_QAbstractSpinBox_setWrapping, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, specialValueText, arginfo_class_Qt_Widgets_QAbstractSpinBox_specialValueText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, stepBy, arginfo_class_Qt_Widgets_QAbstractSpinBox_stepBy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, text, arginfo_class_Qt_Widgets_QAbstractSpinBox_text, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, wrapping, arginfo_class_Qt_Widgets_QAbstractSpinBox_wrapping, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, onEditingFinished, arginfo_class_Qt_Widgets_QAbstractSpinBox_onEditingFinished, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, clear, arginfo_class_Qt_Widgets_QAbstractSpinBox_clear, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, selectAll, arginfo_class_Qt_Widgets_QAbstractSpinBox_selectAll, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, stepDown, arginfo_class_Qt_Widgets_QAbstractSpinBox_stepDown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSpinBox, stepUp, arginfo_class_Qt_Widgets_QAbstractSpinBox_stepUp, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
 static const zend_function_entry class_Qt_Widgets_QBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QBoxLayout, __construct, arginfo_class_Qt_Widgets_QBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QBoxLayout, addStretch, arginfo_class_Qt_Widgets_QBoxLayout_addStretch, ZEND_ACC_PUBLIC)
@@ -466,7 +705,9 @@ static const zend_function_entry class_Qt_Widgets_QVBoxLayout_methods[] = {
 
 static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, __construct, arginfo_class_Qt_Widgets_QWidget___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isWindowModified, arginfo_class_Qt_Widgets_QWidget_isWindowModified, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, setLayout, arginfo_class_Qt_Widgets_QWidget_setLayout, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowModified, arginfo_class_Qt_Widgets_QWidget_setWindowModified, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, setWindowTitle, arginfo_class_Qt_Widgets_QWidget_setWindowTitle, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, show, arginfo_class_Qt_Widgets_QWidget_show, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, showFullScreen, arginfo_class_Qt_Widgets_QWidget_showFullScreen, ZEND_ACC_PUBLIC)
@@ -549,6 +790,242 @@ static const zend_function_entry class_Qt_Widgets_QPushButton_methods[] = {
 	ZEND_FE_END
 };
 
+
+static const zend_function_entry class_Qt_Widgets_QRadioButton_methods[] = {
+	ZEND_ME(Qt_Widgets_QRadioButton, __construct, arginfo_class_Qt_Widgets_QRadioButton___construct, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Widgets_QSpinBox_methods[] = {
+	ZEND_ME(Qt_Widgets_QSpinBox, __construct, arginfo_class_Qt_Widgets_QSpinBox___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, cleanText, arginfo_class_Qt_Widgets_QSpinBox_cleanText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, displayIntegerBase, arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, maximum, arginfo_class_Qt_Widgets_QSpinBox_maximum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, minimum, arginfo_class_Qt_Widgets_QSpinBox_minimum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, prefix, arginfo_class_Qt_Widgets_QSpinBox_prefix, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setDisplayIntegerBase, arginfo_class_Qt_Widgets_QSpinBox_setDisplayIntegerBase, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setMaximum, arginfo_class_Qt_Widgets_QSpinBox_setMaximum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setMinimum, arginfo_class_Qt_Widgets_QSpinBox_setMinimum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setPrefix, arginfo_class_Qt_Widgets_QSpinBox_setPrefix, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setRange, arginfo_class_Qt_Widgets_QSpinBox_setRange, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setSingleStep, arginfo_class_Qt_Widgets_QSpinBox_setSingleStep, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setStepType, arginfo_class_Qt_Widgets_QSpinBox_setStepType, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setSuffix, arginfo_class_Qt_Widgets_QSpinBox_setSuffix, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, singleStep, arginfo_class_Qt_Widgets_QSpinBox_singleStep, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, stepType, arginfo_class_Qt_Widgets_QSpinBox_stepType, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, suffix, arginfo_class_Qt_Widgets_QSpinBox_suffix, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, value, arginfo_class_Qt_Widgets_QSpinBox_value, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, setValue, arginfo_class_Qt_Widgets_QSpinBox_setValue, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, onTextChanged, arginfo_class_Qt_Widgets_QSpinBox_onTextChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSpinBox, onValueChanged, arginfo_class_Qt_Widgets_QSpinBox_onValueChanged, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static zend_class_entry *register_class_Qt_CheckState(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "CheckState", class_Qt_CheckState_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	zval const_Unchecked_value;
+	ZVAL_LONG(&const_Unchecked_value, 0);
+	zend_string *const_Unchecked_name = zend_string_init_interned("Unchecked", sizeof("Unchecked") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Unchecked_name, &const_Unchecked_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Unchecked_name);
+
+	zval const_PartiallyChecked_value;
+	ZVAL_LONG(&const_PartiallyChecked_value, 1);
+	zend_string *const_PartiallyChecked_name = zend_string_init_interned("PartiallyChecked", sizeof("PartiallyChecked") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_PartiallyChecked_name, &const_PartiallyChecked_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_PartiallyChecked_name);
+
+	zval const_Checked_value;
+	ZVAL_LONG(&const_Checked_value, 2);
+	zend_string *const_Checked_name = zend_string_init_interned("Checked", sizeof("Checked") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Checked_name, &const_Checked_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Checked_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_WindowType(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "WindowType", class_Qt_WindowType_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	zval const_Widget_value;
+	ZVAL_LONG(&const_Widget_value, 0);
+	zend_string *const_Widget_name = zend_string_init_interned("Widget", sizeof("Widget") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Widget_name, &const_Widget_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Widget_name);
+
+	zval const_Window_value;
+	ZVAL_LONG(&const_Window_value, 1);
+	zend_string *const_Window_name = zend_string_init_interned("Window", sizeof("Window") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Window_name, &const_Window_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Window_name);
+
+	zval const_Dialog_value;
+	ZVAL_LONG(&const_Dialog_value, 2 | 1);
+	zend_string *const_Dialog_name = zend_string_init_interned("Dialog", sizeof("Dialog") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Dialog_name, &const_Dialog_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Dialog_name);
+
+	zval const_Sheet_value;
+	ZVAL_LONG(&const_Sheet_value, 4 | 1);
+	zend_string *const_Sheet_name = zend_string_init_interned("Sheet", sizeof("Sheet") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Sheet_name, &const_Sheet_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Sheet_name);
+
+	zval const_Drawer_value;
+	ZVAL_LONG(&const_Drawer_value, 4 | 1 | (2 | 1));
+	zend_string *const_Drawer_name = zend_string_init_interned("Drawer", sizeof("Drawer") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Drawer_name, &const_Drawer_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Drawer_name);
+
+	zval const_Popup_value;
+	ZVAL_LONG(&const_Popup_value, 8 | 1);
+	zend_string *const_Popup_name = zend_string_init_interned("Popup", sizeof("Popup") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Popup_name, &const_Popup_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Popup_name);
+
+	zval const_Tool_value;
+	ZVAL_LONG(&const_Tool_value, 8 | 1 | (2 | 1));
+	zend_string *const_Tool_name = zend_string_init_interned("Tool", sizeof("Tool") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Tool_name, &const_Tool_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Tool_name);
+
+	zval const_ToolTip_value;
+	ZVAL_LONG(&const_ToolTip_value, 8 | 1 | (4 | 1));
+	zend_string *const_ToolTip_name = zend_string_init_interned("ToolTip", sizeof("ToolTip") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_ToolTip_name, &const_ToolTip_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_ToolTip_name);
+
+	zval const_SplashScreen_value;
+	ZVAL_LONG(&const_SplashScreen_value, 8 | 1 | (4 | 1) | (2 | 1));
+	zend_string *const_SplashScreen_name = zend_string_init_interned("SplashScreen", sizeof("SplashScreen") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SplashScreen_name, &const_SplashScreen_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SplashScreen_name);
+
+	zval const_SubWindow_value;
+	ZVAL_LONG(&const_SubWindow_value, 128);
+	zend_string *const_SubWindow_name = zend_string_init_interned("SubWindow", sizeof("SubWindow") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SubWindow_name, &const_SubWindow_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SubWindow_name);
+
+	zval const_ForeignWindow_value;
+	ZVAL_LONG(&const_ForeignWindow_value, 20 | 1);
+	zend_string *const_ForeignWindow_name = zend_string_init_interned("ForeignWindow", sizeof("ForeignWindow") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_ForeignWindow_name, &const_ForeignWindow_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_ForeignWindow_name);
+
+	zval const_CoverWindow_value;
+	ZVAL_LONG(&const_CoverWindow_value, 40 | 1);
+	zend_string *const_CoverWindow_name = zend_string_init_interned("CoverWindow", sizeof("CoverWindow") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_CoverWindow_name, &const_CoverWindow_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_CoverWindow_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_AlignmentFlag(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "AlignmentFlag", class_Qt_AlignmentFlag_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	zval const_AlignLeft_value;
+	ZVAL_LONG(&const_AlignLeft_value, 0x1);
+	zend_string *const_AlignLeft_name = zend_string_init_interned("AlignLeft", sizeof("AlignLeft") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignLeft_name, &const_AlignLeft_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignLeft_name);
+
+	zval const_AlignRight_value;
+	ZVAL_LONG(&const_AlignRight_value, 0x2);
+	zend_string *const_AlignRight_name = zend_string_init_interned("AlignRight", sizeof("AlignRight") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignRight_name, &const_AlignRight_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignRight_name);
+
+	zval const_AlignHCenter_value;
+	ZVAL_LONG(&const_AlignHCenter_value, 0x4);
+	zend_string *const_AlignHCenter_name = zend_string_init_interned("AlignHCenter", sizeof("AlignHCenter") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignHCenter_name, &const_AlignHCenter_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignHCenter_name);
+
+	zval const_AlignJustify_value;
+	ZVAL_LONG(&const_AlignJustify_value, 0x8);
+	zend_string *const_AlignJustify_name = zend_string_init_interned("AlignJustify", sizeof("AlignJustify") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignJustify_name, &const_AlignJustify_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignJustify_name);
+
+	zval const_AlignTop_value;
+	ZVAL_LONG(&const_AlignTop_value, 0x20);
+	zend_string *const_AlignTop_name = zend_string_init_interned("AlignTop", sizeof("AlignTop") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignTop_name, &const_AlignTop_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignTop_name);
+
+	zval const_AlignBottom_value;
+	ZVAL_LONG(&const_AlignBottom_value, 0x40);
+	zend_string *const_AlignBottom_name = zend_string_init_interned("AlignBottom", sizeof("AlignBottom") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignBottom_name, &const_AlignBottom_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignBottom_name);
+
+	zval const_AlignVCenter_value;
+	ZVAL_LONG(&const_AlignVCenter_value, 0x80);
+	zend_string *const_AlignVCenter_name = zend_string_init_interned("AlignVCenter", sizeof("AlignVCenter") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignVCenter_name, &const_AlignVCenter_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignVCenter_name);
+
+	zval const_AlignBaseline_value;
+	ZVAL_LONG(&const_AlignBaseline_value, 0x100);
+	zend_string *const_AlignBaseline_name = zend_string_init_interned("AlignBaseline", sizeof("AlignBaseline") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignBaseline_name, &const_AlignBaseline_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignBaseline_name);
+
+	zval const_AlignCenter_value;
+	ZVAL_LONG(&const_AlignCenter_value, 0x80 | 0x4);
+	zend_string *const_AlignCenter_name = zend_string_init_interned("AlignCenter", sizeof("AlignCenter") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignCenter_name, &const_AlignCenter_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignCenter_name);
+
+	zval const_AlignAbsolute_value;
+	ZVAL_LONG(&const_AlignAbsolute_value, 0x10);
+	zend_string *const_AlignAbsolute_name = zend_string_init_interned("AlignAbsolute", sizeof("AlignAbsolute") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignAbsolute_name, &const_AlignAbsolute_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignAbsolute_name);
+
+	zval const_AlignLeading_value;
+	ZVAL_LONG(&const_AlignLeading_value, 0x1);
+	zend_string *const_AlignLeading_name = zend_string_init_interned("AlignLeading", sizeof("AlignLeading") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignLeading_name, &const_AlignLeading_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignLeading_name);
+
+	zval const_AlignTrailing_value;
+	ZVAL_LONG(&const_AlignTrailing_value, 0x2);
+	zend_string *const_AlignTrailing_name = zend_string_init_interned("AlignTrailing", sizeof("AlignTrailing") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignTrailing_name, &const_AlignTrailing_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignTrailing_name);
+
+	zval const_AlignHorizontal_Mask_value;
+	ZVAL_LONG(&const_AlignHorizontal_Mask_value, 0x1 | 0x2 | 0x4 | 0x8 | 0x10);
+	zend_string *const_AlignHorizontal_Mask_name = zend_string_init_interned("AlignHorizontal_Mask", sizeof("AlignHorizontal_Mask") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignHorizontal_Mask_name, &const_AlignHorizontal_Mask_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignHorizontal_Mask_name);
+
+	zval const_AlignVertical_Mask_value;
+	ZVAL_LONG(&const_AlignVertical_Mask_value, 0x20 | 0x40 | 0x80 | 0x100);
+	zend_string *const_AlignVertical_Mask_name = zend_string_init_interned("AlignVertical_Mask", sizeof("AlignVertical_Mask") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AlignVertical_Mask_name, &const_AlignVertical_Mask_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AlignVertical_Mask_name);
+
+	return class_entry;
+}
+
 static zend_class_entry *register_class_Qt_Core_QObject(void)
 {
 	zend_class_entry ce, *class_entry;
@@ -576,6 +1053,35 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractButton(zend_class_en
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractButton", class_Qt_Widgets_QAbstractButton_methods);
 	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
 	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QAbstractSpinBox(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractSpinBox", class_Qt_Widgets_QAbstractSpinBox_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
+
+	zval const_UpDownArrows_value;
+	ZVAL_LONG(&const_UpDownArrows_value, 0);
+	zend_string *const_UpDownArrows_name = zend_string_init_interned("UpDownArrows", sizeof("UpDownArrows") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_UpDownArrows_name, &const_UpDownArrows_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_UpDownArrows_name);
+
+	zval const_PlusMinus_value;
+	ZVAL_LONG(&const_PlusMinus_value, 1);
+	zend_string *const_PlusMinus_name = zend_string_init_interned("PlusMinus", sizeof("PlusMinus") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_PlusMinus_name, &const_PlusMinus_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_PlusMinus_name);
+
+	zval const_NoButtons_value;
+	ZVAL_LONG(&const_NoButtons_value, 2);
+	zend_string *const_NoButtons_name = zend_string_init_interned("NoButtons", sizeof("NoButtons") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_NoButtons_name, &const_NoButtons_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_NoButtons_name);
 
 	return class_entry;
 }
@@ -725,6 +1231,26 @@ static zend_class_entry *register_class_Qt_Widgets_QPushButton(zend_class_entry 
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QPushButton", class_Qt_Widgets_QPushButton_methods);
 	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QRadioButton(zend_class_entry *class_entry_Qt_Widgets_QAbstractButton)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QRadioButton", class_Qt_Widgets_QRadioButton_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QSpinBox(zend_class_entry *class_entry_Qt_Widgets_QAbstractSpinBox)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSpinBox", class_Qt_Widgets_QSpinBox_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSpinBox);
 
 	return class_entry;
 }

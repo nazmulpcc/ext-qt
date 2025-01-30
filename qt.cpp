@@ -50,6 +50,9 @@ PHP_RINIT_FUNCTION(qt)
 
 PHP_MINIT_FUNCTION(qt)
 {
+	register_class_Qt_CheckState();
+	register_class_Qt_WindowType();
+
 	memcpy(&qt_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
 	qt_object_handlers.offset = XtOffsetOf(qt_container_t<QObject>, std);
 	qt_object_handlers.free_obj = qt_obj_free_handler;
@@ -75,6 +78,13 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qcheckbox->create_object = qt_obj_create_handler;
 	auto ce_qpushbutton = register_class_Qt_Widgets_QPushButton(ce_qabstractbutton);
 	ce_qpushbutton->create_object = qt_obj_create_handler;
+	auto ce_qradiobutton = register_class_Qt_Widgets_QRadioButton(ce_qabstractbutton);
+	ce_qradiobutton->create_object = qt_obj_create_handler;
+
+	auto ce_qabstractspinbox = register_class_Qt_Widgets_QAbstractSpinBox(ce_widget_QWidget);
+	ce_qabstractspinbox->create_object = qt_obj_create_handler;
+	auto ce_qspinbox = register_class_Qt_Widgets_QSpinBox(ce_qabstractspinbox);
+	ce_qspinbox->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;

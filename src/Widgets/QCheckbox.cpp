@@ -23,8 +23,24 @@ ZEND_METHOD(Qt_Widgets_QCheckBox, __construct)
     container->native = new QCheckBox(ZSTR_VAL(text), parent_zval ? QT_Object_P(parent_zval, QWidget)->native : nullptr);
 }
 
-QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QCheckBox, QCheckBox, checkState);
+ZEND_METHOD(Qt_Widgets_QCheckBox, checkState)
+{
+    ZEND_PARSE_PARAMETERS_NONE();
+    auto *container = QT_Object_P(ZEND_THIS, QCheckBox);
+    RETURN_LONG(container->native->checkState());
+}
+
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QCheckBox, QCheckBox, isTristate);
-QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QCheckBox, QCheckBox, setCheckState, Qt::CheckState);
+ZEND_METHOD(Qt_Widgets_QCheckBox, setCheckState)
+{
+    zend_long state;
+
+    ZEND_PARSE_PARAMETERS_START(1, 1)
+    Z_PARAM_LONG(state)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QCheckBox);
+    container->native->setCheckState(static_cast<Qt::CheckState>(state));
+}
 QT_METHOD_FORWARD_BOOL(Qt_Widgets_QCheckBox, QCheckBox, setTristate);
 QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QCheckBox, QCheckBox, onCheckStateChanged, checkStateChanged);

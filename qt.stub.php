@@ -5,6 +5,48 @@
  * @undocumentable
  */
 
+namespace Qt {
+    class CheckState
+    {
+        public const int Unchecked = 0;
+        public const int PartiallyChecked = 1;
+        public const int Checked = 2;
+    }
+    class WindowType
+    {
+        public const int Widget = 0;
+        public const int Window = 1;
+        public const int Dialog = 2 | WindowType::Window;
+        public const int Sheet = 4 | WindowType::Window;
+        public const int Drawer = WindowType::Sheet | WindowType::Dialog;
+        public const int Popup = 8 | WindowType::Window;
+        public const int Tool = WindowType::Popup | WindowType::Dialog;
+        public const int ToolTip = WindowType::Popup | WindowType::Sheet;
+        public const int SplashScreen = WindowType::ToolTip | WindowType::Dialog;
+        public const int SubWindow = 128;
+        public const int ForeignWindow = 20 | WindowType::Window;
+        public const int CoverWindow = 40 | WindowType::Window;
+    }
+    class AlignmentFlag
+    {
+        public const int AlignLeft = 0x0001;
+        public const int AlignRight = 0x0002;
+        public const int AlignHCenter = 0x0004;
+        public const int AlignJustify = 0x0008;
+        public const int AlignTop = 0x0020;
+        public const int AlignBottom = 0x0040;
+        public const int AlignVCenter = 0x0080;
+        public const int AlignBaseline = 0x0100;
+        public const int AlignCenter = AlignmentFlag::AlignVCenter | AlignmentFlag::AlignHCenter;
+        public const int AlignAbsolute = 0x0010;
+        public const int AlignLeading = AlignmentFlag::AlignLeft;
+        public const int AlignTrailing = AlignmentFlag::AlignRight;
+        // masks
+        public const int AlignHorizontal_Mask = AlignmentFlag::AlignLeft | AlignmentFlag::AlignRight | AlignmentFlag::AlignHCenter | AlignmentFlag::AlignJustify | AlignmentFlag::AlignAbsolute;
+        public const int AlignVertical_Mask = AlignmentFlag::AlignTop | AlignmentFlag::AlignBottom | AlignmentFlag::AlignVCenter | AlignmentFlag::AlignBaseline;
+    }
+}
+
 namespace Qt\Core {
     class QObject
     {
@@ -56,6 +98,47 @@ namespace Qt\Widgets {
         public function onToggled(callable $callback): void {}
     }
 
+    abstract class QAbstractSpinBox extends QWidget
+    {
+        public const int UpDownArrows = 0;
+        public const int PlusMinus = 1;
+        public const int NoButtons = 2;
+
+        public function alignment(): int {}
+        public function buttonSymbols(): int {}
+        public function correctionMode(): int {}
+        public function hasAcceptableInput(): bool {}
+        public function hasFrame(): bool {}
+        public function interpretText(): void {}
+        public function isAccelerated(): bool {}
+        public function isGroupSeparatorShown(): bool {}
+        public function isReadOnly(): bool {}
+        public function keyboardTracking(): bool {}
+        public function setAccelerated(bool $on): void {}
+        public function setAlignment(int $alignment): void {}
+        public function setButtonSymbols(int $buttonSymbols): void {}
+        public function setCorrectionMode(int $mode): void {}
+        public function setFrame(bool $frame): void {}
+        public function setGroupSeparatorShown(bool $show): void {}
+        public function setKeyboardTracking(bool $on): void {}
+        public function setReadOnly(bool $readOnly): void {}
+        public function setSpecialValueText(string $text): void {}
+        public function setWrapping(bool $enable): void {}
+        public function specialValueText(): string {}
+        public function stepBy(int $steps): void {}
+        public function text(): string {}
+        public function wrapping(): bool {}
+
+        // Signals
+        public function onEditingFinished(callable $callback): void {}
+
+        // Slots
+        public function clear(): void {}
+        public function selectAll(): void {}
+        public function stepDown(): void {}
+        public function stepUp(): void {}
+    }
+
     class QBoxLayout extends QLayout
     {
         public const int LeftToRight = 0;
@@ -94,7 +177,9 @@ namespace Qt\Widgets {
     class QWidget extends \Qt\Core\QObject
     {
         public function __construct(?QWidget $parent = null, int $windowFlags = 0) {}
+        public function isWindowModified(): bool {}
         public function setLayout(QLayout $layout): void {}
+        public function setWindowModified(bool $modified): void {}
         public function setWindowTitle(string $title): void {}
         public function show(): void {}
         public function showFullScreen(): void {}
@@ -178,5 +263,39 @@ namespace Qt\Widgets {
     class QPushButton extends QAbstractButton
     {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
+    }
+
+    class QRadioButton extends QAbstractButton
+    {
+        public function __construct(?string $text = null, ?QWidget $parent = null) {}
+    }
+
+    class QSpinBox extends QAbstractSpinBox
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function cleanText(): string {}
+        public function displayIntegerBase(): int {}
+        public function maximum(): int {}
+        public function minimum(): int {}
+        public function prefix(): string {}
+        public function setDisplayIntegerBase(int $base): void {}
+        public function setMaximum(int $max): void {}
+        public function setMinimum(int $min): void {}
+        public function setPrefix(string $prefix): void {}
+        public function setRange(int $min, int $max): void {}
+        public function setSingleStep(int $val): void {}
+        public function setStepType(int $stepType): void {}
+        public function setSuffix(string $suffix): void {}
+        public function singleStep(): int {}
+        public function stepType(): int {}
+        public function suffix(): string {}
+        public function value(): int {}
+
+        // Slots
+        public function setValue(int $val): void {}
+
+        // Signals
+        public function onTextChanged(callable $callback): void {}
+        public function onValueChanged(callable $callback): void {}
     }
 }

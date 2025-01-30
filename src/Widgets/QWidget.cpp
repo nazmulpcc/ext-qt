@@ -34,6 +34,8 @@ ZEND_METHOD(Qt_Widgets_QWidget, __construct)
     }
 }
 
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QWidget, QWidget, isWindowModified)
+
 ZEND_METHOD(Qt_Widgets_QWidget, setLayout)
 {
     zval *layout_zval = nullptr;
@@ -46,6 +48,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, setLayout)
     container->native->setLayout(layout_container->native);
 }
 
+QT_METHOD_FORWARD_BOOL(Qt_Widgets_QWidget, QWidget, setWindowModified)
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setWindowTitle)
 
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, show)
