@@ -48,6 +48,27 @@ namespace Qt {
 }
 
 namespace Qt\Core {
+    class QCalendar
+    {
+        public const int Gregorian = 0;
+        public const int Julian = 8;
+        public const int Milankovic = 9;
+        public const int Jalali = 10;
+        public const int IslamicCivil = 11;
+
+        public function __construct(int $system) {}
+    }
+
+    class QDate
+    {
+        public function __construct(int $y, int $m, int $d) {}
+        public function day(?QCalendar $calendar = null): int {}
+        public function isNull(): bool {}
+        public function isValid(): bool {}
+        public function month(?QCalendar $calendar = null): int {}
+        public function year(?QCalendar $calendar = null): int {}
+    }
+
     class QObject
     {
         public function __construct(?QObject $parent = null) {}
@@ -63,6 +84,17 @@ namespace Qt\Core {
         public function setParent(QObject $parent): void {}
         public function signalsBlocked(): bool {}
         public function startTimer(callable $callback, int $interval, int $timerType = 1): int {}
+    }
+
+    class QTime
+    {
+        public function __construct(int $h, int $m, int $s = 0, int $ms = 0) {}
+        public function hour(): int {}
+        public function isNull(): bool {}
+        public function isValid(): bool {}
+        public function minute(): int {}
+        public function msec(): int {}
+        public function second(): int {}
     }
 }
 
@@ -162,6 +194,11 @@ namespace Qt\Widgets {
 
         // Signals
         public function onCheckStateChanged(callable $callback): void {}
+    }
+
+    class QDateTimeEdit extends QAbstractSpinbox
+    {
+        //
     }
 
     class QHBoxLayout extends QBoxLayout
