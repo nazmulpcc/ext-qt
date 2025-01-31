@@ -277,7 +277,95 @@ namespace Qt\Widgets {
     class QWidget extends \Qt\Core\QObject
     {
         public function __construct(?QWidget $parent = null, int $windowFlags = 0) {}
+        public function acceptDrops(): bool {}
+        public function accessibleDescription(): string {}
+        public function accessibleName(): string {}
+        public function actions(): array {}
+        public function activateWindow(): void {}
+        public function addAction(QAction $action): void {}
+        public function addActions(array $actions): void {}
+        public function adjustSize(): void {}
+        public function autoFillBackground(): bool {}
+        public function backgroundRole(): int {}
+        public function baseSize(): QSize {}
+        public function childAt(int $x, int $y): QWidget {}
+        public function childrenRect(): QRect {}
+        public function childrenRegion(): QRegion {}
+        public function clearFocus(): void {}
+        public function clearMask(): void {}
+        public function contentsMargins(): QMargins {}
+        public function contentsRect(): QRect {}
+        public function contextMenuPolicy(): int {}
+        public function ensurePolished(): void {}
+        public function focusPolicy(): int {}
+        public function frameGeometry(): QRect {}
+        public function frameSize(): QSize {}
+        public function geometry(): QRect {}
+        public function grabKeyboard(): void {}
+        public function grabMouse(): void {}
+        public function hasEditFocus(): bool {}
+        public function hasFocus(): bool {}
+        public function hasMouseTracking(): bool {}
+        public function hasTabletTracking(): bool {}
+        public function height(): int {}
+        public function inputMethodHints(): int {}
+        public function insertAction(QAction $before, QAction $action): void {}
+        public function insertActions(QAction $before, array $actions): void {}
+        public function isActiveWindow(): bool {}
+        public function isAncestorOf(QWidget $child): bool {}
+        public function isEnabled(): bool {}
+        public function isEnabledTo(QWidget $ancestor): bool {}
+        public function isFullScreen(): bool {}
+        public function isHidden(): bool {}
+        public function isMaximized(): bool {}
+        public function isMinimized(): bool {}
+        public function isModal(): bool {}
+        public function isVisible(): bool {}
+        public function isVisibleTo(QWidget $ancestor): bool {}
+        public function isWindow(): bool {}
         public function isWindowModified(): bool {}
+        public function layout(): QLayout {}
+        public function layoutDirection(): int {}
+        public function maximumHeight(): int {}
+        public function maximumSize(): QSize {}
+        public function maximumWidth(): int {}
+        public function minimumHeight(): int {}
+        public function minimumSize(): QSize {}
+        public function minimumWidth(): int {}
+        public function move(int $x, int $y): void {}
+        public function nativeParentWidget(): QWidget {}
+        public function nextInFocusChain(): QWidget {}
+        public function normalGeometry(): QRect {}
+        public function overrideWindowFlags(int $flags): void {}
+        public function parentWidget(): QWidget {}
+        public function pos(): QPoint {}
+        public function previousInFocusChain(): QWidget {}
+        public function rect(): QRect {}
+        public function releaseKeyboard(): void {}
+        public function releaseMouse(): void {}
+        public function releaseShortcut(int $id): void {}
+        public function removeAction(QAction $action): void {}
+        public function repaint(Qrect $rect): void {}
+        public function resize(int $w, int $h): void {}
+        public function scroll(int $dx, int $dy): void {}
+        public function setAcceptDrops(bool $on): void {}
+        public function setAccessibleDescription(string $description): void {}
+        public function setAccessibleName(string $name): void {}
+        public function setAttribute(int $attribute, bool $on = true): void {}
+        public function setAutoFillBackground(bool $enabled): void {}
+        public function setBackgroundRole(int $role): void {}
+        public function setBaseSize(int $basew, int $baseh): void {}
+        public function setContentsMargins(int $left, int $top, int $right, int $bottom): void {}
+        public function setContextMenuPolicy(int $policy): void {}
+        public function setEditFocus(bool enable): void {}
+        public function setFixedHeight(int $h): void {}
+        public function setFixedSize(int $w, int $h): void {}
+        public function setFixedWidth(int $w): void {}
+        public function setFocus(int $reason): void {}
+        public function setFocusPolicy(int $policy): void {}
+        public function setFont(QFont $font): void {}
+        public function setGeometry(int $x, int $y, int $w, int $h): void {}
+        public function setInputMethodHints(int $hints): void {}
         public function setLayout(QLayout $layout): void {}
         public function setWindowModified(bool $modified): void {}
         public function setWindowTitle(string $title): void {}
