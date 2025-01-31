@@ -48,9 +48,3 @@ ZEND_METHOD(Qt_Widgets_QLayout, spacing)
     auto *container = QT_Object_P(ZEND_THIS, QLayout);
     RETURN_LONG(container->native->spacing());
 }
-
-ZEND_METHOD(Qt_Widgets_QLayout, __destruct)
-{
-    auto *container = QT_Object_P(ZEND_THIS, QLayout);
-    container->native->deleteLater();
-}

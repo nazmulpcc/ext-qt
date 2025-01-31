@@ -357,7 +357,7 @@ namespace Qt\Widgets {
         public function setBaseSize(int $basew, int $baseh): void {}
         public function setContentsMargins(int $left, int $top, int $right, int $bottom): void {}
         public function setContextMenuPolicy(int $policy): void {}
-        public function setEditFocus(bool enable): void {}
+        public function setEditFocus(bool $enable): void {}
         public function setFixedHeight(int $h): void {}
         public function setFixedSize(int $w, int $h): void {}
         public function setFixedWidth(int $w): void {}
@@ -367,14 +367,70 @@ namespace Qt\Widgets {
         public function setGeometry(int $x, int $y, int $w, int $h): void {}
         public function setInputMethodHints(int $hints): void {}
         public function setLayout(QLayout $layout): void {}
+        public function setLayoutDirection(int $direction): void {}
+        public function setMaximumHeight(int $maxh): void {}
+        public function setMaximumSize(int $maxw, int $maxh): void {}
+        public function setMaximumWidth(int $maxw): void {}
+        public function setMinimumHeight(int $minh): void {}
+        public function setMinimumSize(int $minw, int $minh): void {}
+        public function setMinimumWidth(int $minw): void {}
+        public function setMouseTracking(bool $enable): void {}
+        // public function setParent(QWidget $parent): void {}
+        public function setShortcutAutoRepeat(int $id, bool $enable = true): void {}
+        public function setShortcutEnabled(int $id, bool $enable = true): void {}
+        public function setSizeIncrement(int $w, int $h): void {}
+        public function setSizePolicy(int $horizontal, ?int $vertical = null): void {}
+        public function setStatusTip(string $statusTip): void {}
+        public function setStyle(QStyle $style): void {}
+        public function setStyleSheet(string $styleSheet): void {}
+        public function setTabletTracking(bool $enable): void {}
+        public function setToolTip(string $toolTip): void {}
+        public function setToolTipDuration(int $msec): void {}
+        public function setUpdatesEnabled(bool $enable): void {}
+        public function setWhatsThis(string $whatsThis): void {}
+        public function setWindowFilePath(string $filePath): void {}
+        public function setWindowFlag(int $flag, bool $on = true): void {}
+        public function setWindowFlags(int $flags): void {}
+        public function setWindowModality(int $windowModality): void {}
+        public function setWindowOpacity(float $level): void {}
+        public function setWindowRole(string $role): void {}
+        public function setWindowState(int $state): void {}
         public function setWindowModified(bool $modified): void {}
         public function setWindowTitle(string $title): void {}
+        public function size(): QSize {}
+        public function sizeIncrement(): QSize {}
+        //public function sizePolicy(): QSizePolicy {}
+        public function stackUnder(QWidget $w): void {}
+        public function statusTip(): string {}
+        public function style(): QStyle {}
+        public function styleSheet(): string {}
+        public function toolTip(): string {}
+        public function toolTipDuration(): int {}
         public function show(): void {}
         public function showFullScreen(): void {}
         public function showMaximized(): void {}
         public function showMinimized(): void {}
         public function showNormal(): void {}
-        public function __destruct() {}
+        public function underMouse(): bool {}
+        public function upgrabGesture(int $gestureType): void {}
+        public function unsetCursor(): void {}
+        public function unsetLayoutDirection(): void {}
+        public function updatesEnabled(): bool {}
+        public function visibleRegion(): QRegion {}
+        public function whatsThis(): string {}
+        public function width(): int {}
+        public function window(): QWidget {}
+        public function windowFilePath(): string {}
+        public function windowFlags(): int {}
+        //public function windowHandle(): QWindow {}
+        public function windowModality(): int {}
+        public function windowOpacity(): float {}
+        public function windowRole(): string {}
+        public function windowState(): int {}
+        public function windowTitle(): string {}
+        public function windowType(): int {}
+        public function x(): int {}
+        public function y(): int {}
     }
 
     class QLabel extends QWidget
@@ -390,7 +446,6 @@ namespace Qt\Widgets {
         public function removeWidget(QWidget $widget): void {}
         public function setSpacing(int $spacing): void {}
         public function spacing(): int {}
-        public function __destruct() {}
     }
 
     class QLineEdit extends QWidget
