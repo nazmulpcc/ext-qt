@@ -92,6 +92,16 @@ namespace Qt\Core {
         public function startTimer(callable $callback, int $interval, int $timerType = 1): int {}
     }
 
+    class QRect
+    {
+        public function __construct(int $x, int $y, int $width, int $height) {}
+    }
+
+    class QSize
+    {
+        public function __construct(int $width, int $height) {}
+    }
+
     class QTime
     {
         public function __construct(int $h, int $m, int $s = 0, int $ms = 0) {}
@@ -280,37 +290,37 @@ namespace Qt\Widgets {
         public function acceptDrops(): bool {}
         public function accessibleDescription(): string {}
         public function accessibleName(): string {}
-        public function actions(): array {}
+        // public function actions(): array {}
         public function activateWindow(): void {}
-        public function addAction(QAction $action): void {}
-        public function addActions(array $actions): void {}
+        // public function addAction(QAction $action): void {}
+        // public function addActions(array $actions): void {}
         public function adjustSize(): void {}
         public function autoFillBackground(): bool {}
         public function backgroundRole(): int {}
-        public function baseSize(): QSize {}
+        public function baseSize(): Qt\Core\QSize {}
         public function childAt(int $x, int $y): QWidget {}
-        public function childrenRect(): QRect {}
-        public function childrenRegion(): QRegion {}
+        public function childrenRect(): \Qt\Core\QRect {}
+        // public function childrenRegion(): \Qt\Gui\QRegion {}
         public function clearFocus(): void {}
         public function clearMask(): void {}
-        public function contentsMargins(): QMargins {}
-        public function contentsRect(): QRect {}
+        public function contentsMargins(): array {}
+        public function contentsRect(): \Qt\Core\QRect {}
         public function contextMenuPolicy(): int {}
         public function ensurePolished(): void {}
         public function focusPolicy(): int {}
-        public function frameGeometry(): QRect {}
-        public function frameSize(): QSize {}
-        public function geometry(): QRect {}
+        public function frameGeometry(): \Qt\Core\QRect {}
+        public function frameSize(): Qt\Core\QSize {}
+        public function geometry(): \Qt\Core\QRect {}
         public function grabKeyboard(): void {}
         public function grabMouse(): void {}
-        public function hasEditFocus(): bool {}
+        // public function hasEditFocus(): bool {}
         public function hasFocus(): bool {}
         public function hasMouseTracking(): bool {}
         public function hasTabletTracking(): bool {}
         public function height(): int {}
         public function inputMethodHints(): int {}
-        public function insertAction(QAction $before, QAction $action): void {}
-        public function insertActions(QAction $before, array $actions): void {}
+        // public function insertAction(QAction $before, QAction $action): void {}
+        // public function insertActions(QAction $before, array $actions): void {}
         public function isActiveWindow(): bool {}
         public function isAncestorOf(QWidget $child): bool {}
         public function isEnabled(): bool {}
@@ -324,46 +334,46 @@ namespace Qt\Widgets {
         public function isVisibleTo(QWidget $ancestor): bool {}
         public function isWindow(): bool {}
         public function isWindowModified(): bool {}
-        public function layout(): QLayout {}
+        public function layout(): ?QLayout {}
         public function layoutDirection(): int {}
         public function maximumHeight(): int {}
-        public function maximumSize(): QSize {}
+        public function maximumSize(): Qt\Core\QSize {}
         public function maximumWidth(): int {}
         public function minimumHeight(): int {}
-        public function minimumSize(): QSize {}
+        public function minimumSize(): Qt\Core\QSize {}
         public function minimumWidth(): int {}
         public function move(int $x, int $y): void {}
         public function nativeParentWidget(): QWidget {}
         public function nextInFocusChain(): QWidget {}
-        public function normalGeometry(): QRect {}
+        public function normalGeometry(): \Qt\Core\QRect {}
         public function overrideWindowFlags(int $flags): void {}
         public function parentWidget(): QWidget {}
-        public function pos(): QPoint {}
+        public function pos(): array {}
         public function previousInFocusChain(): QWidget {}
-        public function rect(): QRect {}
+        public function rect(): \Qt\Core\QRect {}
         public function releaseKeyboard(): void {}
         public function releaseMouse(): void {}
         public function releaseShortcut(int $id): void {}
-        public function removeAction(QAction $action): void {}
-        public function repaint(Qrect $rect): void {}
+        // public function removeAction(QAction $action): void {}
+        public function repaint(?\Qt\Core\Qrect $rect = null): void {}
         public function resize(int $w, int $h): void {}
         public function scroll(int $dx, int $dy): void {}
         public function setAcceptDrops(bool $on): void {}
         public function setAccessibleDescription(string $description): void {}
         public function setAccessibleName(string $name): void {}
-        public function setAttribute(int $attribute, bool $on = true): void {}
+        // public function setAttribute(int $attribute, bool $on = true): void {}
         public function setAutoFillBackground(bool $enabled): void {}
         public function setBackgroundRole(int $role): void {}
         public function setBaseSize(int $basew, int $baseh): void {}
         public function setContentsMargins(int $left, int $top, int $right, int $bottom): void {}
         public function setContextMenuPolicy(int $policy): void {}
-        public function setEditFocus(bool $enable): void {}
+        // public function setEditFocus(bool $enable): void {}
         public function setFixedHeight(int $h): void {}
         public function setFixedSize(int $w, int $h): void {}
         public function setFixedWidth(int $w): void {}
-        public function setFocus(int $reason): void {}
+        public function setFocus(?int $reason = null): void {}
         public function setFocusPolicy(int $policy): void {}
-        public function setFont(QFont $font): void {}
+        // public function setFont(QFont $font): void {}
         public function setGeometry(int $x, int $y, int $w, int $h): void {}
         public function setInputMethodHints(int $hints): void {}
         public function setLayout(QLayout $layout): void {}
@@ -381,8 +391,7 @@ namespace Qt\Widgets {
         public function setSizeIncrement(int $w, int $h): void {}
         public function setSizePolicy(int $horizontal, ?int $vertical = null): void {}
         public function setStatusTip(string $statusTip): void {}
-        public function setStyle(QStyle $style): void {}
-        public function setStyleSheet(string $styleSheet): void {}
+        // public function setStyle(QStyle $style): void {}
         public function setTabletTracking(bool $enable): void {}
         public function setToolTip(string $toolTip): void {}
         public function setToolTipDuration(int $msec): void {}
@@ -395,28 +404,21 @@ namespace Qt\Widgets {
         public function setWindowOpacity(float $level): void {}
         public function setWindowRole(string $role): void {}
         public function setWindowState(int $state): void {}
-        public function setWindowModified(bool $modified): void {}
-        public function setWindowTitle(string $title): void {}
-        public function size(): QSize {}
-        public function sizeIncrement(): QSize {}
+        public function size(): Qt\Core\QSize {}
+        public function sizeIncrement(): Qt\Core\QSize {}
         //public function sizePolicy(): QSizePolicy {}
-        public function stackUnder(QWidget $w): void {}
+        // public function stackUnder(QWidget $w): void {}
         public function statusTip(): string {}
-        public function style(): QStyle {}
+        // public function style(): QStyle {}
         public function styleSheet(): string {}
         public function toolTip(): string {}
         public function toolTipDuration(): int {}
-        public function show(): void {}
-        public function showFullScreen(): void {}
-        public function showMaximized(): void {}
-        public function showMinimized(): void {}
-        public function showNormal(): void {}
         public function underMouse(): bool {}
-        public function upgrabGesture(int $gestureType): void {}
+        public function ungrabGesture(int $gestureType): void {}
         public function unsetCursor(): void {}
         public function unsetLayoutDirection(): void {}
         public function updatesEnabled(): bool {}
-        public function visibleRegion(): QRegion {}
+        // public function visibleRegion(): \Qt\Core\QRegion {}
         public function whatsThis(): string {}
         public function width(): int {}
         public function window(): QWidget {}
@@ -431,6 +433,29 @@ namespace Qt\Widgets {
         public function windowType(): int {}
         public function x(): int {}
         public function y(): int {}
+
+        // Slots
+        public function close(): void {}
+        public function hide(): void {}
+        public function lower(): void {}
+        public function raise(): void {}
+        public function setDisabled(bool $disable): void {}
+        public function setEnabled(bool $enable): void {}
+        public function setHidden(bool $hide): void {}
+        public function setStyleSheet(string $styleSheet): void {}
+        public function setWindowModified(bool $modified): void {}
+        public function setWindowTitle(string $title): void {}
+        public function show(): void {}
+        public function showFullScreen(): void {}
+        public function showMaximized(): void {}
+        public function showMinimized(): void {}
+        public function showNormal(): void {}
+        public function update(?\Qt\Core\QRect $region = null): void {}
+
+        // Signals
+        public function onCustomContextMenuRequested(callable $callback): void {}
+        // public function onWindowIconChanged(callable $callback): void {}
+        public function onWindowTitleChanged(callable $callback): void {}
     }
 
     class QLabel extends QWidget

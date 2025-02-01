@@ -26,6 +26,9 @@
 #include <QtCore/QTimeZone>
 #include <QtCore/QCalendar>
 #include <QtCore/QDate>
+#include <QtCore/QRect>
+#include <QtCore/QSize>
+#include <QtWidgets/QWidget>
 
 extern zend_module_entry qt_module_entry;
 #define phpext_qt_ptr &qt_module_entry
@@ -33,6 +36,7 @@ extern zend_module_entry qt_module_entry;
 #define PHP_QT_VERSION "0.1.0"
 
 static zend_object_handlers qt_object_handlers, qt_qcalendar_handler, qt_qdate_handler, qt_qtime_handler, qt_qdatetime_handler, qt_qtimezone_handler;
+static zend_object_handlers qt_qsize_handler, qt_qrect_handler;
 
 template <typename T>
 struct qt_container_t
@@ -79,6 +83,22 @@ static zend_object *qt_qdate_create_handler(zend_class_entry *ce)
    container->std.handlers = &qt_qdate_handler;
    return &container->std;
 }
+static zend_object *qt_qrect_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QRect> *container = (qt_container_t<QRect> *)zend_object_alloc(sizeof(qt_container_t<QRect>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qrect_handler;
+   return &container->std;
+}
+static zend_object *qt_qsize_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QSize> *container = (qt_container_t<QSize> *)zend_object_alloc(sizeof(qt_container_t<QSize>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qsize_handler;
+   return &container->std;
+}
 static zend_object *qt_qtime_create_handler(zend_class_entry *ce)
 {
    qt_container_t<QTime> *container = (qt_container_t<QTime> *)zend_object_alloc(sizeof(qt_container_t<QTime>), ce);
@@ -122,7 +142,6 @@ static void qt_generic_free_handler(zend_object *object)
 template <typename T>
 inline void qt_cpp_to_zval(zval *z, const T &value)
 {
-   php_printf("qt_cpp_to_zval not implemented for this type\n");
    ZVAL_NULL(z);
 }
 template <>
@@ -260,10 +279,9 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
    template <>                                                                                                                \
    inline void qt_cpp_to_zval<type>(zval * z, const type &value)                                                              \
    {                                                                                                                          \
-      type *obj = new type(value);                                                                                            \
       qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
       object_init_ex(z, class_entry);                                                                                         \
-      QT_Object_P(z, type)->native = new type(value);                                                                         \
+      QT_Object_P(z, type)->native = const_cast<type *>(&value);                                                              \
    }
 
 // Helper functions
@@ -348,16 +366,21 @@ extern zend_class_entry *ce_qcalendar;
 extern zend_class_entry *ce_qdate;
 extern zend_class_entry *ce_qdatetime;
 extern zend_class_entry *ce_qobject;
+extern zend_class_entry *ce_qrect;
+extern zend_class_entry *ce_qsize;
 extern zend_class_entry *ce_qtime;
 extern zend_class_entry *ce_qtimezone;
 extern zend_class_entry *ce_widget_QWidget;
 extern zend_class_entry *ce_widget_QLayout;
 
-QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar);
+QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar)
 QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
 QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
+QT_REGISRER_NATIVE_TO_ZVAL(QRect, ce_qrect)
+QT_REGISRER_NATIVE_TO_ZVAL(QSize, ce_qsize)
 QT_REGISRER_NATIVE_TO_ZVAL(QTime, ce_qtime)
 QT_REGISRER_NATIVE_TO_ZVAL(QTimeZone, ce_qtimezone)
+QT_REGISRER_NATIVE_TO_ZVAL(QWidget, ce_widget_QWidget)
 
 #if defined(ZTS) && defined(COMPILE_DL_QT)
 ZEND_TSRMLS_CACHE_EXTERN()

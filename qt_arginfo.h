@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 4ef649c30abba63e9a7c7791bebebb4d3ad9b92b */
+ * Stub hash: e9f09d5932056b0e0179a818a5aa92f75ad779c2 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -72,6 +72,18 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer
 	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
 	ZEND_ARG_TYPE_INFO(0, interval, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, timerType, IS_LONG, 0, "1")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QRect___construct, 0, 0, 4)
+	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, width, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, height, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QSize___construct, 0, 0, 2)
+	ZEND_ARG_TYPE_INFO(0, width, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, height, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTime___construct, 0, 0, 2)
@@ -415,10 +427,380 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QWidget___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, windowFlags, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
+#define arginfo_class_Qt_Widgets_QWidget_acceptDrops arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_accessibleDescription arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_accessibleName arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_activateWindow arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_adjustSize arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_autoFillBackground arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_backgroundRole arginfo_class_Qt_Core_QTime_hour
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_baseSize, 0, 0, Qt\\Widgets\\Qt\\Core\\QSize, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_childAt, 0, 2, Qt\\Widgets\\QWidget, 0)
+	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_childrenRect, 0, 0, Qt\\Core\\QRect, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_clearFocus arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_clearMask arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_contentsMargins, 0, 0, IS_ARRAY, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_contentsRect arginfo_class_Qt_Widgets_QWidget_childrenRect
+
+#define arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_ensurePolished arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_focusPolicy arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_frameGeometry arginfo_class_Qt_Widgets_QWidget_childrenRect
+
+#define arginfo_class_Qt_Widgets_QWidget_frameSize arginfo_class_Qt_Widgets_QWidget_baseSize
+
+#define arginfo_class_Qt_Widgets_QWidget_geometry arginfo_class_Qt_Widgets_QWidget_childrenRect
+
+#define arginfo_class_Qt_Widgets_QWidget_grabKeyboard arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_grabMouse arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_hasFocus arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_hasMouseTracking arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_hasTabletTracking arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_height arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_inputMethodHints arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_isActiveWindow arginfo_class_Qt_Core_QCalendar_isValid
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_isAncestorOf, 0, 1, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, child, Qt\\Widgets\\QWidget, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_isEnabled arginfo_class_Qt_Core_QCalendar_isValid
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_isEnabledTo, 0, 1, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, ancestor, Qt\\Widgets\\QWidget, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_isFullScreen arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_isHidden arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_isMaximized arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_isMinimized arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_isModal arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_isVisible arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_isVisibleTo arginfo_class_Qt_Widgets_QWidget_isEnabledTo
+
+#define arginfo_class_Qt_Widgets_QWidget_isWindow arginfo_class_Qt_Core_QCalendar_isValid
+
 #define arginfo_class_Qt_Widgets_QWidget_isWindowModified arginfo_class_Qt_Core_QCalendar_isValid
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_layout, 0, 0, Qt\\Widgets\\QLayout, 1)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_layoutDirection arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_maximumHeight arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_maximumSize arginfo_class_Qt_Widgets_QWidget_baseSize
+
+#define arginfo_class_Qt_Widgets_QWidget_maximumWidth arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_minimumHeight arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_minimumSize arginfo_class_Qt_Widgets_QWidget_baseSize
+
+#define arginfo_class_Qt_Widgets_QWidget_minimumWidth arginfo_class_Qt_Core_QTime_hour
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_move, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_nativeParentWidget, 0, 0, Qt\\Widgets\\QWidget, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_nextInFocusChain arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
+
+#define arginfo_class_Qt_Widgets_QWidget_normalGeometry arginfo_class_Qt_Widgets_QWidget_childrenRect
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_overrideWindowFlags, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, flags, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_parentWidget arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
+
+#define arginfo_class_Qt_Widgets_QWidget_pos arginfo_class_Qt_Widgets_QWidget_contentsMargins
+
+#define arginfo_class_Qt_Widgets_QWidget_previousInFocusChain arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
+
+#define arginfo_class_Qt_Widgets_QWidget_rect arginfo_class_Qt_Widgets_QWidget_childrenRect
+
+#define arginfo_class_Qt_Widgets_QWidget_releaseKeyboard arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_releaseMouse arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_releaseShortcut arginfo_class_Qt_Core_QObject_killTimer
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_repaint, 0, 0, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, rect, Qt\\Core\\Qrect, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_resize, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, w, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_scroll, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, dx, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, dy, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setAcceptDrops arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setAccessibleDescription, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, description, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setAccessibleName arginfo_class_Qt_Core_QObject_setObjectName
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setAutoFillBackground, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, enabled, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setBackgroundRole, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, role, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setBaseSize, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, basew, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, baseh, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setContentsMargins, 0, 4, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, left, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, top, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, right, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, bottom, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setContextMenuPolicy, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, policy, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setFixedHeight, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setFixedSize arginfo_class_Qt_Widgets_QWidget_resize
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setFixedWidth, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, w, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setFocus, 0, 0, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, reason, IS_LONG, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setFocusPolicy arginfo_class_Qt_Widgets_QWidget_setContextMenuPolicy
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setGeometry, 0, 4, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, w, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setInputMethodHints, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, hints, IS_LONG, 0)
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setLayout, 0, 1, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, layout, Qt\\Widgets\\QLayout, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setLayoutDirection arginfo_class_Qt_Widgets_QBoxLayout_setDirection
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setMaximumHeight, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, maxh, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setMaximumSize, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, maxw, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, maxh, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setMaximumWidth, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, maxw, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setMinimumHeight, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, minh, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setMinimumSize, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, minw, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, minh, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setMinimumWidth, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, minw, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setMouseTracking arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setShortcutAutoRepeat, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, id, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, enable, _IS_BOOL, 0, "true")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setShortcutEnabled arginfo_class_Qt_Widgets_QWidget_setShortcutAutoRepeat
+
+#define arginfo_class_Qt_Widgets_QWidget_setSizeIncrement arginfo_class_Qt_Widgets_QWidget_resize
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setSizePolicy, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, horizontal, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, vertical, IS_LONG, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setStatusTip, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, statusTip, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setTabletTracking arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setToolTip, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, toolTip, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setToolTipDuration, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, msec, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setUpdatesEnabled arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWhatsThis, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, whatsThis, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowFilePath, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, filePath, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowFlag, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, flag, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, on, _IS_BOOL, 0, "true")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setWindowFlags arginfo_class_Qt_Widgets_QWidget_overrideWindowFlags
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowModality, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, windowModality, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowOpacity, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, level, IS_DOUBLE, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowRole, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, role, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setWindowState arginfo_class_Qt_Widgets_QCheckBox_setCheckState
+
+#define arginfo_class_Qt_Widgets_QWidget_size arginfo_class_Qt_Widgets_QWidget_baseSize
+
+#define arginfo_class_Qt_Widgets_QWidget_sizeIncrement arginfo_class_Qt_Widgets_QWidget_baseSize
+
+#define arginfo_class_Qt_Widgets_QWidget_statusTip arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_styleSheet arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_toolTip arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_toolTipDuration arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_underMouse arginfo_class_Qt_Core_QCalendar_isValid
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_ungrabGesture, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, gestureType, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_unsetCursor arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_unsetLayoutDirection arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_updatesEnabled arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QWidget_whatsThis arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_width arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_window arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
+
+#define arginfo_class_Qt_Widgets_QWidget_windowFilePath arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_windowFlags arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_windowModality arginfo_class_Qt_Core_QTime_hour
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_windowOpacity, 0, 0, IS_DOUBLE, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_windowRole arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_windowState arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_windowTitle arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QWidget_windowType arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_x arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_y arginfo_class_Qt_Core_QTime_hour
+
+#define arginfo_class_Qt_Widgets_QWidget_close arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_hide arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_lower arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QWidget_raise arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setDisabled, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, disable, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_setEnabled arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setHidden, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, hide, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setStyleSheet, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, styleSheet, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowModified, 0, 1, IS_VOID, 0)
@@ -439,7 +821,13 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_showNormal arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QWidget___destruct arginfo_class_Qt_Widgets_QApplication___construct
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_update, 0, 0, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, region, Qt\\Core\\QRect, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QWidget_onCustomContextMenuRequested arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QWidget_onWindowTitleChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLabel___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
@@ -462,8 +850,6 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_setSpac
 ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QTime_hour
-
-#define arginfo_class_Qt_Widgets_QLayout___destruct arginfo_class_Qt_Widgets_QApplication___construct
 
 #define arginfo_class_Qt_Widgets_QLineEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
@@ -617,7 +1003,6 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSpinBox_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
-
 ZEND_METHOD(Qt_Core_QCalendar, __construct);
 ZEND_METHOD(Qt_Core_QCalendar, isValid);
 ZEND_METHOD(Qt_Core_QDate, __construct);
@@ -640,6 +1025,8 @@ ZEND_METHOD(Qt_Core_QObject, setObjectName);
 ZEND_METHOD(Qt_Core_QObject, setParent);
 ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
 ZEND_METHOD(Qt_Core_QObject, startTimer);
+ZEND_METHOD(Qt_Core_QRect, __construct);
+ZEND_METHOD(Qt_Core_QSize, __construct);
 ZEND_METHOD(Qt_Core_QTime, __construct);
 ZEND_METHOD(Qt_Core_QTime, hour);
 ZEND_METHOD(Qt_Core_QTime, isNull);
@@ -758,8 +1145,142 @@ ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onTimeChanged);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QVBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, __construct);
+ZEND_METHOD(Qt_Widgets_QWidget, acceptDrops);
+ZEND_METHOD(Qt_Widgets_QWidget, accessibleDescription);
+ZEND_METHOD(Qt_Widgets_QWidget, accessibleName);
+ZEND_METHOD(Qt_Widgets_QWidget, activateWindow);
+ZEND_METHOD(Qt_Widgets_QWidget, adjustSize);
+ZEND_METHOD(Qt_Widgets_QWidget, autoFillBackground);
+ZEND_METHOD(Qt_Widgets_QWidget, backgroundRole);
+ZEND_METHOD(Qt_Widgets_QWidget, baseSize);
+ZEND_METHOD(Qt_Widgets_QWidget, childAt);
+ZEND_METHOD(Qt_Widgets_QWidget, childrenRect);
+ZEND_METHOD(Qt_Widgets_QWidget, clearFocus);
+ZEND_METHOD(Qt_Widgets_QWidget, clearMask);
+ZEND_METHOD(Qt_Widgets_QWidget, contentsMargins);
+ZEND_METHOD(Qt_Widgets_QWidget, contentsRect);
+ZEND_METHOD(Qt_Widgets_QWidget, contextMenuPolicy);
+ZEND_METHOD(Qt_Widgets_QWidget, ensurePolished);
+ZEND_METHOD(Qt_Widgets_QWidget, focusPolicy);
+ZEND_METHOD(Qt_Widgets_QWidget, frameGeometry);
+ZEND_METHOD(Qt_Widgets_QWidget, frameSize);
+ZEND_METHOD(Qt_Widgets_QWidget, geometry);
+ZEND_METHOD(Qt_Widgets_QWidget, grabKeyboard);
+ZEND_METHOD(Qt_Widgets_QWidget, grabMouse);
+ZEND_METHOD(Qt_Widgets_QWidget, hasFocus);
+ZEND_METHOD(Qt_Widgets_QWidget, hasMouseTracking);
+ZEND_METHOD(Qt_Widgets_QWidget, hasTabletTracking);
+ZEND_METHOD(Qt_Widgets_QWidget, height);
+ZEND_METHOD(Qt_Widgets_QWidget, inputMethodHints);
+ZEND_METHOD(Qt_Widgets_QWidget, isActiveWindow);
+ZEND_METHOD(Qt_Widgets_QWidget, isAncestorOf);
+ZEND_METHOD(Qt_Widgets_QWidget, isEnabled);
+ZEND_METHOD(Qt_Widgets_QWidget, isEnabledTo);
+ZEND_METHOD(Qt_Widgets_QWidget, isFullScreen);
+ZEND_METHOD(Qt_Widgets_QWidget, isHidden);
+ZEND_METHOD(Qt_Widgets_QWidget, isMaximized);
+ZEND_METHOD(Qt_Widgets_QWidget, isMinimized);
+ZEND_METHOD(Qt_Widgets_QWidget, isModal);
+ZEND_METHOD(Qt_Widgets_QWidget, isVisible);
+ZEND_METHOD(Qt_Widgets_QWidget, isVisibleTo);
+ZEND_METHOD(Qt_Widgets_QWidget, isWindow);
 ZEND_METHOD(Qt_Widgets_QWidget, isWindowModified);
+ZEND_METHOD(Qt_Widgets_QWidget, layout);
+ZEND_METHOD(Qt_Widgets_QWidget, layoutDirection);
+ZEND_METHOD(Qt_Widgets_QWidget, maximumHeight);
+ZEND_METHOD(Qt_Widgets_QWidget, maximumSize);
+ZEND_METHOD(Qt_Widgets_QWidget, maximumWidth);
+ZEND_METHOD(Qt_Widgets_QWidget, minimumHeight);
+ZEND_METHOD(Qt_Widgets_QWidget, minimumSize);
+ZEND_METHOD(Qt_Widgets_QWidget, minimumWidth);
+ZEND_METHOD(Qt_Widgets_QWidget, move);
+ZEND_METHOD(Qt_Widgets_QWidget, nativeParentWidget);
+ZEND_METHOD(Qt_Widgets_QWidget, nextInFocusChain);
+ZEND_METHOD(Qt_Widgets_QWidget, normalGeometry);
+ZEND_METHOD(Qt_Widgets_QWidget, overrideWindowFlags);
+ZEND_METHOD(Qt_Widgets_QWidget, parentWidget);
+ZEND_METHOD(Qt_Widgets_QWidget, pos);
+ZEND_METHOD(Qt_Widgets_QWidget, previousInFocusChain);
+ZEND_METHOD(Qt_Widgets_QWidget, rect);
+ZEND_METHOD(Qt_Widgets_QWidget, releaseKeyboard);
+ZEND_METHOD(Qt_Widgets_QWidget, releaseMouse);
+ZEND_METHOD(Qt_Widgets_QWidget, releaseShortcut);
+ZEND_METHOD(Qt_Widgets_QWidget, repaint);
+ZEND_METHOD(Qt_Widgets_QWidget, resize);
+ZEND_METHOD(Qt_Widgets_QWidget, scroll);
+ZEND_METHOD(Qt_Widgets_QWidget, setAcceptDrops);
+ZEND_METHOD(Qt_Widgets_QWidget, setAccessibleDescription);
+ZEND_METHOD(Qt_Widgets_QWidget, setAccessibleName);
+ZEND_METHOD(Qt_Widgets_QWidget, setAutoFillBackground);
+ZEND_METHOD(Qt_Widgets_QWidget, setBackgroundRole);
+ZEND_METHOD(Qt_Widgets_QWidget, setBaseSize);
+ZEND_METHOD(Qt_Widgets_QWidget, setContentsMargins);
+ZEND_METHOD(Qt_Widgets_QWidget, setContextMenuPolicy);
+ZEND_METHOD(Qt_Widgets_QWidget, setFixedHeight);
+ZEND_METHOD(Qt_Widgets_QWidget, setFixedSize);
+ZEND_METHOD(Qt_Widgets_QWidget, setFixedWidth);
+ZEND_METHOD(Qt_Widgets_QWidget, setFocus);
+ZEND_METHOD(Qt_Widgets_QWidget, setFocusPolicy);
+ZEND_METHOD(Qt_Widgets_QWidget, setGeometry);
+ZEND_METHOD(Qt_Widgets_QWidget, setInputMethodHints);
 ZEND_METHOD(Qt_Widgets_QWidget, setLayout);
+ZEND_METHOD(Qt_Widgets_QWidget, setLayoutDirection);
+ZEND_METHOD(Qt_Widgets_QWidget, setMaximumHeight);
+ZEND_METHOD(Qt_Widgets_QWidget, setMaximumSize);
+ZEND_METHOD(Qt_Widgets_QWidget, setMaximumWidth);
+ZEND_METHOD(Qt_Widgets_QWidget, setMinimumHeight);
+ZEND_METHOD(Qt_Widgets_QWidget, setMinimumSize);
+ZEND_METHOD(Qt_Widgets_QWidget, setMinimumWidth);
+ZEND_METHOD(Qt_Widgets_QWidget, setMouseTracking);
+ZEND_METHOD(Qt_Widgets_QWidget, setShortcutAutoRepeat);
+ZEND_METHOD(Qt_Widgets_QWidget, setShortcutEnabled);
+ZEND_METHOD(Qt_Widgets_QWidget, setSizeIncrement);
+ZEND_METHOD(Qt_Widgets_QWidget, setSizePolicy);
+ZEND_METHOD(Qt_Widgets_QWidget, setStatusTip);
+ZEND_METHOD(Qt_Widgets_QWidget, setTabletTracking);
+ZEND_METHOD(Qt_Widgets_QWidget, setToolTip);
+ZEND_METHOD(Qt_Widgets_QWidget, setToolTipDuration);
+ZEND_METHOD(Qt_Widgets_QWidget, setUpdatesEnabled);
+ZEND_METHOD(Qt_Widgets_QWidget, setWhatsThis);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowFilePath);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowFlag);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowFlags);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowModality);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowOpacity);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowRole);
+ZEND_METHOD(Qt_Widgets_QWidget, setWindowState);
+ZEND_METHOD(Qt_Widgets_QWidget, size);
+ZEND_METHOD(Qt_Widgets_QWidget, sizeIncrement);
+ZEND_METHOD(Qt_Widgets_QWidget, statusTip);
+ZEND_METHOD(Qt_Widgets_QWidget, styleSheet);
+ZEND_METHOD(Qt_Widgets_QWidget, toolTip);
+ZEND_METHOD(Qt_Widgets_QWidget, toolTipDuration);
+ZEND_METHOD(Qt_Widgets_QWidget, underMouse);
+ZEND_METHOD(Qt_Widgets_QWidget, ungrabGesture);
+ZEND_METHOD(Qt_Widgets_QWidget, unsetCursor);
+ZEND_METHOD(Qt_Widgets_QWidget, unsetLayoutDirection);
+ZEND_METHOD(Qt_Widgets_QWidget, updatesEnabled);
+ZEND_METHOD(Qt_Widgets_QWidget, whatsThis);
+ZEND_METHOD(Qt_Widgets_QWidget, width);
+ZEND_METHOD(Qt_Widgets_QWidget, window);
+ZEND_METHOD(Qt_Widgets_QWidget, windowFilePath);
+ZEND_METHOD(Qt_Widgets_QWidget, windowFlags);
+ZEND_METHOD(Qt_Widgets_QWidget, windowModality);
+ZEND_METHOD(Qt_Widgets_QWidget, windowOpacity);
+ZEND_METHOD(Qt_Widgets_QWidget, windowRole);
+ZEND_METHOD(Qt_Widgets_QWidget, windowState);
+ZEND_METHOD(Qt_Widgets_QWidget, windowTitle);
+ZEND_METHOD(Qt_Widgets_QWidget, windowType);
+ZEND_METHOD(Qt_Widgets_QWidget, x);
+ZEND_METHOD(Qt_Widgets_QWidget, y);
+ZEND_METHOD(Qt_Widgets_QWidget, close);
+ZEND_METHOD(Qt_Widgets_QWidget, hide);
+ZEND_METHOD(Qt_Widgets_QWidget, lower);
+ZEND_METHOD(Qt_Widgets_QWidget, raise);
+ZEND_METHOD(Qt_Widgets_QWidget, setDisabled);
+ZEND_METHOD(Qt_Widgets_QWidget, setEnabled);
+ZEND_METHOD(Qt_Widgets_QWidget, setHidden);
+ZEND_METHOD(Qt_Widgets_QWidget, setStyleSheet);
 ZEND_METHOD(Qt_Widgets_QWidget, setWindowModified);
 ZEND_METHOD(Qt_Widgets_QWidget, setWindowTitle);
 ZEND_METHOD(Qt_Widgets_QWidget, show);
@@ -767,7 +1288,9 @@ ZEND_METHOD(Qt_Widgets_QWidget, showFullScreen);
 ZEND_METHOD(Qt_Widgets_QWidget, showMaximized);
 ZEND_METHOD(Qt_Widgets_QWidget, showMinimized);
 ZEND_METHOD(Qt_Widgets_QWidget, showNormal);
-ZEND_METHOD(Qt_Widgets_QWidget, __destruct);
+ZEND_METHOD(Qt_Widgets_QWidget, update);
+ZEND_METHOD(Qt_Widgets_QWidget, onCustomContextMenuRequested);
+ZEND_METHOD(Qt_Widgets_QWidget, onWindowTitleChanged);
 ZEND_METHOD(Qt_Widgets_QLabel, __construct);
 ZEND_METHOD(Qt_Widgets_QLabel, setText);
 ZEND_METHOD(Qt_Widgets_QLabel, text);
@@ -775,7 +1298,6 @@ ZEND_METHOD(Qt_Widgets_QLayout, addWidget);
 ZEND_METHOD(Qt_Widgets_QLayout, removeWidget);
 ZEND_METHOD(Qt_Widgets_QLayout, setSpacing);
 ZEND_METHOD(Qt_Widgets_QLayout, spacing);
-ZEND_METHOD(Qt_Widgets_QLayout, __destruct);
 ZEND_METHOD(Qt_Widgets_QLineEdit, __construct);
 ZEND_METHOD(Qt_Widgets_QLineEdit, backspace);
 ZEND_METHOD(Qt_Widgets_QLineEdit, cursorPosition);
@@ -838,28 +1360,11 @@ ZEND_METHOD(Qt_Widgets_QSpinBox, setValue);
 ZEND_METHOD(Qt_Widgets_QSpinBox, onTextChanged);
 ZEND_METHOD(Qt_Widgets_QSpinBox, onValueChanged);
 
-
-static const zend_function_entry class_Qt_CheckState_methods[] = {
-	ZEND_FE_END
-};
-
-
-static const zend_function_entry class_Qt_WindowType_methods[] = {
-	ZEND_FE_END
-};
-
-
-static const zend_function_entry class_Qt_AlignmentFlag_methods[] = {
-	ZEND_FE_END
-};
-
-
 static const zend_function_entry class_Qt_Core_QCalendar_methods[] = {
 	ZEND_ME(Qt_Core_QCalendar, __construct, arginfo_class_Qt_Core_QCalendar___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QCalendar, isValid, arginfo_class_Qt_Core_QCalendar_isValid, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Core_QDate_methods[] = {
 	ZEND_ME(Qt_Core_QDate, __construct, arginfo_class_Qt_Core_QDate___construct, ZEND_ACC_PUBLIC)
@@ -871,12 +1376,10 @@ static const zend_function_entry class_Qt_Core_QDate_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Core_QDateTime_methods[] = {
 	ZEND_ME(Qt_Core_QDateTime, __construct, arginfo_class_Qt_Core_QDateTime___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_ME(Qt_Core_QObject, __construct, arginfo_class_Qt_Core_QObject___construct, ZEND_ACC_PUBLIC)
@@ -895,6 +1398,15 @@ static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_FE_END
 };
 
+static const zend_function_entry class_Qt_Core_QRect_methods[] = {
+	ZEND_ME(Qt_Core_QRect, __construct, arginfo_class_Qt_Core_QRect___construct, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Core_QSize_methods[] = {
+	ZEND_ME(Qt_Core_QSize, __construct, arginfo_class_Qt_Core_QSize___construct, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
 
 static const zend_function_entry class_Qt_Core_QTime_methods[] = {
 	ZEND_ME(Qt_Core_QTime, __construct, arginfo_class_Qt_Core_QTime___construct, ZEND_ACC_PUBLIC)
@@ -907,20 +1419,17 @@ static const zend_function_entry class_Qt_Core_QTime_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Core_QTimeZone_methods[] = {
 	ZEND_ME(Qt_Core_QTimeZone, __construct, arginfo_class_Qt_Core_QTimeZone___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QTimeZone, isValid, arginfo_class_Qt_Core_QTimeZone_isValid, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QApplication_methods[] = {
 	ZEND_ME(Qt_Widgets_QApplication, __construct, arginfo_class_Qt_Widgets_QApplication___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QApplication, exec, arginfo_class_Qt_Widgets_QApplication_exec, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeat, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat, ZEND_ACC_PUBLIC)
@@ -942,7 +1451,6 @@ static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractButton, onToggled, arginfo_class_Qt_Widgets_QAbstractButton_onToggled, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QAbstractSpinBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractSpinBox, alignment, arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment, ZEND_ACC_PUBLIC)
@@ -977,7 +1485,6 @@ static const zend_function_entry class_Qt_Widgets_QAbstractSpinBox_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QBoxLayout, __construct, arginfo_class_Qt_Widgets_QBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QBoxLayout, addStretch, arginfo_class_Qt_Widgets_QBoxLayout_addStretch, ZEND_ACC_PUBLIC)
@@ -985,7 +1492,6 @@ static const zend_function_entry class_Qt_Widgets_QBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QBoxLayout, setDirection, arginfo_class_Qt_Widgets_QBoxLayout_setDirection, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QCheckBox, __construct, arginfo_class_Qt_Widgets_QCheckBox___construct, ZEND_ACC_PUBLIC)
@@ -996,7 +1502,6 @@ static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QCheckBox, onCheckStateChanged, arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QDateTimeEdit, __construct, arginfo_class_Qt_Widgets_QDateTimeEdit___construct, ZEND_ACC_PUBLIC)
@@ -1050,23 +1555,154 @@ static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QHBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QHBoxLayout, __construct, arginfo_class_Qt_Widgets_QHBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QVBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QVBoxLayout, __construct, arginfo_class_Qt_Widgets_QVBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, __construct, arginfo_class_Qt_Widgets_QWidget___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, acceptDrops, arginfo_class_Qt_Widgets_QWidget_acceptDrops, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, accessibleDescription, arginfo_class_Qt_Widgets_QWidget_accessibleDescription, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, accessibleName, arginfo_class_Qt_Widgets_QWidget_accessibleName, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, activateWindow, arginfo_class_Qt_Widgets_QWidget_activateWindow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, adjustSize, arginfo_class_Qt_Widgets_QWidget_adjustSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, autoFillBackground, arginfo_class_Qt_Widgets_QWidget_autoFillBackground, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, backgroundRole, arginfo_class_Qt_Widgets_QWidget_backgroundRole, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, baseSize, arginfo_class_Qt_Widgets_QWidget_baseSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, childAt, arginfo_class_Qt_Widgets_QWidget_childAt, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, childrenRect, arginfo_class_Qt_Widgets_QWidget_childrenRect, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, clearFocus, arginfo_class_Qt_Widgets_QWidget_clearFocus, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, clearMask, arginfo_class_Qt_Widgets_QWidget_clearMask, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, contentsMargins, arginfo_class_Qt_Widgets_QWidget_contentsMargins, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, contentsRect, arginfo_class_Qt_Widgets_QWidget_contentsRect, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, contextMenuPolicy, arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, ensurePolished, arginfo_class_Qt_Widgets_QWidget_ensurePolished, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, focusPolicy, arginfo_class_Qt_Widgets_QWidget_focusPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, frameGeometry, arginfo_class_Qt_Widgets_QWidget_frameGeometry, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, frameSize, arginfo_class_Qt_Widgets_QWidget_frameSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, geometry, arginfo_class_Qt_Widgets_QWidget_geometry, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, grabKeyboard, arginfo_class_Qt_Widgets_QWidget_grabKeyboard, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, grabMouse, arginfo_class_Qt_Widgets_QWidget_grabMouse, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, hasFocus, arginfo_class_Qt_Widgets_QWidget_hasFocus, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, hasMouseTracking, arginfo_class_Qt_Widgets_QWidget_hasMouseTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, hasTabletTracking, arginfo_class_Qt_Widgets_QWidget_hasTabletTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, height, arginfo_class_Qt_Widgets_QWidget_height, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, inputMethodHints, arginfo_class_Qt_Widgets_QWidget_inputMethodHints, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isActiveWindow, arginfo_class_Qt_Widgets_QWidget_isActiveWindow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isAncestorOf, arginfo_class_Qt_Widgets_QWidget_isAncestorOf, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isEnabled, arginfo_class_Qt_Widgets_QWidget_isEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isEnabledTo, arginfo_class_Qt_Widgets_QWidget_isEnabledTo, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isFullScreen, arginfo_class_Qt_Widgets_QWidget_isFullScreen, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isHidden, arginfo_class_Qt_Widgets_QWidget_isHidden, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isMaximized, arginfo_class_Qt_Widgets_QWidget_isMaximized, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isMinimized, arginfo_class_Qt_Widgets_QWidget_isMinimized, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isModal, arginfo_class_Qt_Widgets_QWidget_isModal, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isVisible, arginfo_class_Qt_Widgets_QWidget_isVisible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isVisibleTo, arginfo_class_Qt_Widgets_QWidget_isVisibleTo, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, isWindow, arginfo_class_Qt_Widgets_QWidget_isWindow, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, isWindowModified, arginfo_class_Qt_Widgets_QWidget_isWindowModified, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, layout, arginfo_class_Qt_Widgets_QWidget_layout, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, layoutDirection, arginfo_class_Qt_Widgets_QWidget_layoutDirection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, maximumHeight, arginfo_class_Qt_Widgets_QWidget_maximumHeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, maximumSize, arginfo_class_Qt_Widgets_QWidget_maximumSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, maximumWidth, arginfo_class_Qt_Widgets_QWidget_maximumWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, minimumHeight, arginfo_class_Qt_Widgets_QWidget_minimumHeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, minimumSize, arginfo_class_Qt_Widgets_QWidget_minimumSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, minimumWidth, arginfo_class_Qt_Widgets_QWidget_minimumWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, move, arginfo_class_Qt_Widgets_QWidget_move, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, nativeParentWidget, arginfo_class_Qt_Widgets_QWidget_nativeParentWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, nextInFocusChain, arginfo_class_Qt_Widgets_QWidget_nextInFocusChain, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, normalGeometry, arginfo_class_Qt_Widgets_QWidget_normalGeometry, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, overrideWindowFlags, arginfo_class_Qt_Widgets_QWidget_overrideWindowFlags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, parentWidget, arginfo_class_Qt_Widgets_QWidget_parentWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, pos, arginfo_class_Qt_Widgets_QWidget_pos, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, previousInFocusChain, arginfo_class_Qt_Widgets_QWidget_previousInFocusChain, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, rect, arginfo_class_Qt_Widgets_QWidget_rect, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, releaseKeyboard, arginfo_class_Qt_Widgets_QWidget_releaseKeyboard, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, releaseMouse, arginfo_class_Qt_Widgets_QWidget_releaseMouse, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, releaseShortcut, arginfo_class_Qt_Widgets_QWidget_releaseShortcut, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, repaint, arginfo_class_Qt_Widgets_QWidget_repaint, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, resize, arginfo_class_Qt_Widgets_QWidget_resize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, scroll, arginfo_class_Qt_Widgets_QWidget_scroll, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setAcceptDrops, arginfo_class_Qt_Widgets_QWidget_setAcceptDrops, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setAccessibleDescription, arginfo_class_Qt_Widgets_QWidget_setAccessibleDescription, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setAccessibleName, arginfo_class_Qt_Widgets_QWidget_setAccessibleName, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setAutoFillBackground, arginfo_class_Qt_Widgets_QWidget_setAutoFillBackground, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setBackgroundRole, arginfo_class_Qt_Widgets_QWidget_setBackgroundRole, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setBaseSize, arginfo_class_Qt_Widgets_QWidget_setBaseSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setContentsMargins, arginfo_class_Qt_Widgets_QWidget_setContentsMargins, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setContextMenuPolicy, arginfo_class_Qt_Widgets_QWidget_setContextMenuPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setFixedHeight, arginfo_class_Qt_Widgets_QWidget_setFixedHeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setFixedSize, arginfo_class_Qt_Widgets_QWidget_setFixedSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setFixedWidth, arginfo_class_Qt_Widgets_QWidget_setFixedWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setFocus, arginfo_class_Qt_Widgets_QWidget_setFocus, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setFocusPolicy, arginfo_class_Qt_Widgets_QWidget_setFocusPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setGeometry, arginfo_class_Qt_Widgets_QWidget_setGeometry, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setInputMethodHints, arginfo_class_Qt_Widgets_QWidget_setInputMethodHints, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, setLayout, arginfo_class_Qt_Widgets_QWidget_setLayout, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setLayoutDirection, arginfo_class_Qt_Widgets_QWidget_setLayoutDirection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMaximumHeight, arginfo_class_Qt_Widgets_QWidget_setMaximumHeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMaximumSize, arginfo_class_Qt_Widgets_QWidget_setMaximumSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMaximumWidth, arginfo_class_Qt_Widgets_QWidget_setMaximumWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMinimumHeight, arginfo_class_Qt_Widgets_QWidget_setMinimumHeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMinimumSize, arginfo_class_Qt_Widgets_QWidget_setMinimumSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMinimumWidth, arginfo_class_Qt_Widgets_QWidget_setMinimumWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setMouseTracking, arginfo_class_Qt_Widgets_QWidget_setMouseTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setShortcutAutoRepeat, arginfo_class_Qt_Widgets_QWidget_setShortcutAutoRepeat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setShortcutEnabled, arginfo_class_Qt_Widgets_QWidget_setShortcutEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setSizeIncrement, arginfo_class_Qt_Widgets_QWidget_setSizeIncrement, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setSizePolicy, arginfo_class_Qt_Widgets_QWidget_setSizePolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setStatusTip, arginfo_class_Qt_Widgets_QWidget_setStatusTip, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setTabletTracking, arginfo_class_Qt_Widgets_QWidget_setTabletTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setToolTip, arginfo_class_Qt_Widgets_QWidget_setToolTip, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setToolTipDuration, arginfo_class_Qt_Widgets_QWidget_setToolTipDuration, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setUpdatesEnabled, arginfo_class_Qt_Widgets_QWidget_setUpdatesEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWhatsThis, arginfo_class_Qt_Widgets_QWidget_setWhatsThis, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowFilePath, arginfo_class_Qt_Widgets_QWidget_setWindowFilePath, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowFlag, arginfo_class_Qt_Widgets_QWidget_setWindowFlag, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowFlags, arginfo_class_Qt_Widgets_QWidget_setWindowFlags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowModality, arginfo_class_Qt_Widgets_QWidget_setWindowModality, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowOpacity, arginfo_class_Qt_Widgets_QWidget_setWindowOpacity, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowRole, arginfo_class_Qt_Widgets_QWidget_setWindowRole, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setWindowState, arginfo_class_Qt_Widgets_QWidget_setWindowState, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, size, arginfo_class_Qt_Widgets_QWidget_size, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, sizeIncrement, arginfo_class_Qt_Widgets_QWidget_sizeIncrement, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, statusTip, arginfo_class_Qt_Widgets_QWidget_statusTip, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, styleSheet, arginfo_class_Qt_Widgets_QWidget_styleSheet, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, toolTip, arginfo_class_Qt_Widgets_QWidget_toolTip, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, toolTipDuration, arginfo_class_Qt_Widgets_QWidget_toolTipDuration, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, underMouse, arginfo_class_Qt_Widgets_QWidget_underMouse, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, ungrabGesture, arginfo_class_Qt_Widgets_QWidget_ungrabGesture, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, unsetCursor, arginfo_class_Qt_Widgets_QWidget_unsetCursor, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, unsetLayoutDirection, arginfo_class_Qt_Widgets_QWidget_unsetLayoutDirection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, updatesEnabled, arginfo_class_Qt_Widgets_QWidget_updatesEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, whatsThis, arginfo_class_Qt_Widgets_QWidget_whatsThis, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, width, arginfo_class_Qt_Widgets_QWidget_width, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, window, arginfo_class_Qt_Widgets_QWidget_window, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowFilePath, arginfo_class_Qt_Widgets_QWidget_windowFilePath, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowFlags, arginfo_class_Qt_Widgets_QWidget_windowFlags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowModality, arginfo_class_Qt_Widgets_QWidget_windowModality, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowOpacity, arginfo_class_Qt_Widgets_QWidget_windowOpacity, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowRole, arginfo_class_Qt_Widgets_QWidget_windowRole, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowState, arginfo_class_Qt_Widgets_QWidget_windowState, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowTitle, arginfo_class_Qt_Widgets_QWidget_windowTitle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, windowType, arginfo_class_Qt_Widgets_QWidget_windowType, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, x, arginfo_class_Qt_Widgets_QWidget_x, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, y, arginfo_class_Qt_Widgets_QWidget_y, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, close, arginfo_class_Qt_Widgets_QWidget_close, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, hide, arginfo_class_Qt_Widgets_QWidget_hide, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, lower, arginfo_class_Qt_Widgets_QWidget_lower, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, raise, arginfo_class_Qt_Widgets_QWidget_raise, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setDisabled, arginfo_class_Qt_Widgets_QWidget_setDisabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setEnabled, arginfo_class_Qt_Widgets_QWidget_setEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setHidden, arginfo_class_Qt_Widgets_QWidget_setHidden, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, setStyleSheet, arginfo_class_Qt_Widgets_QWidget_setStyleSheet, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, setWindowModified, arginfo_class_Qt_Widgets_QWidget_setWindowModified, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, setWindowTitle, arginfo_class_Qt_Widgets_QWidget_setWindowTitle, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, show, arginfo_class_Qt_Widgets_QWidget_show, ZEND_ACC_PUBLIC)
@@ -1074,10 +1710,11 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, showMaximized, arginfo_class_Qt_Widgets_QWidget_showMaximized, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, showMinimized, arginfo_class_Qt_Widgets_QWidget_showMinimized, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, showNormal, arginfo_class_Qt_Widgets_QWidget_showNormal, ZEND_ACC_PUBLIC)
-	ZEND_ME(Qt_Widgets_QWidget, __destruct, arginfo_class_Qt_Widgets_QWidget___destruct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, update, arginfo_class_Qt_Widgets_QWidget_update, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, onCustomContextMenuRequested, arginfo_class_Qt_Widgets_QWidget_onCustomContextMenuRequested, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, onWindowTitleChanged, arginfo_class_Qt_Widgets_QWidget_onWindowTitleChanged, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QLabel_methods[] = {
 	ZEND_ME(Qt_Widgets_QLabel, __construct, arginfo_class_Qt_Widgets_QLabel___construct, ZEND_ACC_PUBLIC)
@@ -1086,16 +1723,13 @@ static const zend_function_entry class_Qt_Widgets_QLabel_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QLayout, addWidget, arginfo_class_Qt_Widgets_QLayout_addWidget, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLayout, removeWidget, arginfo_class_Qt_Widgets_QLayout_removeWidget, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLayout, setSpacing, arginfo_class_Qt_Widgets_QLayout_setSpacing, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLayout, spacing, arginfo_class_Qt_Widgets_QLayout_spacing, ZEND_ACC_PUBLIC)
-	ZEND_ME(Qt_Widgets_QLayout, __destruct, arginfo_class_Qt_Widgets_QLayout___destruct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QLineEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QLineEdit, __construct, arginfo_class_Qt_Widgets_QLineEdit___construct, ZEND_ACC_PUBLIC)
@@ -1137,25 +1771,21 @@ static const zend_function_entry class_Qt_Widgets_QLineEdit_methods[] = {
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QMainWindow_methods[] = {
 	ZEND_ME(Qt_Widgets_QMainWindow, __construct, arginfo_class_Qt_Widgets_QMainWindow___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QMainWindow, setCentralWidget, arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QPushButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QPushButton, __construct, arginfo_class_Qt_Widgets_QPushButton___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
-
 static const zend_function_entry class_Qt_Widgets_QRadioButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QRadioButton, __construct, arginfo_class_Qt_Widgets_QRadioButton___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
-
 
 static const zend_function_entry class_Qt_Widgets_QSpinBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QSpinBox, __construct, arginfo_class_Qt_Widgets_QSpinBox___construct, ZEND_ACC_PUBLIC)
@@ -1186,8 +1816,8 @@ static zend_class_entry *register_class_Qt_CheckState(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "CheckState", class_Qt_CheckState_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "CheckState", NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	zval const_Unchecked_value;
 	ZVAL_LONG(&const_Unchecked_value, 0);
@@ -1214,8 +1844,8 @@ static zend_class_entry *register_class_Qt_WindowType(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "WindowType", class_Qt_WindowType_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "WindowType", NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	zval const_Widget_value;
 	ZVAL_LONG(&const_Widget_value, 0);
@@ -1296,8 +1926,8 @@ static zend_class_entry *register_class_Qt_AlignmentFlag(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "AlignmentFlag", class_Qt_AlignmentFlag_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "AlignmentFlag", NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	zval const_AlignLeft_value;
 	ZVAL_LONG(&const_AlignLeft_value, 0x1);
@@ -1391,7 +2021,7 @@ static zend_class_entry *register_class_Qt_Core_QCalendar(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QCalendar", class_Qt_Core_QCalendar_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	zval const_Gregorian_value;
 	ZVAL_LONG(&const_Gregorian_value, 0);
@@ -1431,7 +2061,7 @@ static zend_class_entry *register_class_Qt_Core_QDate(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDate", class_Qt_Core_QDate_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;
 }
@@ -1441,7 +2071,7 @@ static zend_class_entry *register_class_Qt_Core_QDateTime(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDateTime", class_Qt_Core_QDateTime_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;
 }
@@ -1451,7 +2081,27 @@ static zend_class_entry *register_class_Qt_Core_QObject(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QObject", class_Qt_Core_QObject_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QRect(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QRect", class_Qt_Core_QRect_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QSize(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QSize", class_Qt_Core_QSize_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;
 }
@@ -1461,7 +2111,7 @@ static zend_class_entry *register_class_Qt_Core_QTime(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QTime", class_Qt_Core_QTime_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;
 }
@@ -1471,7 +2121,7 @@ static zend_class_entry *register_class_Qt_Core_QTimeZone(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QTimeZone", class_Qt_Core_QTimeZone_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;
 }
@@ -1481,7 +2131,7 @@ static zend_class_entry *register_class_Qt_Widgets_QApplication(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QApplication", class_Qt_Widgets_QApplication_methods);
-	class_entry = zend_register_internal_class_ex(&ce, NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;
 }
@@ -1491,8 +2141,7 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractButton(zend_class_en
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractButton", class_Qt_Widgets_QAbstractButton_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
-	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
 
 	return class_entry;
 }
@@ -1502,8 +2151,7 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractSpinBox(zend_class_e
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractSpinBox", class_Qt_Widgets_QAbstractSpinBox_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
-	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
 
 	zval const_UpDownArrows_value;
 	ZVAL_LONG(&const_UpDownArrows_value, 0);
@@ -1531,7 +2179,7 @@ static zend_class_entry *register_class_Qt_Widgets_QBoxLayout(zend_class_entry *
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QBoxLayout", class_Qt_Widgets_QBoxLayout_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QLayout);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QLayout, 0);
 
 	zval const_LeftToRight_value;
 	ZVAL_LONG(&const_LeftToRight_value, 0);
@@ -1565,7 +2213,7 @@ static zend_class_entry *register_class_Qt_Widgets_QCheckBox(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QCheckBox", class_Qt_Widgets_QCheckBox_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
 
 	return class_entry;
 }
@@ -1575,7 +2223,7 @@ static zend_class_entry *register_class_Qt_Widgets_QDateTimeEdit(zend_class_entr
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QDateTimeEdit", class_Qt_Widgets_QDateTimeEdit_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSpinbox);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSpinbox, 0);
 
 	return class_entry;
 }
@@ -1585,7 +2233,7 @@ static zend_class_entry *register_class_Qt_Widgets_QHBoxLayout(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QHBoxLayout", class_Qt_Widgets_QHBoxLayout_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QBoxLayout);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QBoxLayout, 0);
 
 	return class_entry;
 }
@@ -1595,7 +2243,7 @@ static zend_class_entry *register_class_Qt_Widgets_QVBoxLayout(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QVBoxLayout", class_Qt_Widgets_QVBoxLayout_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QBoxLayout);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QBoxLayout, 0);
 
 	return class_entry;
 }
@@ -1605,7 +2253,7 @@ static zend_class_entry *register_class_Qt_Widgets_QWidget(zend_class_entry *cla
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QWidget", class_Qt_Widgets_QWidget_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Core_QObject, 0);
 
 	return class_entry;
 }
@@ -1615,7 +2263,7 @@ static zend_class_entry *register_class_Qt_Widgets_QLabel(zend_class_entry *clas
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLabel", class_Qt_Widgets_QLabel_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
 
 	return class_entry;
 }
@@ -1625,8 +2273,7 @@ static zend_class_entry *register_class_Qt_Widgets_QLayout(zend_class_entry *cla
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLayout", class_Qt_Widgets_QLayout_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
-	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Core_QObject, ZEND_ACC_ABSTRACT);
 
 	return class_entry;
 }
@@ -1636,7 +2283,7 @@ static zend_class_entry *register_class_Qt_Widgets_QLineEdit(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLineEdit", class_Qt_Widgets_QLineEdit_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
 
 	zval const_Normal_value;
 	ZVAL_LONG(&const_Normal_value, 0);
@@ -1670,7 +2317,7 @@ static zend_class_entry *register_class_Qt_Widgets_QMainWindow(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QMainWindow", class_Qt_Widgets_QMainWindow_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
 
 	return class_entry;
 }
@@ -1680,7 +2327,7 @@ static zend_class_entry *register_class_Qt_Widgets_QPushButton(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QPushButton", class_Qt_Widgets_QPushButton_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
 
 	return class_entry;
 }
@@ -1690,7 +2337,7 @@ static zend_class_entry *register_class_Qt_Widgets_QRadioButton(zend_class_entry
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QRadioButton", class_Qt_Widgets_QRadioButton_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
 
 	return class_entry;
 }
@@ -1700,7 +2347,7 @@ static zend_class_entry *register_class_Qt_Widgets_QSpinBox(zend_class_entry *cl
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSpinBox", class_Qt_Widgets_QSpinBox_methods);
-	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSpinBox);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSpinBox, 0);
 
 	return class_entry;
 }

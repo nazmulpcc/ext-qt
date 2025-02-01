@@ -38,6 +38,8 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Core/QDate.cpp \
     src/Core/QDateTime.cpp \
     src/Core/QObject.cpp \
+    src/Core/QRect.cpp \
+    src/Core/QSize.cpp \
     src/Core/QTime.cpp \
     src/Core/QTimeZone.cpp \
     src/Widgets/QApplication.cpp \
