@@ -239,10 +239,11 @@ namespace Qt\Widgets {
 
         public function __construct(?QWidget $parent = null) {}
         public function addItem(string $text): void {}
+        public function addItems(array $texts): void {}
         public function count(): int {}
         public function currentIndex(): int {}
         public function currentText(): string {}
-        public function duplicateEnabled(): bool {}
+        public function duplicatesEnabled(): bool {}
         public function hasFrame(): bool {}
         public function hidePopup(): void {}
         public function insertItem(int $index, string $text): void {}

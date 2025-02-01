@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: cc879138f68f4ea365b39da1115553b91d5bd5b8 */
+ * Stub hash: 44610b40b719fc66c91609e7ad1b92ae796fcc23 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -283,6 +283,115 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QComboBox___construct, 0, 0, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_addItem arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_addItems, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, texts, IS_ARRAY, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_count arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QComboBox_currentIndex arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QComboBox_currentText arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QComboBox_duplicatesEnabled arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QComboBox_hasFrame arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QComboBox_hidePopup arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_insertItem, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, text, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_insertPolicy arginfo_class_Qt_Core_QSize_height
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_insertSeparator, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_isEditable arginfo_class_Qt_Core_QCalendar_isValid
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_itemText, 0, 1, IS_STRING, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_maxCount arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QComboBox_maxVisibleItems arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QComboBox_minimumContentsLength arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QComboBox_placeholderText arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QComboBox_removeItem arginfo_class_Qt_Widgets_QComboBox_insertSeparator
+
+#define arginfo_class_Qt_Widgets_QComboBox_setDuplicatesEnabled arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setEditable, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, editable, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_setFrame arginfo_class_Qt_Widgets_QAbstractSpinBox_setFrame
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setInsertPolicy, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, policy, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_setItemText arginfo_class_Qt_Widgets_QComboBox_insertItem
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setMaxCount, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setMaxVisibleItems, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, maxItems, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setMinimumContentsLength, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, characters, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setPlaceholderText, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, placeholderText, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QComboBox_setSizeAdjustPolicy arginfo_class_Qt_Widgets_QComboBox_setInsertPolicy
+
+#define arginfo_class_Qt_Widgets_QComboBox_showPopup arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QComboBox_sizeAdjustPolicy arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QComboBox_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QComboBox_clearEditText arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QComboBox_setCurrentIndex arginfo_class_Qt_Widgets_QComboBox_insertSeparator
+
+#define arginfo_class_Qt_Widgets_QComboBox_setCurrentText arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QComboBox_setEditText arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QComboBox_onActivated arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QComboBox_onCurrentIndexChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QComboBox_onCurrentTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QComboBox_onEditTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QComboBox_onHighlighted arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QComboBox_onTextActivated arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QComboBox_onTextHighlighted arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_TYPE_MASK(0, dateTime, Qt\\Core\\QDate|Qt\\Core\\QTime|Qt\\Core\\QDateTime, MAY_BE_NULL, "null")
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -352,9 +461,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_s
 	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSectionIndex, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_setCurrentSectionIndex arginfo_class_Qt_Widgets_QComboBox_insertSeparator
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_setDateRange, 0, 2, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, min, Qt\\Core\\QDate, 0)
@@ -426,11 +533,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QDateTimeEdit_onTimeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QHBoxLayout___construct, 0, 0, 0)
-	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QHBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
-#define arginfo_class_Qt_Widgets_QVBoxLayout___construct arginfo_class_Qt_Widgets_QHBoxLayout___construct
+#define arginfo_class_Qt_Widgets_QVBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QWidget___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -616,9 +721,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setCont
 	ZEND_ARG_TYPE_INFO(0, bottom, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setContextMenuPolicy, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, policy, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QWidget_setContextMenuPolicy arginfo_class_Qt_Widgets_QComboBox_setInsertPolicy
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setFixedHeight, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
@@ -634,7 +737,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setFocu
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, reason, IS_LONG, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_setFocusPolicy arginfo_class_Qt_Widgets_QWidget_setContextMenuPolicy
+#define arginfo_class_Qt_Widgets_QWidget_setFocusPolicy arginfo_class_Qt_Widgets_QComboBox_setInsertPolicy
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setGeometry, 0, 4, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
@@ -912,9 +1015,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setMa
 	ZEND_ARG_TYPE_INFO(0, length, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setPlaceholderText, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, placeholderText, IS_STRING, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_setPlaceholderText arginfo_class_Qt_Widgets_QComboBox_setPlaceholderText
 
 #define arginfo_class_Qt_Widgets_QLineEdit_setReadOnly arginfo_class_Qt_Widgets_QAbstractSpinBox_setReadOnly
 
@@ -955,7 +1056,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QRadioButton___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
-#define arginfo_class_Qt_Widgets_QSpinBox___construct arginfo_class_Qt_Widgets_QHBoxLayout___construct
+#define arginfo_class_Qt_Widgets_QSpinBox___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
 #define arginfo_class_Qt_Widgets_QSpinBox_cleanText arginfo_class_Qt_Core_QObject_objectName
 
@@ -971,9 +1072,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setDis
 	ZEND_ARG_TYPE_INFO(0, base, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setMaximum, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QSpinBox_setMaximum arginfo_class_Qt_Widgets_QComboBox_setMaxCount
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setMinimum, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
@@ -1110,6 +1209,49 @@ ZEND_METHOD(Qt_Widgets_QCheckBox, isTristate);
 ZEND_METHOD(Qt_Widgets_QCheckBox, setCheckState);
 ZEND_METHOD(Qt_Widgets_QCheckBox, setTristate);
 ZEND_METHOD(Qt_Widgets_QCheckBox, onCheckStateChanged);
+ZEND_METHOD(Qt_Widgets_QComboBox, __construct);
+ZEND_METHOD(Qt_Widgets_QComboBox, addItem);
+ZEND_METHOD(Qt_Widgets_QComboBox, addItems);
+ZEND_METHOD(Qt_Widgets_QComboBox, count);
+ZEND_METHOD(Qt_Widgets_QComboBox, currentIndex);
+ZEND_METHOD(Qt_Widgets_QComboBox, currentText);
+ZEND_METHOD(Qt_Widgets_QComboBox, duplicatesEnabled);
+ZEND_METHOD(Qt_Widgets_QComboBox, hasFrame);
+ZEND_METHOD(Qt_Widgets_QComboBox, hidePopup);
+ZEND_METHOD(Qt_Widgets_QComboBox, insertItem);
+ZEND_METHOD(Qt_Widgets_QComboBox, insertPolicy);
+ZEND_METHOD(Qt_Widgets_QComboBox, insertSeparator);
+ZEND_METHOD(Qt_Widgets_QComboBox, isEditable);
+ZEND_METHOD(Qt_Widgets_QComboBox, itemText);
+ZEND_METHOD(Qt_Widgets_QComboBox, maxCount);
+ZEND_METHOD(Qt_Widgets_QComboBox, maxVisibleItems);
+ZEND_METHOD(Qt_Widgets_QComboBox, minimumContentsLength);
+ZEND_METHOD(Qt_Widgets_QComboBox, placeholderText);
+ZEND_METHOD(Qt_Widgets_QComboBox, removeItem);
+ZEND_METHOD(Qt_Widgets_QComboBox, setDuplicatesEnabled);
+ZEND_METHOD(Qt_Widgets_QComboBox, setEditable);
+ZEND_METHOD(Qt_Widgets_QComboBox, setFrame);
+ZEND_METHOD(Qt_Widgets_QComboBox, setInsertPolicy);
+ZEND_METHOD(Qt_Widgets_QComboBox, setItemText);
+ZEND_METHOD(Qt_Widgets_QComboBox, setMaxCount);
+ZEND_METHOD(Qt_Widgets_QComboBox, setMaxVisibleItems);
+ZEND_METHOD(Qt_Widgets_QComboBox, setMinimumContentsLength);
+ZEND_METHOD(Qt_Widgets_QComboBox, setPlaceholderText);
+ZEND_METHOD(Qt_Widgets_QComboBox, setSizeAdjustPolicy);
+ZEND_METHOD(Qt_Widgets_QComboBox, showPopup);
+ZEND_METHOD(Qt_Widgets_QComboBox, sizeAdjustPolicy);
+ZEND_METHOD(Qt_Widgets_QComboBox, clear);
+ZEND_METHOD(Qt_Widgets_QComboBox, clearEditText);
+ZEND_METHOD(Qt_Widgets_QComboBox, setCurrentIndex);
+ZEND_METHOD(Qt_Widgets_QComboBox, setCurrentText);
+ZEND_METHOD(Qt_Widgets_QComboBox, setEditText);
+ZEND_METHOD(Qt_Widgets_QComboBox, onActivated);
+ZEND_METHOD(Qt_Widgets_QComboBox, onCurrentIndexChanged);
+ZEND_METHOD(Qt_Widgets_QComboBox, onCurrentTextChanged);
+ZEND_METHOD(Qt_Widgets_QComboBox, onEditTextChanged);
+ZEND_METHOD(Qt_Widgets_QComboBox, onHighlighted);
+ZEND_METHOD(Qt_Widgets_QComboBox, onTextActivated);
+ZEND_METHOD(Qt_Widgets_QComboBox, onTextHighlighted);
 ZEND_METHOD(Qt_Widgets_QDateTimeEdit, __construct);
 ZEND_METHOD(Qt_Widgets_QDateTimeEdit, calendar);
 ZEND_METHOD(Qt_Widgets_QDateTimeEdit, calendarPopup);
@@ -1521,6 +1663,53 @@ static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QCheckBox, setCheckState, arginfo_class_Qt_Widgets_QCheckBox_setCheckState, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QCheckBox, setTristate, arginfo_class_Qt_Widgets_QCheckBox_setTristate, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QCheckBox, onCheckStateChanged, arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QComboBox_methods[] = {
+	ZEND_ME(Qt_Widgets_QComboBox, __construct, arginfo_class_Qt_Widgets_QComboBox___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, addItem, arginfo_class_Qt_Widgets_QComboBox_addItem, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, addItems, arginfo_class_Qt_Widgets_QComboBox_addItems, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, count, arginfo_class_Qt_Widgets_QComboBox_count, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, currentIndex, arginfo_class_Qt_Widgets_QComboBox_currentIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, currentText, arginfo_class_Qt_Widgets_QComboBox_currentText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, duplicatesEnabled, arginfo_class_Qt_Widgets_QComboBox_duplicatesEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, hasFrame, arginfo_class_Qt_Widgets_QComboBox_hasFrame, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, hidePopup, arginfo_class_Qt_Widgets_QComboBox_hidePopup, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, insertItem, arginfo_class_Qt_Widgets_QComboBox_insertItem, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, insertPolicy, arginfo_class_Qt_Widgets_QComboBox_insertPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, insertSeparator, arginfo_class_Qt_Widgets_QComboBox_insertSeparator, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, isEditable, arginfo_class_Qt_Widgets_QComboBox_isEditable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, itemText, arginfo_class_Qt_Widgets_QComboBox_itemText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, maxCount, arginfo_class_Qt_Widgets_QComboBox_maxCount, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, maxVisibleItems, arginfo_class_Qt_Widgets_QComboBox_maxVisibleItems, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, minimumContentsLength, arginfo_class_Qt_Widgets_QComboBox_minimumContentsLength, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, placeholderText, arginfo_class_Qt_Widgets_QComboBox_placeholderText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, removeItem, arginfo_class_Qt_Widgets_QComboBox_removeItem, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setDuplicatesEnabled, arginfo_class_Qt_Widgets_QComboBox_setDuplicatesEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setEditable, arginfo_class_Qt_Widgets_QComboBox_setEditable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setFrame, arginfo_class_Qt_Widgets_QComboBox_setFrame, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setInsertPolicy, arginfo_class_Qt_Widgets_QComboBox_setInsertPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setItemText, arginfo_class_Qt_Widgets_QComboBox_setItemText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setMaxCount, arginfo_class_Qt_Widgets_QComboBox_setMaxCount, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setMaxVisibleItems, arginfo_class_Qt_Widgets_QComboBox_setMaxVisibleItems, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setMinimumContentsLength, arginfo_class_Qt_Widgets_QComboBox_setMinimumContentsLength, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setPlaceholderText, arginfo_class_Qt_Widgets_QComboBox_setPlaceholderText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setSizeAdjustPolicy, arginfo_class_Qt_Widgets_QComboBox_setSizeAdjustPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, showPopup, arginfo_class_Qt_Widgets_QComboBox_showPopup, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, sizeAdjustPolicy, arginfo_class_Qt_Widgets_QComboBox_sizeAdjustPolicy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, clear, arginfo_class_Qt_Widgets_QComboBox_clear, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, clearEditText, arginfo_class_Qt_Widgets_QComboBox_clearEditText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setCurrentIndex, arginfo_class_Qt_Widgets_QComboBox_setCurrentIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setCurrentText, arginfo_class_Qt_Widgets_QComboBox_setCurrentText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, setEditText, arginfo_class_Qt_Widgets_QComboBox_setEditText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onActivated, arginfo_class_Qt_Widgets_QComboBox_onActivated, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onCurrentIndexChanged, arginfo_class_Qt_Widgets_QComboBox_onCurrentIndexChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onCurrentTextChanged, arginfo_class_Qt_Widgets_QComboBox_onCurrentTextChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onEditTextChanged, arginfo_class_Qt_Widgets_QComboBox_onEditTextChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onHighlighted, arginfo_class_Qt_Widgets_QComboBox_onHighlighted, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onTextActivated, arginfo_class_Qt_Widgets_QComboBox_onTextActivated, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QComboBox, onTextHighlighted, arginfo_class_Qt_Widgets_QComboBox_onTextHighlighted, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -2235,6 +2424,76 @@ static zend_class_entry *register_class_Qt_Widgets_QCheckBox(zend_class_entry *c
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QCheckBox", class_Qt_Widgets_QCheckBox_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QComboBox(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QComboBox", class_Qt_Widgets_QComboBox_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+
+	zval const_NoInsert_value;
+	ZVAL_LONG(&const_NoInsert_value, 0);
+	zend_string *const_NoInsert_name = zend_string_init_interned("NoInsert", sizeof("NoInsert") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_NoInsert_name, &const_NoInsert_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_NoInsert_name);
+
+	zval const_InsertAtTop_value;
+	ZVAL_LONG(&const_InsertAtTop_value, 1);
+	zend_string *const_InsertAtTop_name = zend_string_init_interned("InsertAtTop", sizeof("InsertAtTop") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InsertAtTop_name, &const_InsertAtTop_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InsertAtTop_name);
+
+	zval const_InsertAtCurrent_value;
+	ZVAL_LONG(&const_InsertAtCurrent_value, 2);
+	zend_string *const_InsertAtCurrent_name = zend_string_init_interned("InsertAtCurrent", sizeof("InsertAtCurrent") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InsertAtCurrent_name, &const_InsertAtCurrent_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InsertAtCurrent_name);
+
+	zval const_InsertAtBottom_value;
+	ZVAL_LONG(&const_InsertAtBottom_value, 3);
+	zend_string *const_InsertAtBottom_name = zend_string_init_interned("InsertAtBottom", sizeof("InsertAtBottom") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InsertAtBottom_name, &const_InsertAtBottom_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InsertAtBottom_name);
+
+	zval const_InsertAfterCurrent_value;
+	ZVAL_LONG(&const_InsertAfterCurrent_value, 4);
+	zend_string *const_InsertAfterCurrent_name = zend_string_init_interned("InsertAfterCurrent", sizeof("InsertAfterCurrent") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InsertAfterCurrent_name, &const_InsertAfterCurrent_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InsertAfterCurrent_name);
+
+	zval const_InsertBeforeCurrent_value;
+	ZVAL_LONG(&const_InsertBeforeCurrent_value, 5);
+	zend_string *const_InsertBeforeCurrent_name = zend_string_init_interned("InsertBeforeCurrent", sizeof("InsertBeforeCurrent") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InsertBeforeCurrent_name, &const_InsertBeforeCurrent_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InsertBeforeCurrent_name);
+
+	zval const_InsertAlphabetically_value;
+	ZVAL_LONG(&const_InsertAlphabetically_value, 6);
+	zend_string *const_InsertAlphabetically_name = zend_string_init_interned("InsertAlphabetically", sizeof("InsertAlphabetically") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_InsertAlphabetically_name, &const_InsertAlphabetically_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_InsertAlphabetically_name);
+
+	zval const_AdjustToContents_value;
+	ZVAL_LONG(&const_AdjustToContents_value, 0);
+	zend_string *const_AdjustToContents_name = zend_string_init_interned("AdjustToContents", sizeof("AdjustToContents") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AdjustToContents_name, &const_AdjustToContents_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AdjustToContents_name);
+
+	zval const_AdjustToContentsOnFirstShow_value;
+	ZVAL_LONG(&const_AdjustToContentsOnFirstShow_value, 1);
+	zend_string *const_AdjustToContentsOnFirstShow_name = zend_string_init_interned("AdjustToContentsOnFirstShow", sizeof("AdjustToContentsOnFirstShow") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AdjustToContentsOnFirstShow_name, &const_AdjustToContentsOnFirstShow_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AdjustToContentsOnFirstShow_name);
+
+	zval const_AdjustToMinimumContentsLengthWithIcon_value;
+	ZVAL_LONG(&const_AdjustToMinimumContentsLengthWithIcon_value, 2);
+	zend_string *const_AdjustToMinimumContentsLengthWithIcon_name = zend_string_init_interned("AdjustToMinimumContentsLengthWithIcon", sizeof("AdjustToMinimumContentsLengthWithIcon") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AdjustToMinimumContentsLengthWithIcon_name, &const_AdjustToMinimumContentsLengthWithIcon_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AdjustToMinimumContentsLengthWithIcon_name);
 
 	return class_entry;
 }
