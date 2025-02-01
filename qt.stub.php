@@ -223,6 +223,69 @@ namespace Qt\Widgets {
         public function onCheckStateChanged(callable $callback): void {}
     }
 
+    class QComboBox extends QWidget
+    {
+        public const int NoInsert = 0;
+        public const int InsertAtTop = 1;
+        public const int InsertAtCurrent = 2;
+        public const int InsertAtBottom = 3;
+        public const int InsertAfterCurrent = 4;
+        public const int InsertBeforeCurrent = 5;
+        public const int InsertAlphabetically = 6;
+
+        public const int AdjustToContents = 0;
+        public const int AdjustToContentsOnFirstShow = 1;
+        public const int AdjustToMinimumContentsLengthWithIcon = 2;
+
+        public function __construct(?QWidget $parent = null) {}
+        public function addItem(string $text): void {}
+        public function count(): int {}
+        public function currentIndex(): int {}
+        public function currentText(): string {}
+        public function duplicateEnabled(): bool {}
+        public function hasFrame(): bool {}
+        public function hidePopup(): void {}
+        public function insertItem(int $index, string $text): void {}
+        public function insertPolicy(): int {}
+        public function insertSeparator(int $index): void {}
+        public function isEditable(): bool {}
+        public function itemText(int $index): string {}
+        // public function lineEdit(): QLineEdit {}
+        public function maxCount(): int {}
+        public function maxVisibleItems(): int {}
+        public function minimumContentsLength(): int {}
+        public function placeholderText(): string {}
+        public function removeItem(int $index): void {}
+        public function setDuplicatesEnabled(bool $enable): void {}
+        public function setEditable(bool $editable): void {}
+        public function setFrame(bool $frame): void {}
+        public function setInsertPolicy(int $policy): void {}
+        public function setItemText(int $index, string $text): void {}
+        public function setMaxCount(int $max): void {}
+        public function setMaxVisibleItems(int $maxItems): void {}
+        public function setMinimumContentsLength(int $characters): void {}
+        public function setPlaceholderText(string $placeholderText): void {}
+        public function setSizeAdjustPolicy(int $policy): void {}
+        public function showPopup(): void {}
+        public function sizeAdjustPolicy(): int {}
+
+        // slots
+        public function clear(): void {}
+        public function clearEditText(): void {}
+        public function setCurrentIndex(int $index): void {}
+        public function setCurrentText(string $text): void {}
+        public function setEditText(string $text): void {}
+
+        // signals
+        public function onActivated(callable $callback): void {}
+        public function onCurrentIndexChanged(callable $callback): void {}
+        public function onCurrentTextChanged(callable $callback): void {}
+        public function onEditTextChanged(callable $callback): void {}
+        public function onHighlighted(callable $callback): void {}
+        public function onTextActivated(callable $callback): void {}
+        public function onTextHighlighted(callable $callback): void {}
+    }
+
     class QDateTimeEdit extends QAbstractSpinbox
     {
         public function __construct(\Qt\Core\QDate|\Qt\Core\QTime|\Qt\Core\QDateTime|null $dateTime = null, ?QWidget $parent = null) {}
