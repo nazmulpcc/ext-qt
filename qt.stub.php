@@ -100,6 +100,11 @@ namespace Qt\Core {
     class QSize
     {
         public function __construct(int $width, int $height) {}
+        public function height(): int {}
+        public function isEmpty(): int {}
+        public function isNull(): int {}
+        public function isValid(): int {}
+        public function width(): int {}
     }
 
     class QTime
@@ -404,8 +409,8 @@ namespace Qt\Widgets {
         public function setWindowOpacity(float $level): void {}
         public function setWindowRole(string $role): void {}
         public function setWindowState(int $state): void {}
-        public function size(): Qt\Core\QSize {}
-        public function sizeIncrement(): Qt\Core\QSize {}
+        public function size(): \Qt\Core\QSize {}
+        public function sizeIncrement(): \Qt\Core\QSize {}
         //public function sizePolicy(): QSizePolicy {}
         // public function stackUnder(QWidget $w): void {}
         public function statusTip(): string {}

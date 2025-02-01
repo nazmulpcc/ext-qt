@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: e9f09d5932056b0e0179a818a5aa92f75ad779c2 */
+ * Stub hash: cc879138f68f4ea365b39da1115553b91d5bd5b8 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -86,6 +86,17 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QSize___construct, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO(0, height, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QSize_height, 0, 0, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QSize_isEmpty arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Core_QSize_isNull arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Core_QSize_isValid arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Core_QSize_width arginfo_class_Qt_Core_QSize_height
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTime___construct, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, m, IS_LONG, 0)
@@ -93,18 +104,17 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTime___construct, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, ms, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QTime_hour, 0, 0, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Core_QTime_hour arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Core_QTime_isNull arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Core_QTime_isValid arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Core_QTime_minute arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Core_QTime_minute arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Core_QTime_msec arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Core_QTime_msec arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Core_QTime_second arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Core_QTime_second arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTimeZone___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, offsetSeconds, IS_LONG, 0)
@@ -115,13 +125,13 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_isChecked arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -163,11 +173,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasAcceptableInput arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -259,7 +269,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QCheckBox_isTristate arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -297,9 +307,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSection arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSection arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSectionIndex arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSectionIndex arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_date, 0, 0, Qt\\Core\\QDate, 0)
 ZEND_END_ARG_INFO()
@@ -326,7 +336,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_s
 	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_sectionCount arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_sectionCount arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_sectionText, 0, 1, IS_STRING, 0)
 	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
@@ -439,7 +449,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_autoFillBackground arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QWidget_backgroundRole arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_backgroundRole arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_baseSize, 0, 0, Qt\\Widgets\\Qt\\Core\\QSize, 0)
 ZEND_END_ARG_INFO()
@@ -461,11 +471,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_contentsRect arginfo_class_Qt_Widgets_QWidget_childrenRect
 
-#define arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_ensurePolished arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QWidget_focusPolicy arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_focusPolicy arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_frameGeometry arginfo_class_Qt_Widgets_QWidget_childrenRect
 
@@ -483,9 +493,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_hasTabletTracking arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QWidget_height arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_height arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_inputMethodHints arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_inputMethodHints arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_isActiveWindow arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -520,19 +530,19 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_layout, 0, 0, Qt\\Widgets\\QLayout, 1)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_layoutDirection arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_layoutDirection arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_maximumHeight arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_maximumHeight arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_maximumSize arginfo_class_Qt_Widgets_QWidget_baseSize
 
-#define arginfo_class_Qt_Widgets_QWidget_maximumWidth arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_maximumWidth arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_minimumHeight arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_minimumHeight arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_minimumSize arginfo_class_Qt_Widgets_QWidget_baseSize
 
-#define arginfo_class_Qt_Widgets_QWidget_minimumWidth arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_minimumWidth arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_move, 0, 2, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
@@ -730,9 +740,10 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_setWindowState arginfo_class_Qt_Widgets_QCheckBox_setCheckState
 
-#define arginfo_class_Qt_Widgets_QWidget_size arginfo_class_Qt_Widgets_QWidget_baseSize
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_size, 0, 0, Qt\\Core\\QSize, 0)
+ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_sizeIncrement arginfo_class_Qt_Widgets_QWidget_baseSize
+#define arginfo_class_Qt_Widgets_QWidget_sizeIncrement arginfo_class_Qt_Widgets_QWidget_size
 
 #define arginfo_class_Qt_Widgets_QWidget_statusTip arginfo_class_Qt_Core_QObject_objectName
 
@@ -740,7 +751,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_toolTip arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_toolTipDuration arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_toolTipDuration arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_underMouse arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -756,30 +767,30 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_whatsThis arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_width arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_width arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_window arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
 #define arginfo_class_Qt_Widgets_QWidget_windowFilePath arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_windowFlags arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_windowFlags arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_windowModality arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_windowModality arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_windowOpacity, 0, 0, IS_DOUBLE, 0)
 ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_windowRole arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_windowState arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_windowState arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_windowTitle arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_windowType arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_windowType arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_x arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_x arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_y arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QWidget_y arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QWidget_close arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -849,13 +860,13 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_setSpac
 	ZEND_ARG_TYPE_INFO(0, spacing, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QLineEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 #define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
-#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -863,7 +874,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_displayText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Core_QSize_height
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_end, 0, 0, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, mark, _IS_BOOL, 0, "false")
@@ -883,7 +894,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QLineEdit_placeholderText arginfo_class_Qt_Core_QObject_objectName
 
@@ -948,11 +959,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSpinBox_cleanText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QSpinBox_prefix arginfo_class_Qt_Core_QObject_objectName
 
@@ -989,13 +1000,13 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setSuf
 	ZEND_ARG_TYPE_INFO(0, suffix, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QSpinBox_suffix arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Core_QTime_hour
+#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QSpinBox_setValue arginfo_class_Qt_Widgets_QSpinBox_setSingleStep
 
@@ -1027,6 +1038,11 @@ ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
 ZEND_METHOD(Qt_Core_QObject, startTimer);
 ZEND_METHOD(Qt_Core_QRect, __construct);
 ZEND_METHOD(Qt_Core_QSize, __construct);
+ZEND_METHOD(Qt_Core_QSize, height);
+ZEND_METHOD(Qt_Core_QSize, isEmpty);
+ZEND_METHOD(Qt_Core_QSize, isNull);
+ZEND_METHOD(Qt_Core_QSize, isValid);
+ZEND_METHOD(Qt_Core_QSize, width);
 ZEND_METHOD(Qt_Core_QTime, __construct);
 ZEND_METHOD(Qt_Core_QTime, hour);
 ZEND_METHOD(Qt_Core_QTime, isNull);
@@ -1405,6 +1421,11 @@ static const zend_function_entry class_Qt_Core_QRect_methods[] = {
 
 static const zend_function_entry class_Qt_Core_QSize_methods[] = {
 	ZEND_ME(Qt_Core_QSize, __construct, arginfo_class_Qt_Core_QSize___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QSize, height, arginfo_class_Qt_Core_QSize_height, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QSize, isEmpty, arginfo_class_Qt_Core_QSize_isEmpty, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QSize, isNull, arginfo_class_Qt_Core_QSize_isNull, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QSize, isValid, arginfo_class_Qt_Core_QSize_isValid, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QSize, width, arginfo_class_Qt_Core_QSize_width, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 

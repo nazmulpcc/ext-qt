@@ -20,3 +20,9 @@ ZEND_METHOD(Qt_Core_QSize, __construct)
     auto container = QT_Object_P(getThis(), QSize);
     container->native = new QSize(width, height);
 }
+
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QSize, QSize, height);
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QSize, QSize, isEmpty);
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QSize, QSize, isNull);
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QSize, QSize, isValid);
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QSize, QSize, width);
