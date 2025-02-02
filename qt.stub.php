@@ -400,6 +400,20 @@ namespace Qt\Widgets {
         public function onTimeChanged(callable $callback): void {}
     }
 
+    class QDial extends QAbstractSlider
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function notchSize(): int {}
+        public function notchTarget(): float {}
+        public function notchesVisible(): bool {}
+        public function setNotchTarget(float $target): void {}
+        public function wrapping(): bool {}
+
+        // Slots
+        public function setNotchesVisible(bool $visible): void {}
+        public function setWrapping(bool $on): void {}
+    }
+
     class QHBoxLayout extends QBoxLayout
     {
         public function __construct(?QWidget $parent = null) {}

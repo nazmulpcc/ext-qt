@@ -48,6 +48,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QAbstractSlider.cpp \
     src/Widgets/QBoxLayout.cpp \
     src/Widgets/QCheckbox.cpp \
+    src/Widgets/QDial.cpp \
     src/Widgets/QComboBox.cpp \
     src/Widgets/QDateTimeEdit.cpp \
     src/Widgets/QWidget.cpp \
