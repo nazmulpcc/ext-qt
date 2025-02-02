@@ -33,6 +33,7 @@ zend_class_entry *ce_qdate = nullptr;
 zend_class_entry *ce_qdatetime = nullptr;
 zend_class_entry *ce_qobject = nullptr;
 zend_class_entry *ce_qrect = nullptr;
+zend_class_entry *ce_qscrollbar = nullptr;
 zend_class_entry *ce_qsize = nullptr;
 zend_class_entry *ce_qtime = nullptr;
 zend_class_entry *ce_qtimezone = nullptr;
@@ -136,7 +137,7 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qabstractslider->create_object = qt_obj_create_handler;
 	auto ce_qdial = register_class_Qt_Widgets_QDial(ce_qabstractslider);
 	ce_qdial->create_object = qt_obj_create_handler;
-	auto ce_qscrollbar = register_class_Qt_Widgets_QScrollBar(ce_qabstractslider);
+	ce_qscrollbar = register_class_Qt_Widgets_QScrollBar(ce_qabstractslider);
 	ce_qscrollbar->create_object = qt_obj_create_handler;
 	auto ce_qslider = register_class_Qt_Widgets_QSlider(ce_qabstractslider);
 	ce_qslider->create_object = qt_obj_create_handler;
@@ -149,6 +150,7 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qdatetimeedit->create_object = qt_obj_create_handler;
 
 	auto ce_qframe = register_class_Qt_Widgets_QFrame(ce_widget_QWidget);
+	auto ce_qabstractscrollarea = register_class_Qt_Widgets_QAbstractScrollArea(ce_qframe);
 	auto ce_qlabel = register_class_Qt_Widgets_QLabel(ce_qframe);
 	ce_qlabel->create_object = qt_obj_create_handler;
 	auto ce_qscrollarea = register_class_Qt_Widgets_QScrollArea(ce_qframe);

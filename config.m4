@@ -44,6 +44,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Core/QTimeZone.cpp \
     src/Widgets/QApplication.cpp \
     src/Widgets/QAbstractButton.cpp \
+    src/Widgets/QAbstractScrollArea.cpp \
     src/Widgets/QAbstractSpinBox.cpp \
     src/Widgets/QAbstractSlider.cpp \
     src/Widgets/QBoxLayout.cpp \

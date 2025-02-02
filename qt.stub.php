@@ -162,6 +162,22 @@ namespace Qt\Widgets {
         public function onToggled(callable $callback): void {}
     }
 
+    abstract class QAbstractScrollArea extends QWidget
+    {
+        public function addScrollBarWidget(QWidget $widget, int $alignment): void {}
+        public function horizontalScrollBarPolicy(): int {}
+        public function maximumViewportSize(): \Qt\Core\QSize {}
+        public function setCornerWidget(QWidget $widget): void {}
+        public function setHorizontalScrollBar(QScrollBar $scrollBar): void {}
+        public function setHorizontalScrollBarPolicy(int $policy): void {}
+        public function setSizeAdjustPolicy(int $policy): void {}
+        public function setVerticalScrollBar(QScrollBar $scrollBar): void {}
+        public function setVerticalScrollBarPolicy(int $policy): void {}
+        public function setViewport(QWidget $widget): void {}
+        public function sizeAdjustPolicy(): int {}
+        public function verticalScrollBarPolicy(): int {}
+    }
+
     abstract class QAbstractSlider extends QWidget
     {
         public const int SliderNoAction = 0;

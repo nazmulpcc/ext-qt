@@ -220,6 +220,17 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       container->native->method_name(*QT_Object_P(zv, forward_type)->native);           \
    }
 
+#define QT_METHOD_FORWARD_NATIVE_P(classname, native_type, method_name, forward_type, ce) \
+   ZEND_METHOD(classname, method_name)                                                    \
+   {                                                                                      \
+      zval *zv;                                                                           \
+      ZEND_PARSE_PARAMETERS_START(1, 1)                                                   \
+      Z_PARAM_OBJECT_OF_CLASS(zv, ce)                                                     \
+      ZEND_PARSE_PARAMETERS_END();                                                        \
+      auto *container = QT_Object_P(ZEND_THIS, native_type);                              \
+      container->native->method_name(QT_Object_P(zv, forward_type)->native);              \
+   }
+
 #define QT_METHOD_FORWARD_STRING(classname, native_type, method_name) \
    PHP_METHOD(classname, method_name)                                 \
    {                                                                  \
@@ -368,6 +379,7 @@ extern zend_class_entry *ce_qdatetime;
 extern zend_class_entry *ce_qobject;
 extern zend_class_entry *ce_qrect;
 extern zend_class_entry *ce_qsize;
+extern zend_class_entry *ce_qscrollbar;
 extern zend_class_entry *ce_qtime;
 extern zend_class_entry *ce_qtimezone;
 extern zend_class_entry *ce_widget_QWidget;
