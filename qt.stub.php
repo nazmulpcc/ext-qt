@@ -680,6 +680,22 @@ namespace Qt\Widgets {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
     }
 
+    class QSizePolicy
+    {
+        public const int GrowFlag = 1;
+        public const int ExpandFlag = 2;
+        public const int ShrinkFlag = 4;
+        public const int IgnoreFlag = 8;
+
+        public const int Fixed = 0;
+        public const int Minimum = QSizePolicy::GrowFlag;
+        public const int Maximum = QSizePolicy::ShrinkFlag;
+        public const int Preferred = QSizePolicy::GrowFlag | QSizePolicy::ShrinkFlag;
+        public const int Expanding = QSizePolicy::GrowFlag | QSizePolicy::ShrinkFlag | QSizePolicy::ExpandFlag;
+        public const int MinimumExpanding = QSizePolicy::GrowFlag | QSizePolicy::ExpandFlag;
+        public const int Ignored = QSizePolicy::ShrinkFlag | QSizePolicy::GrowFlag | QSizePolicy::IgnoreFlag;
+    }
+
     class QSpinBox extends QAbstractSpinBox
     {
         public function __construct(?QWidget $parent = null) {}

@@ -161,6 +161,8 @@ PHP_MINIT_FUNCTION(qt)
 	auto ce_qvboxlayout = register_class_Qt_Widgets_QVBoxLayout(ce_widget_QBoxLayout);
 	ce_qvboxlayout->create_object = qt_obj_create_handler;
 
+	register_class_Qt_Widgets_QSizePolicy();
+
 	return SUCCESS;
 }
 
