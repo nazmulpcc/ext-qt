@@ -694,6 +694,17 @@ namespace Qt\Widgets {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
     }
 
+    class QScrollArea extends QWidget
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function alignment(): int {}
+        public function ensureVisible(int $x, int $y, int $xmargin = 50, int $ymargin = 50): void {}
+        public function ensureWidgetVisible(QWidget $childWidget, int $xmargin = 50, int $ymargin = 50): void {}
+        public function setAlignment(int $alignment): void {}
+        public function setWidget(QWidget $widget): void {}
+        public function setWidgetResizable(bool $resizable): void {}
+    }
+
     class QScrollBar extends QAbstractSlider
     {
         public function __construct(int $orientation = \Qt\Orientation::Vertical, ?QWidget $parent = null) {}
