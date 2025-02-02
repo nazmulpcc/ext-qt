@@ -59,6 +59,7 @@ PHP_MINIT_FUNCTION(qt)
 {
 	register_class_Qt_CheckState();
 	register_class_Qt_WindowType();
+	register_class_Qt_Orientation();
 
 	memcpy(&qt_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
 	qt_object_handlers.offset = XtOffsetOf(qt_container_t<QObject>, std);
@@ -136,6 +137,8 @@ PHP_MINIT_FUNCTION(qt)
 
 	auto ce_qabstractslider = register_class_Qt_Widgets_QAbstractSlider(ce_widget_QWidget);
 	ce_qabstractslider->create_object = qt_obj_create_handler;
+	auto ce_qslider = register_class_Qt_Widgets_QSlider(ce_qabstractslider);
+	ce_qslider->create_object = qt_obj_create_handler;
 
 	auto ce_qabstractspinbox = register_class_Qt_Widgets_QAbstractSpinBox(ce_widget_QWidget);
 	ce_qabstractspinbox->create_object = qt_obj_create_handler;

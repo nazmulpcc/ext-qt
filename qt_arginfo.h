@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: f9b47c94f17af8f0774733d6adfef890331aa79f */
+ * Stub hash: 51ac63faf63ccda85ee8935f4ff832b83f338da3 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -613,6 +613,21 @@ ZEND_END_ARG_INFO()
 #define arginfo_class_Qt_Widgets_QDateTimeEdit_onTimeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 #define arginfo_class_Qt_Widgets_QHBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QSlider___construct, 0, 0, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, orientation, IS_LONG, 0, "Qt\\Orientation::Vertical")
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSlider_setTickInterval, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, ti, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSlider_setTickPosition arginfo_class_Qt_Widgets_QAbstractSlider_setSliderPosition
+
+#define arginfo_class_Qt_Widgets_QSlider_tickInterval arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QSlider_tickPosition arginfo_class_Qt_Core_QSize_height
 
 #define arginfo_class_Qt_Widgets_QVBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
@@ -1403,6 +1418,11 @@ ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onDateChanged);
 ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onDateTimeChanged);
 ZEND_METHOD(Qt_Widgets_QDateTimeEdit, onTimeChanged);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
+ZEND_METHOD(Qt_Widgets_QSlider, __construct);
+ZEND_METHOD(Qt_Widgets_QSlider, setTickInterval);
+ZEND_METHOD(Qt_Widgets_QSlider, setTickPosition);
+ZEND_METHOD(Qt_Widgets_QSlider, tickInterval);
+ZEND_METHOD(Qt_Widgets_QSlider, tickPosition);
 ZEND_METHOD(Qt_Widgets_QVBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, __construct);
 ZEND_METHOD(Qt_Widgets_QWidget, acceptDrops);
@@ -1906,6 +1926,15 @@ static const zend_function_entry class_Qt_Widgets_QHBoxLayout_methods[] = {
 	ZEND_FE_END
 };
 
+static const zend_function_entry class_Qt_Widgets_QSlider_methods[] = {
+	ZEND_ME(Qt_Widgets_QSlider, __construct, arginfo_class_Qt_Widgets_QSlider___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSlider, setTickInterval, arginfo_class_Qt_Widgets_QSlider_setTickInterval, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSlider, setTickPosition, arginfo_class_Qt_Widgets_QSlider_setTickPosition, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSlider, tickInterval, arginfo_class_Qt_Widgets_QSlider_tickInterval, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSlider, tickPosition, arginfo_class_Qt_Widgets_QSlider_tickPosition, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
 static const zend_function_entry class_Qt_Widgets_QVBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QVBoxLayout, __construct, arginfo_class_Qt_Widgets_QVBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
@@ -2194,13 +2223,13 @@ static zend_class_entry *register_class_Qt_Orientation(void)
 	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	zval const_Horizontal_value;
-	ZVAL_LONG(&const_Horizontal_value, 0x1);
+	ZVAL_LONG(&const_Horizontal_value, 1);
 	zend_string *const_Horizontal_name = zend_string_init_interned("Horizontal", sizeof("Horizontal") - 1, 1);
 	zend_declare_typed_class_constant(class_entry, const_Horizontal_name, &const_Horizontal_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
 	zend_string_release(const_Horizontal_name);
 
 	zval const_Vertical_value;
-	ZVAL_LONG(&const_Vertical_value, 0x2);
+	ZVAL_LONG(&const_Vertical_value, 2);
 	zend_string *const_Vertical_name = zend_string_init_interned("Vertical", sizeof("Vertical") - 1, 1);
 	zend_declare_typed_class_constant(class_entry, const_Vertical_name, &const_Vertical_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
 	zend_string_release(const_Vertical_name);
@@ -2754,6 +2783,52 @@ static zend_class_entry *register_class_Qt_Widgets_QHBoxLayout(zend_class_entry 
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QHBoxLayout", class_Qt_Widgets_QHBoxLayout_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QBoxLayout, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QSlider(zend_class_entry *class_entry_Qt_Widgets_QAbstractSlider)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSlider", class_Qt_Widgets_QSlider_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSlider, 0);
+
+	zval const_NoTicks_value;
+	ZVAL_LONG(&const_NoTicks_value, 0);
+	zend_string *const_NoTicks_name = zend_string_init_interned("NoTicks", sizeof("NoTicks") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_NoTicks_name, &const_NoTicks_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_NoTicks_name);
+
+	zval const_TicksAbove_value;
+	ZVAL_LONG(&const_TicksAbove_value, 1);
+	zend_string *const_TicksAbove_name = zend_string_init_interned("TicksAbove", sizeof("TicksAbove") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TicksAbove_name, &const_TicksAbove_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TicksAbove_name);
+
+	zval const_TicksBelow_value;
+	ZVAL_LONG(&const_TicksBelow_value, 2);
+	zend_string *const_TicksBelow_name = zend_string_init_interned("TicksBelow", sizeof("TicksBelow") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TicksBelow_name, &const_TicksBelow_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TicksBelow_name);
+
+	zval const_TicksBothSides_value;
+	ZVAL_LONG(&const_TicksBothSides_value, 3);
+	zend_string *const_TicksBothSides_name = zend_string_init_interned("TicksBothSides", sizeof("TicksBothSides") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TicksBothSides_name, &const_TicksBothSides_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TicksBothSides_name);
+
+	zval const_TicksLeft_value;
+	ZVAL_LONG(&const_TicksLeft_value, 1);
+	zend_string *const_TicksLeft_name = zend_string_init_interned("TicksLeft", sizeof("TicksLeft") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TicksLeft_name, &const_TicksLeft_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TicksLeft_name);
+
+	zval const_TicksRight_value;
+	ZVAL_LONG(&const_TicksRight_value, 2);
+	zend_string *const_TicksRight_name = zend_string_init_interned("TicksRight", sizeof("TicksRight") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TicksRight_name, &const_TicksRight_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TicksRight_name);
 
 	return class_entry;
 }

@@ -14,8 +14,8 @@ namespace Qt {
     }
     class Orientation
     {
-        public const int Horizontal = 0x1;
-        public const int Vertical = 0x2;
+        public const int Horizontal = 1;
+        public const int Vertical = 2;
     }
     class WindowType
     {
@@ -403,6 +403,22 @@ namespace Qt\Widgets {
     class QHBoxLayout extends QBoxLayout
     {
         public function __construct(?QWidget $parent = null) {}
+    }
+
+    class QSlider extends QAbstractSlider
+    {
+        public const int NoTicks = 0;
+        public const int TicksAbove = 1;
+        public const int TicksBelow = 2;
+        public const int TicksBothSides = 3;
+        public const int TicksLeft = 1;
+        public const int TicksRight = 2;
+
+        public function __construct(int $orientation = \Qt\Orientation::Vertical, ?QWidget $parent = null) {}
+        public function setTickInterval(int $ti): void {}
+        public function setTickPosition(int $position): void {}
+        public function tickInterval(): int {}
+        public function tickPosition(): int {}
     }
 
     class QVBoxLayout extends QBoxLayout
