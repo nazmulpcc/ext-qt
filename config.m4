@@ -45,6 +45,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QApplication.cpp \
     src/Widgets/QAbstractButton.cpp \
     src/Widgets/QAbstractSpinBox.cpp \
+    src/Widgets/QAbstractSlider.cpp \
     src/Widgets/QBoxLayout.cpp \
     src/Widgets/QCheckbox.cpp \
     src/Widgets/QComboBox.cpp \

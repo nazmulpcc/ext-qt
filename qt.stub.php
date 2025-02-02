@@ -12,6 +12,11 @@ namespace Qt {
         public const int PartiallyChecked = 1;
         public const int Checked = 2;
     }
+    class Orientation
+    {
+        public const int Horizontal = 0x1;
+        public const int Vertical = 0x2;
+    }
     class WindowType
     {
         public const int Widget = 0;
@@ -155,6 +160,58 @@ namespace Qt\Widgets {
         public function onPressed(callable $callback): void {}
         public function onReleased(callable $callback): void {}
         public function onToggled(callable $callback): void {}
+    }
+
+    abstract class QAbstractSlider extends QWidget
+    {
+        public const int SliderNoAction = 0;
+        public const int SliderSingleStepAdd = 1;
+        public const int SliderSingleStepSub = 2;
+        public const int SliderPageStepAdd = 3;
+        public const int SliderPageStepSub = 4;
+        public const int SliderToMinimum = 5;
+        public const int SliderToMaximum = 6;
+        public const int SliderMove = 7;
+
+        public const int SliderRangeChange = 0;
+        public const int SliderOrientationChange = 1;
+        public const int SliderStepsChange = 2;
+        public const int SliderValueChange = 3;
+
+        public function hasTracking(): bool {}
+        public function invertedAppearance(): bool {}
+        public function invertedControls(): bool {}
+        public function isSliderDown(): bool {}
+        public function maximum(): int {}
+        public function minimum(): int {}
+        public function orientation(): int {}
+        public function pageStep(): int {}
+        public function setInvertedAppearance(bool $inverted): void {}
+        public function setInvertedControls(bool $inverted): void {}
+        public function setMaximum(int $max): void {}
+        public function setMinimum(int $min): void {}
+        public function setPageStep(int $step): void {}
+        public function setSingleStep(int $step): void {}
+        public function setSliderDown(bool $down): void {}
+        public function setSliderPosition(int $position): void {}
+        public function setTracking(bool $enable): void {}
+        public function singleStep(): int {}
+        public function sliderPosition(): int {}
+        public function triggerAction(int $action): void {}
+        public function value(): int {}
+
+        // Signals
+        public function setOrientation(int $orientation): void {}
+        public function setRange(int $min, int $max): void {}
+        public function setValue(int $value): void {}
+
+        // Slots
+        public function onActionTriggered(callable $callback): void {}
+        public function onRangeChanged(callable $callback): void {}
+        public function onSliderMoved(callable $callback): void {}
+        public function onSliderPressed(callable $callback): void {}
+        public function onSliderReleased(callable $callback): void {}
+        public function onValueChanged(callable $callback): void {}
     }
 
     abstract class QAbstractSpinBox extends QWidget

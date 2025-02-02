@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 44610b40b719fc66c91609e7ad1b92ae796fcc23 */
+ * Stub hash: f9b47c94f17af8f0774733d6adfef890331aa79f */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -172,6 +172,87 @@ ZEND_END_ARG_INFO()
 #define arginfo_class_Qt_Widgets_QAbstractButton_onReleased arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_hasTracking arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_invertedAppearance arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_invertedControls arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_isSliderDown arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_maximum arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_minimum arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_orientation arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_pageStep arginfo_class_Qt_Core_QSize_height
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setInvertedAppearance, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, inverted, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_setInvertedControls arginfo_class_Qt_Widgets_QAbstractSlider_setInvertedAppearance
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setMaximum, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setMinimum, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setPageStep, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_setSingleStep arginfo_class_Qt_Widgets_QAbstractSlider_setPageStep
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setSliderDown, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, down, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setSliderPosition, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, position, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_setTracking arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_singleStep arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_sliderPosition arginfo_class_Qt_Core_QSize_height
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_triggerAction, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, action, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_value arginfo_class_Qt_Core_QSize_height
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setOrientation, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, orientation, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setRange, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setValue, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onActionTriggered arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onRangeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderMoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderPressed arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderReleased arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Core_QSize_height
 
@@ -346,9 +427,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QComboBox_setItemText arginfo_class_Qt_Widgets_QComboBox_insertItem
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setMaxCount, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QComboBox_setMaxCount arginfo_class_Qt_Widgets_QAbstractSlider_setMaximum
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_setMaxVisibleItems, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, maxItems, IS_LONG, 0)
@@ -1005,9 +1084,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_setClearButtonEnabled arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_setCursorPosition, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, position, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QLineEdit_setCursorPosition arginfo_class_Qt_Widgets_QAbstractSlider_setSliderPosition
 
 #define arginfo_class_Qt_Widgets_QLineEdit_setEchoMode arginfo_class_Qt_Widgets_QAbstractSpinBox_setCorrectionMode
 
@@ -1072,20 +1149,15 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setDis
 	ZEND_ARG_TYPE_INFO(0, base, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QSpinBox_setMaximum arginfo_class_Qt_Widgets_QComboBox_setMaxCount
+#define arginfo_class_Qt_Widgets_QSpinBox_setMaximum arginfo_class_Qt_Widgets_QAbstractSlider_setMaximum
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setMinimum, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QSpinBox_setMinimum arginfo_class_Qt_Widgets_QAbstractSlider_setMinimum
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setPrefix, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, prefix, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setRange, 0, 2, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, min, IS_LONG, 0)
-	ZEND_ARG_TYPE_INFO(0, max, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QSpinBox_setRange arginfo_class_Qt_Widgets_QAbstractSlider_setRange
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setSingleStep, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, val, IS_LONG, 0)
@@ -1170,6 +1242,36 @@ ZEND_METHOD(Qt_Widgets_QAbstractButton, onClicked);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, onPressed);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, onReleased);
 ZEND_METHOD(Qt_Widgets_QAbstractButton, onToggled);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, hasTracking);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, invertedAppearance);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, invertedControls);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, isSliderDown);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, maximum);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, minimum);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, orientation);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, pageStep);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setInvertedAppearance);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setInvertedControls);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setMaximum);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setMinimum);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setPageStep);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setSingleStep);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setSliderDown);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setSliderPosition);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setTracking);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, singleStep);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, sliderPosition);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, triggerAction);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, value);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setOrientation);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setRange);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, setValue);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, onActionTriggered);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, onRangeChanged);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, onSliderMoved);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, onSliderPressed);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, onSliderReleased);
+ZEND_METHOD(Qt_Widgets_QAbstractSlider, onValueChanged);
 ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, alignment);
 ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, buttonSymbols);
 ZEND_METHOD(Qt_Widgets_QAbstractSpinBox, correctionMode);
@@ -1615,6 +1717,40 @@ static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 	ZEND_FE_END
 };
 
+static const zend_function_entry class_Qt_Widgets_QAbstractSlider_methods[] = {
+	ZEND_ME(Qt_Widgets_QAbstractSlider, hasTracking, arginfo_class_Qt_Widgets_QAbstractSlider_hasTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, invertedAppearance, arginfo_class_Qt_Widgets_QAbstractSlider_invertedAppearance, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, invertedControls, arginfo_class_Qt_Widgets_QAbstractSlider_invertedControls, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, isSliderDown, arginfo_class_Qt_Widgets_QAbstractSlider_isSliderDown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, maximum, arginfo_class_Qt_Widgets_QAbstractSlider_maximum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, minimum, arginfo_class_Qt_Widgets_QAbstractSlider_minimum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, orientation, arginfo_class_Qt_Widgets_QAbstractSlider_orientation, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, pageStep, arginfo_class_Qt_Widgets_QAbstractSlider_pageStep, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setInvertedAppearance, arginfo_class_Qt_Widgets_QAbstractSlider_setInvertedAppearance, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setInvertedControls, arginfo_class_Qt_Widgets_QAbstractSlider_setInvertedControls, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setMaximum, arginfo_class_Qt_Widgets_QAbstractSlider_setMaximum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setMinimum, arginfo_class_Qt_Widgets_QAbstractSlider_setMinimum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setPageStep, arginfo_class_Qt_Widgets_QAbstractSlider_setPageStep, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setSingleStep, arginfo_class_Qt_Widgets_QAbstractSlider_setSingleStep, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setSliderDown, arginfo_class_Qt_Widgets_QAbstractSlider_setSliderDown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setSliderPosition, arginfo_class_Qt_Widgets_QAbstractSlider_setSliderPosition, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setTracking, arginfo_class_Qt_Widgets_QAbstractSlider_setTracking, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, singleStep, arginfo_class_Qt_Widgets_QAbstractSlider_singleStep, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, sliderPosition, arginfo_class_Qt_Widgets_QAbstractSlider_sliderPosition, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, triggerAction, arginfo_class_Qt_Widgets_QAbstractSlider_triggerAction, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, value, arginfo_class_Qt_Widgets_QAbstractSlider_value, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setOrientation, arginfo_class_Qt_Widgets_QAbstractSlider_setOrientation, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setRange, arginfo_class_Qt_Widgets_QAbstractSlider_setRange, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, setValue, arginfo_class_Qt_Widgets_QAbstractSlider_setValue, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, onActionTriggered, arginfo_class_Qt_Widgets_QAbstractSlider_onActionTriggered, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, onRangeChanged, arginfo_class_Qt_Widgets_QAbstractSlider_onRangeChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, onSliderMoved, arginfo_class_Qt_Widgets_QAbstractSlider_onSliderMoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, onSliderPressed, arginfo_class_Qt_Widgets_QAbstractSlider_onSliderPressed, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, onSliderReleased, arginfo_class_Qt_Widgets_QAbstractSlider_onSliderReleased, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QAbstractSlider, onValueChanged, arginfo_class_Qt_Widgets_QAbstractSlider_onValueChanged, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
 static const zend_function_entry class_Qt_Widgets_QAbstractSpinBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractSpinBox, alignment, arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractSpinBox, buttonSymbols, arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols, ZEND_ACC_PUBLIC)
@@ -2050,6 +2186,28 @@ static zend_class_entry *register_class_Qt_CheckState(void)
 	return class_entry;
 }
 
+static zend_class_entry *register_class_Qt_Orientation(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "Orientation", NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+
+	zval const_Horizontal_value;
+	ZVAL_LONG(&const_Horizontal_value, 0x1);
+	zend_string *const_Horizontal_name = zend_string_init_interned("Horizontal", sizeof("Horizontal") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Horizontal_name, &const_Horizontal_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Horizontal_name);
+
+	zval const_Vertical_value;
+	ZVAL_LONG(&const_Vertical_value, 0x2);
+	zend_string *const_Vertical_name = zend_string_init_interned("Vertical", sizeof("Vertical") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Vertical_name, &const_Vertical_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Vertical_name);
+
+	return class_entry;
+}
+
 static zend_class_entry *register_class_Qt_WindowType(void)
 {
 	zend_class_entry ce, *class_entry;
@@ -2352,6 +2510,88 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractButton(zend_class_en
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractButton", class_Qt_Widgets_QAbstractButton_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QAbstractSlider(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractSlider", class_Qt_Widgets_QAbstractSlider_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+
+	zval const_SliderNoAction_value;
+	ZVAL_LONG(&const_SliderNoAction_value, 0);
+	zend_string *const_SliderNoAction_name = zend_string_init_interned("SliderNoAction", sizeof("SliderNoAction") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderNoAction_name, &const_SliderNoAction_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderNoAction_name);
+
+	zval const_SliderSingleStepAdd_value;
+	ZVAL_LONG(&const_SliderSingleStepAdd_value, 1);
+	zend_string *const_SliderSingleStepAdd_name = zend_string_init_interned("SliderSingleStepAdd", sizeof("SliderSingleStepAdd") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderSingleStepAdd_name, &const_SliderSingleStepAdd_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderSingleStepAdd_name);
+
+	zval const_SliderSingleStepSub_value;
+	ZVAL_LONG(&const_SliderSingleStepSub_value, 2);
+	zend_string *const_SliderSingleStepSub_name = zend_string_init_interned("SliderSingleStepSub", sizeof("SliderSingleStepSub") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderSingleStepSub_name, &const_SliderSingleStepSub_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderSingleStepSub_name);
+
+	zval const_SliderPageStepAdd_value;
+	ZVAL_LONG(&const_SliderPageStepAdd_value, 3);
+	zend_string *const_SliderPageStepAdd_name = zend_string_init_interned("SliderPageStepAdd", sizeof("SliderPageStepAdd") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderPageStepAdd_name, &const_SliderPageStepAdd_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderPageStepAdd_name);
+
+	zval const_SliderPageStepSub_value;
+	ZVAL_LONG(&const_SliderPageStepSub_value, 4);
+	zend_string *const_SliderPageStepSub_name = zend_string_init_interned("SliderPageStepSub", sizeof("SliderPageStepSub") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderPageStepSub_name, &const_SliderPageStepSub_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderPageStepSub_name);
+
+	zval const_SliderToMinimum_value;
+	ZVAL_LONG(&const_SliderToMinimum_value, 5);
+	zend_string *const_SliderToMinimum_name = zend_string_init_interned("SliderToMinimum", sizeof("SliderToMinimum") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderToMinimum_name, &const_SliderToMinimum_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderToMinimum_name);
+
+	zval const_SliderToMaximum_value;
+	ZVAL_LONG(&const_SliderToMaximum_value, 6);
+	zend_string *const_SliderToMaximum_name = zend_string_init_interned("SliderToMaximum", sizeof("SliderToMaximum") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderToMaximum_name, &const_SliderToMaximum_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderToMaximum_name);
+
+	zval const_SliderMove_value;
+	ZVAL_LONG(&const_SliderMove_value, 7);
+	zend_string *const_SliderMove_name = zend_string_init_interned("SliderMove", sizeof("SliderMove") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderMove_name, &const_SliderMove_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderMove_name);
+
+	zval const_SliderRangeChange_value;
+	ZVAL_LONG(&const_SliderRangeChange_value, 0);
+	zend_string *const_SliderRangeChange_name = zend_string_init_interned("SliderRangeChange", sizeof("SliderRangeChange") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderRangeChange_name, &const_SliderRangeChange_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderRangeChange_name);
+
+	zval const_SliderOrientationChange_value;
+	ZVAL_LONG(&const_SliderOrientationChange_value, 1);
+	zend_string *const_SliderOrientationChange_name = zend_string_init_interned("SliderOrientationChange", sizeof("SliderOrientationChange") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderOrientationChange_name, &const_SliderOrientationChange_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderOrientationChange_name);
+
+	zval const_SliderStepsChange_value;
+	ZVAL_LONG(&const_SliderStepsChange_value, 2);
+	zend_string *const_SliderStepsChange_name = zend_string_init_interned("SliderStepsChange", sizeof("SliderStepsChange") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderStepsChange_name, &const_SliderStepsChange_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderStepsChange_name);
+
+	zval const_SliderValueChange_value;
+	ZVAL_LONG(&const_SliderValueChange_value, 3);
+	zend_string *const_SliderValueChange_name = zend_string_init_interned("SliderValueChange", sizeof("SliderValueChange") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_SliderValueChange_name, &const_SliderValueChange_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_SliderValueChange_name);
 
 	return class_entry;
 }

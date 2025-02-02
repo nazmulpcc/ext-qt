@@ -134,6 +134,9 @@ PHP_MINIT_FUNCTION(qt)
 	auto ce_qradiobutton = register_class_Qt_Widgets_QRadioButton(ce_qabstractbutton);
 	ce_qradiobutton->create_object = qt_obj_create_handler;
 
+	auto ce_qabstractslider = register_class_Qt_Widgets_QAbstractSlider(ce_widget_QWidget);
+	ce_qabstractslider->create_object = qt_obj_create_handler;
+
 	auto ce_qabstractspinbox = register_class_Qt_Widgets_QAbstractSpinBox(ce_widget_QWidget);
 	ce_qabstractspinbox->create_object = qt_obj_create_handler;
 	auto ce_qspinbox = register_class_Qt_Widgets_QSpinBox(ce_qabstractspinbox);
