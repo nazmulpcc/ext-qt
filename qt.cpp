@@ -141,6 +141,8 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qdial->create_object = qt_obj_create_handler;
 	auto ce_qscrollbar = register_class_Qt_Widgets_QScrollBar(ce_qabstractslider);
 	ce_qscrollbar->create_object = qt_obj_create_handler;
+	auto ce_qscrollarea = register_class_Qt_Widgets_QScrollArea(ce_widget_QWidget);
+	ce_qscrollarea->create_object = qt_obj_create_handler;
 	auto ce_qslider = register_class_Qt_Widgets_QSlider(ce_qabstractslider);
 	ce_qslider->create_object = qt_obj_create_handler;
 
