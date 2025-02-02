@@ -694,6 +694,11 @@ namespace Qt\Widgets {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
     }
 
+    class QScrollBar extends QAbstractSlider
+    {
+        public function __construct(int $orientation = \Qt\Orientation::Vertical, ?QWidget $parent = null) {}
+    }
+
     class QSizePolicy
     {
         public const int GrowFlag = 1;
