@@ -784,4 +784,31 @@ namespace Qt\Widgets {
         public function onTextChanged(callable $callback): void {}
         public function onValueChanged(callable $callback): void {}
     }
+
+    class QSplitter extends QFrame
+    {
+        public function __construct(int $orientation = \Qt\Orientation::Horizontal, ?QWidget $parent = null) {}
+        public function addWidget(QWidget $widget): void {}
+        public function childrenCollapsible(): bool {}
+        public function count(): int {}
+        public function handleWidth(): int {}
+        public function indexOf(QWidget $widget): int {}
+        public function insertWidget(int $index, QWidget $widget): void {}
+        public function isCollapsible(int $index): bool {}
+        public function opaqueResize(): bool {}
+        public function refresh(): void {}
+        public function replaceWidget(int $index, QWidget $widget): void {}
+        public function setChildrenCollapsible(bool $enable): void {}
+        public function setCollapsible(int $index, bool $collapsible): void {}
+        public function setHandleWidth(int $width): void {}
+        public function setOpaqueResize(bool $opaque = true): void {}
+        public function setOrientation(int $orientation): void {}
+        public function setSizes(array $sizes): void {}
+        public function setStretchFactor(int $index, int $stretch): void {}
+        public function sizes(): array {}
+        // public function widget(int $index): QWidget {}
+
+        // Signals
+        public function onSplitterMoved(callable $callback): void {}
+    }
 }

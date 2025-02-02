@@ -62,6 +62,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QScrollArea.cpp \
     src/Widgets/QScrollBar.cpp \
     src/Widgets/QSlider.cpp \
+    src/Widgets/QSplitter.cpp \
     src/Widgets/QSpinBox.cpp"
 
   PHP_NEW_EXTENSION([qt],

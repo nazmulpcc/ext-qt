@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 7f9cda4471b51534551d37fb77d190cd866f4dc7 */
+ * Stub hash: 663422c7900cc13379834cdd132d40c68d1d0e75 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -1288,6 +1288,66 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSpinBox_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QSplitter___construct, 0, 0, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, orientation, IS_LONG, 0, "Qt\\Orientation::Horizontal")
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSplitter_addWidget arginfo_class_Qt_Widgets_QLayout_addWidget
+
+#define arginfo_class_Qt_Widgets_QSplitter_childrenCollapsible arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QSplitter_count arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QSplitter_handleWidth arginfo_class_Qt_Core_QSize_height
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_indexOf, 0, 1, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, widget, Qt\\Widgets\\QWidget, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_insertWidget, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, widget, Qt\\Widgets\\QWidget, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_isCollapsible, 0, 1, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSplitter_opaqueResize arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QSplitter_refresh arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QSplitter_replaceWidget arginfo_class_Qt_Widgets_QSplitter_insertWidget
+
+#define arginfo_class_Qt_Widgets_QSplitter_setChildrenCollapsible arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_setCollapsible, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, collapsible, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSplitter_setHandleWidth arginfo_class_Qt_Widgets_QFrame_setLineWidth
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_setOpaqueResize, 0, 0, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, opaque, _IS_BOOL, 0, "true")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSplitter_setOrientation arginfo_class_Qt_Widgets_QAbstractSlider_setOrientation
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_setSizes, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, sizes, IS_ARRAY, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_setStretchFactor, 0, 2, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, stretch, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QSplitter_sizes arginfo_class_Qt_Widgets_QWidget_contentsMargins
+
+#define arginfo_class_Qt_Widgets_QSplitter_onSplitterMoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
 ZEND_METHOD(Qt_Core_QCalendar, __construct);
 ZEND_METHOD(Qt_Core_QCalendar, isValid);
 ZEND_METHOD(Qt_Core_QDate, __construct);
@@ -1757,6 +1817,26 @@ ZEND_METHOD(Qt_Widgets_QSpinBox, value);
 ZEND_METHOD(Qt_Widgets_QSpinBox, setValue);
 ZEND_METHOD(Qt_Widgets_QSpinBox, onTextChanged);
 ZEND_METHOD(Qt_Widgets_QSpinBox, onValueChanged);
+ZEND_METHOD(Qt_Widgets_QSplitter, __construct);
+ZEND_METHOD(Qt_Widgets_QSplitter, addWidget);
+ZEND_METHOD(Qt_Widgets_QSplitter, childrenCollapsible);
+ZEND_METHOD(Qt_Widgets_QSplitter, count);
+ZEND_METHOD(Qt_Widgets_QSplitter, handleWidth);
+ZEND_METHOD(Qt_Widgets_QSplitter, indexOf);
+ZEND_METHOD(Qt_Widgets_QSplitter, insertWidget);
+ZEND_METHOD(Qt_Widgets_QSplitter, isCollapsible);
+ZEND_METHOD(Qt_Widgets_QSplitter, opaqueResize);
+ZEND_METHOD(Qt_Widgets_QSplitter, refresh);
+ZEND_METHOD(Qt_Widgets_QSplitter, replaceWidget);
+ZEND_METHOD(Qt_Widgets_QSplitter, setChildrenCollapsible);
+ZEND_METHOD(Qt_Widgets_QSplitter, setCollapsible);
+ZEND_METHOD(Qt_Widgets_QSplitter, setHandleWidth);
+ZEND_METHOD(Qt_Widgets_QSplitter, setOpaqueResize);
+ZEND_METHOD(Qt_Widgets_QSplitter, setOrientation);
+ZEND_METHOD(Qt_Widgets_QSplitter, setSizes);
+ZEND_METHOD(Qt_Widgets_QSplitter, setStretchFactor);
+ZEND_METHOD(Qt_Widgets_QSplitter, sizes);
+ZEND_METHOD(Qt_Widgets_QSplitter, onSplitterMoved);
 
 static const zend_function_entry class_Qt_Core_QCalendar_methods[] = {
 	ZEND_ME(Qt_Core_QCalendar, __construct, arginfo_class_Qt_Core_QCalendar___construct, ZEND_ACC_PUBLIC)
@@ -2348,6 +2428,30 @@ static const zend_function_entry class_Qt_Widgets_QSpinBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QSpinBox, setValue, arginfo_class_Qt_Widgets_QSpinBox_setValue, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QSpinBox, onTextChanged, arginfo_class_Qt_Widgets_QSpinBox_onTextChanged, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QSpinBox, onValueChanged, arginfo_class_Qt_Widgets_QSpinBox_onValueChanged, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QSplitter_methods[] = {
+	ZEND_ME(Qt_Widgets_QSplitter, __construct, arginfo_class_Qt_Widgets_QSplitter___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, addWidget, arginfo_class_Qt_Widgets_QSplitter_addWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, childrenCollapsible, arginfo_class_Qt_Widgets_QSplitter_childrenCollapsible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, count, arginfo_class_Qt_Widgets_QSplitter_count, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, handleWidth, arginfo_class_Qt_Widgets_QSplitter_handleWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, indexOf, arginfo_class_Qt_Widgets_QSplitter_indexOf, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, insertWidget, arginfo_class_Qt_Widgets_QSplitter_insertWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, isCollapsible, arginfo_class_Qt_Widgets_QSplitter_isCollapsible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, opaqueResize, arginfo_class_Qt_Widgets_QSplitter_opaqueResize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, refresh, arginfo_class_Qt_Widgets_QSplitter_refresh, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, replaceWidget, arginfo_class_Qt_Widgets_QSplitter_replaceWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setChildrenCollapsible, arginfo_class_Qt_Widgets_QSplitter_setChildrenCollapsible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setCollapsible, arginfo_class_Qt_Widgets_QSplitter_setCollapsible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setHandleWidth, arginfo_class_Qt_Widgets_QSplitter_setHandleWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setOpaqueResize, arginfo_class_Qt_Widgets_QSplitter_setOpaqueResize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setOrientation, arginfo_class_Qt_Widgets_QSplitter_setOrientation, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setSizes, arginfo_class_Qt_Widgets_QSplitter_setSizes, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, setStretchFactor, arginfo_class_Qt_Widgets_QSplitter_setStretchFactor, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, sizes, arginfo_class_Qt_Widgets_QSplitter_sizes, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QSplitter, onSplitterMoved, arginfo_class_Qt_Widgets_QSplitter_onSplitterMoved, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3097,12 +3201,12 @@ static zend_class_entry *register_class_Qt_Widgets_QWidget(zend_class_entry *cla
 	return class_entry;
 }
 
-static zend_class_entry *register_class_Qt_Widgets_QLabel(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+static zend_class_entry *register_class_Qt_Widgets_QLabel(zend_class_entry *class_entry_Qt_Widgets_QFrame)
 {
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLabel", class_Qt_Widgets_QLabel_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
 
 	return class_entry;
 }
@@ -3181,12 +3285,12 @@ static zend_class_entry *register_class_Qt_Widgets_QRadioButton(zend_class_entry
 	return class_entry;
 }
 
-static zend_class_entry *register_class_Qt_Widgets_QScrollArea(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+static zend_class_entry *register_class_Qt_Widgets_QScrollArea(zend_class_entry *class_entry_Qt_Widgets_QFrame)
 {
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QScrollArea", class_Qt_Widgets_QScrollArea_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
 
 	return class_entry;
 }
@@ -3283,6 +3387,16 @@ static zend_class_entry *register_class_Qt_Widgets_QSpinBox(zend_class_entry *cl
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSpinBox", class_Qt_Widgets_QSpinBox_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSpinBox, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QSplitter(zend_class_entry *class_entry_Qt_Widgets_QFrame)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSplitter", class_Qt_Widgets_QSplitter_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
 
 	return class_entry;
 }
