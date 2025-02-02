@@ -52,7 +52,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QDateTimeEdit.cpp \
     src/Widgets/QDial.cpp \
     src/Widgets/QFrame.cpp \
-    src/Widgets/QWidget.cpp \
+    src/Widgets/QGroupBox.cpp \
     src/Widgets/QLabel.cpp \
     src/Widgets/QLineEdit.cpp \
     src/Widgets/QLayout.cpp \
@@ -63,7 +63,8 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QScrollBar.cpp \
     src/Widgets/QSlider.cpp \
     src/Widgets/QSplitter.cpp \
-    src/Widgets/QSpinBox.cpp"
+    src/Widgets/QSpinBox.cpp \
+    src/Widgets/QWidget.cpp"
 
   PHP_NEW_EXTENSION([qt],
     $qt_source_files,

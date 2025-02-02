@@ -159,12 +159,12 @@ PHP_MINIT_FUNCTION(qt)
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;
 
+	register_class_Qt_Widgets_QGroupBox(ce_widget_QWidget);
+
 	ce_widget_QLayout = register_class_Qt_Widgets_QLayout(ce_qobject);
 	ce_widget_QLayout->create_object = qt_obj_create_handler;
-
 	auto ce_widget_QBoxLayout = register_class_Qt_Widgets_QBoxLayout(ce_widget_QLayout);
 	ce_widget_QBoxLayout->create_object = qt_obj_create_handler;
-
 	auto ce_qhboxlayout = register_class_Qt_Widgets_QHBoxLayout(ce_widget_QBoxLayout);
 	ce_qhboxlayout->create_object = qt_obj_create_handler;
 	auto ce_qvboxlayout = register_class_Qt_Widgets_QVBoxLayout(ce_widget_QBoxLayout);

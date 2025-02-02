@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 663422c7900cc13379834cdd132d40c68d1d0e75 */
+ * Stub hash: f325623406f15d90ef8f031e427ea22990318c0e */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -675,6 +675,41 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QFrame_setMidLineWidth arginfo_class_Qt_Widgets_QFrame_setLineWidth
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QGroupBox___construct, 0, 0, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, title, IS_STRING, 1, "null")
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QGroupBox_alignment arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QGroupBox_isCheckable arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QGroupBox_isChecked arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QGroupBox_isFlat arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QGroupBox_setAlignment arginfo_class_Qt_Widgets_QAbstractSpinBox_setAlignment
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QGroupBox_setCheckable, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, checkable, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QGroupBox_setFlat, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, flat, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QGroupBox_setTitle, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, title, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QGroupBox_title arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QGroupBox_setChecked arginfo_class_Qt_Widgets_QAbstractButton_setChecked
+
+#define arginfo_class_Qt_Widgets_QGroupBox_onClicked arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QGroupBox_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
 #define arginfo_class_Qt_Widgets_QHBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QSlider___construct, 0, 0, 0)
@@ -1076,9 +1111,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWind
 	ZEND_ARG_TYPE_INFO(0, modified, _IS_BOOL, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setWindowTitle, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, title, IS_STRING, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QWidget_setWindowTitle arginfo_class_Qt_Widgets_QGroupBox_setTitle
 
 #define arginfo_class_Qt_Widgets_QWidget_show arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -1587,6 +1620,19 @@ ZEND_METHOD(Qt_Widgets_QFrame, setFrameShape);
 ZEND_METHOD(Qt_Widgets_QFrame, setFrameStyle);
 ZEND_METHOD(Qt_Widgets_QFrame, setLineWidth);
 ZEND_METHOD(Qt_Widgets_QFrame, setMidLineWidth);
+ZEND_METHOD(Qt_Widgets_QGroupBox, __construct);
+ZEND_METHOD(Qt_Widgets_QGroupBox, alignment);
+ZEND_METHOD(Qt_Widgets_QGroupBox, isCheckable);
+ZEND_METHOD(Qt_Widgets_QGroupBox, isChecked);
+ZEND_METHOD(Qt_Widgets_QGroupBox, isFlat);
+ZEND_METHOD(Qt_Widgets_QGroupBox, setAlignment);
+ZEND_METHOD(Qt_Widgets_QGroupBox, setCheckable);
+ZEND_METHOD(Qt_Widgets_QGroupBox, setFlat);
+ZEND_METHOD(Qt_Widgets_QGroupBox, setTitle);
+ZEND_METHOD(Qt_Widgets_QGroupBox, title);
+ZEND_METHOD(Qt_Widgets_QGroupBox, setChecked);
+ZEND_METHOD(Qt_Widgets_QGroupBox, onClicked);
+ZEND_METHOD(Qt_Widgets_QGroupBox, onToggled);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QSlider, __construct);
 ZEND_METHOD(Qt_Widgets_QSlider, setTickInterval);
@@ -2146,6 +2192,23 @@ static const zend_function_entry class_Qt_Widgets_QFrame_methods[] = {
 	ZEND_ME(Qt_Widgets_QFrame, setFrameStyle, arginfo_class_Qt_Widgets_QFrame_setFrameStyle, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QFrame, setLineWidth, arginfo_class_Qt_Widgets_QFrame_setLineWidth, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QFrame, setMidLineWidth, arginfo_class_Qt_Widgets_QFrame_setMidLineWidth, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QGroupBox_methods[] = {
+	ZEND_ME(Qt_Widgets_QGroupBox, __construct, arginfo_class_Qt_Widgets_QGroupBox___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, alignment, arginfo_class_Qt_Widgets_QGroupBox_alignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, isCheckable, arginfo_class_Qt_Widgets_QGroupBox_isCheckable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, isChecked, arginfo_class_Qt_Widgets_QGroupBox_isChecked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, isFlat, arginfo_class_Qt_Widgets_QGroupBox_isFlat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, setAlignment, arginfo_class_Qt_Widgets_QGroupBox_setAlignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, setCheckable, arginfo_class_Qt_Widgets_QGroupBox_setCheckable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, setFlat, arginfo_class_Qt_Widgets_QGroupBox_setFlat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, setTitle, arginfo_class_Qt_Widgets_QGroupBox_setTitle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, title, arginfo_class_Qt_Widgets_QGroupBox_title, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, setChecked, arginfo_class_Qt_Widgets_QGroupBox_setChecked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, onClicked, arginfo_class_Qt_Widgets_QGroupBox_onClicked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QGroupBox, onToggled, arginfo_class_Qt_Widgets_QGroupBox_onToggled, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3121,6 +3184,16 @@ static zend_class_entry *register_class_Qt_Widgets_QFrame(zend_class_entry *clas
 	zend_string *const_Sunken_name = zend_string_init_interned("Sunken", sizeof("Sunken") - 1, 1);
 	zend_declare_typed_class_constant(class_entry, const_Sunken_name, &const_Sunken_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
 	zend_string_release(const_Sunken_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QGroupBox(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QGroupBox", class_Qt_Widgets_QGroupBox_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
 
 	return class_entry;
 }

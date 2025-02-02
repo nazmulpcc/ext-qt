@@ -444,6 +444,27 @@ namespace Qt\Widgets {
         public function setMidLineWidth(int $width): void {}
     }
 
+    class QGroupBox extends QWidget
+    {
+        public function __construct(?string $title = null, ?QWidget $parent = null) {}
+        public function alignment(): int {}
+        public function isCheckable(): bool {}
+        public function isChecked(): bool {}
+        public function isFlat(): bool {}
+        public function setAlignment(int $alignment): void {}
+        public function setCheckable(bool $checkable): void {}
+        public function setFlat(bool $flat): void {}
+        public function setTitle(string $title): void {}
+        public function title(): string {}
+
+        // slots
+        public function setChecked(bool $checked): void {}
+
+        // signals
+        public function onClicked(callable $callback): void {}
+        public function onToggled(callable $callback): void {}
+    }
+
     class QHBoxLayout extends QBoxLayout
     {
         public function __construct(?QWidget $parent = null) {}
