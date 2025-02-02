@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 375abc13a761f021d5a417bef455cb741d4df8d8 */
+ * Stub hash: 7f9cda4471b51534551d37fb77d190cd866f4dc7 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -633,6 +633,48 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QDial_setWrapping arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QFrame___construct, 0, 0, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, flags, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QFrame_frameRect, 0, 0, Qt\\Core\\QRect, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QFrame_frameShadow arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QFrame_frameShape arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QFrame_frameStyle arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QFrame_frameWidth arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QFrame_lineWidth arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QFrame_midLineWidth arginfo_class_Qt_Core_QSize_height
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QFrame_setFrameRect, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, rect, Qt\\Core\\QRect, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QFrame_setFrameShadow, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, shadow, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QFrame_setFrameShape, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, shape, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QFrame_setFrameStyle, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, style, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QFrame_setLineWidth, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, width, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QFrame_setMidLineWidth arginfo_class_Qt_Widgets_QFrame_setLineWidth
+
 #define arginfo_class_Qt_Widgets_QHBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QSlider___construct, 0, 0, 0)
@@ -679,8 +721,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_childAt,
 	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_childrenRect, 0, 0, Qt\\Core\\QRect, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QWidget_childrenRect arginfo_class_Qt_Widgets_QFrame_frameRect
 
 #define arginfo_class_Qt_Widgets_QWidget_clearFocus arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -689,7 +730,7 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_contentsMargins, 0, 0, IS_ARRAY, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_contentsRect arginfo_class_Qt_Widgets_QWidget_childrenRect
+#define arginfo_class_Qt_Widgets_QWidget_contentsRect arginfo_class_Qt_Widgets_QFrame_frameRect
 
 #define arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy arginfo_class_Qt_Core_QSize_height
 
@@ -697,11 +738,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_focusPolicy arginfo_class_Qt_Core_QSize_height
 
-#define arginfo_class_Qt_Widgets_QWidget_frameGeometry arginfo_class_Qt_Widgets_QWidget_childrenRect
+#define arginfo_class_Qt_Widgets_QWidget_frameGeometry arginfo_class_Qt_Widgets_QFrame_frameRect
 
 #define arginfo_class_Qt_Widgets_QWidget_frameSize arginfo_class_Qt_Widgets_QWidget_baseSize
 
-#define arginfo_class_Qt_Widgets_QWidget_geometry arginfo_class_Qt_Widgets_QWidget_childrenRect
+#define arginfo_class_Qt_Widgets_QWidget_geometry arginfo_class_Qt_Widgets_QFrame_frameRect
 
 #define arginfo_class_Qt_Widgets_QWidget_grabKeyboard arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -774,7 +815,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_nextInFocusChain arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
-#define arginfo_class_Qt_Widgets_QWidget_normalGeometry arginfo_class_Qt_Widgets_QWidget_childrenRect
+#define arginfo_class_Qt_Widgets_QWidget_normalGeometry arginfo_class_Qt_Widgets_QFrame_frameRect
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_overrideWindowFlags, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, flags, IS_LONG, 0)
@@ -786,7 +827,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_previousInFocusChain arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
-#define arginfo_class_Qt_Widgets_QWidget_rect arginfo_class_Qt_Widgets_QWidget_childrenRect
+#define arginfo_class_Qt_Widgets_QWidget_rect arginfo_class_Qt_Widgets_QFrame_frameRect
 
 #define arginfo_class_Qt_Widgets_QWidget_releaseKeyboard arginfo_class_Qt_Core_QObject_dumpObjectInfo
 
@@ -1472,6 +1513,20 @@ ZEND_METHOD(Qt_Widgets_QDial, setNotchTarget);
 ZEND_METHOD(Qt_Widgets_QDial, wrapping);
 ZEND_METHOD(Qt_Widgets_QDial, setNotchesVisible);
 ZEND_METHOD(Qt_Widgets_QDial, setWrapping);
+ZEND_METHOD(Qt_Widgets_QFrame, __construct);
+ZEND_METHOD(Qt_Widgets_QFrame, frameRect);
+ZEND_METHOD(Qt_Widgets_QFrame, frameShadow);
+ZEND_METHOD(Qt_Widgets_QFrame, frameShape);
+ZEND_METHOD(Qt_Widgets_QFrame, frameStyle);
+ZEND_METHOD(Qt_Widgets_QFrame, frameWidth);
+ZEND_METHOD(Qt_Widgets_QFrame, lineWidth);
+ZEND_METHOD(Qt_Widgets_QFrame, midLineWidth);
+ZEND_METHOD(Qt_Widgets_QFrame, setFrameRect);
+ZEND_METHOD(Qt_Widgets_QFrame, setFrameShadow);
+ZEND_METHOD(Qt_Widgets_QFrame, setFrameShape);
+ZEND_METHOD(Qt_Widgets_QFrame, setFrameStyle);
+ZEND_METHOD(Qt_Widgets_QFrame, setLineWidth);
+ZEND_METHOD(Qt_Widgets_QFrame, setMidLineWidth);
 ZEND_METHOD(Qt_Widgets_QHBoxLayout, __construct);
 ZEND_METHOD(Qt_Widgets_QSlider, __construct);
 ZEND_METHOD(Qt_Widgets_QSlider, setTickInterval);
@@ -1993,6 +2048,24 @@ static const zend_function_entry class_Qt_Widgets_QDial_methods[] = {
 	ZEND_ME(Qt_Widgets_QDial, wrapping, arginfo_class_Qt_Widgets_QDial_wrapping, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QDial, setNotchesVisible, arginfo_class_Qt_Widgets_QDial_setNotchesVisible, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QDial, setWrapping, arginfo_class_Qt_Widgets_QDial_setWrapping, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QFrame_methods[] = {
+	ZEND_ME(Qt_Widgets_QFrame, __construct, arginfo_class_Qt_Widgets_QFrame___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, frameRect, arginfo_class_Qt_Widgets_QFrame_frameRect, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, frameShadow, arginfo_class_Qt_Widgets_QFrame_frameShadow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, frameShape, arginfo_class_Qt_Widgets_QFrame_frameShape, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, frameStyle, arginfo_class_Qt_Widgets_QFrame_frameStyle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, frameWidth, arginfo_class_Qt_Widgets_QFrame_frameWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, lineWidth, arginfo_class_Qt_Widgets_QFrame_lineWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, midLineWidth, arginfo_class_Qt_Widgets_QFrame_midLineWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, setFrameRect, arginfo_class_Qt_Widgets_QFrame_setFrameRect, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, setFrameShadow, arginfo_class_Qt_Widgets_QFrame_setFrameShadow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, setFrameShape, arginfo_class_Qt_Widgets_QFrame_setFrameShape, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, setFrameStyle, arginfo_class_Qt_Widgets_QFrame_setFrameStyle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, setLineWidth, arginfo_class_Qt_Widgets_QFrame_setLineWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QFrame, setMidLineWidth, arginfo_class_Qt_Widgets_QFrame_setMidLineWidth, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -2874,6 +2947,76 @@ static zend_class_entry *register_class_Qt_Widgets_QDial(zend_class_entry *class
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QDial", class_Qt_Widgets_QDial_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSlider, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QFrame(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QFrame", class_Qt_Widgets_QFrame_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+
+	zval const_NoFrame_value;
+	ZVAL_LONG(&const_NoFrame_value, 0);
+	zend_string *const_NoFrame_name = zend_string_init_interned("NoFrame", sizeof("NoFrame") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_NoFrame_name, &const_NoFrame_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_NoFrame_name);
+
+	zval const_Box_value;
+	ZVAL_LONG(&const_Box_value, 1);
+	zend_string *const_Box_name = zend_string_init_interned("Box", sizeof("Box") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Box_name, &const_Box_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Box_name);
+
+	zval const_Panel_value;
+	ZVAL_LONG(&const_Panel_value, 2);
+	zend_string *const_Panel_name = zend_string_init_interned("Panel", sizeof("Panel") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Panel_name, &const_Panel_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Panel_name);
+
+	zval const_StyledPanel_value;
+	ZVAL_LONG(&const_StyledPanel_value, 6);
+	zend_string *const_StyledPanel_name = zend_string_init_interned("StyledPanel", sizeof("StyledPanel") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_StyledPanel_name, &const_StyledPanel_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_StyledPanel_name);
+
+	zval const_HLine_value;
+	ZVAL_LONG(&const_HLine_value, 4);
+	zend_string *const_HLine_name = zend_string_init_interned("HLine", sizeof("HLine") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_HLine_name, &const_HLine_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_HLine_name);
+
+	zval const_VLine_value;
+	ZVAL_LONG(&const_VLine_value, 5);
+	zend_string *const_VLine_name = zend_string_init_interned("VLine", sizeof("VLine") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_VLine_name, &const_VLine_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_VLine_name);
+
+	zval const_WinPanel_value;
+	ZVAL_LONG(&const_WinPanel_value, 3);
+	zend_string *const_WinPanel_name = zend_string_init_interned("WinPanel", sizeof("WinPanel") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_WinPanel_name, &const_WinPanel_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_WinPanel_name);
+
+	zval const_Plain_value;
+	ZVAL_LONG(&const_Plain_value, 16);
+	zend_string *const_Plain_name = zend_string_init_interned("Plain", sizeof("Plain") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Plain_name, &const_Plain_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Plain_name);
+
+	zval const_Raised_value;
+	ZVAL_LONG(&const_Raised_value, 32);
+	zend_string *const_Raised_name = zend_string_init_interned("Raised", sizeof("Raised") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Raised_name, &const_Raised_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Raised_name);
+
+	zval const_Sunken_value;
+	ZVAL_LONG(&const_Sunken_value, 48);
+	zend_string *const_Sunken_name = zend_string_init_interned("Sunken", sizeof("Sunken") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_Sunken_name, &const_Sunken_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_Sunken_name);
 
 	return class_entry;
 }

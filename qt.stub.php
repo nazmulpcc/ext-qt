@@ -414,6 +414,36 @@ namespace Qt\Widgets {
         public function setWrapping(bool $on): void {}
     }
 
+    class QFrame extends QWidget
+    {
+        public const int NoFrame = 0;
+        public const int Box = 1;
+        public const int Panel = 2;
+        public const int StyledPanel = 6;
+        public const int HLine = 4;
+        public const int VLine = 5;
+        public const int WinPanel = 3;
+
+        public const int Plain = 16; // 0x10
+        public const int Raised = 32; // 0x20
+        public const int Sunken = 48; // 0x30
+
+        public function __construct(?QWidget $parent = null, int $flags = 0) {}
+        public function frameRect(): \Qt\Core\QRect {}
+        public function frameShadow(): int {}
+        public function frameShape(): int {}
+        public function frameStyle(): int {}
+        public function frameWidth(): int {}
+        public function lineWidth(): int {}
+        public function midLineWidth(): int {}
+        public function setFrameRect(\Qt\Core\QRect $rect): void {}
+        public function setFrameShadow(int $shadow): void {}
+        public function setFrameShape(int $shape): void {}
+        public function setFrameStyle(int $style): void {}
+        public function setLineWidth(int $width): void {}
+        public function setMidLineWidth(int $width): void {}
+    }
+
     class QHBoxLayout extends QBoxLayout
     {
         public function __construct(?QWidget $parent = null) {}
@@ -614,7 +644,7 @@ namespace Qt\Widgets {
         public function onWindowTitleChanged(callable $callback): void {}
     }
 
-    class QLabel extends QWidget
+    class QLabel extends QFrame
     {
         public function __construct(?string $text = null, ?QWidget $parent = null, int $windowFlags = 0) {}
         public function setText(string $text): void {}
@@ -694,7 +724,7 @@ namespace Qt\Widgets {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
     }
 
-    class QScrollArea extends QWidget
+    class QScrollArea extends QFrame // @todo Implement QAbstractScrollArea
     {
         public function __construct(?QWidget $parent = null) {}
         public function alignment(): int {}
