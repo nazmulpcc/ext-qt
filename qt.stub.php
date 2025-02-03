@@ -868,7 +868,6 @@ namespace Qt\Widgets {
         public function isUndoRedoEnabled(): bool {}
         public function lineWrapColumnOrWidth(): int {}
         public function lineWrapMode(): int {}
-        public function loadResource(int $type, string $name): void {}
         public function overwriteMode(): bool {}
         public function placeholderText(): string {}
         public function setAcceptRichText(bool $accept): void {}
@@ -886,8 +885,6 @@ namespace Qt\Widgets {
         public function setWordWrapMode(int $policy): void {}
         public function tabChangesFocus(): bool {}
         public function tabStopDistance(): float {}
-        public function textBackgroundColor(): string {}
-        public function textColor(): string {}
         public function textInteractionFlags(): int {}
         public function toHtml(): string {}
         public function toMarkdown(int $features = 2): string {}
@@ -915,8 +912,6 @@ namespace Qt\Widgets {
         public function setMarkdown(string $text): void {}
         public function setPlainText(string $text): void {}
         public function setText(string $text): void {}
-        public function setTextBackgroundColor(string $color): void {}
-        public function setTextColor(string $color): void {}
         public function undo(): void {}
         public function zoomIn(int $range = 1): void {}
         public function zoomOut(int $range = 1): void {}

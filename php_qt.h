@@ -160,6 +160,11 @@ inline void qt_cpp_to_zval<QString>(zval *z, const QString &value)
    zend_string *ztext = zend_string_init(value.toUtf8().data(), value.size(), 0);
    ZVAL_STR(z, ztext);
 }
+template <>
+inline void qt_cpp_to_zval<double>(zval *z, const double &value)
+{
+   ZVAL_DOUBLE(z, value);
+}
 
 template <typename Func1>
 struct SignalParameterTypes;

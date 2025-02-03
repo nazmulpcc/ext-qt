@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 00bf48908421c4e4fcafb84f184977240ae3cd2d */
+ * Stub hash: d6527fed09d5600a4739afd8de4af55fc14eab03 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -1423,6 +1423,157 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QTextEdit_autoFormatting arginfo_class_Qt_Core_QSize_height
 
+#define arginfo_class_Qt_Widgets_QTextEdit_canPaste arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_documentTitle arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QTextEdit_ensureCursorVisible arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_fontFamily arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QTextEdit_fontItalic arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_fontPointSize arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QTextEdit_fontUnderline arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_fontWeight arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QTextEdit_isReadOnly arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_isUndoRedoEnabled arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_lineWrapColumnOrWidth arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QTextEdit_lineWrapMode arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QTextEdit_overwriteMode arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_placeholderText arginfo_class_Qt_Core_QObject_objectName
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setAcceptRichText, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, accept, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setAutoFormatting, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, features, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setDocumentTitle arginfo_class_Qt_Widgets_QGroupBox_setTitle
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setLineWrapColumnOrWidth arginfo_class_Qt_Widgets_QWidget_setFixedWidth
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setLineWrapMode arginfo_class_Qt_Widgets_QAbstractSpinBox_setCorrectionMode
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setOverwriteMode, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, overwrite, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setPlaceholderText arginfo_class_Qt_Widgets_QComboBox_setPlaceholderText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setReadOnly arginfo_class_Qt_Widgets_QAbstractSpinBox_setReadOnly
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setTabChangesFocus, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, b, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setTabStopDistance, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, distance, IS_DOUBLE, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setTextInteractionFlags arginfo_class_Qt_Widgets_QWidget_overrideWindowFlags
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setUndoRedoEnabled arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setWordWrapMode arginfo_class_Qt_Widgets_QAbstractScrollArea_setHorizontalScrollBarPolicy
+
+#define arginfo_class_Qt_Widgets_QTextEdit_tabChangesFocus arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QTextEdit_tabStopDistance arginfo_class_Qt_Widgets_QDial_notchTarget
+
+#define arginfo_class_Qt_Widgets_QTextEdit_textInteractionFlags arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QTextEdit_toHtml arginfo_class_Qt_Core_QObject_objectName
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_toMarkdown, 0, 0, IS_STRING, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, features, IS_LONG, 0, "2")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QTextEdit_toPlainText arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QTextEdit_wordWrapMode arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QTextEdit_append arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_copy arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_cut arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_insertHtml arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_insertPlainText arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_paste arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_redo arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_scrollToAnchor arginfo_class_Qt_Core_QObject_setObjectName
+
+#define arginfo_class_Qt_Widgets_QTextEdit_selectAll arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setAlignment arginfo_class_Qt_Widgets_QAbstractSpinBox_setAlignment
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setFontFamily, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, family, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setFontItalic, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, italic, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setFontPointSize, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, size, IS_DOUBLE, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setFontUnderline, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, underline, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_setFontWeight, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, weight, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setHtml arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setMarkdown arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setPlainText arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_setText arginfo_class_Qt_Widgets_QAbstractButton_setText
+
+#define arginfo_class_Qt_Widgets_QTextEdit_undo arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_zoomIn, 0, 0, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, range, IS_LONG, 0, "1")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QTextEdit_zoomOut arginfo_class_Qt_Widgets_QTextEdit_zoomIn
+
+#define arginfo_class_Qt_Widgets_QTextEdit_onCopyAvailable arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QTextEdit_onCursorPositionChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QTextEdit_onRedoAvailable arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QTextEdit_onSelectionChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QTextEdit_onTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+
 ZEND_METHOD(Qt_Core_QCalendar, __construct);
 ZEND_METHOD(Qt_Core_QCalendar, isValid);
 ZEND_METHOD(Qt_Core_QDate, __construct);
@@ -1942,12 +2093,97 @@ ZEND_METHOD(Qt_Widgets_QTextEdit, acceptRichText);
 ZEND_METHOD(Qt_Widgets_QTextEdit, alignment);
 ZEND_METHOD(Qt_Widgets_QTextEdit, anchorAt);
 ZEND_METHOD(Qt_Widgets_QTextEdit, autoFormatting);
+ZEND_METHOD(Qt_Widgets_QTextEdit, canPaste);
+ZEND_METHOD(Qt_Widgets_QTextEdit, documentTitle);
+ZEND_METHOD(Qt_Widgets_QTextEdit, ensureCursorVisible);
+ZEND_METHOD(Qt_Widgets_QTextEdit, fontFamily);
+ZEND_METHOD(Qt_Widgets_QTextEdit, fontItalic);
+ZEND_METHOD(Qt_Widgets_QTextEdit, fontPointSize);
+ZEND_METHOD(Qt_Widgets_QTextEdit, fontUnderline);
+ZEND_METHOD(Qt_Widgets_QTextEdit, fontWeight);
+ZEND_METHOD(Qt_Widgets_QTextEdit, isReadOnly);
+ZEND_METHOD(Qt_Widgets_QTextEdit, isUndoRedoEnabled);
+ZEND_METHOD(Qt_Widgets_QTextEdit, lineWrapColumnOrWidth);
+ZEND_METHOD(Qt_Widgets_QTextEdit, lineWrapMode);
+ZEND_METHOD(Qt_Widgets_QTextEdit, overwriteMode);
+ZEND_METHOD(Qt_Widgets_QTextEdit, placeholderText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setAcceptRichText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setAutoFormatting);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setDocumentTitle);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setLineWrapColumnOrWidth);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setLineWrapMode);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setOverwriteMode);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setPlaceholderText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setReadOnly);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setTabChangesFocus);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setTabStopDistance);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setTextInteractionFlags);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setUndoRedoEnabled);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setWordWrapMode);
+ZEND_METHOD(Qt_Widgets_QTextEdit, tabChangesFocus);
+ZEND_METHOD(Qt_Widgets_QTextEdit, tabStopDistance);
+ZEND_METHOD(Qt_Widgets_QTextEdit, textInteractionFlags);
+ZEND_METHOD(Qt_Widgets_QTextEdit, toHtml);
+ZEND_METHOD(Qt_Widgets_QTextEdit, toMarkdown);
+ZEND_METHOD(Qt_Widgets_QTextEdit, toPlainText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, wordWrapMode);
+ZEND_METHOD(Qt_Widgets_QTextEdit, append);
+ZEND_METHOD(Qt_Widgets_QTextEdit, clear);
+ZEND_METHOD(Qt_Widgets_QTextEdit, copy);
+ZEND_METHOD(Qt_Widgets_QTextEdit, cut);
+ZEND_METHOD(Qt_Widgets_QTextEdit, insertHtml);
+ZEND_METHOD(Qt_Widgets_QTextEdit, insertPlainText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, paste);
+ZEND_METHOD(Qt_Widgets_QTextEdit, redo);
+ZEND_METHOD(Qt_Widgets_QTextEdit, scrollToAnchor);
+ZEND_METHOD(Qt_Widgets_QTextEdit, selectAll);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setAlignment);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setFontFamily);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setFontItalic);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setFontPointSize);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setFontUnderline);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setFontWeight);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setHtml);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setMarkdown);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setPlainText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, setText);
+ZEND_METHOD(Qt_Widgets_QTextEdit, undo);
+ZEND_METHOD(Qt_Widgets_QTextEdit, zoomIn);
+ZEND_METHOD(Qt_Widgets_QTextEdit, zoomOut);
+ZEND_METHOD(Qt_Widgets_QTextEdit, onCopyAvailable);
+ZEND_METHOD(Qt_Widgets_QTextEdit, onCursorPositionChanged);
+ZEND_METHOD(Qt_Widgets_QTextEdit, onRedoAvailable);
+ZEND_METHOD(Qt_Widgets_QTextEdit, onSelectionChanged);
+ZEND_METHOD(Qt_Widgets_QTextEdit, onTextChanged);
+ZEND_METHOD(Qt_Widgets_QTextEdit, onUndoAvailable);
+
+
+static const zend_function_entry class_Qt_CheckState_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Orientation_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_WindowType_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_AlignmentFlag_methods[] = {
+	ZEND_FE_END
+};
+
 
 static const zend_function_entry class_Qt_Core_QCalendar_methods[] = {
 	ZEND_ME(Qt_Core_QCalendar, __construct, arginfo_class_Qt_Core_QCalendar___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QCalendar, isValid, arginfo_class_Qt_Core_QCalendar_isValid, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Core_QDate_methods[] = {
 	ZEND_ME(Qt_Core_QDate, __construct, arginfo_class_Qt_Core_QDate___construct, ZEND_ACC_PUBLIC)
@@ -1959,10 +2195,12 @@ static const zend_function_entry class_Qt_Core_QDate_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Core_QDateTime_methods[] = {
 	ZEND_ME(Qt_Core_QDateTime, __construct, arginfo_class_Qt_Core_QDateTime___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_ME(Qt_Core_QObject, __construct, arginfo_class_Qt_Core_QObject___construct, ZEND_ACC_PUBLIC)
@@ -1981,10 +2219,12 @@ static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Core_QRect_methods[] = {
 	ZEND_ME(Qt_Core_QRect, __construct, arginfo_class_Qt_Core_QRect___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Core_QSize_methods[] = {
 	ZEND_ME(Qt_Core_QSize, __construct, arginfo_class_Qt_Core_QSize___construct, ZEND_ACC_PUBLIC)
@@ -1995,6 +2235,7 @@ static const zend_function_entry class_Qt_Core_QSize_methods[] = {
 	ZEND_ME(Qt_Core_QSize, width, arginfo_class_Qt_Core_QSize_width, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Core_QTime_methods[] = {
 	ZEND_ME(Qt_Core_QTime, __construct, arginfo_class_Qt_Core_QTime___construct, ZEND_ACC_PUBLIC)
@@ -2007,17 +2248,20 @@ static const zend_function_entry class_Qt_Core_QTime_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Core_QTimeZone_methods[] = {
 	ZEND_ME(Qt_Core_QTimeZone, __construct, arginfo_class_Qt_Core_QTimeZone___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QTimeZone, isValid, arginfo_class_Qt_Core_QTimeZone_isValid, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QApplication_methods[] = {
 	ZEND_ME(Qt_Widgets_QApplication, __construct, arginfo_class_Qt_Widgets_QApplication___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QApplication, exec, arginfo_class_Qt_Widgets_QApplication_exec, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractButton, autoRepeat, arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat, ZEND_ACC_PUBLIC)
@@ -2040,6 +2284,7 @@ static const zend_function_entry class_Qt_Widgets_QAbstractButton_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QAbstractScrollArea_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractScrollArea, addScrollBarWidget, arginfo_class_Qt_Widgets_QAbstractScrollArea_addScrollBarWidget, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractScrollArea, horizontalScrollBarPolicy, arginfo_class_Qt_Widgets_QAbstractScrollArea_horizontalScrollBarPolicy, ZEND_ACC_PUBLIC)
@@ -2055,6 +2300,7 @@ static const zend_function_entry class_Qt_Widgets_QAbstractScrollArea_methods[] 
 	ZEND_ME(Qt_Widgets_QAbstractScrollArea, verticalScrollBarPolicy, arginfo_class_Qt_Widgets_QAbstractScrollArea_verticalScrollBarPolicy, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QAbstractSlider_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractSlider, hasTracking, arginfo_class_Qt_Widgets_QAbstractSlider_hasTracking, ZEND_ACC_PUBLIC)
@@ -2090,6 +2336,7 @@ static const zend_function_entry class_Qt_Widgets_QAbstractSlider_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QAbstractSpinBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QAbstractSpinBox, alignment, arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QAbstractSpinBox, buttonSymbols, arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols, ZEND_ACC_PUBLIC)
@@ -2123,6 +2370,7 @@ static const zend_function_entry class_Qt_Widgets_QAbstractSpinBox_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QBoxLayout, __construct, arginfo_class_Qt_Widgets_QBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QBoxLayout, addStretch, arginfo_class_Qt_Widgets_QBoxLayout_addStretch, ZEND_ACC_PUBLIC)
@@ -2130,6 +2378,7 @@ static const zend_function_entry class_Qt_Widgets_QBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QBoxLayout, setDirection, arginfo_class_Qt_Widgets_QBoxLayout_setDirection, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QCheckBox, __construct, arginfo_class_Qt_Widgets_QCheckBox___construct, ZEND_ACC_PUBLIC)
@@ -2140,6 +2389,7 @@ static const zend_function_entry class_Qt_Widgets_QCheckBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QCheckBox, onCheckStateChanged, arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QComboBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QComboBox, __construct, arginfo_class_Qt_Widgets_QComboBox___construct, ZEND_ACC_PUBLIC)
@@ -2187,6 +2437,7 @@ static const zend_function_entry class_Qt_Widgets_QComboBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QComboBox, onTextHighlighted, arginfo_class_Qt_Widgets_QComboBox_onTextHighlighted, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QDateTimeEdit, __construct, arginfo_class_Qt_Widgets_QDateTimeEdit___construct, ZEND_ACC_PUBLIC)
@@ -2240,6 +2491,7 @@ static const zend_function_entry class_Qt_Widgets_QDateTimeEdit_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QDial_methods[] = {
 	ZEND_ME(Qt_Widgets_QDial, __construct, arginfo_class_Qt_Widgets_QDial___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QDial, notchSize, arginfo_class_Qt_Widgets_QDial_notchSize, ZEND_ACC_PUBLIC)
@@ -2251,6 +2503,7 @@ static const zend_function_entry class_Qt_Widgets_QDial_methods[] = {
 	ZEND_ME(Qt_Widgets_QDial, setWrapping, arginfo_class_Qt_Widgets_QDial_setWrapping, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QFrame_methods[] = {
 	ZEND_ME(Qt_Widgets_QFrame, __construct, arginfo_class_Qt_Widgets_QFrame___construct, ZEND_ACC_PUBLIC)
@@ -2270,6 +2523,7 @@ static const zend_function_entry class_Qt_Widgets_QFrame_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QGroupBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QGroupBox, __construct, arginfo_class_Qt_Widgets_QGroupBox___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QGroupBox, alignment, arginfo_class_Qt_Widgets_QGroupBox_alignment, ZEND_ACC_PUBLIC)
@@ -2287,10 +2541,12 @@ static const zend_function_entry class_Qt_Widgets_QGroupBox_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QHBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QHBoxLayout, __construct, arginfo_class_Qt_Widgets_QHBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QSlider_methods[] = {
 	ZEND_ME(Qt_Widgets_QSlider, __construct, arginfo_class_Qt_Widgets_QSlider___construct, ZEND_ACC_PUBLIC)
@@ -2301,10 +2557,12 @@ static const zend_function_entry class_Qt_Widgets_QSlider_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QVBoxLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QVBoxLayout, __construct, arginfo_class_Qt_Widgets_QVBoxLayout___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, __construct, arginfo_class_Qt_Widgets_QWidget___construct, ZEND_ACC_PUBLIC)
@@ -2457,12 +2715,14 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QLabel_methods[] = {
 	ZEND_ME(Qt_Widgets_QLabel, __construct, arginfo_class_Qt_Widgets_QLabel___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLabel, setText, arginfo_class_Qt_Widgets_QLabel_setText, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLabel, text, arginfo_class_Qt_Widgets_QLabel_text, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QLayout, addWidget, arginfo_class_Qt_Widgets_QLayout_addWidget, ZEND_ACC_PUBLIC)
@@ -2471,6 +2731,7 @@ static const zend_function_entry class_Qt_Widgets_QLayout_methods[] = {
 	ZEND_ME(Qt_Widgets_QLayout, spacing, arginfo_class_Qt_Widgets_QLayout_spacing, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QLineEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QLineEdit, __construct, arginfo_class_Qt_Widgets_QLineEdit___construct, ZEND_ACC_PUBLIC)
@@ -2512,21 +2773,25 @@ static const zend_function_entry class_Qt_Widgets_QLineEdit_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QMainWindow_methods[] = {
 	ZEND_ME(Qt_Widgets_QMainWindow, __construct, arginfo_class_Qt_Widgets_QMainWindow___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QMainWindow, setCentralWidget, arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QPushButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QPushButton, __construct, arginfo_class_Qt_Widgets_QPushButton___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QRadioButton_methods[] = {
 	ZEND_ME(Qt_Widgets_QRadioButton, __construct, arginfo_class_Qt_Widgets_QRadioButton___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
 
 static const zend_function_entry class_Qt_Widgets_QScrollArea_methods[] = {
 	ZEND_ME(Qt_Widgets_QScrollArea, __construct, arginfo_class_Qt_Widgets_QScrollArea___construct, ZEND_ACC_PUBLIC)
@@ -2539,10 +2804,17 @@ static const zend_function_entry class_Qt_Widgets_QScrollArea_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QScrollBar_methods[] = {
 	ZEND_ME(Qt_Widgets_QScrollBar, __construct, arginfo_class_Qt_Widgets_QScrollBar___construct, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
+
+
+static const zend_function_entry class_Qt_Widgets_QSizePolicy_methods[] = {
+	ZEND_FE_END
+};
+
 
 static const zend_function_entry class_Qt_Widgets_QSpinBox_methods[] = {
 	ZEND_ME(Qt_Widgets_QSpinBox, __construct, arginfo_class_Qt_Widgets_QSpinBox___construct, ZEND_ACC_PUBLIC)
@@ -2569,6 +2841,7 @@ static const zend_function_entry class_Qt_Widgets_QSpinBox_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QSplitter_methods[] = {
 	ZEND_ME(Qt_Widgets_QSplitter, __construct, arginfo_class_Qt_Widgets_QSplitter___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QSplitter, addWidget, arginfo_class_Qt_Widgets_QSplitter_addWidget, ZEND_ACC_PUBLIC)
@@ -2593,12 +2866,76 @@ static const zend_function_entry class_Qt_Widgets_QSplitter_methods[] = {
 	ZEND_FE_END
 };
 
+
 static const zend_function_entry class_Qt_Widgets_QTextEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QTextEdit, __construct, arginfo_class_Qt_Widgets_QTextEdit___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, acceptRichText, arginfo_class_Qt_Widgets_QTextEdit_acceptRichText, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, alignment, arginfo_class_Qt_Widgets_QTextEdit_alignment, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, anchorAt, arginfo_class_Qt_Widgets_QTextEdit_anchorAt, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, autoFormatting, arginfo_class_Qt_Widgets_QTextEdit_autoFormatting, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, canPaste, arginfo_class_Qt_Widgets_QTextEdit_canPaste, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, documentTitle, arginfo_class_Qt_Widgets_QTextEdit_documentTitle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, ensureCursorVisible, arginfo_class_Qt_Widgets_QTextEdit_ensureCursorVisible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, fontFamily, arginfo_class_Qt_Widgets_QTextEdit_fontFamily, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, fontItalic, arginfo_class_Qt_Widgets_QTextEdit_fontItalic, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, fontPointSize, arginfo_class_Qt_Widgets_QTextEdit_fontPointSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, fontUnderline, arginfo_class_Qt_Widgets_QTextEdit_fontUnderline, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, fontWeight, arginfo_class_Qt_Widgets_QTextEdit_fontWeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, isReadOnly, arginfo_class_Qt_Widgets_QTextEdit_isReadOnly, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, isUndoRedoEnabled, arginfo_class_Qt_Widgets_QTextEdit_isUndoRedoEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, lineWrapColumnOrWidth, arginfo_class_Qt_Widgets_QTextEdit_lineWrapColumnOrWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, lineWrapMode, arginfo_class_Qt_Widgets_QTextEdit_lineWrapMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, overwriteMode, arginfo_class_Qt_Widgets_QTextEdit_overwriteMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, placeholderText, arginfo_class_Qt_Widgets_QTextEdit_placeholderText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setAcceptRichText, arginfo_class_Qt_Widgets_QTextEdit_setAcceptRichText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setAutoFormatting, arginfo_class_Qt_Widgets_QTextEdit_setAutoFormatting, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setDocumentTitle, arginfo_class_Qt_Widgets_QTextEdit_setDocumentTitle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setLineWrapColumnOrWidth, arginfo_class_Qt_Widgets_QTextEdit_setLineWrapColumnOrWidth, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setLineWrapMode, arginfo_class_Qt_Widgets_QTextEdit_setLineWrapMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setOverwriteMode, arginfo_class_Qt_Widgets_QTextEdit_setOverwriteMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setPlaceholderText, arginfo_class_Qt_Widgets_QTextEdit_setPlaceholderText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setReadOnly, arginfo_class_Qt_Widgets_QTextEdit_setReadOnly, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setTabChangesFocus, arginfo_class_Qt_Widgets_QTextEdit_setTabChangesFocus, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setTabStopDistance, arginfo_class_Qt_Widgets_QTextEdit_setTabStopDistance, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setTextInteractionFlags, arginfo_class_Qt_Widgets_QTextEdit_setTextInteractionFlags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setUndoRedoEnabled, arginfo_class_Qt_Widgets_QTextEdit_setUndoRedoEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setWordWrapMode, arginfo_class_Qt_Widgets_QTextEdit_setWordWrapMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, tabChangesFocus, arginfo_class_Qt_Widgets_QTextEdit_tabChangesFocus, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, tabStopDistance, arginfo_class_Qt_Widgets_QTextEdit_tabStopDistance, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, textInteractionFlags, arginfo_class_Qt_Widgets_QTextEdit_textInteractionFlags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, toHtml, arginfo_class_Qt_Widgets_QTextEdit_toHtml, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, toMarkdown, arginfo_class_Qt_Widgets_QTextEdit_toMarkdown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, toPlainText, arginfo_class_Qt_Widgets_QTextEdit_toPlainText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, wordWrapMode, arginfo_class_Qt_Widgets_QTextEdit_wordWrapMode, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, append, arginfo_class_Qt_Widgets_QTextEdit_append, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, clear, arginfo_class_Qt_Widgets_QTextEdit_clear, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, copy, arginfo_class_Qt_Widgets_QTextEdit_copy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, cut, arginfo_class_Qt_Widgets_QTextEdit_cut, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, insertHtml, arginfo_class_Qt_Widgets_QTextEdit_insertHtml, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, insertPlainText, arginfo_class_Qt_Widgets_QTextEdit_insertPlainText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, paste, arginfo_class_Qt_Widgets_QTextEdit_paste, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, redo, arginfo_class_Qt_Widgets_QTextEdit_redo, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, scrollToAnchor, arginfo_class_Qt_Widgets_QTextEdit_scrollToAnchor, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, selectAll, arginfo_class_Qt_Widgets_QTextEdit_selectAll, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setAlignment, arginfo_class_Qt_Widgets_QTextEdit_setAlignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setFontFamily, arginfo_class_Qt_Widgets_QTextEdit_setFontFamily, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setFontItalic, arginfo_class_Qt_Widgets_QTextEdit_setFontItalic, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setFontPointSize, arginfo_class_Qt_Widgets_QTextEdit_setFontPointSize, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setFontUnderline, arginfo_class_Qt_Widgets_QTextEdit_setFontUnderline, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setFontWeight, arginfo_class_Qt_Widgets_QTextEdit_setFontWeight, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setHtml, arginfo_class_Qt_Widgets_QTextEdit_setHtml, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setMarkdown, arginfo_class_Qt_Widgets_QTextEdit_setMarkdown, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setPlainText, arginfo_class_Qt_Widgets_QTextEdit_setPlainText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, setText, arginfo_class_Qt_Widgets_QTextEdit_setText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, undo, arginfo_class_Qt_Widgets_QTextEdit_undo, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, zoomIn, arginfo_class_Qt_Widgets_QTextEdit_zoomIn, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, zoomOut, arginfo_class_Qt_Widgets_QTextEdit_zoomOut, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, onCopyAvailable, arginfo_class_Qt_Widgets_QTextEdit_onCopyAvailable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, onCursorPositionChanged, arginfo_class_Qt_Widgets_QTextEdit_onCursorPositionChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, onRedoAvailable, arginfo_class_Qt_Widgets_QTextEdit_onRedoAvailable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, onSelectionChanged, arginfo_class_Qt_Widgets_QTextEdit_onSelectionChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, onTextChanged, arginfo_class_Qt_Widgets_QTextEdit_onTextChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTextEdit, onUndoAvailable, arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -2606,8 +2943,8 @@ static zend_class_entry *register_class_Qt_CheckState(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "CheckState", NULL);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "CheckState", class_Qt_CheckState_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	zval const_Unchecked_value;
 	ZVAL_LONG(&const_Unchecked_value, 0);
@@ -2634,8 +2971,8 @@ static zend_class_entry *register_class_Qt_Orientation(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "Orientation", NULL);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "Orientation", class_Qt_Orientation_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	zval const_Horizontal_value;
 	ZVAL_LONG(&const_Horizontal_value, 1);
@@ -2656,8 +2993,8 @@ static zend_class_entry *register_class_Qt_WindowType(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "WindowType", NULL);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "WindowType", class_Qt_WindowType_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	zval const_Widget_value;
 	ZVAL_LONG(&const_Widget_value, 0);
@@ -2738,8 +3075,8 @@ static zend_class_entry *register_class_Qt_AlignmentFlag(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt", "AlignmentFlag", NULL);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "AlignmentFlag", class_Qt_AlignmentFlag_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	zval const_AlignLeft_value;
 	ZVAL_LONG(&const_AlignLeft_value, 0x1);
@@ -2833,7 +3170,7 @@ static zend_class_entry *register_class_Qt_Core_QCalendar(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QCalendar", class_Qt_Core_QCalendar_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	zval const_Gregorian_value;
 	ZVAL_LONG(&const_Gregorian_value, 0);
@@ -2873,7 +3210,7 @@ static zend_class_entry *register_class_Qt_Core_QDate(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDate", class_Qt_Core_QDate_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2883,7 +3220,7 @@ static zend_class_entry *register_class_Qt_Core_QDateTime(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDateTime", class_Qt_Core_QDateTime_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2893,7 +3230,7 @@ static zend_class_entry *register_class_Qt_Core_QObject(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QObject", class_Qt_Core_QObject_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2903,7 +3240,7 @@ static zend_class_entry *register_class_Qt_Core_QRect(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QRect", class_Qt_Core_QRect_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2913,7 +3250,7 @@ static zend_class_entry *register_class_Qt_Core_QSize(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QSize", class_Qt_Core_QSize_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2923,7 +3260,7 @@ static zend_class_entry *register_class_Qt_Core_QTime(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QTime", class_Qt_Core_QTime_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2933,7 +3270,7 @@ static zend_class_entry *register_class_Qt_Core_QTimeZone(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QTimeZone", class_Qt_Core_QTimeZone_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2943,7 +3280,7 @@ static zend_class_entry *register_class_Qt_Widgets_QApplication(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QApplication", class_Qt_Widgets_QApplication_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	return class_entry;
 }
@@ -2953,7 +3290,8 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractButton(zend_class_en
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractButton", class_Qt_Widgets_QAbstractButton_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	return class_entry;
 }
@@ -2963,7 +3301,8 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractScrollArea(zend_clas
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractScrollArea", class_Qt_Widgets_QAbstractScrollArea_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	return class_entry;
 }
@@ -2973,7 +3312,8 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractSlider(zend_class_en
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractSlider", class_Qt_Widgets_QAbstractSlider_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	zval const_SliderNoAction_value;
 	ZVAL_LONG(&const_SliderNoAction_value, 0);
@@ -3055,7 +3395,8 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractSpinBox(zend_class_e
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractSpinBox", class_Qt_Widgets_QAbstractSpinBox_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	zval const_UpDownArrows_value;
 	ZVAL_LONG(&const_UpDownArrows_value, 0);
@@ -3083,7 +3424,7 @@ static zend_class_entry *register_class_Qt_Widgets_QBoxLayout(zend_class_entry *
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QBoxLayout", class_Qt_Widgets_QBoxLayout_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QLayout, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QLayout);
 
 	zval const_LeftToRight_value;
 	ZVAL_LONG(&const_LeftToRight_value, 0);
@@ -3117,7 +3458,7 @@ static zend_class_entry *register_class_Qt_Widgets_QCheckBox(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QCheckBox", class_Qt_Widgets_QCheckBox_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
 
 	return class_entry;
 }
@@ -3127,7 +3468,7 @@ static zend_class_entry *register_class_Qt_Widgets_QComboBox(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QComboBox", class_Qt_Widgets_QComboBox_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
 
 	zval const_NoInsert_value;
 	ZVAL_LONG(&const_NoInsert_value, 0);
@@ -3197,7 +3538,7 @@ static zend_class_entry *register_class_Qt_Widgets_QDateTimeEdit(zend_class_entr
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QDateTimeEdit", class_Qt_Widgets_QDateTimeEdit_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSpinbox, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSpinbox);
 
 	return class_entry;
 }
@@ -3207,7 +3548,7 @@ static zend_class_entry *register_class_Qt_Widgets_QDial(zend_class_entry *class
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QDial", class_Qt_Widgets_QDial_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSlider, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSlider);
 
 	return class_entry;
 }
@@ -3217,7 +3558,7 @@ static zend_class_entry *register_class_Qt_Widgets_QFrame(zend_class_entry *clas
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QFrame", class_Qt_Widgets_QFrame_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
 
 	zval const_NoFrame_value;
 	ZVAL_LONG(&const_NoFrame_value, 0);
@@ -3287,7 +3628,7 @@ static zend_class_entry *register_class_Qt_Widgets_QGroupBox(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QGroupBox", class_Qt_Widgets_QGroupBox_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
 
 	return class_entry;
 }
@@ -3297,7 +3638,7 @@ static zend_class_entry *register_class_Qt_Widgets_QHBoxLayout(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QHBoxLayout", class_Qt_Widgets_QHBoxLayout_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QBoxLayout, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QBoxLayout);
 
 	return class_entry;
 }
@@ -3307,7 +3648,7 @@ static zend_class_entry *register_class_Qt_Widgets_QSlider(zend_class_entry *cla
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSlider", class_Qt_Widgets_QSlider_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSlider, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSlider);
 
 	zval const_NoTicks_value;
 	ZVAL_LONG(&const_NoTicks_value, 0);
@@ -3353,7 +3694,7 @@ static zend_class_entry *register_class_Qt_Widgets_QVBoxLayout(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QVBoxLayout", class_Qt_Widgets_QVBoxLayout_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QBoxLayout, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QBoxLayout);
 
 	return class_entry;
 }
@@ -3363,7 +3704,7 @@ static zend_class_entry *register_class_Qt_Widgets_QWidget(zend_class_entry *cla
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QWidget", class_Qt_Widgets_QWidget_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Core_QObject, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
 
 	return class_entry;
 }
@@ -3373,7 +3714,7 @@ static zend_class_entry *register_class_Qt_Widgets_QLabel(zend_class_entry *clas
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLabel", class_Qt_Widgets_QLabel_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QFrame);
 
 	return class_entry;
 }
@@ -3383,7 +3724,8 @@ static zend_class_entry *register_class_Qt_Widgets_QLayout(zend_class_entry *cla
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLayout", class_Qt_Widgets_QLayout_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Core_QObject, ZEND_ACC_ABSTRACT);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Core_QObject);
+	class_entry->ce_flags |= ZEND_ACC_ABSTRACT;
 
 	return class_entry;
 }
@@ -3393,7 +3735,7 @@ static zend_class_entry *register_class_Qt_Widgets_QLineEdit(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QLineEdit", class_Qt_Widgets_QLineEdit_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
 
 	zval const_Normal_value;
 	ZVAL_LONG(&const_Normal_value, 0);
@@ -3427,7 +3769,7 @@ static zend_class_entry *register_class_Qt_Widgets_QMainWindow(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QMainWindow", class_Qt_Widgets_QMainWindow_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QWidget);
 
 	return class_entry;
 }
@@ -3437,7 +3779,7 @@ static zend_class_entry *register_class_Qt_Widgets_QPushButton(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QPushButton", class_Qt_Widgets_QPushButton_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
 
 	return class_entry;
 }
@@ -3447,7 +3789,7 @@ static zend_class_entry *register_class_Qt_Widgets_QRadioButton(zend_class_entry
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QRadioButton", class_Qt_Widgets_QRadioButton_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractButton, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractButton);
 
 	return class_entry;
 }
@@ -3457,7 +3799,7 @@ static zend_class_entry *register_class_Qt_Widgets_QScrollArea(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QScrollArea", class_Qt_Widgets_QScrollArea_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QFrame);
 
 	return class_entry;
 }
@@ -3467,7 +3809,7 @@ static zend_class_entry *register_class_Qt_Widgets_QScrollBar(zend_class_entry *
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QScrollBar", class_Qt_Widgets_QScrollBar_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSlider, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSlider);
 
 	return class_entry;
 }
@@ -3476,8 +3818,8 @@ static zend_class_entry *register_class_Qt_Widgets_QSizePolicy(void)
 {
 	zend_class_entry ce, *class_entry;
 
-	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSizePolicy", NULL);
-	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSizePolicy", class_Qt_Widgets_QSizePolicy_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
 
 	zval const_GrowFlag_value;
 	ZVAL_LONG(&const_GrowFlag_value, 1);
@@ -3553,7 +3895,7 @@ static zend_class_entry *register_class_Qt_Widgets_QSpinBox(zend_class_entry *cl
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSpinBox", class_Qt_Widgets_QSpinBox_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractSpinBox, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractSpinBox);
 
 	return class_entry;
 }
@@ -3563,7 +3905,7 @@ static zend_class_entry *register_class_Qt_Widgets_QSplitter(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSplitter", class_Qt_Widgets_QSplitter_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QFrame);
 
 	return class_entry;
 }
@@ -3573,7 +3915,7 @@ static zend_class_entry *register_class_Qt_Widgets_QTextEdit(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QTextEdit", class_Qt_Widgets_QTextEdit_methods);
-	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractScrollArea, 0);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QAbstractScrollArea);
 
 	return class_entry;
 }
