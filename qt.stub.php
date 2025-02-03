@@ -849,6 +849,25 @@ namespace Qt\Widgets {
         public function onSplitterMoved(callable $callback): void {}
     }
 
+    class QStackedWidget extends QFrame
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function addWidget(QWidget $widget): void {}
+        public function count(): int {}
+        public function currentIndex(): int {}
+        public function currentWidget(): QWidget {}
+        public function indexOf(QWidget $widget): int {}
+        public function insertWidget(int $index, QWidget $widget): void {}
+        public function removeWidget(QWidget $widget): void {}
+        public function setCurrentIndex(int $index): void {}
+        public function setCurrentWidget(QWidget $widget): void {}
+        public function widget(int $index): QWidget {}
+
+        // Signals
+        public function onCurrentChanged(callable $callback): void {}
+        public function onWidgetRemoved(callable $callback): void {}
+    }
+
     class QTextEdit extends QAbstractScrollArea
     {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}

@@ -65,6 +65,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QSlider.cpp \
     src/Widgets/QSplitter.cpp \
     src/Widgets/QSpinBox.cpp \
+    src/Widgets/QStackedWidget.cpp \
     src/Widgets/QTextEdit.cpp \
     src/Widgets/QWidget.cpp"
 

@@ -35,6 +35,7 @@ zend_class_entry *ce_qobject = nullptr;
 zend_class_entry *ce_qrect = nullptr;
 zend_class_entry *ce_qscrollbar = nullptr;
 zend_class_entry *ce_qsize = nullptr;
+zend_class_entry *ce_qtextedit = nullptr;
 zend_class_entry *ce_qtime = nullptr;
 zend_class_entry *ce_qtimezone = nullptr;
 zend_class_entry *ce_widget_QWidget = nullptr;
@@ -157,7 +158,9 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qscrollarea->create_object = qt_obj_create_handler;
 	auto ce_qsplitter = register_class_Qt_Widgets_QSplitter(ce_qframe);
 	ce_qsplitter->create_object = qt_obj_create_handler;
-	auto ce_qtextedit = register_class_Qt_Widgets_QTextEdit(ce_qabstractscrollarea);
+	auto qstackedwidget = register_class_Qt_Widgets_QStackedWidget(ce_qframe);
+	qstackedwidget->create_object = qt_obj_create_handler;
+	ce_qtextedit = register_class_Qt_Widgets_QTextEdit(ce_qabstractscrollarea);
 	ce_qtextedit->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);

@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: d6527fed09d5600a4739afd8de4af55fc14eab03 */
+ * Stub hash: 644ebce028ca1921c61f0c2108251aa6aacd9101 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -1410,6 +1410,34 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSplitter_onSplitterMoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
+#define arginfo_class_Qt_Widgets_QStackedWidget___construct arginfo_class_Qt_Widgets_QComboBox___construct
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_addWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_count arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_currentIndex arginfo_class_Qt_Core_QSize_height
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_currentWidget arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_indexOf arginfo_class_Qt_Widgets_QSplitter_indexOf
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_insertWidget arginfo_class_Qt_Widgets_QSplitter_insertWidget
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_removeWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_setCurrentIndex arginfo_class_Qt_Widgets_QComboBox_insertSeparator
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_setCurrentWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QStackedWidget_widget, 0, 1, Qt\\Widgets\\QWidget, 0)
+	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_onCurrentChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
+#define arginfo_class_Qt_Widgets_QStackedWidget_onWidgetRemoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+
 #define arginfo_class_Qt_Widgets_QTextEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 #define arginfo_class_Qt_Widgets_QTextEdit_acceptRichText arginfo_class_Qt_Core_QCalendar_isValid
@@ -2088,6 +2116,19 @@ ZEND_METHOD(Qt_Widgets_QSplitter, setSizes);
 ZEND_METHOD(Qt_Widgets_QSplitter, setStretchFactor);
 ZEND_METHOD(Qt_Widgets_QSplitter, sizes);
 ZEND_METHOD(Qt_Widgets_QSplitter, onSplitterMoved);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, __construct);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, addWidget);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, count);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, currentIndex);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, currentWidget);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, indexOf);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, insertWidget);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, removeWidget);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, setCurrentIndex);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, setCurrentWidget);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, widget);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, onCurrentChanged);
+ZEND_METHOD(Qt_Widgets_QStackedWidget, onWidgetRemoved);
 ZEND_METHOD(Qt_Widgets_QTextEdit, __construct);
 ZEND_METHOD(Qt_Widgets_QTextEdit, acceptRichText);
 ZEND_METHOD(Qt_Widgets_QTextEdit, alignment);
@@ -2863,6 +2904,24 @@ static const zend_function_entry class_Qt_Widgets_QSplitter_methods[] = {
 	ZEND_ME(Qt_Widgets_QSplitter, setStretchFactor, arginfo_class_Qt_Widgets_QSplitter_setStretchFactor, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QSplitter, sizes, arginfo_class_Qt_Widgets_QSplitter_sizes, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QSplitter, onSplitterMoved, arginfo_class_Qt_Widgets_QSplitter_onSplitterMoved, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_Widgets_QStackedWidget_methods[] = {
+	ZEND_ME(Qt_Widgets_QStackedWidget, __construct, arginfo_class_Qt_Widgets_QStackedWidget___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, addWidget, arginfo_class_Qt_Widgets_QStackedWidget_addWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, count, arginfo_class_Qt_Widgets_QStackedWidget_count, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, currentIndex, arginfo_class_Qt_Widgets_QStackedWidget_currentIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, currentWidget, arginfo_class_Qt_Widgets_QStackedWidget_currentWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, indexOf, arginfo_class_Qt_Widgets_QStackedWidget_indexOf, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, insertWidget, arginfo_class_Qt_Widgets_QStackedWidget_insertWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, removeWidget, arginfo_class_Qt_Widgets_QStackedWidget_removeWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, setCurrentIndex, arginfo_class_Qt_Widgets_QStackedWidget_setCurrentIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, setCurrentWidget, arginfo_class_Qt_Widgets_QStackedWidget_setCurrentWidget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, widget, arginfo_class_Qt_Widgets_QStackedWidget_widget, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, onCurrentChanged, arginfo_class_Qt_Widgets_QStackedWidget_onCurrentChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QStackedWidget, onWidgetRemoved, arginfo_class_Qt_Widgets_QStackedWidget_onWidgetRemoved, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3905,6 +3964,16 @@ static zend_class_entry *register_class_Qt_Widgets_QSplitter(zend_class_entry *c
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QSplitter", class_Qt_Widgets_QSplitter_methods);
+	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QFrame);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QStackedWidget(zend_class_entry *class_entry_Qt_Widgets_QFrame)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QStackedWidget", class_Qt_Widgets_QStackedWidget_methods);
 	class_entry = zend_register_internal_class_ex(&ce, class_entry_Qt_Widgets_QFrame);
 
 	return class_entry;

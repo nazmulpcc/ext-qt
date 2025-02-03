@@ -29,6 +29,7 @@
 #include <QtCore/QRect>
 #include <QtCore/QSize>
 #include <QtWidgets/QWidget>
+#include <QtWidgets/QTextEdit>
 
 extern zend_module_entry qt_module_entry;
 #define phpext_qt_ptr &qt_module_entry
@@ -142,6 +143,13 @@ static void qt_generic_free_handler(zend_object *object)
 template <typename T>
 inline void qt_cpp_to_zval(zval *z, const T &value)
 {
+   php_error_docref(nullptr, E_WARNING, "Failed to convert native QT object to PHP");
+   ZVAL_NULL(z);
+}
+template <typename T>
+inline void qt_cpp_to_zval(zval *z, T *value)
+{
+   php_error_docref(nullptr, E_WARNING, "Failed to convert native QT object to PHP");
    ZVAL_NULL(z);
 }
 template <>
@@ -298,6 +306,13 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
       object_init_ex(z, class_entry);                                                                                         \
       QT_Object_P(z, type)->native = const_cast<type *>(&value);                                                              \
+   }                                                                                                                          \
+   template <>                                                                                                                \
+   inline void qt_cpp_to_zval<type>(zval * z, type * value)                                                                   \
+   {                                                                                                                          \
+      qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
+      object_init_ex(z, class_entry);                                                                                         \
+      QT_Object_P(z, type)->native = value;                                                                                   \
    }
 
 // Helper functions
@@ -385,6 +400,7 @@ extern zend_class_entry *ce_qobject;
 extern zend_class_entry *ce_qrect;
 extern zend_class_entry *ce_qsize;
 extern zend_class_entry *ce_qscrollbar;
+extern zend_class_entry *ce_qtextedit;
 extern zend_class_entry *ce_qtime;
 extern zend_class_entry *ce_qtimezone;
 extern zend_class_entry *ce_widget_QWidget;
@@ -395,6 +411,7 @@ QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
 QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
 QT_REGISRER_NATIVE_TO_ZVAL(QRect, ce_qrect)
 QT_REGISRER_NATIVE_TO_ZVAL(QSize, ce_qsize)
+QT_REGISRER_NATIVE_TO_ZVAL(QTextEdit, ce_qtextedit)
 QT_REGISRER_NATIVE_TO_ZVAL(QTime, ce_qtime)
 QT_REGISRER_NATIVE_TO_ZVAL(QTimeZone, ce_qtimezone)
 QT_REGISRER_NATIVE_TO_ZVAL(QWidget, ce_widget_QWidget)
