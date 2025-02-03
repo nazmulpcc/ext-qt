@@ -861,7 +861,7 @@ namespace Qt\Widgets {
         public function removeWidget(QWidget $widget): void {}
         public function setCurrentIndex(int $index): void {}
         public function setCurrentWidget(QWidget $widget): void {}
-        public function widget(int $index): QWidget {}
+        public function widget(int $index): ?QWidget {}
 
         // Signals
         public function onCurrentChanged(callable $callback): void {}

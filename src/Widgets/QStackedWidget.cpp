@@ -63,8 +63,11 @@ ZEND_METHOD(Qt_Widgets_QStackedWidget, widget)
     ZEND_PARSE_PARAMETERS_END();
 
     QWidget *widget = QT_Object_P(ZEND_THIS, QStackedWidget)->native->widget(index);
-    // widget->dumpObjectInfo();
-    qt_cpp_to_zval(return_value, widget);
+    qt_container_t<QWidget> *container = (qt_container_t<QWidget> *)zend_object_alloc(sizeof(qt_container_t<QWidget>), ce_widget_QWidget);
+    zend_object_std_init(&container->std, ce_widget_QWidget);
+    object_properties_init(&container->std, ce_widget_QWidget);
+    container->native = widget;
+    ZVAL_OBJ(return_value, &container->std);
 }
 
 QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QStackedWidget, QStackedWidget, onCurrentChanged, currentChanged)

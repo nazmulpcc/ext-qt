@@ -65,6 +65,7 @@ static zend_object *qt_obj_create_handler(zend_class_entry *ce)
    qt_container_t<QObject> *container = (qt_container_t<QObject> *)zend_object_alloc(sizeof(qt_container_t<QObject>), ce);
 
    zend_object_std_init(&container->std, ce);
+   object_properties_init(&container->std, ce);
    container->std.handlers = &qt_object_handlers;
    return &container->std;
 }
