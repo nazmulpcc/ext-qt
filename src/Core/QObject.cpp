@@ -74,7 +74,7 @@ QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QObject, QObject, isWidgetType);
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QObject, QObject, isWindowType);
 QT_METHOD_FORWARD_INT(Qt_Core_QObject, QObject, killTimer);
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Core_QObject, QObject, objectName);
-QT_METHOD_FORWARD_STRING(Qt_Core_QObject, QObject, setObjectName);
+QT_METHOD_FORWARD_STRING(Qt_Core_QObject, QObject, setObjectName)
 
 ZEND_METHOD(Qt_Core_QObject, setParent)
 {

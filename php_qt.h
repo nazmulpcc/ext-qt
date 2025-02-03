@@ -253,7 +253,7 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       ZEND_PARSE_PARAMETERS_START(1, 1)                               \
       Z_PARAM_STR(text)                                               \
       ZEND_PARSE_PARAMETERS_END();                                    \
-      container->native->method_name(ZSTR_VAL(text));                 \
+      container->native->method_name(QString(ZSTR_VAL(text)));        \
    }
 
 #define QT_METHOD_FORWARD_BOOL(classname, native_type, method_name) \
@@ -300,20 +300,18 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       qt_connect_signal_to_callback(container->native, &native_type::signal_name, callback); \
    }
 
-#define QT_REGISRER_NATIVE_TO_ZVAL(type, class_entry)                                                                         \
-   template <>                                                                                                                \
-   inline void qt_cpp_to_zval<type>(zval * z, const type &value)                                                              \
-   {                                                                                                                          \
-      qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
-      object_init_ex(z, class_entry);                                                                                         \
-      QT_Object_P(z, type)->native = const_cast<type *>(&value);                                                              \
-   }                                                                                                                          \
-   template <>                                                                                                                \
-   inline void qt_cpp_to_zval<type>(zval * z, type * value)                                                                   \
-   {                                                                                                                          \
-      qt_container_t<type> *container = (qt_container_t<type> *)zend_object_alloc(sizeof(qt_container_t<type>), class_entry); \
-      object_init_ex(z, class_entry);                                                                                         \
-      QT_Object_P(z, type)->native = value;                                                                                   \
+#define QT_REGISRER_NATIVE_TO_ZVAL(type, class_entry)            \
+   template <>                                                   \
+   inline void qt_cpp_to_zval<type>(zval * z, const type &value) \
+   {                                                             \
+      ZVAL_OBJ(z, zend_objects_new(class_entry));                \
+      QT_Object_P(z, type)->native = const_cast<type *>(&value); \
+   }                                                             \
+   template <>                                                   \
+   inline void qt_cpp_to_zval<type>(zval * z, type * value)      \
+   {                                                             \
+      ZVAL_OBJ(z, zend_objects_new(class_entry));                \
+      QT_Object_P(z, type)->native = value;                      \
    }
 
 // Helper functions
