@@ -157,6 +157,8 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qscrollarea->create_object = qt_obj_create_handler;
 	auto ce_qsplitter = register_class_Qt_Widgets_QSplitter(ce_qframe);
 	ce_qsplitter->create_object = qt_obj_create_handler;
+	auto ce_qtextedit = register_class_Qt_Widgets_QTextEdit(ce_qabstractscrollarea);
+	ce_qtextedit->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;

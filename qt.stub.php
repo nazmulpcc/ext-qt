@@ -848,4 +848,85 @@ namespace Qt\Widgets {
         // Signals
         public function onSplitterMoved(callable $callback): void {}
     }
+
+    class QTextEdit extends QAbstractScrollArea
+    {
+        public function __construct(?string $text = null, ?QWidget $parent = null) {}
+        public function acceptRichText(): bool {}
+        public function alignment(): int {}
+        public function anchorAt(int $x, int $y): string {}
+        public function autoFormatting(): int {}
+        public function canPaste(): bool {}
+        public function documentTitle(): string {}
+        public function ensureCursorVisible(): void {}
+        public function fontFamily(): string {}
+        public function fontItalic(): bool {}
+        public function fontPointSize(): int {}
+        public function fontUnderline(): bool {}
+        public function fontWeight(): int {}
+        public function isReadOnly(): bool {}
+        public function isUndoRedoEnabled(): bool {}
+        public function lineWrapColumnOrWidth(): int {}
+        public function lineWrapMode(): int {}
+        public function loadResource(int $type, string $name): void {}
+        public function overwriteMode(): bool {}
+        public function placeholderText(): string {}
+        public function setAcceptRichText(bool $accept): void {}
+        public function setAutoFormatting(int $features): void {}
+        public function setDocumentTitle(string $title): void {}
+        public function setLineWrapColumnOrWidth(int $w): void {}
+        public function setLineWrapMode(int $mode): void {}
+        public function setOverwriteMode(bool $overwrite): void {}
+        public function setPlaceholderText(string $placeholderText): void {}
+        public function setReadOnly(bool $readOnly): void {}
+        public function setTabChangesFocus(bool $b): void {}
+        public function setTabStopDistance(float $distance): void {}
+        public function setTextInteractionFlags(int $flags): void {}
+        public function setUndoRedoEnabled(bool $enable): void {}
+        public function setWordWrapMode(int $policy): void {}
+        public function tabChangesFocus(): bool {}
+        public function tabStopDistance(): float {}
+        public function textBackgroundColor(): string {}
+        public function textColor(): string {}
+        public function textInteractionFlags(): int {}
+        public function toHtml(): string {}
+        public function toMarkdown(int $features = 2): string {}
+        public function toPlainText(): string {}
+        public function wordWrapMode(): int {}
+
+        // Slots
+        public function append(string $text): void {}
+        public function clear(): void {}
+        public function copy(): void {}
+        public function cut(): void {}
+        public function insertHtml(string $text): void {}
+        public function insertPlainText(string $text): void {}
+        public function paste(): void {}
+        public function redo(): void {}
+        public function scrollToAnchor(string $name): void {}
+        public function selectAll(): void {}
+        public function setAlignment(int $alignment): void {}
+        public function setFontFamily(string $family): void {}
+        public function setFontItalic(bool $italic): void {}
+        public function setFontPointSize(float $size): void {}
+        public function setFontUnderline(bool $underline): void {}
+        public function setFontWeight(int $weight): void {}
+        public function setHtml(string $text): void {}
+        public function setMarkdown(string $text): void {}
+        public function setPlainText(string $text): void {}
+        public function setText(string $text): void {}
+        public function setTextBackgroundColor(string $color): void {}
+        public function setTextColor(string $color): void {}
+        public function undo(): void {}
+        public function zoomIn(int $range = 1): void {}
+        public function zoomOut(int $range = 1): void {}
+
+        // Signals
+        public function onCopyAvailable(callable $callback): void {}
+        public function onCursorPositionChanged(callable $callback): void {}
+        public function onRedoAvailable(callable $callback): void {}
+        public function onSelectionChanged(callable $callback): void {}
+        public function onTextChanged(callable $callback): void {}
+        public function onUndoAvailable(callable $callback): void {}
+    }
 }
