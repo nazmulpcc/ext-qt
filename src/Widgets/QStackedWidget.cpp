@@ -21,7 +21,7 @@ ZEND_METHOD(Qt_Widgets_QStackedWidget, __construct)
     container->native = new QStackedWidget(parent_zval ? QT_Object_P(parent_zval, QWidget)->native : nullptr);
 }
 
-QT_METHOD_FORWARD_NATIVE_P(Qt_Widgets_QStackedWidget, QStackedWidget, addWidget, QWidget, ce_widget_QWidget)
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QStackedWidget, QStackedWidget, addWidget, QWidget, ce_widget_QWidget, 1)
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QStackedWidget, QStackedWidget, count)
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QStackedWidget, QStackedWidget, currentIndex)
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QStackedWidget, QStackedWidget, currentWidget)
@@ -50,7 +50,7 @@ ZEND_METHOD(Qt_Widgets_QStackedWidget, insertWidget)
     QT_Object_P(ZEND_THIS, QStackedWidget)->native->insertWidget(index, QT_Object_P(widget_zval, QWidget)->native);
 }
 
-QT_METHOD_FORWARD_NATIVE_P(Qt_Widgets_QStackedWidget, QStackedWidget, removeWidget, QWidget, ce_widget_QWidget)
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QStackedWidget, QStackedWidget, removeWidget, QWidget, ce_widget_QWidget, -1)
 QT_METHOD_FORWARD_INT(Qt_Widgets_QStackedWidget, QStackedWidget, setCurrentIndex)
 QT_METHOD_FORWARD_NATIVE_P(Qt_Widgets_QStackedWidget, QStackedWidget, setCurrentWidget, QWidget, ce_widget_QWidget)
 

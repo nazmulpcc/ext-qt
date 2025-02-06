@@ -234,16 +234,20 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       container->native->method_name(*QT_Object_P(zv, forward_type)->native);           \
    }
 
-#define QT_METHOD_FORWARD_NATIVE_P(classname, native_type, method_name, forward_type, ce) \
-   ZEND_METHOD(classname, method_name)                                                    \
-   {                                                                                      \
-      zval *zv;                                                                           \
-      ZEND_PARSE_PARAMETERS_START(1, 1)                                                   \
-      Z_PARAM_OBJECT_OF_CLASS(zv, ce)                                                     \
-      ZEND_PARSE_PARAMETERS_END();                                                        \
-      auto *container = QT_Object_P(ZEND_THIS, native_type);                              \
-      container->native->method_name(QT_Object_P(zv, forward_type)->native);              \
+#define QT_METHOD_FORWARD_NATIVE_P_REF(classname, native_type, method_name, forward_type, ce, ref) \
+   ZEND_METHOD(classname, method_name)                                                             \
+   {                                                                                               \
+      zval *zv;                                                                                    \
+      ZEND_PARSE_PARAMETERS_START(1, 1)                                                            \
+      Z_PARAM_OBJECT_OF_CLASS(zv, ce)                                                              \
+      ZEND_PARSE_PARAMETERS_END();                                                                 \
+      Z_COUNTED_P(zv)->gc.refcount += ref;                                                         \
+      auto *container = QT_Object_P(ZEND_THIS, native_type);                                       \
+      container->native->method_name(QT_Object_P(zv, forward_type)->native);                       \
    }
+
+#define QT_METHOD_FORWARD_NATIVE_P(classname, native_type, method_name, forward_type, ce) \
+   QT_METHOD_FORWARD_NATIVE_P_REF(classname, native_type, method_name, forward_type, ce, 0)
 
 #define QT_METHOD_FORWARD_STRING(classname, native_type, method_name) \
    PHP_METHOD(classname, method_name)                                 \

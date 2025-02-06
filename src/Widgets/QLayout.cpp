@@ -9,42 +9,7 @@ extern "C"
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QLayout>
 
-ZEND_METHOD(Qt_Widgets_QLayout, addWidget)
-{
-    zval *widget_zval = nullptr;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(widget_zval, ce_widget_QWidget)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QLayout);
-    auto *widget_container = QT_Object_P(widget_zval, QWidget);
-
-    container->native->addWidget(widget_container->native);
-}
-ZEND_METHOD(Qt_Widgets_QLayout, removeWidget)
-{
-    zval *widget_zval = nullptr;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(widget_zval, ce_widget_QWidget)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QLayout);
-    auto *widget_container = QT_Object_P(widget_zval, QWidget);
-    container->native->removeWidget(widget_container->native);
-}
-ZEND_METHOD(Qt_Widgets_QLayout, setSpacing)
-{
-    zend_long spacing;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_LONG(spacing)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QLayout);
-    container->native->setSpacing(spacing);
-}
-
-ZEND_METHOD(Qt_Widgets_QLayout, spacing)
-{
-    auto *container = QT_Object_P(ZEND_THIS, QLayout);
-    RETURN_LONG(container->native->spacing());
-}
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QLayout, QLayout, addWidget, QWidget, ce_widget_QWidget, 1)
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QLayout, QLayout, removeWidget, QWidget, ce_widget_QWidget, -1)
+QT_METHOD_FORWARD_INT(Qt_Widgets_QLayout, QLayout, setSpacing)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QLayout, QLayout, spacing)

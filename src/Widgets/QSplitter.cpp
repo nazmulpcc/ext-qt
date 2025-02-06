@@ -35,7 +35,7 @@ ZEND_METHOD(Qt_Widgets_QSplitter, addWidget)
     ZEND_PARSE_PARAMETERS_START(1, 1)
     Z_PARAM_OBJECT_OF_CLASS(widget_zval, ce_widget_QWidget)
     ZEND_PARSE_PARAMETERS_END();
-
+    Z_TRY_ADDREF_P(widget_zval);
     auto *container = QT_Object_P(ZEND_THIS, QSplitter);
     container->native->addWidget(QT_Object_P(widget_zval, QWidget)->native);
 }
@@ -66,6 +66,7 @@ ZEND_METHOD(Qt_Widgets_QSplitter, insertWidget)
     Z_PARAM_LONG(index)
     Z_PARAM_OBJECT_OF_CLASS(widget_zval, ce_widget_QWidget)
     ZEND_PARSE_PARAMETERS_END();
+    Z_TRY_ADDREF_P(widget_zval);
 
     auto *container = QT_Object_P(ZEND_THIS, QSplitter);
     container->native->insertWidget(index, QT_Object_P(widget_zval, QWidget)->native);
