@@ -307,17 +307,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, setGeometry)
 
 QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QWidget, QWidget, setInputMethodHints, Qt::InputMethodHint);
 
-ZEND_METHOD(Qt_Widgets_QWidget, setLayout)
-{
-    zval *layout_zval = nullptr;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(layout_zval, ce_widget_QLayout)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    auto *layout_container = QT_Object_P(layout_zval, QLayout);
-    container->native->setLayout(layout_container->native);
-}
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QWidget, QWidget, setLayout, QLayout, ce_widget_QLayout, 1);
 
 QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QWidget, QWidget, setLayoutDirection, Qt::LayoutDirection);
 QT_METHOD_FORWARD_INT(Qt_Widgets_QWidget, QWidget, setMaximumHeight);

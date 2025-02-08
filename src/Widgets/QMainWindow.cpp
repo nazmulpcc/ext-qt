@@ -31,15 +31,4 @@ ZEND_METHOD(Qt_Widgets_QMainWindow, __construct)
     container->native = new QMainWindow(parent, static_cast<Qt::WindowType>(windowFlags));
 }
 
-ZEND_METHOD(Qt_Widgets_QMainWindow, setCentralWidget)
-{
-    zval *widget_zval = nullptr;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(widget_zval, ce_widget_QWidget)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QMainWindow);
-    auto *widget_container = QT_Object_P(widget_zval, QWidget);
-
-    container->native->setCentralWidget((QWidget *)widget_container->native);
-}
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QMainWindow, QMainWindow, setCentralWidget, QWidget, ce_widget_QWidget, 1)
