@@ -47,12 +47,5 @@ ZEND_METHOD(Qt_Widgets_QScrollArea, ensureWidgetVisible)
 }
 
 QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QScrollArea, QScrollArea, setAlignment, Qt::AlignmentFlag)
-ZEND_METHOD(Qt_Widgets_QScrollArea, setWidget)
-{
-    zval *widget;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(widget, ce_widget_QWidget)
-    ZEND_PARSE_PARAMETERS_END();
-    QT_Object_P(ZEND_THIS, QScrollArea)->native->setWidget(QT_Object_P(widget, QWidget)->native);
-}
-QT_METHOD_FORWARD_BOOL(Qt_Widgets_QScrollArea, QScrollArea, setWidgetResizable);
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QScrollArea, QScrollArea, setWidget, QWidget, ce_widget_QWidget, 1)
+QT_METHOD_FORWARD_BOOL(Qt_Widgets_QScrollArea, QScrollArea, setWidgetResizable)
