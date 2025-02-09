@@ -388,6 +388,7 @@ QT_METHOD_FORWARD_BOOL(Qt_Widgets_QWidget, QWidget, setTabletTracking);
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setToolTip);
 QT_METHOD_FORWARD_INT(Qt_Widgets_QWidget, QWidget, setToolTipDuration);
 QT_METHOD_FORWARD_BOOL(Qt_Widgets_QWidget, QWidget, setUpdatesEnabled);
+QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, updateGeometry);
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setWhatsThis);
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setWindowFilePath);
 

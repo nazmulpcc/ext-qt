@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: c4e7a03df1834e0760fd01dff202e5b50d9a1545 */
+ * Stub hash: f29f8e8970c219961a160fe7982471338b4557e1 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -1090,6 +1090,8 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_updatesEnabled arginfo_class_Qt_Core_QCalendar_isValid
 
+#define arginfo_class_Qt_Widgets_QWidget_updateGeometry arginfo_class_Qt_Core_QObject_dumpObjectInfo
+
 #define arginfo_class_Qt_Widgets_QWidget_whatsThis arginfo_class_Qt_Core_QObject_objectName
 
 #define arginfo_class_Qt_Widgets_QWidget_width arginfo_class_Qt_Core_QSize_height
@@ -1168,9 +1170,23 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLabel___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, windowFlags, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLabel_setOpenExternalLinks, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, open, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
 #define arginfo_class_Qt_Widgets_QLabel_setText arginfo_class_Qt_Widgets_QAbstractButton_setText
 
+#define arginfo_class_Qt_Widgets_QLabel_setTextInteractionFlags arginfo_class_Qt_Widgets_QWidget_overrideWindowFlags
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLabel_setTextFormat, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, format, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QLabel_setWordWrap arginfo_class_Qt_Widgets_QAbstractSpinBox_setAccelerated
+
 #define arginfo_class_Qt_Widgets_QLabel_text arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QLabel_wordWrap arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QLayout_addWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
 
@@ -1989,6 +2005,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, ungrabGesture);
 ZEND_METHOD(Qt_Widgets_QWidget, unsetCursor);
 ZEND_METHOD(Qt_Widgets_QWidget, unsetLayoutDirection);
 ZEND_METHOD(Qt_Widgets_QWidget, updatesEnabled);
+ZEND_METHOD(Qt_Widgets_QWidget, updateGeometry);
 ZEND_METHOD(Qt_Widgets_QWidget, whatsThis);
 ZEND_METHOD(Qt_Widgets_QWidget, width);
 ZEND_METHOD(Qt_Widgets_QWidget, window);
@@ -2021,8 +2038,13 @@ ZEND_METHOD(Qt_Widgets_QWidget, update);
 ZEND_METHOD(Qt_Widgets_QWidget, onCustomContextMenuRequested);
 ZEND_METHOD(Qt_Widgets_QWidget, onWindowTitleChanged);
 ZEND_METHOD(Qt_Widgets_QLabel, __construct);
+ZEND_METHOD(Qt_Widgets_QLabel, setOpenExternalLinks);
 ZEND_METHOD(Qt_Widgets_QLabel, setText);
+ZEND_METHOD(Qt_Widgets_QLabel, setTextInteractionFlags);
+ZEND_METHOD(Qt_Widgets_QLabel, setTextFormat);
+ZEND_METHOD(Qt_Widgets_QLabel, setWordWrap);
 ZEND_METHOD(Qt_Widgets_QLabel, text);
+ZEND_METHOD(Qt_Widgets_QLabel, wordWrap);
 ZEND_METHOD(Qt_Widgets_QLayout, addWidget);
 ZEND_METHOD(Qt_Widgets_QLayout, removeWidget);
 ZEND_METHOD(Qt_Widgets_QLayout, setSpacing);
@@ -2215,6 +2237,16 @@ static const zend_function_entry class_Qt_WindowType_methods[] = {
 
 
 static const zend_function_entry class_Qt_AlignmentFlag_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_TextFormat_methods[] = {
+	ZEND_FE_END
+};
+
+
+static const zend_function_entry class_Qt_TextInteractionFlag_methods[] = {
 	ZEND_FE_END
 };
 
@@ -2722,6 +2754,7 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, unsetCursor, arginfo_class_Qt_Widgets_QWidget_unsetCursor, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, unsetLayoutDirection, arginfo_class_Qt_Widgets_QWidget_unsetLayoutDirection, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, updatesEnabled, arginfo_class_Qt_Widgets_QWidget_updatesEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, updateGeometry, arginfo_class_Qt_Widgets_QWidget_updateGeometry, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, whatsThis, arginfo_class_Qt_Widgets_QWidget_whatsThis, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, width, arginfo_class_Qt_Widgets_QWidget_width, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, window, arginfo_class_Qt_Widgets_QWidget_window, ZEND_ACC_PUBLIC)
@@ -2759,8 +2792,13 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 
 static const zend_function_entry class_Qt_Widgets_QLabel_methods[] = {
 	ZEND_ME(Qt_Widgets_QLabel, __construct, arginfo_class_Qt_Widgets_QLabel___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QLabel, setOpenExternalLinks, arginfo_class_Qt_Widgets_QLabel_setOpenExternalLinks, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLabel, setText, arginfo_class_Qt_Widgets_QLabel_setText, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QLabel, setTextInteractionFlags, arginfo_class_Qt_Widgets_QLabel_setTextInteractionFlags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QLabel, setTextFormat, arginfo_class_Qt_Widgets_QLabel_setTextFormat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QLabel, setWordWrap, arginfo_class_Qt_Widgets_QLabel_setWordWrap, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QLabel, text, arginfo_class_Qt_Widgets_QLabel_text, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QLabel, wordWrap, arginfo_class_Qt_Widgets_QLabel_wordWrap, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3220,6 +3258,98 @@ static zend_class_entry *register_class_Qt_AlignmentFlag(void)
 	zend_string *const_AlignVertical_Mask_name = zend_string_init_interned("AlignVertical_Mask", sizeof("AlignVertical_Mask") - 1, 1);
 	zend_declare_typed_class_constant(class_entry, const_AlignVertical_Mask_name, &const_AlignVertical_Mask_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
 	zend_string_release(const_AlignVertical_Mask_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_TextFormat(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "TextFormat", class_Qt_TextFormat_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	zval const_PlainText_value;
+	ZVAL_LONG(&const_PlainText_value, 0);
+	zend_string *const_PlainText_name = zend_string_init_interned("PlainText", sizeof("PlainText") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_PlainText_name, &const_PlainText_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_PlainText_name);
+
+	zval const_RichText_value;
+	ZVAL_LONG(&const_RichText_value, 1);
+	zend_string *const_RichText_name = zend_string_init_interned("RichText", sizeof("RichText") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_RichText_name, &const_RichText_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_RichText_name);
+
+	zval const_AutoText_value;
+	ZVAL_LONG(&const_AutoText_value, 2);
+	zend_string *const_AutoText_name = zend_string_init_interned("AutoText", sizeof("AutoText") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_AutoText_name, &const_AutoText_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_AutoText_name);
+
+	zval const_MarkdownText_value;
+	ZVAL_LONG(&const_MarkdownText_value, 3);
+	zend_string *const_MarkdownText_name = zend_string_init_interned("MarkdownText", sizeof("MarkdownText") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_MarkdownText_name, &const_MarkdownText_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_MarkdownText_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_TextInteractionFlag(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt", "TextInteractionFlag", class_Qt_TextInteractionFlag_methods);
+	class_entry = zend_register_internal_class_ex(&ce, NULL);
+
+	zval const_NoTextInteraction_value;
+	ZVAL_LONG(&const_NoTextInteraction_value, 0);
+	zend_string *const_NoTextInteraction_name = zend_string_init_interned("NoTextInteraction", sizeof("NoTextInteraction") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_NoTextInteraction_name, &const_NoTextInteraction_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_NoTextInteraction_name);
+
+	zval const_TextSelectableByMouse_value;
+	ZVAL_LONG(&const_TextSelectableByMouse_value, 1);
+	zend_string *const_TextSelectableByMouse_name = zend_string_init_interned("TextSelectableByMouse", sizeof("TextSelectableByMouse") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TextSelectableByMouse_name, &const_TextSelectableByMouse_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TextSelectableByMouse_name);
+
+	zval const_TextSelectableByKeyboard_value;
+	ZVAL_LONG(&const_TextSelectableByKeyboard_value, 2);
+	zend_string *const_TextSelectableByKeyboard_name = zend_string_init_interned("TextSelectableByKeyboard", sizeof("TextSelectableByKeyboard") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TextSelectableByKeyboard_name, &const_TextSelectableByKeyboard_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TextSelectableByKeyboard_name);
+
+	zval const_LinksAccessibleByMouse_value;
+	ZVAL_LONG(&const_LinksAccessibleByMouse_value, 4);
+	zend_string *const_LinksAccessibleByMouse_name = zend_string_init_interned("LinksAccessibleByMouse", sizeof("LinksAccessibleByMouse") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_LinksAccessibleByMouse_name, &const_LinksAccessibleByMouse_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_LinksAccessibleByMouse_name);
+
+	zval const_LinksAccessibleByKeyboard_value;
+	ZVAL_LONG(&const_LinksAccessibleByKeyboard_value, 8);
+	zend_string *const_LinksAccessibleByKeyboard_name = zend_string_init_interned("LinksAccessibleByKeyboard", sizeof("LinksAccessibleByKeyboard") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_LinksAccessibleByKeyboard_name, &const_LinksAccessibleByKeyboard_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_LinksAccessibleByKeyboard_name);
+
+	zval const_TextEditable_value;
+	ZVAL_LONG(&const_TextEditable_value, 16);
+	zend_string *const_TextEditable_name = zend_string_init_interned("TextEditable", sizeof("TextEditable") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TextEditable_name, &const_TextEditable_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TextEditable_name);
+
+	zval const_TextEditorInteraction_value;
+	ZVAL_LONG(&const_TextEditorInteraction_value, 1 | 2 | 16);
+	zend_string *const_TextEditorInteraction_name = zend_string_init_interned("TextEditorInteraction", sizeof("TextEditorInteraction") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TextEditorInteraction_name, &const_TextEditorInteraction_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TextEditorInteraction_name);
+
+	zval const_TextBrowserInteraction_value;
+	ZVAL_LONG(&const_TextBrowserInteraction_value, 1 | 4 | 8);
+	zend_string *const_TextBrowserInteraction_name = zend_string_init_interned("TextBrowserInteraction", sizeof("TextBrowserInteraction") - 1, 1);
+	zend_declare_typed_class_constant(class_entry, const_TextBrowserInteraction_name, &const_TextBrowserInteraction_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
+	zend_string_release(const_TextBrowserInteraction_name);
 
 	return class_entry;
 }

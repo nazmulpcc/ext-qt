@@ -50,6 +50,26 @@ namespace Qt {
         public const int AlignHorizontal_Mask = AlignmentFlag::AlignLeft | AlignmentFlag::AlignRight | AlignmentFlag::AlignHCenter | AlignmentFlag::AlignJustify | AlignmentFlag::AlignAbsolute;
         public const int AlignVertical_Mask = AlignmentFlag::AlignTop | AlignmentFlag::AlignBottom | AlignmentFlag::AlignVCenter | AlignmentFlag::AlignBaseline;
     }
+
+    class TextFormat
+    {
+        public const int PlainText = 0;
+        public const int RichText = 1;
+        public const int AutoText = 2;
+        public const int MarkdownText = 3;
+    }
+
+    class TextInteractionFlag
+    {
+        public const int NoTextInteraction = 0;
+        public const int TextSelectableByMouse = 1;
+        public const int TextSelectableByKeyboard = 2;
+        public const int LinksAccessibleByMouse = 4;
+        public const int LinksAccessibleByKeyboard = 8;
+        public const int TextEditable = 16;
+        public const int TextEditorInteraction = TextInteractionFlag::TextSelectableByMouse | TextInteractionFlag::TextSelectableByKeyboard | TextInteractionFlag::TextEditable;
+        public const int TextBrowserInteraction = TextInteractionFlag::TextSelectableByMouse | TextInteractionFlag::LinksAccessibleByMouse | TextInteractionFlag::LinksAccessibleByKeyboard;
+    }
 }
 
 namespace Qt\Core {
@@ -641,6 +661,7 @@ namespace Qt\Widgets {
         public function unsetCursor(): void {}
         public function unsetLayoutDirection(): void {}
         public function updatesEnabled(): bool {}
+        public function updateGeometry(): void {}
         // public function visibleRegion(): \Qt\Core\QRegion {}
         public function whatsThis(): string {}
         public function width(): int {}
@@ -684,8 +705,13 @@ namespace Qt\Widgets {
     class QLabel extends QFrame
     {
         public function __construct(?string $text = null, ?QWidget $parent = null, int $windowFlags = 0) {}
+        public function setOpenExternalLinks(bool $open): void {}
         public function setText(string $text): void {}
+        public function setTextInteractionFlags(int $flags): void {}
+        public function setTextFormat(int $format): void {}
+        public function setWordWrap(bool $on): void {}
         public function text(): string {}
+        public function wordWrap(): bool {}
     }
 
     abstract class QLayout extends \Qt\Core\QObject

@@ -62,6 +62,9 @@ PHP_MINIT_FUNCTION(qt)
 	register_class_Qt_CheckState();
 	register_class_Qt_WindowType();
 	register_class_Qt_Orientation();
+	register_class_Qt_AlignmentFlag();
+	register_class_Qt_TextFormat();
+	register_class_Qt_TextInteractionFlag();
 
 	memcpy(&qt_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
 	qt_object_handlers.offset = XtOffsetOf(qt_container_t<QObject>, std);

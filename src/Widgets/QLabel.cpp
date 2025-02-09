@@ -44,5 +44,11 @@ ZEND_METHOD(Qt_Widgets_QLabel, __construct)
         container->native->setText(text->val);
     }
 }
+
+QT_METHOD_FORWARD_BOOL(Qt_Widgets_QLabel, QLabel, setOpenExternalLinks)
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QLabel, QLabel, setText)
+QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QLabel, QLabel, setTextInteractionFlags, Qt::TextInteractionFlag)
+QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QLabel, QLabel, setTextFormat, Qt::TextFormat)
+QT_METHOD_FORWARD_BOOL(Qt_Widgets_QLabel, QLabel, setWordWrap)
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QLabel, QLabel, text)
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QLabel, QLabel, wordWrap)
