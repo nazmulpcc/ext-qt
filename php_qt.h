@@ -129,7 +129,6 @@ static zend_object *qt_qtimezone_create_handler(zend_class_entry *ce)
 static void qt_obj_free_handler(zend_object *object)
 {
    auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
-   obj->native->deleteLater();
    zend_object_std_dtor(object);
 }
 
