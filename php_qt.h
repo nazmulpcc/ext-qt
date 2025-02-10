@@ -17,6 +17,7 @@
 #ifndef PHP_QT_H
 #define PHP_QT_H
 
+#ifdef __cplusplus
 #include <QtCore/QString>
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
@@ -30,14 +31,54 @@
 #include <QtCore/QSize>
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QTextEdit>
+#endif
 
-extern zend_module_entry qt_module_entry;
-#define phpext_qt_ptr &qt_module_entry
+/**
+ * Declarations needed for the PHP extension at the C level go here.
+ */
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 #define PHP_QT_VERSION "0.1.0"
+   extern zend_module_entry qt_module_entry;
+#define phpext_qt_ptr &qt_module_entry
 
-static zend_object_handlers qt_object_handlers, qt_qcalendar_handler, qt_qdate_handler, qt_qtime_handler, qt_qdatetime_handler, qt_qtimezone_handler;
-static zend_object_handlers qt_qsize_handler, qt_qrect_handler;
+   static zend_object_handlers qt_object_handlers,
+       qt_qcalendar_handler,
+       qt_qdate_handler,
+       qt_qtime_handler,
+       qt_qdatetime_handler,
+       qt_qtimezone_handler,
+       qt_qsize_handler,
+       qt_qrect_handler;
+
+   extern zend_class_entry *ce_qcalendar;
+   extern zend_class_entry *ce_qdate;
+   extern zend_class_entry *ce_qdatetime;
+   extern zend_class_entry *ce_qobject;
+   extern zend_class_entry *ce_qrect;
+   extern zend_class_entry *ce_qsize;
+   extern zend_class_entry *ce_qscrollbar;
+   extern zend_class_entry *ce_qtextedit;
+   extern zend_class_entry *ce_qtime;
+   extern zend_class_entry *ce_qtimezone;
+   extern zend_class_entry *ce_widget_QWidget;
+   extern zend_class_entry *ce_widget_QLayout;
+
+#if defined(ZTS) && defined(COMPILE_DL_QT)
+   ZEND_TSRMLS_CACHE_EXTERN()
+#endif
+
+#ifdef __cplusplus
+}
+#endif
+
+/**
+ * C++-specific code (templates, inline C++ functions, Qt usage) goes under #ifdef __cplusplus.
+ */
+#ifdef __cplusplus
 
 template <typename T>
 struct qt_container_t
@@ -45,11 +86,13 @@ struct qt_container_t
    T *native;
    zend_object std{};
 };
+
 struct qt_callback_t
 {
    zend_fcall_info fci;
    zend_fcall_info_cache fci_cache{};
 };
+
 struct qt_callback_wrapper
 {
    std::shared_ptr<qt_callback_t> callback;
@@ -60,66 +103,82 @@ struct qt_callback_wrapper
 #define QT_Object_P(zv, type) \
    ((qt_container_t<type> *)((char *)(Z_OBJ_P(zv)) - XtOffsetOf(qt_container_t<type>, std)))
 
+// Object create handlers
 static zend_object *qt_obj_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QObject> *container = (qt_container_t<QObject> *)zend_object_alloc(sizeof(qt_container_t<QObject>), ce);
+   qt_container_t<QObject> *container =
+       (qt_container_t<QObject> *)zend_object_alloc(sizeof(qt_container_t<QObject>), ce);
 
    zend_object_std_init(&container->std, ce);
    object_properties_init(&container->std, ce);
    container->std.handlers = &qt_object_handlers;
    return &container->std;
 }
+
 static zend_object *qt_qcalendar_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QCalendar> *container = (qt_container_t<QCalendar> *)zend_object_alloc(sizeof(qt_container_t<QCalendar>), ce);
+   qt_container_t<QCalendar> *container =
+       (qt_container_t<QCalendar> *)zend_object_alloc(sizeof(qt_container_t<QCalendar>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qcalendar_handler;
    return &container->std;
 }
+
 static zend_object *qt_qdate_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QDate> *container = (qt_container_t<QDate> *)zend_object_alloc(sizeof(qt_container_t<QDate>), ce);
+   qt_container_t<QDate> *container =
+       (qt_container_t<QDate> *)zend_object_alloc(sizeof(qt_container_t<QDate>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qdate_handler;
    return &container->std;
 }
+
 static zend_object *qt_qrect_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QRect> *container = (qt_container_t<QRect> *)zend_object_alloc(sizeof(qt_container_t<QRect>), ce);
+   qt_container_t<QRect> *container =
+       (qt_container_t<QRect> *)zend_object_alloc(sizeof(qt_container_t<QRect>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qrect_handler;
    return &container->std;
 }
+
 static zend_object *qt_qsize_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QSize> *container = (qt_container_t<QSize> *)zend_object_alloc(sizeof(qt_container_t<QSize>), ce);
+   qt_container_t<QSize> *container =
+       (qt_container_t<QSize> *)zend_object_alloc(sizeof(qt_container_t<QSize>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qsize_handler;
    return &container->std;
 }
+
 static zend_object *qt_qtime_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QTime> *container = (qt_container_t<QTime> *)zend_object_alloc(sizeof(qt_container_t<QTime>), ce);
+   qt_container_t<QTime> *container =
+       (qt_container_t<QTime> *)zend_object_alloc(sizeof(qt_container_t<QTime>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qtime_handler;
    return &container->std;
 }
+
 static zend_object *qt_qdatetime_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QDateTime> *container = (qt_container_t<QDateTime> *)zend_object_alloc(sizeof(qt_container_t<QDateTime>), ce);
+   qt_container_t<QDateTime> *container =
+       (qt_container_t<QDateTime> *)zend_object_alloc(sizeof(qt_container_t<QDateTime>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qdatetime_handler;
    return &container->std;
 }
+
 static zend_object *qt_qtimezone_create_handler(zend_class_entry *ce)
 {
-   qt_container_t<QTimeZone> *container = (qt_container_t<QTimeZone> *)zend_object_alloc(sizeof(qt_container_t<QTimeZone>), ce);
+   qt_container_t<QTimeZone> *container =
+       (qt_container_t<QTimeZone> *)zend_object_alloc(sizeof(qt_container_t<QTimeZone>), ce);
 
    zend_object_std_init(&container->std, ce);
    container->std.handlers = &qt_qtimezone_handler;
@@ -140,50 +199,62 @@ static void qt_generic_free_handler(zend_object *object)
    zend_object_std_dtor(object);
 }
 
+//
+// Conversion helpers
+//
 template <typename T>
 inline void qt_cpp_to_zval(zval *z, const T &value)
 {
    php_error_docref(nullptr, E_WARNING, "Failed to convert native QT object to PHP");
    ZVAL_NULL(z);
 }
+
 template <typename T>
 inline void qt_cpp_to_zval(zval *z, T *value)
 {
    php_error_docref(nullptr, E_WARNING, "Failed to convert native QT object to PHP");
    ZVAL_NULL(z);
 }
+
 template <>
 inline void qt_cpp_to_zval<int>(zval *z, const int &value)
 {
    ZVAL_LONG(z, value);
 }
+
 template <>
 inline void qt_cpp_to_zval<bool>(zval *z, const bool &value)
 {
    ZVAL_BOOL(z, value);
 }
+
 template <>
 inline void qt_cpp_to_zval<QString>(zval *z, const QString &value)
 {
    zend_string *ztext = zend_string_init(value.toUtf8().data(), value.size(), 0);
    ZVAL_STR(z, ztext);
 }
+
 template <>
 inline void qt_cpp_to_zval<double>(zval *z, const double &value)
 {
    ZVAL_DOUBLE(z, value);
 }
 
+//
+// Signal parameter introspection
+//
 template <typename Func1>
 struct SignalParameterTypes;
-// For Regular functions
+
+// For regular functions
 template <typename R, typename... Args>
 struct SignalParameterTypes<R(Args...)>
 {
    using ParamTypes = std::tuple<Args...>;
 };
 
-// For Member function pointers
+// For member function pointers
 template <typename R, typename C, typename... Args>
 struct SignalParameterTypes<R (C::*)(Args...)>
 {
@@ -196,7 +267,9 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
    using ParamTypes = std::tuple<Args...>;
 };
 
-// Macros to define methods
+//
+// Common macros for PHP-Qt method forwarding
+//
 #define QT_RECEIVE_SINGLE_CALLBACK(callback) \
    zval *callback;                           \
    ZEND_PARSE_PARAMETERS_START(1, 1)         \
@@ -317,7 +390,9 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       QT_Object_P(z, type)->native = value;                      \
    }
 
+//
 // Helper functions
+//
 inline void qt_clear_callback(qt_callback_t *cb)
 {
    zend_fcall_info_args_clear(&cb->fci, true);
@@ -326,11 +401,8 @@ inline void qt_clear_callback(qt_callback_t *cb)
 }
 
 /**
- * Create a fci & fcc pair for a given zval. <br>
- * Also, register a callback to clear the fci & fcc when the sender is destroyed.
- * @param sender
- * @param callback
- * @return
+ * Create a qt_callback_t for a given zval callback.
+ * Also, registers a cleanup when the sender is destroyed.
  */
 inline qt_callback_t *qt_callback_create(const QObject *sender, zval *callback)
 {
@@ -352,62 +424,58 @@ inline qt_callback_t *qt_callback_create(const QObject *sender, zval *callback)
 }
 
 template <typename Func1>
-inline void qt_connect_signal_to_callback(typename QtPrivate::FunctionPointer<Func1>::Object *sender,
-                                          Func1 signal, zval *callback)
+inline void qt_connect_signal_to_callback(
+    typename QtPrivate::FunctionPointer<Func1>::Object *sender,
+    Func1 signal,
+    zval *callback)
 {
    auto cb = std::make_shared<qt_callback_t>(*qt_callback_create(sender, callback));
    using ParamTypes = typename SignalParameterTypes<Func1>::ParamTypes;
    constexpr int paramCount = std::tuple_size_v<ParamTypes>;
    auto cb_wrapper = std::make_shared<qt_callback_wrapper>(cb.get());
 
-   QObject::connect(sender, signal, [cb_wrapper, cb, sender, paramCount](auto... args)
+   QObject::connect(sender, signal,
+                    [cb_wrapper, cb, sender, paramCount](auto... args)
                     {
-        if (QThread::currentThread() != QCoreApplication::instance()->thread()) {
-            php_printf("Not in GUI thread\n");
-            // If we are not in the GUI thread
-            QMetaObject::invokeMethod(qobject_cast<QObject *>(sender), [cb_wrapper, cb, paramCount, args...]() {
-                zval retval, params[paramCount];
-                int i = 0;
-                (void) std::initializer_list<int>{
-                    (qt_cpp_to_zval(&params[i], args), ++i)...
-                };
+                       if (QThread::currentThread() != QCoreApplication::instance()->thread())
+                       {
+                          php_printf("Not in GUI thread\n");
+                          // If we are not in the GUI thread
+                          QMetaObject::invokeMethod(
+                              qobject_cast<QObject *>(sender),
+                              [cb_wrapper, cb, paramCount, args...]()
+                              {
+                                 zval retval, params[paramCount];
+                                 int i = 0;
+                                 (void)std::initializer_list<int>{
+                                     (qt_cpp_to_zval(&params[i], args), ++i)...};
 
-                cb_wrapper->callback->fci.retval = &retval;
-                cb_wrapper->callback->fci.params = params;
-                cb_wrapper->callback->fci.param_count = paramCount;
-                zend_call_function(&cb_wrapper->callback->fci, &cb_wrapper->callback->fci_cache);
-                zval_ptr_dtor(&retval);
-            }, Qt::QueuedConnection);
-        } else {
-            // If we are in the GUI thread
-            zval retval, params[paramCount];
-            int i = 0;
-            (void) std::initializer_list<int>{
-                (qt_cpp_to_zval(&params[i], args), ++i)...
-            };
+                                 cb_wrapper->callback->fci.retval = &retval;
+                                 cb_wrapper->callback->fci.params = params;
+                                 cb_wrapper->callback->fci.param_count = paramCount;
+                                 zend_call_function(&cb_wrapper->callback->fci, &cb_wrapper->callback->fci_cache);
+                                 zval_ptr_dtor(&retval);
+                              },
+                              Qt::QueuedConnection);
+                       }
+                       else
+                       {
+                          // If we are in the GUI thread
+                          zval retval, params[paramCount];
+                          int i = 0;
+                          (void)std::initializer_list<int>{
+                              (qt_cpp_to_zval(&params[i], args), ++i)...};
 
-            cb->fci.retval = &retval;
-            cb->fci.params = params;
-            cb->fci.param_count = paramCount;
-            zend_call_function(&cb->fci, &cb->fci_cache);
-            zval_ptr_dtor(&retval);
-        } });
+                          cb->fci.retval = &retval;
+                          cb->fci.params = params;
+                          cb->fci.param_count = paramCount;
+                          zend_call_function(&cb->fci, &cb->fci_cache);
+                          zval_ptr_dtor(&retval);
+                       }
+                    });
 }
 
-// global variables
-extern zend_class_entry *ce_qcalendar;
-extern zend_class_entry *ce_qdate;
-extern zend_class_entry *ce_qdatetime;
-extern zend_class_entry *ce_qobject;
-extern zend_class_entry *ce_qrect;
-extern zend_class_entry *ce_qsize;
-extern zend_class_entry *ce_qscrollbar;
-extern zend_class_entry *ce_qtextedit;
-extern zend_class_entry *ce_qtime;
-extern zend_class_entry *ce_qtimezone;
-extern zend_class_entry *ce_widget_QWidget;
-extern zend_class_entry *ce_widget_QLayout;
-
+// Register conversions
 QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar)
 QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
 QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
@@ -418,8 +486,6 @@ QT_REGISRER_NATIVE_TO_ZVAL(QTime, ce_qtime)
 QT_REGISRER_NATIVE_TO_ZVAL(QTimeZone, ce_qtimezone)
 QT_REGISRER_NATIVE_TO_ZVAL(QWidget, ce_widget_QWidget)
 
-#if defined(ZTS) && defined(COMPILE_DL_QT)
-ZEND_TSRMLS_CACHE_EXTERN()
-#endif
+#endif /* __cplusplus */
 
 #endif /* PHP_QT_H */

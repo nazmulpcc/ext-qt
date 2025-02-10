@@ -11,6 +11,9 @@ AS_VAR_IF([PHP_QT], [no],, [
   PHP_EVAL_INCLINE([$QT_CFLAGS])
   PHP_EVAL_LIBLINE([$QT_LIBS], [QT_SHARED_LIBADD])
 
+  LDFLAGS="$LDFLAGS $QT_LIBS"
+  export LDFLAGS
+
   dnl Check for library and symbol presence.
   dnl LIBNAME=qt # you may want to change this
   dnl LIBSYMBOL=qt # you most likely want to change this
