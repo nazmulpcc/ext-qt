@@ -1,5 +1,244 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 57be7727a1e9232ca86f0f6c65211d935a0cb865 */
+ * Stub hash: ae2cd8a76b115acbc3afddf02f46e692a1b7dcd5 */
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_buddy, 0, 1, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_canFetchMore, 0, 1, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, parent, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_checkIndex, 0, 2, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, options, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_clearItemData, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_columnCount, 0, 0, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_data, 0, 1, IS_MIXED, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, role, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_fetchMore, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, parent, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_flags, 0, 1, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_hasChildren, 0, 0, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_hasIndex, 0, 2, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_headerData, 0, 2, IS_MIXED, 0)
+	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, orientation, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, role, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_index, 0, 2, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_insertColumn, 0, 1, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_insertColumns, 0, 2, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, count, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_insertRow, 0, 1, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_insertRows, 0, 2, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, count, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QModelIndex, 1, "null")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_moveColumn, 0, 4, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, sourceParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, sourceColumn, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, destinationParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, destinationChild, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_moveColumns, 0, 5, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, sourceParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, sourceColumn, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, count, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, destinationParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, destinationChild, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_moveRow, 0, 4, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, sourceParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, sourceRow, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, destinationParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, destinationChild, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_moveRows, 0, 5, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, sourceParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, sourceRow, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, count, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, destinationParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, destinationChild, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_parent arginfo_class_Qt_Core_QAbstractItemModel_buddy
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_removeColumn arginfo_class_Qt_Core_QAbstractItemModel_insertColumn
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_removeColumns arginfo_class_Qt_Core_QAbstractItemModel_insertColumns
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_removeRow arginfo_class_Qt_Core_QAbstractItemModel_insertRow
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_removeRows arginfo_class_Qt_Core_QAbstractItemModel_insertRows
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_rowCount arginfo_class_Qt_Core_QAbstractItemModel_columnCount
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_setData, 0, 2, _IS_BOOL, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, value, IS_MIXED, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, role, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_setHeaderData, 0, 3, _IS_BOOL, 0)
+	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, orientation, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, value, IS_MIXED, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, role, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_sibling, 0, 3, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_sort, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, order, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_revert, 0, 0, IS_VOID, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_submit arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeMoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeRemoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onColumnsInserted arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onColumnsMoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onColumnsRemoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onDataChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onHeaderDataChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onLayoutAboutToBeChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onLayoutChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onModelAboutToBeReset arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onModelReset arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onRowsAboutToBeInserted arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onRowsAboutToBeMoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onRowsAboutToBeRemoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onRowsInserted arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onRowsMoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_onRowsRemoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_beginInsertColumns, 0, 3, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, parent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, first, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, last, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_beginInsertRows arginfo_class_Qt_Core_QAbstractItemModel_beginInsertColumns
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_beginMoveColumns, 0, 5, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, sourceParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, sourceFirst, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, sourceLast, IS_LONG, 0)
+	ZEND_ARG_OBJ_INFO(0, destinationParent, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, destinationChild, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_beginMoveRows arginfo_class_Qt_Core_QAbstractItemModel_beginMoveColumns
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_beginRemoveColumns arginfo_class_Qt_Core_QAbstractItemModel_beginInsertColumns
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_beginRemoveRows arginfo_class_Qt_Core_QAbstractItemModel_beginInsertColumns
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_beginResetModel arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_changePersistentIndex, 0, 2, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, from, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_OBJ_INFO(0, to, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_createIndex, 0, 2, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, data, IS_MIXED, 0, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endInsertColumns arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endInsertRows arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endMoveColumns arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endMoveRows arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endRemoveColumns arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endRemoveRows arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractItemModel_endResetModel arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_persistentIndexList, 0, 0, IS_ARRAY, 0)
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -32,6 +271,39 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QDateTime___construct, 0, 0, 3)
 	ZEND_ARG_OBJ_INFO(0, timeZone, Qt\\Core\\QTimeZone, 0)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QModelIndex___construct, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QModelIndex_column, 0, 0, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QModelIndex_data, 0, 0, IS_MIXED, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, role, IS_LONG, 0, "0")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QModelIndex_isValid arginfo_class_Qt_Core_QCalendar_isValid
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QModelIndex_model, 0, 0, Qt\\Core\\QAbstractItemModel, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QModelIndex_parent, 0, 0, Qt\\Core\\QModelIndex, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Core_QModelIndex_row arginfo_class_Qt_Core_QModelIndex_column
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QModelIndex_sibling, 0, 2, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QModelIndex_siblingAtColumn, 0, 1, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, column, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QModelIndex_siblingAtRow, 0, 1, Qt\\Core\\QModelIndex, 0)
+	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
+ZEND_END_ARG_INFO()
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
 ZEND_END_ARG_INFO()
@@ -40,10 +312,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_blockSigna
 	ZEND_ARG_TYPE_INFO(0, block, _IS_BOOL, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_dumpObjectInfo, 0, 0, IS_VOID, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Core_QObject_dumpObjectInfo arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Core_QObject_dumpObjectTree arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Core_QObject_dumpObjectTree arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Core_QObject_isQuickItemType arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -89,16 +360,15 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QSize___construct, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO(0, height, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QSize_height, 0, 0, IS_LONG, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Core_QSize_height arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Core_QSize_isEmpty arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QSize_isEmpty arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Core_QSize_isNull arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QSize_isNull arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Core_QSize_isValid arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QSize_isValid arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Core_QSize_width arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QSize_width arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTime___construct, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO(0, h, IS_LONG, 0)
@@ -107,17 +377,17 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTime___construct, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, ms, IS_LONG, 0, "0")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Core_QTime_hour arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QTime_hour arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Core_QTime_isNull arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Core_QTime_isValid arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Core_QTime_minute arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QTime_minute arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Core_QTime_msec arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QTime_msec arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Core_QTime_second arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Core_QTime_second arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QTimeZone___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, offsetSeconds, IS_LONG, 0)
@@ -125,16 +395,15 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Core_QTimeZone_isValid arginfo_class_Qt_Core_QCalendar_isValid
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QApplication___construct arginfo_class_Qt_Core_QModelIndex___construct
 
-#define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeat arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatDelay arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractButton_autoRepeatInterval arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_isChecked arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -160,28 +429,26 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractButton_text arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_animateClick arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractButton_animateClick arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_click arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractButton_click arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_toggle arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractButton_toggle arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractButton_onClicked, 0, 1, IS_VOID, 0)
-	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QAbstractButton_onClicked arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_onPressed arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractButton_onPressed arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_onReleased arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractButton_onReleased arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractButton_onToggled arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractScrollArea_addScrollBarWidget, 0, 2, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, widget, Qt\\Widgets\\QWidget, 0)
 	ZEND_ARG_TYPE_INFO(0, alignment, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QAbstractScrollArea_horizontalScrollBarPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractScrollArea_horizontalScrollBarPolicy arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QAbstractScrollArea_maximumViewportSize, 0, 0, Qt\\Core\\QSize, 0)
 ZEND_END_ARG_INFO()
@@ -206,9 +473,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractScrollArea_setViewport arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
 
-#define arginfo_class_Qt_Widgets_QAbstractScrollArea_sizeAdjustPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractScrollArea_sizeAdjustPolicy arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractScrollArea_verticalScrollBarPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractScrollArea_verticalScrollBarPolicy arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QAbstractSlider_hasTracking arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -218,13 +485,13 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractSlider_isSliderDown arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_maximum arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_maximum arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_minimum arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_minimum arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_orientation arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_orientation arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_pageStep arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_pageStep arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setInvertedAppearance, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, inverted, _IS_BOOL, 0)
@@ -256,15 +523,15 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractSlider_setTracking arginfo_class_Qt_Widgets_QAbstractButton_setAutoRepeat
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_singleStep arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_singleStep arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_sliderPosition arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_sliderPosition arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_triggerAction, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, action, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_value arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSlider_value arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider_setOrientation, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, orientation, IS_LONG, 0)
@@ -279,29 +546,29 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QAbstractSlider
 	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_onActionTriggered arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onActionTriggered arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_onRangeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onRangeChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderMoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderMoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderPressed arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderPressed arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderReleased arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onSliderReleased arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSlider_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSlider_onValueChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_alignment arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_buttonSymbols arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_correctionMode arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasAcceptableInput arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_hasFrame arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_interpretText arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_interpretText arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_isAccelerated arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -355,15 +622,15 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QAbstractSpinBox_wrapping arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_onEditingFinished arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_onEditingFinished arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_clear arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_selectAll arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_selectAll arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_stepDown arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_stepDown arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QAbstractSpinBox_stepUp arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QAbstractSpinBox_stepUp arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QBoxLayout___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
@@ -387,7 +654,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QCheckBox_checkState arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QCheckBox_isTristate arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -399,7 +666,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QCheckBox_setTr
 	ZEND_ARG_TYPE_INFO(0, tristate, _IS_BOOL, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QCheckBox_onCheckStateChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QComboBox___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -411,9 +678,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_addIt
 	ZEND_ARG_TYPE_INFO(0, texts, IS_ARRAY, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QComboBox_count arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_count arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QComboBox_currentIndex arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_currentIndex arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QComboBox_currentText arginfo_class_Qt_Core_QObject_objectName
 
@@ -421,14 +688,14 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QComboBox_hasFrame arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QComboBox_hidePopup arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QComboBox_hidePopup arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_insertItem, 0, 2, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, text, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QComboBox_insertPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_insertPolicy arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_insertSeparator, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
@@ -440,11 +707,11 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QComboBox_itemT
 	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QComboBox_maxCount arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_maxCount arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QComboBox_maxVisibleItems arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_maxVisibleItems arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QComboBox_minimumContentsLength arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_minimumContentsLength arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QComboBox_placeholderText arginfo_class_Qt_Core_QObject_objectName
 
@@ -478,13 +745,13 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QComboBox_setSizeAdjustPolicy arginfo_class_Qt_Widgets_QAbstractScrollArea_setHorizontalScrollBarPolicy
 
-#define arginfo_class_Qt_Widgets_QComboBox_showPopup arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QComboBox_showPopup arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QComboBox_sizeAdjustPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QComboBox_sizeAdjustPolicy arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QComboBox_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QComboBox_clear arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QComboBox_clearEditText arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QComboBox_clearEditText arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QComboBox_setCurrentIndex arginfo_class_Qt_Widgets_QComboBox_insertSeparator
 
@@ -492,19 +759,19 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QComboBox_setEditText arginfo_class_Qt_Widgets_QAbstractButton_setText
 
-#define arginfo_class_Qt_Widgets_QComboBox_onActivated arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onActivated arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QComboBox_onCurrentIndexChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onCurrentIndexChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QComboBox_onCurrentTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onCurrentTextChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QComboBox_onEditTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onEditTextChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QComboBox_onHighlighted arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onHighlighted arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QComboBox_onTextActivated arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onTextActivated arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QComboBox_onTextHighlighted arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QComboBox_onTextHighlighted arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_TYPE_MASK(0, dateTime, Qt\\Core\\QDate|Qt\\Core\\QTime|Qt\\Core\\QDateTime, MAY_BE_NULL, "null")
@@ -516,23 +783,23 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QDateTimeEdit_calendarPopup arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clear arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDate arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDate arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDateTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumDateTime arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMaximumTime arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDate arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDate arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDateTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumDateTime arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumTime arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_clearMinimumTime arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSection arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSection arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSectionIndex arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_currentSectionIndex arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_date, 0, 0, Qt\\Core\\QDate, 0)
 ZEND_END_ARG_INFO()
@@ -559,7 +826,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_s
 	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_sectionCount arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_sectionCount arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_sectionText, 0, 1, IS_STRING, 0)
 	ZEND_ARG_TYPE_INFO(0, section, IS_LONG, 0)
@@ -641,15 +908,15 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDateTimeEdit_s
 	ZEND_ARG_OBJ_INFO(0, time, Qt\\Core\\QTime, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_onDateChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_onDateChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_onDateTimeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_onDateTimeChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QDateTimeEdit_onTimeChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QDateTimeEdit_onTimeChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 #define arginfo_class_Qt_Widgets_QDial___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
-#define arginfo_class_Qt_Widgets_QDial_notchSize arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QDial_notchSize arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QDial_notchTarget, 0, 0, IS_DOUBLE, 0)
 ZEND_END_ARG_INFO()
@@ -676,17 +943,17 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QFrame_frameRect, 0, 0, Qt\\Core\\QRect, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QFrame_frameShadow arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QFrame_frameShadow arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QFrame_frameShape arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QFrame_frameShape arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QFrame_frameStyle arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QFrame_frameStyle arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QFrame_frameWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QFrame_frameWidth arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QFrame_lineWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QFrame_lineWidth arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QFrame_midLineWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QFrame_midLineWidth arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QFrame_setFrameRect, 0, 1, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO(0, rect, Qt\\Core\\QRect, 0)
@@ -715,7 +982,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QGroupBox___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QGroupBox_alignment arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QGroupBox_alignment arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QGroupBox_isCheckable arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -741,9 +1008,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QGroupBox_setChecked arginfo_class_Qt_Widgets_QAbstractButton_setChecked
 
-#define arginfo_class_Qt_Widgets_QGroupBox_onClicked arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QGroupBox_onClicked arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QGroupBox_onToggled arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QGroupBox_onToggled arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 #define arginfo_class_Qt_Widgets_QHBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
@@ -758,9 +1025,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSlider_setTickPosition arginfo_class_Qt_Widgets_QAbstractSlider_setSliderPosition
 
-#define arginfo_class_Qt_Widgets_QSlider_tickInterval arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSlider_tickInterval arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QSlider_tickPosition arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSlider_tickPosition arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QVBoxLayout___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
@@ -775,13 +1042,13 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_accessibleName arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_activateWindow arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_activateWindow arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_adjustSize arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_adjustSize arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QWidget_autoFillBackground arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QWidget_backgroundRole arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_backgroundRole arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_baseSize, 0, 0, Qt\\Widgets\\Qt\\Core\\QSize, 0)
 ZEND_END_ARG_INFO()
@@ -793,20 +1060,19 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_childrenRect arginfo_class_Qt_Widgets_QFrame_frameRect
 
-#define arginfo_class_Qt_Widgets_QWidget_clearFocus arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_clearFocus arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_clearMask arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_clearMask arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_contentsMargins, 0, 0, IS_ARRAY, 0)
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Widgets_QWidget_contentsMargins arginfo_class_Qt_Core_QAbstractItemModel_persistentIndexList
 
 #define arginfo_class_Qt_Widgets_QWidget_contentsRect arginfo_class_Qt_Widgets_QFrame_frameRect
 
-#define arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_contextMenuPolicy arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_ensurePolished arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_ensurePolished arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_focusPolicy arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_focusPolicy arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_frameGeometry arginfo_class_Qt_Widgets_QFrame_frameRect
 
@@ -814,9 +1080,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_geometry arginfo_class_Qt_Widgets_QFrame_frameRect
 
-#define arginfo_class_Qt_Widgets_QWidget_grabKeyboard arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_grabKeyboard arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_grabMouse arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_grabMouse arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QWidget_hasFocus arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -824,9 +1090,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_hasTabletTracking arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QWidget_height arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_height arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_inputMethodHints arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_inputMethodHints arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_isActiveWindow arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -861,19 +1127,19 @@ ZEND_END_ARG_INFO()
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QWidget_layout, 0, 0, Qt\\Widgets\\QLayout, 1)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_layoutDirection arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_layoutDirection arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_maximumHeight arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_maximumHeight arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_maximumSize arginfo_class_Qt_Widgets_QWidget_baseSize
 
-#define arginfo_class_Qt_Widgets_QWidget_maximumWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_maximumWidth arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_minimumHeight arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_minimumHeight arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_minimumSize arginfo_class_Qt_Widgets_QWidget_baseSize
 
-#define arginfo_class_Qt_Widgets_QWidget_minimumWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_minimumWidth arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_move, 0, 2, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
@@ -893,15 +1159,15 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_parentWidget arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
-#define arginfo_class_Qt_Widgets_QWidget_pos arginfo_class_Qt_Widgets_QWidget_contentsMargins
+#define arginfo_class_Qt_Widgets_QWidget_pos arginfo_class_Qt_Core_QAbstractItemModel_persistentIndexList
 
 #define arginfo_class_Qt_Widgets_QWidget_previousInFocusChain arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
 #define arginfo_class_Qt_Widgets_QWidget_rect arginfo_class_Qt_Widgets_QFrame_frameRect
 
-#define arginfo_class_Qt_Widgets_QWidget_releaseKeyboard arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_releaseKeyboard arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_releaseMouse arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_releaseMouse arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QWidget_releaseShortcut arginfo_class_Qt_Core_QObject_killTimer
 
@@ -1079,7 +1345,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_toolTip arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_toolTipDuration arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_toolTipDuration arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_underMouse arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -1087,47 +1353,47 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_ungrabG
 	ZEND_ARG_TYPE_INFO(0, gestureType, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_unsetCursor arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_unsetCursor arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_unsetLayoutDirection arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_unsetLayoutDirection arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QWidget_updatesEnabled arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QWidget_updateGeometry arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_updateGeometry arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QWidget_whatsThis arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_width arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_width arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_window arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
 #define arginfo_class_Qt_Widgets_QWidget_windowFilePath arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_windowFlags arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_windowFlags arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_windowModality arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_windowModality arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_windowOpacity arginfo_class_Qt_Widgets_QDial_notchTarget
 
 #define arginfo_class_Qt_Widgets_QWidget_windowRole arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_windowState arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_windowState arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QWidget_windowTitle arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QWidget_windowType arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_windowType arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_x arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_x arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_y arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QWidget_y arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QWidget_close arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_close arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_hide arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_hide arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_lower arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_lower arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_raise arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_raise arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_setDisabled, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, disable, _IS_BOOL, 0)
@@ -1149,23 +1415,23 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_setWindowTitle arginfo_class_Qt_Widgets_QGroupBox_setTitle
 
-#define arginfo_class_Qt_Widgets_QWidget_show arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_show arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_showFullScreen arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_showFullScreen arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_showMaximized arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_showMaximized arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_showMinimized arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_showMinimized arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QWidget_showNormal arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QWidget_showNormal arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_update, 0, 0, IS_VOID, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, region, Qt\\Core\\QRect, 1, "null")
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QWidget_onCustomContextMenuRequested arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QWidget_onCustomContextMenuRequested arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QWidget_onWindowTitleChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QWidget_onWindowTitleChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 #define arginfo_class_Qt_Widgets_QWidget_focusNextChild arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -1201,21 +1467,21 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLayout_setSpac
 	ZEND_ARG_TYPE_INFO(0, spacing, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QLayout_spacing arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QLineEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
-#define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_backspace arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QLineEdit_cursorPosition arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_del arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_deselect arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_deselect arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QLineEdit_displayText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QLineEdit_echoMode arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QLineEdit_end, 0, 0, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, mark, _IS_BOOL, 0, "false")
@@ -1235,7 +1501,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_isReadOnly arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QLineEdit_maxLength arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QLineEdit_placeholderText arginfo_class_Qt_Core_QObject_objectName
 
@@ -1264,25 +1530,25 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QLineEdit_text arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QLineEdit_onEditingFinished arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onReturnPressed arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QLineEdit_onReturnPressed arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QLineEdit_onTextChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QLineEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_clear arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_copy arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_copy arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_cut arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_cut arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_paste arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_paste arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_redo arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_redo arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_selectAll arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_selectAll arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QLineEdit_undo arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QLineEdit_undo arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QMainWindow___construct arginfo_class_Qt_Widgets_QWidget___construct
 
@@ -1294,7 +1560,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QScrollArea___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
-#define arginfo_class_Qt_Widgets_QScrollArea_alignment arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QScrollArea_alignment arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QScrollArea_ensureVisible, 0, 2, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
@@ -1323,11 +1589,11 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSpinBox_cleanText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSpinBox_displayIntegerBase arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSpinBox_maximum arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSpinBox_minimum arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QSpinBox_prefix arginfo_class_Qt_Core_QObject_objectName
 
@@ -1357,19 +1623,19 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSpinBox_setSuf
 	ZEND_ARG_TYPE_INFO(0, suffix, IS_STRING, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSpinBox_singleStep arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSpinBox_stepType arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QSpinBox_suffix arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSpinBox_value arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QSpinBox_setValue arginfo_class_Qt_Widgets_QSpinBox_setSingleStep
 
-#define arginfo_class_Qt_Widgets_QSpinBox_onTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QSpinBox_onTextChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QSpinBox_onValueChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QSpinBox_onValueChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QSplitter___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, orientation, IS_LONG, 0, "Qt\\Orientation::Horizontal")
@@ -1380,9 +1646,9 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSplitter_childrenCollapsible arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QSplitter_count arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSplitter_count arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QSplitter_handleWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QSplitter_handleWidth arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_indexOf, 0, 1, IS_LONG, 0)
 	ZEND_ARG_OBJ_INFO(0, widget, Qt\\Widgets\\QWidget, 0)
@@ -1399,7 +1665,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QSplitter_opaqueResize arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QSplitter_refresh arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QSplitter_refresh arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QSplitter_replaceWidget arginfo_class_Qt_Widgets_QSplitter_insertWidget
 
@@ -1427,17 +1693,17 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QSplitter_setSt
 	ZEND_ARG_TYPE_INFO(0, stretch, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QSplitter_sizes arginfo_class_Qt_Widgets_QWidget_contentsMargins
+#define arginfo_class_Qt_Widgets_QSplitter_sizes arginfo_class_Qt_Core_QAbstractItemModel_persistentIndexList
 
-#define arginfo_class_Qt_Widgets_QSplitter_onSplitterMoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QSplitter_onSplitterMoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 #define arginfo_class_Qt_Widgets_QStackedWidget___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
 #define arginfo_class_Qt_Widgets_QStackedWidget_addWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
 
-#define arginfo_class_Qt_Widgets_QStackedWidget_count arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QStackedWidget_count arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QStackedWidget_currentIndex arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QStackedWidget_currentIndex arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QStackedWidget_currentWidget arginfo_class_Qt_Widgets_QWidget_nativeParentWidget
 
@@ -1455,46 +1721,46 @@ ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QStackedWidget_w
 	ZEND_ARG_TYPE_INFO(0, index, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QStackedWidget_onCurrentChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QStackedWidget_onCurrentChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QStackedWidget_onWidgetRemoved arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QStackedWidget_onWidgetRemoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 #define arginfo_class_Qt_Widgets_QTextEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 #define arginfo_class_Qt_Widgets_QTextEdit_acceptRichText arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QTextEdit_alignment arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_alignment arginfo_class_Qt_Core_QModelIndex_column
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_anchorAt, 0, 2, IS_STRING, 0)
 	ZEND_ARG_TYPE_INFO(0, x, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, y, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-#define arginfo_class_Qt_Widgets_QTextEdit_autoFormatting arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_autoFormatting arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QTextEdit_canPaste arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QTextEdit_documentTitle arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QTextEdit_ensureCursorVisible arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_ensureCursorVisible arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QTextEdit_fontFamily arginfo_class_Qt_Core_QObject_objectName
 
 #define arginfo_class_Qt_Widgets_QTextEdit_fontItalic arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QTextEdit_fontPointSize arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_fontPointSize arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QTextEdit_fontUnderline arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QTextEdit_fontWeight arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_fontWeight arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QTextEdit_isReadOnly arginfo_class_Qt_Core_QCalendar_isValid
 
 #define arginfo_class_Qt_Widgets_QTextEdit_isUndoRedoEnabled arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QTextEdit_lineWrapColumnOrWidth arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_lineWrapColumnOrWidth arginfo_class_Qt_Core_QModelIndex_column
 
-#define arginfo_class_Qt_Widgets_QTextEdit_lineWrapMode arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_lineWrapMode arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QTextEdit_overwriteMode arginfo_class_Qt_Core_QCalendar_isValid
 
@@ -1540,7 +1806,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QTextEdit_tabStopDistance arginfo_class_Qt_Widgets_QDial_notchTarget
 
-#define arginfo_class_Qt_Widgets_QTextEdit_textInteractionFlags arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_textInteractionFlags arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QTextEdit_toHtml arginfo_class_Qt_Core_QObject_objectName
 
@@ -1550,27 +1816,27 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QTextEdit_toPlainText arginfo_class_Qt_Core_QObject_objectName
 
-#define arginfo_class_Qt_Widgets_QTextEdit_wordWrapMode arginfo_class_Qt_Core_QSize_height
+#define arginfo_class_Qt_Widgets_QTextEdit_wordWrapMode arginfo_class_Qt_Core_QModelIndex_column
 
 #define arginfo_class_Qt_Widgets_QTextEdit_append arginfo_class_Qt_Widgets_QAbstractButton_setText
 
-#define arginfo_class_Qt_Widgets_QTextEdit_clear arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_clear arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QTextEdit_copy arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_copy arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QTextEdit_cut arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_cut arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QTextEdit_insertHtml arginfo_class_Qt_Widgets_QAbstractButton_setText
 
 #define arginfo_class_Qt_Widgets_QTextEdit_insertPlainText arginfo_class_Qt_Widgets_QAbstractButton_setText
 
-#define arginfo_class_Qt_Widgets_QTextEdit_paste arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_paste arginfo_class_Qt_Core_QAbstractItemModel_revert
 
-#define arginfo_class_Qt_Widgets_QTextEdit_redo arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_redo arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QTextEdit_scrollToAnchor arginfo_class_Qt_Core_QObject_setObjectName
 
-#define arginfo_class_Qt_Widgets_QTextEdit_selectAll arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_selectAll arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QTextEdit_setAlignment arginfo_class_Qt_Widgets_QAbstractSpinBox_setAlignment
 
@@ -1602,7 +1868,7 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QTextEdit_setText arginfo_class_Qt_Widgets_QAbstractButton_setText
 
-#define arginfo_class_Qt_Widgets_QTextEdit_undo arginfo_class_Qt_Core_QObject_dumpObjectInfo
+#define arginfo_class_Qt_Widgets_QTextEdit_undo arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTextEdit_zoomIn, 0, 0, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, range, IS_LONG, 0, "1")
@@ -1610,18 +1876,80 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QTextEdit_zoomOut arginfo_class_Qt_Widgets_QTextEdit_zoomIn
 
-#define arginfo_class_Qt_Widgets_QTextEdit_onCopyAvailable arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QTextEdit_onCopyAvailable arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QTextEdit_onCursorPositionChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QTextEdit_onCursorPositionChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QTextEdit_onRedoAvailable arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QTextEdit_onRedoAvailable arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QTextEdit_onSelectionChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QTextEdit_onSelectionChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QTextEdit_onTextChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QTextEdit_onTextChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
-#define arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable arginfo_class_Qt_Widgets_QAbstractButton_onClicked
+#define arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
+ZEND_METHOD(Qt_Core_QAbstractItemModel, buddy);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, canFetchMore);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, checkIndex);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, clearItemData);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, fetchMore);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, flags);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, hasChildren);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, hasIndex);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, headerData);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, insertColumn);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, insertColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, insertRow);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, insertRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, moveColumn);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, moveColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, moveRow);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, moveRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, removeColumn);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, removeColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, removeRow);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, removeRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, setData);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, setHeaderData);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, sibling);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, sort);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, revert);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, submit);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onColumnsAboutToBeInserted);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onColumnsAboutToBeMoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onColumnsAboutToBeRemoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onColumnsInserted);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onColumnsMoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onColumnsRemoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onDataChanged);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onHeaderDataChanged);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onLayoutAboutToBeChanged);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onLayoutChanged);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onModelAboutToBeReset);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onModelReset);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onRowsAboutToBeInserted);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onRowsAboutToBeMoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onRowsAboutToBeRemoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onRowsInserted);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onRowsMoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, onRowsRemoved);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginInsertColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginInsertRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginMoveColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginMoveRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginRemoveColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginRemoveRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, beginResetModel);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, changePersistentIndex);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, createIndex);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endInsertColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endInsertRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endMoveColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endMoveRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endRemoveColumns);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endRemoveRows);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, endResetModel);
+ZEND_METHOD(Qt_Core_QAbstractItemModel, persistentIndexList);
 ZEND_METHOD(Qt_Core_QCalendar, __construct);
 ZEND_METHOD(Qt_Core_QCalendar, isValid);
 ZEND_METHOD(Qt_Core_QDate, __construct);
@@ -1631,6 +1959,16 @@ ZEND_METHOD(Qt_Core_QDate, isValid);
 ZEND_METHOD(Qt_Core_QDate, month);
 ZEND_METHOD(Qt_Core_QDate, year);
 ZEND_METHOD(Qt_Core_QDateTime, __construct);
+ZEND_METHOD(Qt_Core_QModelIndex, __construct);
+ZEND_METHOD(Qt_Core_QModelIndex, column);
+ZEND_METHOD(Qt_Core_QModelIndex, data);
+ZEND_METHOD(Qt_Core_QModelIndex, isValid);
+ZEND_METHOD(Qt_Core_QModelIndex, model);
+ZEND_METHOD(Qt_Core_QModelIndex, parent);
+ZEND_METHOD(Qt_Core_QModelIndex, row);
+ZEND_METHOD(Qt_Core_QModelIndex, sibling);
+ZEND_METHOD(Qt_Core_QModelIndex, siblingAtColumn);
+ZEND_METHOD(Qt_Core_QModelIndex, siblingAtRow);
 ZEND_METHOD(Qt_Core_QObject, __construct);
 ZEND_METHOD(Qt_Core_QObject, blockSignals);
 ZEND_METHOD(Qt_Core_QObject, dumpObjectInfo);
@@ -2226,6 +2564,77 @@ ZEND_METHOD(Qt_Widgets_QTextEdit, onSelectionChanged);
 ZEND_METHOD(Qt_Widgets_QTextEdit, onTextChanged);
 ZEND_METHOD(Qt_Widgets_QTextEdit, onUndoAvailable);
 
+static const zend_function_entry class_Qt_Core_QAbstractItemModel_methods[] = {
+	ZEND_ME(Qt_Core_QAbstractItemModel, buddy, arginfo_class_Qt_Core_QAbstractItemModel_buddy, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, canFetchMore, arginfo_class_Qt_Core_QAbstractItemModel_canFetchMore, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, checkIndex, arginfo_class_Qt_Core_QAbstractItemModel_checkIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, clearItemData, arginfo_class_Qt_Core_QAbstractItemModel_clearItemData, ZEND_ACC_PUBLIC)
+	ZEND_RAW_FENTRY("columnCount", NULL, arginfo_class_Qt_Core_QAbstractItemModel_columnCount, ZEND_ACC_PUBLIC|ZEND_ACC_ABSTRACT, NULL, NULL)
+	ZEND_RAW_FENTRY("data", NULL, arginfo_class_Qt_Core_QAbstractItemModel_data, ZEND_ACC_PUBLIC|ZEND_ACC_ABSTRACT, NULL, NULL)
+	ZEND_ME(Qt_Core_QAbstractItemModel, fetchMore, arginfo_class_Qt_Core_QAbstractItemModel_fetchMore, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, flags, arginfo_class_Qt_Core_QAbstractItemModel_flags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, hasChildren, arginfo_class_Qt_Core_QAbstractItemModel_hasChildren, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, hasIndex, arginfo_class_Qt_Core_QAbstractItemModel_hasIndex, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, headerData, arginfo_class_Qt_Core_QAbstractItemModel_headerData, ZEND_ACC_PUBLIC)
+	ZEND_RAW_FENTRY("index", NULL, arginfo_class_Qt_Core_QAbstractItemModel_index, ZEND_ACC_PUBLIC|ZEND_ACC_ABSTRACT, NULL, NULL)
+	ZEND_ME(Qt_Core_QAbstractItemModel, insertColumn, arginfo_class_Qt_Core_QAbstractItemModel_insertColumn, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, insertColumns, arginfo_class_Qt_Core_QAbstractItemModel_insertColumns, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, insertRow, arginfo_class_Qt_Core_QAbstractItemModel_insertRow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, insertRows, arginfo_class_Qt_Core_QAbstractItemModel_insertRows, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, moveColumn, arginfo_class_Qt_Core_QAbstractItemModel_moveColumn, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, moveColumns, arginfo_class_Qt_Core_QAbstractItemModel_moveColumns, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, moveRow, arginfo_class_Qt_Core_QAbstractItemModel_moveRow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, moveRows, arginfo_class_Qt_Core_QAbstractItemModel_moveRows, ZEND_ACC_PUBLIC)
+	ZEND_RAW_FENTRY("parent", NULL, arginfo_class_Qt_Core_QAbstractItemModel_parent, ZEND_ACC_PUBLIC|ZEND_ACC_ABSTRACT, NULL, NULL)
+	ZEND_ME(Qt_Core_QAbstractItemModel, removeColumn, arginfo_class_Qt_Core_QAbstractItemModel_removeColumn, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, removeColumns, arginfo_class_Qt_Core_QAbstractItemModel_removeColumns, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, removeRow, arginfo_class_Qt_Core_QAbstractItemModel_removeRow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, removeRows, arginfo_class_Qt_Core_QAbstractItemModel_removeRows, ZEND_ACC_PUBLIC)
+	ZEND_RAW_FENTRY("rowCount", NULL, arginfo_class_Qt_Core_QAbstractItemModel_rowCount, ZEND_ACC_PUBLIC|ZEND_ACC_ABSTRACT, NULL, NULL)
+	ZEND_ME(Qt_Core_QAbstractItemModel, setData, arginfo_class_Qt_Core_QAbstractItemModel_setData, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, setHeaderData, arginfo_class_Qt_Core_QAbstractItemModel_setHeaderData, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, sibling, arginfo_class_Qt_Core_QAbstractItemModel_sibling, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, sort, arginfo_class_Qt_Core_QAbstractItemModel_sort, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, revert, arginfo_class_Qt_Core_QAbstractItemModel_revert, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, submit, arginfo_class_Qt_Core_QAbstractItemModel_submit, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onColumnsAboutToBeInserted, arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onColumnsAboutToBeMoved, arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeMoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onColumnsAboutToBeRemoved, arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeRemoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onColumnsInserted, arginfo_class_Qt_Core_QAbstractItemModel_onColumnsInserted, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onColumnsMoved, arginfo_class_Qt_Core_QAbstractItemModel_onColumnsMoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onColumnsRemoved, arginfo_class_Qt_Core_QAbstractItemModel_onColumnsRemoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onDataChanged, arginfo_class_Qt_Core_QAbstractItemModel_onDataChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onHeaderDataChanged, arginfo_class_Qt_Core_QAbstractItemModel_onHeaderDataChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onLayoutAboutToBeChanged, arginfo_class_Qt_Core_QAbstractItemModel_onLayoutAboutToBeChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onLayoutChanged, arginfo_class_Qt_Core_QAbstractItemModel_onLayoutChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onModelAboutToBeReset, arginfo_class_Qt_Core_QAbstractItemModel_onModelAboutToBeReset, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onModelReset, arginfo_class_Qt_Core_QAbstractItemModel_onModelReset, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onRowsAboutToBeInserted, arginfo_class_Qt_Core_QAbstractItemModel_onRowsAboutToBeInserted, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onRowsAboutToBeMoved, arginfo_class_Qt_Core_QAbstractItemModel_onRowsAboutToBeMoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onRowsAboutToBeRemoved, arginfo_class_Qt_Core_QAbstractItemModel_onRowsAboutToBeRemoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onRowsInserted, arginfo_class_Qt_Core_QAbstractItemModel_onRowsInserted, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onRowsMoved, arginfo_class_Qt_Core_QAbstractItemModel_onRowsMoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, onRowsRemoved, arginfo_class_Qt_Core_QAbstractItemModel_onRowsRemoved, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginInsertColumns, arginfo_class_Qt_Core_QAbstractItemModel_beginInsertColumns, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginInsertRows, arginfo_class_Qt_Core_QAbstractItemModel_beginInsertRows, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginMoveColumns, arginfo_class_Qt_Core_QAbstractItemModel_beginMoveColumns, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginMoveRows, arginfo_class_Qt_Core_QAbstractItemModel_beginMoveRows, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginRemoveColumns, arginfo_class_Qt_Core_QAbstractItemModel_beginRemoveColumns, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginRemoveRows, arginfo_class_Qt_Core_QAbstractItemModel_beginRemoveRows, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, beginResetModel, arginfo_class_Qt_Core_QAbstractItemModel_beginResetModel, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, changePersistentIndex, arginfo_class_Qt_Core_QAbstractItemModel_changePersistentIndex, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, createIndex, arginfo_class_Qt_Core_QAbstractItemModel_createIndex, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endInsertColumns, arginfo_class_Qt_Core_QAbstractItemModel_endInsertColumns, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endInsertRows, arginfo_class_Qt_Core_QAbstractItemModel_endInsertRows, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endMoveColumns, arginfo_class_Qt_Core_QAbstractItemModel_endMoveColumns, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endMoveRows, arginfo_class_Qt_Core_QAbstractItemModel_endMoveRows, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endRemoveColumns, arginfo_class_Qt_Core_QAbstractItemModel_endRemoveColumns, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endRemoveRows, arginfo_class_Qt_Core_QAbstractItemModel_endRemoveRows, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, endResetModel, arginfo_class_Qt_Core_QAbstractItemModel_endResetModel, ZEND_ACC_PROTECTED)
+	ZEND_ME(Qt_Core_QAbstractItemModel, persistentIndexList, arginfo_class_Qt_Core_QAbstractItemModel_persistentIndexList, ZEND_ACC_PROTECTED)
+	ZEND_FE_END
+};
+
 static const zend_function_entry class_Qt_Core_QCalendar_methods[] = {
 	ZEND_ME(Qt_Core_QCalendar, __construct, arginfo_class_Qt_Core_QCalendar___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QCalendar, isValid, arginfo_class_Qt_Core_QCalendar_isValid, ZEND_ACC_PUBLIC)
@@ -2244,6 +2653,20 @@ static const zend_function_entry class_Qt_Core_QDate_methods[] = {
 
 static const zend_function_entry class_Qt_Core_QDateTime_methods[] = {
 	ZEND_ME(Qt_Core_QDateTime, __construct, arginfo_class_Qt_Core_QDateTime___construct, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Core_QModelIndex_methods[] = {
+	ZEND_ME(Qt_Core_QModelIndex, __construct, arginfo_class_Qt_Core_QModelIndex___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, column, arginfo_class_Qt_Core_QModelIndex_column, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, data, arginfo_class_Qt_Core_QModelIndex_data, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, isValid, arginfo_class_Qt_Core_QModelIndex_isValid, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, model, arginfo_class_Qt_Core_QModelIndex_model, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, parent, arginfo_class_Qt_Core_QModelIndex_parent, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, row, arginfo_class_Qt_Core_QModelIndex_row, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, sibling, arginfo_class_Qt_Core_QModelIndex_sibling, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, siblingAtColumn, arginfo_class_Qt_Core_QModelIndex_siblingAtColumn, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QModelIndex, siblingAtRow, arginfo_class_Qt_Core_QModelIndex_siblingAtRow, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3291,6 +3714,16 @@ static zend_class_entry *register_class_Qt_TextInteractionFlag(void)
 	return class_entry;
 }
 
+static zend_class_entry *register_class_Qt_Core_QAbstractItemModel(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QAbstractItemModel", class_Qt_Core_QAbstractItemModel_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+
+	return class_entry;
+}
+
 static zend_class_entry *register_class_Qt_Core_QCalendar(void)
 {
 	zend_class_entry ce, *class_entry;
@@ -3346,6 +3779,16 @@ static zend_class_entry *register_class_Qt_Core_QDateTime(void)
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QDateTime", class_Qt_Core_QDateTime_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QModelIndex(void)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QModelIndex", class_Qt_Core_QModelIndex_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, NULL, 0);
 
 	return class_entry;

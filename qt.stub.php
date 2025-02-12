@@ -73,6 +73,85 @@ namespace Qt {
 }
 
 namespace Qt\Core {
+    class QAbstractItemModel
+    {
+        public function buddy(QModelIndex $index): QModelIndex {}
+        // public function canDropMimeData(QMimeData $data, int $action, int $row, int $column, QModelIndex $parent): bool {} // @todo: Implement QMimeData
+        public function canFetchMore(QModelIndex $parent): bool {}
+        public function checkIndex(QModelIndex $index, int $options): bool {}
+        public function clearItemData(QModelIndex $index): void {}
+        abstract public function columnCount(?QModelIndex $parent = null): int {}
+        abstract public function data(QModelIndex $index, int $role = 0): mixed {}
+        // public function dropMimeData(QMimeData $data, int $action, int $row, int $column, QModelIndex $parent): bool {} // @todo: Implement QMimeData
+        public function fetchMore(QModelIndex $parent): void {}
+        public function flags(QModelIndex $index): int {}
+        public function hasChildren(?QModelIndex $parent = null): bool {}
+        public function hasIndex(int $row, int $column, ?QModelIndex $parent = null): bool {}
+        public function headerData(int $section, int $orientation, int $role = 0): mixed {}
+        abstract public function index(int $row, int $column, ?QModelIndex $parent = null): QModelIndex {}
+        public function insertColumn(int $column, ?QModelIndex $parent = null): bool {}
+        public function insertColumns(int $column, int $count, ?QModelIndex $parent = null): bool {}
+        public function insertRow(int $row, ?QModelIndex $parent = null): bool {}
+        public function insertRows(int $row, int $count, ?QModelIndex $parent = null): bool {}
+        public function moveColumn(QModelIndex $sourceParent, int $sourceColumn, QModelIndex $destinationParent, int $destinationChild): bool {}
+        public function moveColumns(QModelIndex $sourceParent, int $sourceColumn, int $count, QModelIndex $destinationParent, int $destinationChild): bool {}
+        public function moveRow(QModelIndex $sourceParent, int $sourceRow, QModelIndex $destinationParent, int $destinationChild): bool {}
+        public function moveRows(QModelIndex $sourceParent, int $sourceRow, int $count, QModelIndex $destinationParent, int $destinationChild): bool {}
+        abstract public function parent(QModelIndex $index): QModelIndex {}
+        public function removeColumn(int $column, ?QModelIndex $parent = null): bool {}
+        public function removeColumns(int $column, int $count, ?QModelIndex $parent = null): bool {}
+        public function removeRow(int $row, ?QModelIndex $parent = null): bool {}
+        public function removeRows(int $row, int $count, ?QModelIndex $parent = null): bool {}
+        abstract public function rowCount(?QModelIndex $parent = null): int {}
+        public function setData(QModelIndex $index, mixed $value, int $role = 0): bool {}
+        public function setHeaderData(int $section, int $orientation, mixed $value, int $role = 0): bool {}
+        public function sibling(int $row, int $column, QModelIndex $index): QModelIndex {}
+        public function sort(int $column, int $order = 0): void {}
+
+        // slots
+        public function revert(): void {}
+        public function submit(): void {}
+
+        // signals
+        public function onColumnsAboutToBeInserted(callable $callback): void {}
+        public function onColumnsAboutToBeMoved(callable $callback): void {}
+        public function onColumnsAboutToBeRemoved(callable $callback): void {}
+        public function onColumnsInserted(callable $callback): void {}
+        public function onColumnsMoved(callable $callback): void {}
+        public function onColumnsRemoved(callable $callback): void {}
+        public function onDataChanged(callable $callback): void {}
+        public function onHeaderDataChanged(callable $callback): void {}
+        public function onLayoutAboutToBeChanged(callable $callback): void {}
+        public function onLayoutChanged(callable $callback): void {}
+        public function onModelAboutToBeReset(callable $callback): void {}
+        public function onModelReset(callable $callback): void {}
+        public function onRowsAboutToBeInserted(callable $callback): void {}
+        public function onRowsAboutToBeMoved(callable $callback): void {}
+        public function onRowsAboutToBeRemoved(callable $callback): void {}
+        public function onRowsInserted(callable $callback): void {}
+        public function onRowsMoved(callable $callback): void {}
+        public function onRowsRemoved(callable $callback): void {}
+
+        // protected functions
+        protected function beginInsertColumns(QModelIndex $parent, int $first, int $last): void {}
+        protected function beginInsertRows(QModelIndex $parent, int $first, int $last): void {}
+        protected function beginMoveColumns(QModelIndex $sourceParent, int $sourceFirst, int $sourceLast, QModelIndex $destinationParent, int $destinationChild): void {}
+        protected function beginMoveRows(QModelIndex $sourceParent, int $sourceFirst, int $sourceLast, QModelIndex $destinationParent, int $destinationChild): void {}
+        protected function beginRemoveColumns(QModelIndex $parent, int $first, int $last): void {}
+        protected function beginRemoveRows(QModelIndex $parent, int $first, int $last): void {}
+        protected function beginResetModel(): void {}
+        protected function changePersistentIndex(QModelIndex $from, QModelIndex $to): void {}
+        protected function createIndex(int $row, int $column, mixed $data = null): QModelIndex {}
+        protected function endInsertColumns(): void {}
+        protected function endInsertRows(): void {}
+        protected function endMoveColumns(): void {}
+        protected function endMoveRows(): void {}
+        protected function endRemoveColumns(): void {}
+        protected function endRemoveRows(): void {}
+        protected function endResetModel(): void {}
+        protected function persistentIndexList(): array {}
+    }
+
     class QCalendar
     {
         public const int Gregorian = 0;
@@ -98,6 +177,20 @@ namespace Qt\Core {
     class QDateTime
     {
         public function __construct(QDate $date, QTime $time, QTimeZone $timeZone) {}
+    }
+
+    class QModelIndex
+    {
+        public function __construct() {}
+        public function column(): int {}
+        public function data(int $role = 0): mixed {}
+        public function isValid(): bool {}
+        public function model(): QAbstractItemModel {}
+        public function parent(): QModelIndex {}
+        public function row(): int {}
+        public function sibling(int $row, int $column): QModelIndex {}
+        public function siblingAtColumn(int $column): QModelIndex {}
+        public function siblingAtRow(int $row): QModelIndex {}
     }
 
     class QObject

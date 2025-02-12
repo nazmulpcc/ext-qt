@@ -59,10 +59,10 @@ PHP_RINIT_FUNCTION(qt)
 
 PHP_MINIT_FUNCTION(qt)
 {
+	register_class_Qt_AlignmentFlag();
 	register_class_Qt_CheckState();
 	register_class_Qt_WindowType();
 	register_class_Qt_Orientation();
-	register_class_Qt_AlignmentFlag();
 	register_class_Qt_TextFormat();
 	register_class_Qt_TextInteractionFlag();
 
@@ -116,6 +116,9 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qtime->create_object = qt_qtime_create_handler;
 	ce_qtimezone = register_class_Qt_Core_QTimeZone();
 	ce_qtimezone->create_object = qt_qtimezone_create_handler;
+
+	register_class_Qt_Core_QAbstractItemModel();
+	register_class_Qt_Core_QModelIndex();
 
 	auto ce_widget_QApplication = register_class_Qt_Widgets_QApplication();
 	ce_widget_QApplication->create_object = qt_obj_create_handler;
