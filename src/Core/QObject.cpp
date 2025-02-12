@@ -15,7 +15,7 @@ private:
     std::shared_ptr<qt_callback_t> cb;
 
 public:
-    TimerObject(std::shared_ptr<qt_callback_t> cb, QObject *parent = nullptr) : QObject(parent)
+    explicit TimerObject(std::shared_ptr<qt_callback_t> cb, QObject *parent = nullptr) : QObject(parent)
     {
         this->cb = cb;
         // @todo: delete cb when this object is destroyed
@@ -49,6 +49,20 @@ protected:
     }
 };
 
+class PhpQObject final: public QObject {
+public:
+    zend_object *std = nullptr;
+    explicit PhpQObject(QObject *parent = nullptr) : QObject(parent) {}
+protected:
+    void timerEvent(QTimerEvent *event) override {
+        zval retval;
+        zend_string *method_name = zend_string_init("timerEvent", sizeof("timerEvent") - 1, false);
+        zval params[1];
+        ZVAL_LONG(&params[0], event->timerId());
+        zend_call_method_if_exists(this->std, method_name, &retval, 1, params);
+    }
+};
+
 ZEND_METHOD(Qt_Core_QObject, __construct)
 {
     zval *parent_zval = nullptr;
@@ -58,8 +72,9 @@ ZEND_METHOD(Qt_Core_QObject, __construct)
     Z_PARAM_OBJECT_OF_CLASS_OR_NULL(parent_zval, ce_qobject)
     ZEND_PARSE_PARAMETERS_END();
 
-    auto *container = QT_Object_P(ZEND_THIS, QObject);
-    container->native = new QObject;
+    auto *container = QT_Object_P(ZEND_THIS, PhpQObject);
+    container->native = new PhpQObject;
+    container->native->std = &container->std;
     if (parent_zval)
     {
         auto *parent_container = QT_Object_P(parent_zval, QObject);
@@ -101,16 +116,24 @@ ZEND_METHOD(Qt_Core_QObject, startTimer)
     zend_long interval, timerType;
     zval *callback;
 
-    ZEND_PARSE_PARAMETERS_START(2, 3)
-    Z_PARAM_ZVAL(callback)
+    ZEND_PARSE_PARAMETERS_START(1, 2)
     Z_PARAM_LONG(interval)
     Z_PARAM_OPTIONAL
     Z_PARAM_LONG(timerType)
     ZEND_PARSE_PARAMETERS_END();
 
-    auto *container = QT_Object_P(ZEND_THIS, QObject);
-    auto cb = std::make_shared<qt_callback_t>(*qt_callback_create(container->native, callback));
-    auto timer = new TimerObject(cb, container->native);
+    auto *container = QT_Object_P(ZEND_THIS, PhpQObject);
+    // auto cb = std::make_shared<qt_callback_t>(*qt_callback_create(container->native, callback));
+    // auto timer = new TimerObject(cb, container->native);
 
-    RETURN_LONG(timer->startTimer(interval, static_cast<Qt::TimerType>(timerType)));
+    RETURN_LONG(container->native->startTimer(interval, static_cast<Qt::TimerType>(timerType)));
+}
+
+ZEND_METHOD(Qt_Core_QObject, timerEvent)
+{
+    zend_long timerId;
+    ZEND_PARSE_PARAMETERS_START(1, 1)
+    Z_PARAM_LONG(timerId)
+    ZEND_PARSE_PARAMETERS_END();
+    //
 }

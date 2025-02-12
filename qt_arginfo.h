@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 746630eaec614ec8465d1bbe6e0f07f63dfcac77 */
+ * Stub hash: 57be7727a1e9232ca86f0f6c65211d935a0cb865 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -68,10 +68,13 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Core_QObject_signalsBlocked arginfo_class_Qt_Core_QCalendar_isValid
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer, 0, 2, IS_LONG, 0)
-	ZEND_ARG_TYPE_INFO(0, callback, IS_CALLABLE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_startTimer, 0, 1, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, interval, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, timerType, IS_LONG, 0, "1")
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_timerEvent, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, timerId, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QRect___construct, 0, 0, 4)
@@ -1642,6 +1645,7 @@ ZEND_METHOD(Qt_Core_QObject, setObjectName);
 ZEND_METHOD(Qt_Core_QObject, setParent);
 ZEND_METHOD(Qt_Core_QObject, signalsBlocked);
 ZEND_METHOD(Qt_Core_QObject, startTimer);
+ZEND_METHOD(Qt_Core_QObject, timerEvent);
 ZEND_METHOD(Qt_Core_QRect, __construct);
 ZEND_METHOD(Qt_Core_QSize, __construct);
 ZEND_METHOD(Qt_Core_QSize, height);
@@ -2292,6 +2296,7 @@ static const zend_function_entry class_Qt_Core_QObject_methods[] = {
 	ZEND_ME(Qt_Core_QObject, setParent, arginfo_class_Qt_Core_QObject_setParent, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, signalsBlocked, arginfo_class_Qt_Core_QObject_signalsBlocked, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QObject, startTimer, arginfo_class_Qt_Core_QObject_startTimer, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QObject, timerEvent, arginfo_class_Qt_Core_QObject_timerEvent, ZEND_ACC_PROTECTED)
 	ZEND_FE_END
 };
 
