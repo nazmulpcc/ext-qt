@@ -9,6 +9,12 @@ extern "C"
 #include <QtWidgets/QWidget>
 #include <QtCore/QString>
 
+class PhpQWidget final : public QWidget {
+public:
+    explicit PhpQWidget(QWidget *parent = nullptr) : QWidget(parent) {}
+    using QWidget::focusNextChild;
+};
+
 ZEND_METHOD(Qt_Widgets_QWidget, __construct)
 {
     zval *parent_zval = nullptr;
@@ -22,7 +28,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, __construct)
     ZEND_PARSE_PARAMETERS_END();
 
     auto *container = QT_Object_P(ZEND_THIS, QWidget);
-    container->native = new QWidget;
+    container->native = new PhpQWidget;
     if (parent_zval)
     {
         auto *parent_container = QT_Object_P(parent_zval, QWidget);
@@ -483,3 +489,5 @@ ZEND_METHOD(Qt_Widgets_QWidget, update)
 
 QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QWidget, QWidget, onCustomContextMenuRequested, customContextMenuRequested);
 QT_METHOD_FORWARD_SIGNAL(Qt_Widgets_QWidget, QWidget, onWindowTitleChanged, windowTitleChanged);
+
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QWidget, PhpQWidget, focusNextChild);

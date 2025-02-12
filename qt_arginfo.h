@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: f29f8e8970c219961a160fe7982471338b4557e1 */
+ * Stub hash: 746630eaec614ec8465d1bbe6e0f07f63dfcac77 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -1164,6 +1164,8 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_onWindowTitleChanged arginfo_class_Qt_Widgets_QAbstractButton_onClicked
 
+#define arginfo_class_Qt_Widgets_QWidget_focusNextChild arginfo_class_Qt_Core_QCalendar_isValid
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QLabel___construct, 0, 0, 0)
 	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Widgets\\QWidget, 1, "null")
@@ -2037,6 +2039,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, showNormal);
 ZEND_METHOD(Qt_Widgets_QWidget, update);
 ZEND_METHOD(Qt_Widgets_QWidget, onCustomContextMenuRequested);
 ZEND_METHOD(Qt_Widgets_QWidget, onWindowTitleChanged);
+ZEND_METHOD(Qt_Widgets_QWidget, focusNextChild);
 ZEND_METHOD(Qt_Widgets_QLabel, __construct);
 ZEND_METHOD(Qt_Widgets_QLabel, setOpenExternalLinks);
 ZEND_METHOD(Qt_Widgets_QLabel, setText);
@@ -2786,6 +2789,7 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, update, arginfo_class_Qt_Widgets_QWidget_update, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, onCustomContextMenuRequested, arginfo_class_Qt_Widgets_QWidget_onCustomContextMenuRequested, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, onWindowTitleChanged, arginfo_class_Qt_Widgets_QWidget_onWindowTitleChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, focusNextChild, arginfo_class_Qt_Widgets_QWidget_focusNextChild, ZEND_ACC_PROTECTED)
 	ZEND_FE_END
 };
 

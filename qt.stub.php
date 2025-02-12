@@ -700,6 +700,9 @@ namespace Qt\Widgets {
         public function onCustomContextMenuRequested(callable $callback): void {}
         // public function onWindowIconChanged(callable $callback): void {}
         public function onWindowTitleChanged(callable $callback): void {}
+
+        // protected
+        protected function focusNextChild(): bool {}
     }
 
     class QLabel extends QFrame
