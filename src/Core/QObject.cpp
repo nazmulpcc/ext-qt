@@ -2,6 +2,7 @@ extern "C"
 {
 #include "php.h"
 #include "ext/standard/info.h"
+#include <zend_interfaces.h>
 }
 #include "php_qt.h"
 #include "qt_arginfo.h"
@@ -49,17 +50,19 @@ protected:
     }
 };
 
-class PhpQObject final: public QObject {
+class PhpQObject final : public QObject
+{
 public:
     zend_object *std = nullptr;
     explicit PhpQObject(QObject *parent = nullptr) : QObject(parent) {}
+
 protected:
-    void timerEvent(QTimerEvent *event) override {
-        zval retval;
-        zend_string *method_name = zend_string_init("timerEvent", sizeof("timerEvent") - 1, false);
-        zval params[1];
-        ZVAL_LONG(&params[0], event->timerId());
-        zend_call_method_if_exists(this->std, method_name, &retval, 1, params);
+    void timerEvent(QTimerEvent *event) override
+    {
+        zval retval, param;
+        ZVAL_LONG(&param, event->timerId());
+        zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "timerEvent", nullptr, &param);
+        zval_ptr_dtor(&param);
     }
 };
 
@@ -131,9 +134,5 @@ ZEND_METHOD(Qt_Core_QObject, startTimer)
 
 ZEND_METHOD(Qt_Core_QObject, timerEvent)
 {
-    zend_long timerId;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_LONG(timerId)
-    ZEND_PARSE_PARAMETERS_END();
-    //
+    // users are meant to override this method
 }
