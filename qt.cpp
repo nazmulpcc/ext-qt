@@ -40,6 +40,8 @@ zend_class_entry *ce_qtime = nullptr;
 zend_class_entry *ce_qtimezone = nullptr;
 zend_class_entry *ce_widget_QWidget = nullptr;
 zend_class_entry *ce_widget_QLayout = nullptr;
+zend_class_entry *ce_qabstractitemmodel = nullptr;
+zend_class_entry *ce_qmodelindex = nullptr;
 
 /* For compatibility with older PHP versions */
 #ifndef ZEND_PARSE_PARAMETERS_NONE
@@ -99,6 +101,14 @@ PHP_MINIT_FUNCTION(qt)
 	qt_qtimezone_handler.offset = XtOffsetOf(qt_container_t<QTimeZone>, std);
 	qt_qtimezone_handler.free_obj = qt_generic_free_handler<QTimeZone>;
 
+	memcpy(&qt_qmodelindex_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qmodelindex_handler.offset = XtOffsetOf(qt_container_t<QModelIndex>, std);
+	qt_qmodelindex_handler.free_obj = qt_generic_free_handler<QModelIndex>;
+
+	memcpy(&qt_qabstractitemmodel_handler, &std_object_handlers, sizeof(zend_object_handlers));
+	qt_qabstractitemmodel_handler.offset = XtOffsetOf(qt_container_t<QAbstractItemModel>, std);
+	qt_qabstractitemmodel_handler.free_obj = qt_generic_free_handler<QAbstractItemModel>;
+
 	ce_qobject = register_class_Qt_Core_QObject();
 	ce_qobject->create_object = qt_obj_create_handler;
 
@@ -117,8 +127,10 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qtimezone = register_class_Qt_Core_QTimeZone();
 	ce_qtimezone->create_object = qt_qtimezone_create_handler;
 
-	register_class_Qt_Core_QAbstractItemModel();
-	register_class_Qt_Core_QModelIndex();
+	ce_qabstractitemmodel = register_class_Qt_Core_QAbstractItemModel(ce_qobject);
+	ce_qabstractitemmodel->create_object = qt_qabstractitemmodel_create_handler;
+	ce_qmodelindex = register_class_Qt_Core_QModelIndex();
+	ce_qmodelindex->create_object = qt_qmodelindex_create_handler;
 
 	auto ce_widget_QApplication = register_class_Qt_Widgets_QApplication();
 	ce_widget_QApplication->create_object = qt_obj_create_handler;

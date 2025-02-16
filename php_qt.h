@@ -18,6 +18,8 @@
 #define PHP_QT_H
 
 #ifdef __cplusplus
+#include <QtCore/QAbstractItemModel>
+#include <QtCore/QModelIndex>
 #include <QtCore/QString>
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
@@ -29,8 +31,10 @@
 #include <QtCore/QDate>
 #include <QtCore/QRect>
 #include <QtCore/QSize>
+#include <QtCore/QVariant>
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QTextEdit>
+
 #endif
 
 /**
@@ -52,7 +56,9 @@ extern "C"
        qt_qdatetime_handler,
        qt_qtimezone_handler,
        qt_qsize_handler,
-       qt_qrect_handler;
+       qt_qrect_handler,
+       qt_qmodelindex_handler,
+       qt_qabstractitemmodel_handler;
 
    extern zend_class_entry *ce_qcalendar;
    extern zend_class_entry *ce_qdate;
@@ -66,6 +72,8 @@ extern "C"
    extern zend_class_entry *ce_qtimezone;
    extern zend_class_entry *ce_widget_QWidget;
    extern zend_class_entry *ce_widget_QLayout;
+   extern zend_class_entry *ce_qabstractitemmodel;
+   extern zend_class_entry *ce_qmodelindex;
 
 #if defined(ZTS) && defined(COMPILE_DL_QT)
    ZEND_TSRMLS_CACHE_EXTERN()
@@ -185,6 +193,26 @@ static zend_object *qt_qtimezone_create_handler(zend_class_entry *ce)
    return &container->std;
 }
 
+static zend_object *qt_qmodelindex_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QModelIndex> *container =
+       (qt_container_t<QModelIndex> *)zend_object_alloc(sizeof(qt_container_t<QModelIndex>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qmodelindex_handler;
+   return &container->std;
+}
+
+static zend_object *qt_qabstractitemmodel_create_handler(zend_class_entry *ce)
+{
+   qt_container_t<QAbstractItemModel> *container =
+       (qt_container_t<QAbstractItemModel> *)zend_object_alloc(sizeof(qt_container_t<QAbstractItemModel>), ce);
+
+   zend_object_std_init(&container->std, ce);
+   container->std.handlers = &qt_qabstractitemmodel_handler;
+   return &container->std;
+}
+
 static void qt_obj_free_handler(zend_object *object)
 {
    auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
@@ -216,6 +244,9 @@ inline void qt_cpp_to_zval(zval *z, T *value)
    ZVAL_NULL(z);
 }
 
+#define RETURN_QT(obj) \
+   qt_cpp_to_zval(return_value, obj);
+
 template <>
 inline void qt_cpp_to_zval<int>(zval *z, const int &value)
 {
@@ -233,6 +264,29 @@ inline void qt_cpp_to_zval<QString>(zval *z, const QString &value)
 {
    zend_string *ztext = zend_string_init(value.toUtf8().data(), value.size(), 0);
    ZVAL_STR(z, ztext);
+}
+template <>
+inline void qt_cpp_to_zval<QVariant>(zval *z, const QVariant &value)
+{
+   switch (value.type())
+   {
+   case QVariant::Type::Bool:
+      ZVAL_BOOL(z, value.toBool());
+      break;
+   case QVariant::Type::Int:
+      ZVAL_LONG(z, value.toInt());
+      break;
+   case QVariant::Type::Double:
+      ZVAL_DOUBLE(z, value.toDouble());
+      break;
+   case QVariant::Type::String:
+      qt_cpp_to_zval(z, value.toString());
+      break;
+   default:
+      php_error_docref(nullptr, E_WARNING, "Failed to convert QVariant to PHP");
+      ZVAL_NULL(z);
+      break;
+   }
 }
 
 template <>
@@ -476,9 +530,11 @@ inline void qt_connect_signal_to_callback(
 }
 
 // Register conversions
+QT_REGISRER_NATIVE_TO_ZVAL(QAbstractItemModel, ce_qabstractitemmodel)
 QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar)
 QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
 QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
+QT_REGISRER_NATIVE_TO_ZVAL(QModelIndex, ce_qmodelindex)
 QT_REGISRER_NATIVE_TO_ZVAL(QRect, ce_qrect)
 QT_REGISRER_NATIVE_TO_ZVAL(QSize, ce_qsize)
 QT_REGISRER_NATIVE_TO_ZVAL(QTextEdit, ce_qtextedit)

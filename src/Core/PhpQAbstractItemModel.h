@@ -1,0 +1,59 @@
+#ifdef __cplusplus
+#include <QtCore/QAbstractItemModel>
+
+class PhpQAbstractItemModel : public QAbstractItemModel
+{
+public:
+    zend_object *std = nullptr;
+    explicit PhpQAbstractItemModel(QObject *parent = nullptr) : QAbstractItemModel(parent) {};
+
+    // Minimal required virtual functions implementation:
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        Q_UNUSED(parent);
+        return 0; // Stub: no rows
+    }
+
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        Q_UNUSED(parent);
+        return 0; // Stub: no columns
+    }
+
+    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override
+    {
+        Q_UNUSED(row);
+        Q_UNUSED(column);
+        Q_UNUSED(parent);
+        return QModelIndex(); // Stub: invalid index
+    }
+
+    QModelIndex parent(const QModelIndex &child) const override
+    {
+        Q_UNUSED(child);
+        return QModelIndex(); // Stub: no parent-child relationship
+    }
+
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+
+    using QAbstractItemModel::beginInsertColumns;
+    using QAbstractItemModel::beginInsertRows;
+    using QAbstractItemModel::beginMoveColumns;
+    using QAbstractItemModel::beginMoveRows;
+    using QAbstractItemModel::beginRemoveColumns;
+    using QAbstractItemModel::beginRemoveRows;
+    using QAbstractItemModel::beginResetModel;
+    using QAbstractItemModel::changePersistentIndex;
+    using QAbstractItemModel::createIndex;
+    using QAbstractItemModel::endInsertColumns;
+    using QAbstractItemModel::endInsertRows;
+    using QAbstractItemModel::endMoveColumns;
+    using QAbstractItemModel::endMoveRows;
+    using QAbstractItemModel::endRemoveColumns;
+    using QAbstractItemModel::endRemoveRows;
+    using QAbstractItemModel::endResetModel;
+    using QAbstractItemModel::persistentIndexList;
+};
+
+#endif
