@@ -3,6 +3,7 @@
 
 class PhpQAbstractItemModel : public QAbstractItemModel
 {
+    Q_OBJECT
 public:
     zend_object *std = nullptr;
     explicit PhpQAbstractItemModel(QObject *parent = nullptr) : QAbstractItemModel(parent) {};

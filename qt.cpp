@@ -180,6 +180,10 @@ PHP_MINIT_FUNCTION(qt)
 	qstackedwidget->create_object = qt_obj_create_handler;
 	ce_qtextedit = register_class_Qt_Widgets_QTextEdit(ce_qabstractscrollarea);
 	ce_qtextedit->create_object = qt_obj_create_handler;
+	auto ce_qabstractitemview = register_class_Qt_Widgets_QAbstractItemView(ce_qabstractscrollarea);
+	ce_qabstractitemview->create_object = qt_obj_create_handler;
+	auto ce_qtableview = register_class_Qt_Widgets_QTableView(ce_qabstractitemview);
+	ce_qtableview->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;

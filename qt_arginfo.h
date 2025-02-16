@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 39fc003793e61ebe6013822d1ad2296854d2d86c */
+ * Stub hash: 72ad83cfc2f9fbbaeedba26f780e231f5812c89e */
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_buddy, 0, 1, Qt\\Core\\QModelIndex, 0)
 	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
@@ -1697,6 +1697,12 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QStackedWidget_onWidgetRemoved arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
+#define arginfo_class_Qt_Widgets_QTableView___construct arginfo_class_Qt_Widgets_QComboBox___construct
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QTableView_setModel, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, model, Qt\\Core\\QAbstractItemModel, 0)
+ZEND_END_ARG_INFO()
+
 #define arginfo_class_Qt_Widgets_QTextEdit___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 #define arginfo_class_Qt_Widgets_QTextEdit_acceptRichText arginfo_class_Qt_Core_QCalendar_isValid
@@ -2463,6 +2469,8 @@ ZEND_METHOD(Qt_Widgets_QStackedWidget, setCurrentWidget);
 ZEND_METHOD(Qt_Widgets_QStackedWidget, widget);
 ZEND_METHOD(Qt_Widgets_QStackedWidget, onCurrentChanged);
 ZEND_METHOD(Qt_Widgets_QStackedWidget, onWidgetRemoved);
+ZEND_METHOD(Qt_Widgets_QTableView, __construct);
+ZEND_METHOD(Qt_Widgets_QTableView, setModel);
 ZEND_METHOD(Qt_Widgets_QTextEdit, __construct);
 ZEND_METHOD(Qt_Widgets_QTextEdit, acceptRichText);
 ZEND_METHOD(Qt_Widgets_QTextEdit, alignment);
@@ -3288,6 +3296,12 @@ static const zend_function_entry class_Qt_Widgets_QStackedWidget_methods[] = {
 	ZEND_FE_END
 };
 
+static const zend_function_entry class_Qt_Widgets_QTableView_methods[] = {
+	ZEND_ME(Qt_Widgets_QTableView, __construct, arginfo_class_Qt_Widgets_QTableView___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QTableView, setModel, arginfo_class_Qt_Widgets_QTableView_setModel, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
 static const zend_function_entry class_Qt_Widgets_QTextEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QTextEdit, __construct, arginfo_class_Qt_Widgets_QTextEdit___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, acceptRichText, arginfo_class_Qt_Widgets_QTextEdit_acceptRichText, ZEND_ACC_PUBLIC)
@@ -3848,6 +3862,16 @@ static zend_class_entry *register_class_Qt_Widgets_QAbstractButton(zend_class_en
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractButton", class_Qt_Widgets_QAbstractButton_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, ZEND_ACC_ABSTRACT);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QAbstractItemView(zend_class_entry *class_entry_Qt_Widgets_QAbstractScrollArea)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QAbstractItemView", NULL);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractScrollArea, ZEND_ACC_ABSTRACT);
 
 	return class_entry;
 }
@@ -4468,6 +4492,16 @@ static zend_class_entry *register_class_Qt_Widgets_QStackedWidget(zend_class_ent
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QStackedWidget", class_Qt_Widgets_QStackedWidget_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QFrame, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QTableView(zend_class_entry *class_entry_Qt_Widgets_QAbstractItemView)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QTableView", class_Qt_Widgets_QTableView_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractItemView, 0);
 
 	return class_entry;
 }

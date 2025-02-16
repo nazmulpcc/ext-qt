@@ -284,6 +284,11 @@ namespace Qt\Widgets {
         public function onToggled(callable $callback): void {}
     }
 
+    abstract class QAbstractItemView extends QAbstractScrollArea
+    {
+        //
+    }
+
     abstract class QAbstractScrollArea extends QWidget
     {
         public function addScrollBarWidget(QWidget $widget, int $alignment): void {}
@@ -997,6 +1002,12 @@ namespace Qt\Widgets {
         // Signals
         public function onCurrentChanged(callable $callback): void {}
         public function onWidgetRemoved(callable $callback): void {}
+    }
+
+    class QTableView extends QAbstractItemView
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function setModel(\Qt\Core\QAbstractItemModel $model): void {}
     }
 
     class QTextEdit extends QAbstractScrollArea
