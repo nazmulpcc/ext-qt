@@ -37,6 +37,7 @@ AS_VAR_IF([PHP_QT], [no],, [
   dnl Configure extension sources and compilation flags.
 
   qt_source_files="qt.cpp \
+    src/Core/PhpQAbstractItemModel.cpp \
     src/Core/QAbstractItemModel.cpp \
     src/Core/QCalendar.cpp \
     src/Core/QDate.cpp \

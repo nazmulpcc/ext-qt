@@ -6,6 +6,7 @@ extern "C"
 #include "php_qt.h"
 #include "qt_arginfo.h"
 
+#include "../Core/PhpQAbstractItemModel.h"
 #include <QtWidgets/QTableView>
 
 ZEND_METHOD(Qt_Widgets_QTableView, __construct)
@@ -34,7 +35,7 @@ ZEND_METHOD(Qt_Widgets_QTableView, setModel)
     ZEND_PARSE_PARAMETERS_END();
 
     auto *container = QT_Object_P(ZEND_THIS, QAbstractItemView);
-    auto *model = QT_Object_P(model_zval, QAbstractItemModel);
+    auto *model = QT_Object_P(model_zval, PhpQAbstractItemModel);
     qDebug() << "Setting model" << model->native;
     container->native->setModel(model->native);
 }

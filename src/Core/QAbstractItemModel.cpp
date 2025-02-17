@@ -1,12 +1,3 @@
-extern "C"
-{
-#include "php.h"
-#include "ext/standard/info.h"
-#include <zend_interfaces.h>
-}
-#include "php_qt.h"
-#include "qt_arginfo.h"
-
 #include "./PhpQAbstractItemModel.h"
 #include <QtCore/QAbstractItemModel>
 #include <QtCore/QModelIndex>
@@ -524,7 +515,7 @@ QVariant zval_to_qvariant(zval *zv)
     case IS_TRUE:
         return QVariant(true);
     case IS_LONG:
-        return QVariant(Z_LVAL_P(zv));
+        return QVariant((int)Z_LVAL_P(zv));
     case IS_DOUBLE:
         return QVariant(Z_DVAL_P(zv));
     case IS_STRING:

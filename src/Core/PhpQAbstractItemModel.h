@@ -1,4 +1,16 @@
+#ifndef PHP_QABSTRACTITEMMODEL_H
+#define PHP_QABSTRACTITEMMODEL_H
+
+extern "C"
+{
+#include "php.h"
+#include "ext/standard/info.h"
+#include <zend_interfaces.h>
+}
+#include "php_qt.h"
+
 #ifdef __cplusplus
+#include <QtCore/QObject>
 #include <QtCore/QAbstractItemModel>
 
 class PhpQAbstractItemModel : public QAbstractItemModel
@@ -58,3 +70,5 @@ public:
 };
 
 #endif
+
+#endif /* PHP_QABSTRACTITEMMODEL_H */
