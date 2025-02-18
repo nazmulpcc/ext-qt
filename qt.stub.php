@@ -80,6 +80,7 @@ namespace Qt\Core {
         public const int DoNotUseParent = 2;
         public const int ParentIsInvalid = 4;
 
+        public function __construct(?QObject $parent = null) {}
         public function buddy(QModelIndex $index): QModelIndex {}
         // public function canDropMimeData(QMimeData $data, int $action, int $row, int $column, QModelIndex $parent): bool {} // @todo: Implement QMimeData
         public function canFetchMore(QModelIndex $parent): bool {}

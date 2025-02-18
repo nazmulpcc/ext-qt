@@ -1,5 +1,9 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 72ad83cfc2f9fbbaeedba26f780e231f5812c89e */
+ * Stub hash: b0964c84848dbbbf814e6de0010b8d82ce4d2da6 */
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel___construct, 0, 0, 0)
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel_buddy, 0, 1, Qt\\Core\\QModelIndex, 0)
 	ZEND_ARG_OBJ_INFO(0, index, Qt\\Core\\QModelIndex, 0)
@@ -275,9 +279,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Core_QModelIndex_sibling
 	ZEND_ARG_TYPE_INFO(0, row, IS_LONG, 0)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QObject___construct, 0, 0, 0)
-	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
-ZEND_END_ARG_INFO()
+#define arginfo_class_Qt_Core_QObject___construct arginfo_class_Qt_Core_QAbstractItemModel___construct
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Core_QObject_blockSignals, 0, 1, IS_VOID, 0)
 	ZEND_ARG_TYPE_INFO(0, block, _IS_BOOL, 0)
@@ -1867,6 +1869,7 @@ ZEND_END_ARG_INFO()
 #define arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
 
+ZEND_METHOD(Qt_Core_QAbstractItemModel, __construct);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, buddy);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, canFetchMore);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, checkIndex);
@@ -2573,6 +2576,7 @@ static const zend_function_entry class_Qt_TextInteractionFlag_methods[] = {
 
 
 static const zend_function_entry class_Qt_Core_QAbstractItemModel_methods[] = {
+	ZEND_ME(Qt_Core_QAbstractItemModel, __construct, arginfo_class_Qt_Core_QAbstractItemModel___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QAbstractItemModel, buddy, arginfo_class_Qt_Core_QAbstractItemModel_buddy, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QAbstractItemModel, canFetchMore, arginfo_class_Qt_Core_QAbstractItemModel_canFetchMore, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Core_QAbstractItemModel, checkIndex, arginfo_class_Qt_Core_QAbstractItemModel_checkIndex, ZEND_ACC_PUBLIC)

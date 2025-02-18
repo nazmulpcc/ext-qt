@@ -36,6 +36,5 @@ ZEND_METHOD(Qt_Widgets_QTableView, setModel)
 
     auto *container = QT_Object_P(ZEND_THIS, QAbstractItemView);
     auto *model = QT_Object_P(model_zval, PhpQAbstractItemModel);
-    qDebug() << "Setting model" << model->native;
     container->native->setModel(model->native);
 }
