@@ -142,7 +142,7 @@ namespace Qt\Core {
         public function onRowsRemoved(callable $callback): void {}
 
         // protected functions
-        protected function beginInsertColumns(QModelIndex $parent, array $range): void {}
+        protected function beginInsertColumns(QModelIndex $parent, int $first, int $last): void {}
         protected function beginInsertRows(QModelIndex $parent, int $first, int $last): void {}
         protected function beginMoveColumns(QModelIndex $sourceParent, int $sourceFirst, int $sourceLast, QModelIndex $destinationParent, int $destinationChild): void {}
         protected function beginMoveRows(QModelIndex $sourceParent, int $sourceFirst, int $sourceLast, QModelIndex $destinationParent, int $destinationChild): void {}

@@ -11,7 +11,6 @@ int PhpQAbstractItemModel::rowCount(const QModelIndex &parent) const
     zval retval, zv_parent;
     qt_cpp_to_zval(&zv_parent, parent);
     zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "rowCount", &retval, &zv_parent);
-    php_printf("PhpQAbstractItemModel::rowCount %d\n", (int)zval_get_long(&retval));
     return (int)zval_get_long(&retval);
 }
 
@@ -39,6 +38,8 @@ QModelIndex PhpQAbstractItemModel::parent(const QModelIndex &child) const
 
 QVariant PhpQAbstractItemModel::data(const QModelIndex &index, int role) const
 {
+    php_printf("PhpQAbstractItemModel::data\n");
+
     zval retval, zv_index, zv_role;
     qt_cpp_to_zval(&zv_index, index);
     qt_cpp_to_zval(&zv_role, role);
@@ -467,13 +468,13 @@ ZEND_METHOD(Qt_Core_QAbstractItemModel, changePersistentIndex)
 ZEND_METHOD(Qt_Core_QAbstractItemModel, createIndex)
 {
     zend_long row, column;
-    ZEND_PARSE_PARAMETERS_START(2, 3)
+    ZEND_PARSE_PARAMETERS_START(2, 2)
     Z_PARAM_LONG(row)
     Z_PARAM_LONG(column)
     ZEND_PARSE_PARAMETERS_END();
 
     auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
-    RETURN_QT(container->native->createIndex(row, column));
+    RETURN_QT(container->native->createIndex((int)row, (int)column));
 }
 
 QT_METHOD_FORWARD(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, endInsertColumns);
