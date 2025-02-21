@@ -26,6 +26,7 @@ extern "C"
 #include "php_qt.h"
 #include "qt_arginfo.h"
 
+#include "src/Core/PhpQAbstractItemModel.h"
 #include <QtWidgets/QWidget>
 
 zend_class_entry *ce_qcalendar = nullptr;
@@ -106,8 +107,8 @@ PHP_MINIT_FUNCTION(qt)
 	qt_qmodelindex_handler.free_obj = qt_generic_free_handler<QModelIndex>;
 
 	memcpy(&qt_qabstractitemmodel_handler, &std_object_handlers, sizeof(zend_object_handlers));
-	qt_qabstractitemmodel_handler.offset = XtOffsetOf(qt_container_t<QAbstractItemModel>, std);
-	qt_qabstractitemmodel_handler.free_obj = qt_generic_free_handler<QAbstractItemModel>;
+	qt_qabstractitemmodel_handler.offset = XtOffsetOf(qt_container_t<PhpQAbstractItemModel>, std);
+	qt_qabstractitemmodel_handler.free_obj = qt_generic_free_handler<PhpQAbstractItemModel>;
 
 	ce_qobject = register_class_Qt_Core_QObject();
 	ce_qobject->create_object = qt_obj_create_handler;

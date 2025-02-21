@@ -26,15 +26,4 @@ ZEND_METHOD(Qt_Widgets_QTableView, __construct)
     }
 }
 
-ZEND_METHOD(Qt_Widgets_QTableView, setModel)
-{
-    zval *model_zval = nullptr;
-
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(model_zval, ce_qabstractitemmodel)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, QAbstractItemView);
-    auto *model = QT_Object_P(model_zval, PhpQAbstractItemModel);
-    container->native->setModel(model->native);
-}
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QTableView, QAbstractItemView, setModel, PhpQAbstractItemModel, ce_qabstractitemmodel, 1)

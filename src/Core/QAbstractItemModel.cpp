@@ -2,8 +2,40 @@
 #include <QtCore/QAbstractItemModel>
 #include <QtCore/QModelIndex>
 #include <QtCore/QVariant>
+#include "PhpQAbstractItemModel.h"
 
 QVariant zval_to_qvariant(zval *zv);
+
+int PhpQAbstractItemModel::rowCount(const QModelIndex &parent) const
+{
+    zval retval, zv_parent;
+    qt_cpp_to_zval(&zv_parent, parent);
+    zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "rowCount", &retval, &zv_parent);
+    php_printf("PhpQAbstractItemModel::rowCount %d\n", (int)zval_get_long(&retval));
+    return (int)zval_get_long(&retval);
+}
+
+int PhpQAbstractItemModel::columnCount(const QModelIndex &parent) const
+{
+    zval retval, zv_parent;
+    qt_cpp_to_zval(&zv_parent, parent);
+    zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "columnCount", &retval, &zv_parent);
+    return (int)zval_get_long(&retval);
+}
+
+QModelIndex PhpQAbstractItemModel::index(int row, int column, const QModelIndex &parent) const
+{
+    zval retval, zv_row, zv_column, zv_parent;
+    qt_cpp_to_zval(&zv_row, row);
+    qt_cpp_to_zval(&zv_column, column);
+    zend_call_method_with_2_params(this->std, this->std->ce, nullptr, "index", &retval, &zv_row, &zv_column);
+    return *QT_Object_P(&retval, QModelIndex)->native;
+}
+
+QModelIndex PhpQAbstractItemModel::parent(const QModelIndex &child) const
+{
+    return QModelIndex();
+}
 
 QVariant PhpQAbstractItemModel::data(const QModelIndex &index, int role) const
 {
@@ -452,6 +484,11 @@ QT_METHOD_FORWARD(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, endRemoveCo
 QT_METHOD_FORWARD(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, endRemoveRows);
 QT_METHOD_FORWARD(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, endResetModel);
 // ZEND_METHOD(Qt_Core_QAbstractItemModel, persistentIndexList);
+
+ZEND_METHOD(Qt_Core_QAbstractItemModel, rowCount)
+{
+    ZVAL_LONG(return_value, 0);
+}
 
 QVariant map_array_zval(zval *arr)
 {

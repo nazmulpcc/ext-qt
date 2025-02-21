@@ -108,7 +108,7 @@ namespace Qt\Core {
         public function removeColumns(int $column, int $count, ?QModelIndex $parent = null): bool {}
         public function removeRow(int $row, ?QModelIndex $parent = null): bool {}
         public function removeRows(int $row, int $count, ?QModelIndex $parent = null): bool {}
-        abstract public function rowCount(?QModelIndex $parent = null): int;
+        public function rowCount(?QModelIndex $parent = null): int;
         public function setData(QModelIndex $index, mixed $value, int $role = 0): bool {}
         public function setHeaderData(int $section, int $orientation, mixed $value, int $role = 2): bool {}
         public function sibling(int $row, int $column, QModelIndex $index): QModelIndex {}
