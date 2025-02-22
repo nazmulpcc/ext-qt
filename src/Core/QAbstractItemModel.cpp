@@ -474,7 +474,9 @@ ZEND_METHOD(Qt_Core_QAbstractItemModel, createIndex)
     ZEND_PARSE_PARAMETERS_END();
 
     auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
-    RETURN_QT(container->native->createIndex((int)row, (int)column));
+    QModelIndex *index = (QModelIndex *)malloc(sizeof(QModelIndex));
+    *index = container->native->createIndex(row, column);
+    RETURN_QT(index);
 }
 
 QT_METHOD_FORWARD(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, endInsertColumns);
