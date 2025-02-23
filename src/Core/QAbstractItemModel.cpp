@@ -14,6 +14,14 @@ int PhpQAbstractItemModel::rowCount(const QModelIndex &parent) const
     return (int)zval_get_long(&retval);
 }
 
+Qt::ItemFlags PhpQAbstractItemModel::flags(const QModelIndex &index) const
+{
+    zval retval, zv_index;
+    qt_cpp_to_zval(&zv_index, index);
+    zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "flags", &retval, &zv_index);
+    return (Qt::ItemFlags)(int)zval_get_long(&retval);
+}
+
 int PhpQAbstractItemModel::columnCount(const QModelIndex &parent) const
 {
     zval retval, zv_parent;
@@ -38,8 +46,6 @@ QModelIndex PhpQAbstractItemModel::parent(const QModelIndex &child) const
 
 QVariant PhpQAbstractItemModel::data(const QModelIndex &index, int role) const
 {
-    php_printf("PhpQAbstractItemModel::data\n");
-
     zval retval, zv_index, zv_role;
     qt_cpp_to_zval(&zv_index, index);
     qt_cpp_to_zval(&zv_role, role);
@@ -108,13 +114,7 @@ QT_METHOD_FORWARD_NATIVE(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, fetc
 
 ZEND_METHOD(Qt_Core_QAbstractItemModel, flags)
 {
-    zval *index;
-    ZEND_PARSE_PARAMETERS_START(1, 1)
-    Z_PARAM_OBJECT_OF_CLASS(index, ce_qmodelindex)
-    ZEND_PARSE_PARAMETERS_END();
-
-    auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
-    RETURN_LONG(container->native->flags(*QT_Object_P(index, QModelIndex)->native));
+    RETURN_LONG(Qt::NoItemFlags);
 }
 
 ZEND_METHOD(Qt_Core_QAbstractItemModel, hasChildren)
