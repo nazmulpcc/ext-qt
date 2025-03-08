@@ -57,8 +57,7 @@ extern "C"
        qt_qtimezone_handler,
        qt_qsize_handler,
        qt_qrect_handler,
-       qt_qmodelindex_handler,
-       qt_qabstractitemmodel_handler;
+       qt_qmodelindex_handler;
 
    extern zend_class_entry *ce_qcalendar;
    extern zend_class_entry *ce_qdate;
@@ -210,10 +209,11 @@ static zend_object *qt_qmodelindex_create_handler(zend_class_entry *ce)
 static void qt_obj_free_handler(zend_object *object)
 {
    auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
-   if (obj->native && !obj->native->parent() && QCoreApplication::instance())
+   if (obj->native)
    {
-      // Only delete if there's no parent (i.e. you own it) and if QCoreApplication is still alive.
-      delete obj->native;
+      // @todo: need to improve object deletion strategy.
+      // Deleting all objects causes issue if they are also referenced from QT.
+      // delete obj->native;
       obj->native = nullptr;
    }
    zend_object_std_dtor(object);

@@ -12,6 +12,42 @@ namespace Qt {
         public const int PartiallyChecked = 1;
         public const int Checked = 2;
     }
+
+    class ItemDataRole
+    {
+        public const int DisplayRole = 0;
+        public const int DecorationRole = 1;
+        public const int EditRole = 2;
+        public const int ToolTipRole = 3;
+        public const int StatusTipRole = 4;
+        public const int WhatsThisRole = 5;
+        public const int SizeHintRole = 13;
+
+        public const int FontRole = 6;
+        public const int TextAlignmentRole = 7;
+        public const int BackgroundRole = 8;
+        public const int ForegroundRole = 9;
+        public const int CheckStateRole = 10;
+
+        public const int InitialSortOrderRole = 14;
+        public const int AccessibleTextRole = 11;
+        public const int AccessibleDescriptionRole = 12;
+    }
+
+    class ItemFlag
+    {
+        public const int NoItemFlags = 0;
+        public const int ItemIsSelectable = 1;
+        public const int ItemIsEditable = 2;
+        public const int ItemIsDragEnabled = 4;
+        public const int ItemIsDropEnabled = 8;
+        public const int ItemIsUserCheckable = 16;
+        public const int ItemIsEnabled = 32;
+        public const int ItemIsAutoTristate = 64;
+        public const int ItemNeverHasChildren = 128;
+        public const int ItemIsUserTristate = 256;
+    }
+
     class Orientation
     {
         public const int Horizontal = 1;

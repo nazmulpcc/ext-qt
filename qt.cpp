@@ -63,6 +63,8 @@ PHP_RINIT_FUNCTION(qt)
 PHP_MINIT_FUNCTION(qt)
 {
 	register_class_Qt_AlignmentFlag();
+	register_class_Qt_ItemDataRole();
+	register_class_Qt_ItemFlag();
 	register_class_Qt_CheckState();
 	register_class_Qt_WindowType();
 	register_class_Qt_Orientation();
@@ -105,10 +107,6 @@ PHP_MINIT_FUNCTION(qt)
 	memcpy(&qt_qmodelindex_handler, &std_object_handlers, sizeof(zend_object_handlers));
 	qt_qmodelindex_handler.offset = XtOffsetOf(qt_container_t<QModelIndex>, std);
 	qt_qmodelindex_handler.free_obj = qt_generic_free_handler<QModelIndex>;
-
-	memcpy(&qt_qabstractitemmodel_handler, &std_object_handlers, sizeof(zend_object_handlers));
-	qt_qabstractitemmodel_handler.offset = XtOffsetOf(qt_container_t<PhpQAbstractItemModel>, std);
-	qt_qabstractitemmodel_handler.free_obj = qt_generic_free_handler<PhpQAbstractItemModel>;
 
 	ce_qobject = register_class_Qt_Core_QObject();
 	ce_qobject->create_object = qt_obj_create_handler;
