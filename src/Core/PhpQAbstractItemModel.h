@@ -12,6 +12,7 @@ extern "C"
 #ifdef __cplusplus
 #include <QtCore/QObject>
 #include <QtCore/QAbstractItemModel>
+#include <QtCore/QAbstractTableModel>
 #include <QtCore/QModelIndex>
 #include <QtCore/QVariant>
 
@@ -51,9 +52,9 @@ public:
         return *QT_Object_P(&retval, QModelIndex)->native;
     }
 
-    inline QModelIndex parent(const QModelIndex &child) const override
+    inline QModelIndex nativeIndex(int row, int column, const QModelIndex &parent = QModelIndex()) const
     {
-        return QModelIndex();
+        return BaseModel::index(row, column, parent);
     }
 
     inline QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
@@ -71,6 +72,10 @@ public:
         qt_cpp_to_zval(&zv_index, index);
         zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "flags", &retval, &zv_index);
         return (Qt::ItemFlags)(int)zval_get_long(&retval);
+    }
+    inline Qt::ItemFlags nativeFlags(const QModelIndex &index) const
+    {
+        return BaseModel::flags(index);
     }
 
     inline bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
@@ -103,7 +108,21 @@ public:
     using BaseModel::persistentIndexList;
 };
 
-typedef PhpQAbstractModel<QAbstractItemModel> PhpQAbstractItemModel;
+class PhpQAbstractItemModel : public PhpQAbstractModel<QAbstractItemModel>
+{
+public:
+    using PhpQAbstractModel<QAbstractItemModel>::PhpQAbstractModel;
+
+    QModelIndex parent(const QModelIndex &child) const override
+    {
+        zval retval, zv_child;
+        qt_cpp_to_zval(&zv_child, child);
+        zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "parent", &retval, &zv_child);
+        return *QT_Object_P(&retval, QModelIndex)->native;
+    }
+};
+
+typedef PhpQAbstractModel<QAbstractTableModel> PhpQAbstractTableModel;
 
 #endif // __cplusplus
 

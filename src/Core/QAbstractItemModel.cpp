@@ -5,10 +5,16 @@
 
 ZEND_METHOD(Qt_Core_QAbstractItemModel, __construct)
 {
-    ZEND_PARSE_PARAMETERS_NONE();
+    zval *parent = nullptr;
+    ZEND_PARSE_PARAMETERS_START(0, 1)
+    Z_PARAM_OPTIONAL
+    Z_PARAM_OBJECT_OF_CLASS_OR_NULL(parent, ce_qobject)
+    ZEND_PARSE_PARAMETERS_END();
+
     auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
     container->native = new PhpQAbstractItemModel();
     container->native->std = &container->std;
+    container->native->setParent(parent ? QT_Object_P(parent, QObject)->native : nullptr);
 }
 
 ZEND_METHOD(Qt_Core_QAbstractItemModel, buddy)

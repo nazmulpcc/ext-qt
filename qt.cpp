@@ -42,6 +42,7 @@ zend_class_entry *ce_qtimezone = nullptr;
 zend_class_entry *ce_widget_QWidget = nullptr;
 zend_class_entry *ce_widget_QLayout = nullptr;
 zend_class_entry *ce_qabstractitemmodel = nullptr;
+zend_class_entry *ce_qabstracttablemodel = nullptr;
 zend_class_entry *ce_qmodelindex = nullptr;
 
 /* For compatibility with older PHP versions */
@@ -128,6 +129,8 @@ PHP_MINIT_FUNCTION(qt)
 
 	ce_qabstractitemmodel = register_class_Qt_Core_QAbstractItemModel(ce_qobject);
 	ce_qabstractitemmodel->create_object = qt_obj_create_handler;
+	ce_qabstracttablemodel = register_class_Qt_Core_QAbstractTableModel(ce_qabstractitemmodel);
+	ce_qabstracttablemodel->create_object = qt_obj_create_handler;
 	ce_qmodelindex = register_class_Qt_Core_QModelIndex();
 	ce_qmodelindex->create_object = qt_qmodelindex_create_handler;
 

@@ -197,6 +197,15 @@ namespace Qt\Core {
         // protected function persistentIndexList(): array {}
     }
 
+    class QAbstractTableModel extends QAbstractItemModel
+    {
+        public function __construct(?QObject $parent = null) {}
+        public function flags(QModelIndex $index): int {}
+        public function index(int $row, int $column, ?QModelIndex $parent = null): QModelIndex {}
+        public function sibling(int $row, int $column, QModelIndex $index): QModelIndex {}
+        public function parent(QModelIndex $index): QModelIndex;
+    }
+
     class QCalendar
     {
         public const int Gregorian = 0;

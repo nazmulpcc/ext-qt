@@ -38,6 +38,7 @@ AS_VAR_IF([PHP_QT], [no],, [
 
   qt_source_files="qt.cpp \
     src/Core/QAbstractItemModel.cpp \
+    src/Core/QAbstractTableModel.cpp \
     src/Core/QCalendar.cpp \
     src/Core/QDate.cpp \
     src/Core/QDateTime.cpp \

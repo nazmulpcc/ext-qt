@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: f57dc7b23266185c794d29caed52a631264efd99 */
+ * Stub hash: 74c4b74c7a6e475870fe97cb0b7d1feb9335ab5f */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -214,6 +214,16 @@ ZEND_END_ARG_INFO()
 #define arginfo_class_Qt_Core_QAbstractItemModel_endRemoveRows arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Core_QAbstractItemModel_endResetModel arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Core_QAbstractTableModel___construct arginfo_class_Qt_Core_QAbstractItemModel___construct
+
+#define arginfo_class_Qt_Core_QAbstractTableModel_flags arginfo_class_Qt_Core_QAbstractItemModel_flags
+
+#define arginfo_class_Qt_Core_QAbstractTableModel_index arginfo_class_Qt_Core_QAbstractItemModel_index
+
+#define arginfo_class_Qt_Core_QAbstractTableModel_sibling arginfo_class_Qt_Core_QAbstractItemModel_sibling
+
+#define arginfo_class_Qt_Core_QAbstractTableModel_parent arginfo_class_Qt_Core_QAbstractItemModel_buddy
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QCalendar___construct, 0, 0, 1)
 	ZEND_ARG_TYPE_INFO(0, system, IS_LONG, 0)
@@ -1925,6 +1935,11 @@ ZEND_METHOD(Qt_Core_QAbstractItemModel, endMoveRows);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, endRemoveColumns);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, endRemoveRows);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, endResetModel);
+ZEND_METHOD(Qt_Core_QAbstractTableModel, __construct);
+ZEND_METHOD(Qt_Core_QAbstractTableModel, flags);
+ZEND_METHOD(Qt_Core_QAbstractTableModel, index);
+ZEND_METHOD(Qt_Core_QAbstractTableModel, sibling);
+ZEND_METHOD(Qt_Core_QAbstractTableModel, parent);
 ZEND_METHOD(Qt_Core_QCalendar, __construct);
 ZEND_METHOD(Qt_Core_QCalendar, isValid);
 ZEND_METHOD(Qt_Core_QDate, __construct);
@@ -2606,6 +2621,15 @@ static const zend_function_entry class_Qt_Core_QAbstractItemModel_methods[] = {
 	ZEND_ME(Qt_Core_QAbstractItemModel, endRemoveColumns, arginfo_class_Qt_Core_QAbstractItemModel_endRemoveColumns, ZEND_ACC_PROTECTED)
 	ZEND_ME(Qt_Core_QAbstractItemModel, endRemoveRows, arginfo_class_Qt_Core_QAbstractItemModel_endRemoveRows, ZEND_ACC_PROTECTED)
 	ZEND_ME(Qt_Core_QAbstractItemModel, endResetModel, arginfo_class_Qt_Core_QAbstractItemModel_endResetModel, ZEND_ACC_PROTECTED)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Core_QAbstractTableModel_methods[] = {
+	ZEND_ME(Qt_Core_QAbstractTableModel, __construct, arginfo_class_Qt_Core_QAbstractTableModel___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractTableModel, flags, arginfo_class_Qt_Core_QAbstractTableModel_flags, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractTableModel, index, arginfo_class_Qt_Core_QAbstractTableModel_index, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractTableModel, sibling, arginfo_class_Qt_Core_QAbstractTableModel_sibling, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Core_QAbstractTableModel, parent, arginfo_class_Qt_Core_QAbstractTableModel_parent, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3894,6 +3918,16 @@ static zend_class_entry *register_class_Qt_Core_QAbstractItemModel(zend_class_en
 	zend_string *const_ParentIsInvalid_name = zend_string_init_interned("ParentIsInvalid", sizeof("ParentIsInvalid") - 1, 1);
 	zend_declare_typed_class_constant(class_entry, const_ParentIsInvalid_name, &const_ParentIsInvalid_value, ZEND_ACC_PUBLIC, NULL, (zend_type) ZEND_TYPE_INIT_MASK(MAY_BE_LONG));
 	zend_string_release(const_ParentIsInvalid_name);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Core_QAbstractTableModel(zend_class_entry *class_entry_Qt_Core_QAbstractItemModel)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Core", "QAbstractTableModel", class_Qt_Core_QAbstractTableModel_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Core_QAbstractItemModel, 0);
 
 	return class_entry;
 }
