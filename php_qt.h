@@ -209,14 +209,25 @@ static zend_object *qt_qmodelindex_create_handler(zend_class_entry *ce)
 
 static void qt_obj_free_handler(zend_object *object)
 {
-   // auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
+   auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
+   if (obj->native && !obj->native->parent() && QCoreApplication::instance())
+   {
+      // Only delete if there's no parent (i.e. you own it) and if QCoreApplication is still alive.
+      delete obj->native;
+      obj->native = nullptr;
+   }
    zend_object_std_dtor(object);
 }
 
 template <typename T>
 static void qt_generic_free_handler(zend_object *object)
 {
-   // auto *obj = (qt_container_t<T> *)((char *)object - XtOffsetOf(qt_container_t<T>, std));
+   auto *obj = (qt_container_t<T> *)((char *)object - XtOffsetOf(qt_container_t<T>, std));
+   if (obj->native)
+   {
+      delete obj->native;
+      obj->native = nullptr;
+   }
    zend_object_std_dtor(object);
 }
 
