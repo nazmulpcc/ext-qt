@@ -129,7 +129,7 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qtimezone->create_object = qt_qtimezone_create_handler;
 
 	ce_qabstractitemmodel = register_class_Qt_Core_QAbstractItemModel(ce_qobject);
-	ce_qabstractitemmodel->create_object = qt_qabstractitemmodel_create_handler;
+	ce_qabstractitemmodel->create_object = qt_obj_create_handler;
 	ce_qmodelindex = register_class_Qt_Core_QModelIndex();
 	ce_qmodelindex->create_object = qt_qmodelindex_create_handler;
 

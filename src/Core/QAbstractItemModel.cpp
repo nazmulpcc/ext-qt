@@ -66,6 +66,7 @@ bool PhpQAbstractItemModel::setData(const QModelIndex &index, const QVariant &va
 
 ZEND_METHOD(Qt_Core_QAbstractItemModel, __construct)
 {
+    ZEND_PARSE_PARAMETERS_NONE();
     auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
     container->native = new PhpQAbstractItemModel();
     container->native->std = &container->std;
@@ -474,9 +475,7 @@ ZEND_METHOD(Qt_Core_QAbstractItemModel, createIndex)
     ZEND_PARSE_PARAMETERS_END();
 
     auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
-    QModelIndex *index = (QModelIndex *)malloc(sizeof(QModelIndex));
-    *index = container->native->createIndex(row, column);
-    RETURN_QT(index);
+    RETURN_QT(container->native->createIndex(row, column));
 }
 
 QT_METHOD_FORWARD(Qt_Core_QAbstractItemModel, PhpQAbstractItemModel, endInsertColumns);

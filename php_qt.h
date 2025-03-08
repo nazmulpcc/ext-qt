@@ -129,6 +129,7 @@ static zend_object *qt_qcalendar_create_handler(zend_class_entry *ce)
        (qt_container_t<QCalendar> *)zend_object_alloc(sizeof(qt_container_t<QCalendar>), ce);
 
    zend_object_std_init(&container->std, ce);
+   object_properties_init(&container->std, ce);
    container->std.handlers = &qt_qcalendar_handler;
    return &container->std;
 }
@@ -139,6 +140,7 @@ static zend_object *qt_qdate_create_handler(zend_class_entry *ce)
        (qt_container_t<QDate> *)zend_object_alloc(sizeof(qt_container_t<QDate>), ce);
 
    zend_object_std_init(&container->std, ce);
+   object_properties_init(&container->std, ce);
    container->std.handlers = &qt_qdate_handler;
    return &container->std;
 }
@@ -149,6 +151,7 @@ static zend_object *qt_qrect_create_handler(zend_class_entry *ce)
        (qt_container_t<QRect> *)zend_object_alloc(sizeof(qt_container_t<QRect>), ce);
 
    zend_object_std_init(&container->std, ce);
+   object_properties_init(&container->std, ce);
    container->std.handlers = &qt_qrect_handler;
    return &container->std;
 }
@@ -159,6 +162,7 @@ static zend_object *qt_qsize_create_handler(zend_class_entry *ce)
        (qt_container_t<QSize> *)zend_object_alloc(sizeof(qt_container_t<QSize>), ce);
 
    zend_object_std_init(&container->std, ce);
+   object_properties_init(&container->std, ce);
    container->std.handlers = &qt_qsize_handler;
    return &container->std;
 }
@@ -203,27 +207,16 @@ static zend_object *qt_qmodelindex_create_handler(zend_class_entry *ce)
    return &container->std;
 }
 
-static zend_object *qt_qabstractitemmodel_create_handler(zend_class_entry *ce)
-{
-   qt_container_t<QAbstractItemModel> *container =
-       (qt_container_t<QAbstractItemModel> *)zend_object_alloc(sizeof(qt_container_t<QAbstractItemModel>), ce);
-
-   zend_object_std_init(&container->std, ce);
-   container->std.handlers = &qt_qabstractitemmodel_handler;
-   return &container->std;
-}
-
 static void qt_obj_free_handler(zend_object *object)
 {
-   auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
+   // auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
    zend_object_std_dtor(object);
 }
 
 template <typename T>
 static void qt_generic_free_handler(zend_object *object)
 {
-   auto *obj = (qt_container_t<T> *)((char *)object - XtOffsetOf(qt_container_t<T>, std));
-   // @todo: delete native object
+   // auto *obj = (qt_container_t<T> *)((char *)object - XtOffsetOf(qt_container_t<T>, std));
    zend_object_std_dtor(object);
 }
 
@@ -434,15 +427,29 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
    template <>                                                   \
    inline void qt_cpp_to_zval<type>(zval * z, const type &value) \
    {                                                             \
-      ZVAL_OBJ(z, zend_objects_new(class_entry));                \
+      object_init_ex(z, class_entry);                            \
       QT_Object_P(z, type)->native = const_cast<type *>(&value); \
    }                                                             \
    template <>                                                   \
    inline void qt_cpp_to_zval<type>(zval * z, type * value)      \
    {                                                             \
-      ZVAL_OBJ(z, zend_objects_new(class_entry));                \
+      object_init_ex(z, class_entry);                            \
       QT_Object_P(z, type)->native = value;                      \
    }
+
+template <>
+inline void qt_cpp_to_zval<QModelIndex>(zval *z, const QModelIndex &value)
+{
+   object_init_ex(z, ce_qmodelindex);
+   auto container = QT_Object_P(z, QModelIndex);
+   container->native = new QModelIndex(value);
+}
+template <>
+inline void qt_cpp_to_zval<QModelIndex>(zval *z, QModelIndex *value)
+{
+   object_init_ex(z, ce_qmodelindex);
+   QT_Object_P(z, QModelIndex)->native = value;
+}
 
 //
 // Helper functions
@@ -534,7 +541,7 @@ QT_REGISRER_NATIVE_TO_ZVAL(QAbstractItemModel, ce_qabstractitemmodel)
 QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar)
 QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
 QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
-QT_REGISRER_NATIVE_TO_ZVAL(QModelIndex, ce_qmodelindex)
+// QT_REGISRER_NATIVE_TO_ZVAL(QModelIndex, ce_qmodelindex)
 QT_REGISRER_NATIVE_TO_ZVAL(QRect, ce_qrect)
 QT_REGISRER_NATIVE_TO_ZVAL(QSize, ce_qsize)
 QT_REGISRER_NATIVE_TO_ZVAL(QTextEdit, ce_qtextedit)
