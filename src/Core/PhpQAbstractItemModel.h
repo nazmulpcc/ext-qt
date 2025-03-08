@@ -12,42 +12,99 @@ extern "C"
 #ifdef __cplusplus
 #include <QtCore/QObject>
 #include <QtCore/QAbstractItemModel>
+#include <QtCore/QModelIndex>
+#include <QtCore/QVariant>
 
-class PhpQAbstractItemModel : public QAbstractItemModel
+template <typename BaseModel>
+class PhpQAbstractModel : public BaseModel
 {
-    Q_OBJECT
 public:
     zend_object *std = nullptr;
-    explicit PhpQAbstractItemModel(QObject *parent = nullptr) : QAbstractItemModel(parent) {};
 
-    // Minimal required virtual functions implementation:
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
-    QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
-    QModelIndex parent(const QModelIndex &child) const override;
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+    explicit PhpQAbstractModel(QObject *parent = nullptr)
+        : BaseModel(parent) {}
 
-    using QAbstractItemModel::beginInsertColumns;
-    using QAbstractItemModel::beginInsertRows;
-    using QAbstractItemModel::beginMoveColumns;
-    using QAbstractItemModel::beginMoveRows;
-    using QAbstractItemModel::beginRemoveColumns;
-    using QAbstractItemModel::beginRemoveRows;
-    using QAbstractItemModel::beginResetModel;
-    using QAbstractItemModel::changePersistentIndex;
-    using QAbstractItemModel::createIndex;
-    using QAbstractItemModel::endInsertColumns;
-    using QAbstractItemModel::endInsertRows;
-    using QAbstractItemModel::endMoveColumns;
-    using QAbstractItemModel::endMoveRows;
-    using QAbstractItemModel::endRemoveColumns;
-    using QAbstractItemModel::endRemoveRows;
-    using QAbstractItemModel::endResetModel;
-    using QAbstractItemModel::persistentIndexList;
+    // Inline implementations common for all model classes
+    inline int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        zval retval, zv_parent;
+        qt_cpp_to_zval(&zv_parent, parent);
+        zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "rowCount", &retval, &zv_parent);
+        return (int)zval_get_long(&retval);
+    }
+
+    inline int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        zval retval, zv_parent;
+        qt_cpp_to_zval(&zv_parent, parent);
+        zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "columnCount", &retval, &zv_parent);
+        return (int)zval_get_long(&retval);
+    }
+
+    inline QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override
+    {
+        zval retval, zv_row, zv_column, zv_parent;
+        qt_cpp_to_zval(&zv_row, row);
+        qt_cpp_to_zval(&zv_column, column);
+        qt_cpp_to_zval(&zv_parent, parent);
+        zend_call_method_with_2_params(this->std, this->std->ce, nullptr, "index", &retval, &zv_row, &zv_column);
+        return *QT_Object_P(&retval, QModelIndex)->native;
+    }
+
+    inline QModelIndex parent(const QModelIndex &child) const override
+    {
+        return QModelIndex();
+    }
+
+    inline QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
+    {
+        zval retval, zv_index, zv_role;
+        qt_cpp_to_zval(&zv_index, index);
+        qt_cpp_to_zval(&zv_role, role);
+        zend_call_method_with_2_params(this->std, this->std->ce, nullptr, "data", &retval, &zv_index, &zv_role);
+        return zval_to_qvariant(&retval);
+    }
+
+    inline Qt::ItemFlags flags(const QModelIndex &index) const override
+    {
+        zval retval, zv_index;
+        qt_cpp_to_zval(&zv_index, index);
+        zend_call_method_with_1_params(this->std, this->std->ce, nullptr, "flags", &retval, &zv_index);
+        return (Qt::ItemFlags)(int)zval_get_long(&retval);
+    }
+
+    inline bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
+    {
+        Q_UNUSED(role);
+        zval zv_index, zv_value, retval;
+        qt_cpp_to_zval(&zv_index, index);
+        qt_cpp_to_zval(&zv_value, value);
+        zend_call_method_with_2_params(this->std, this->std->ce, nullptr, "setData", &retval, &zv_index, &zv_value);
+        return zval_is_true(&retval);
+    }
+
+    // Inherit common QAbstractItemModel functions from BaseModel
+    using BaseModel::beginInsertColumns;
+    using BaseModel::beginInsertRows;
+    using BaseModel::beginMoveColumns;
+    using BaseModel::beginMoveRows;
+    using BaseModel::beginRemoveColumns;
+    using BaseModel::beginRemoveRows;
+    using BaseModel::beginResetModel;
+    using BaseModel::changePersistentIndex;
+    using BaseModel::createIndex;
+    using BaseModel::endInsertColumns;
+    using BaseModel::endInsertRows;
+    using BaseModel::endMoveColumns;
+    using BaseModel::endMoveRows;
+    using BaseModel::endRemoveColumns;
+    using BaseModel::endRemoveRows;
+    using BaseModel::endResetModel;
+    using BaseModel::persistentIndexList;
 };
 
-#endif
+typedef PhpQAbstractModel<QAbstractItemModel> PhpQAbstractItemModel;
+
+#endif // __cplusplus
 
 #endif /* PHP_QABSTRACTITEMMODEL_H */

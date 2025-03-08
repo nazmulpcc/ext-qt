@@ -299,6 +299,86 @@ inline void qt_cpp_to_zval<double>(zval *z, const double &value)
    ZVAL_DOUBLE(z, value);
 }
 
+// zval to cpp
+QVariant zval_to_qvariant(zval *zv); // forward declaration.
+
+inline QVariant map_array_zval(zval *arr)
+{
+   if (Z_TYPE_P(arr) != IS_ARRAY)
+   {
+      return QVariant(); // Or throw an exception, depending on your needs
+   }
+
+   HashTable *ht = Z_ARRVAL_P(arr);
+   zend_string *key;
+   zend_ulong idx;
+   zval *value;
+
+   QVariantMap map;
+   QVariantList list;
+   bool is_sequential = true;
+   zend_ulong expected_index = 0;
+
+   ZEND_HASH_FOREACH_KEY_VAL(ht, idx, key, value)
+   {
+      QVariant qValue = zval_to_qvariant(value);
+
+      if (key)
+      {
+         // Associative array
+         is_sequential = false;
+         QString qKey = QString::fromUtf8(key->val, key->len);
+         map[qKey] = qValue;
+      }
+      else
+      {
+         // Numerical array
+         if (idx != expected_index)
+         {
+            is_sequential = false;
+         }
+         list.append(qValue);
+         expected_index = idx + 1;
+      }
+   }
+   ZEND_HASH_FOREACH_END();
+
+   if (is_sequential)
+   {
+      return QVariant::fromValue(list);
+   }
+   else
+   {
+      return QVariant::fromValue(map);
+   }
+}
+
+inline QVariant zval_to_qvariant(zval *zv)
+{
+   switch (Z_TYPE_P(zv))
+   {
+   case IS_NULL:
+      return QVariant();
+   case IS_FALSE:
+      return QVariant(false);
+   case IS_TRUE:
+      return QVariant(true);
+   case IS_LONG:
+      return QVariant((int)Z_LVAL_P(zv));
+   case IS_DOUBLE:
+      return QVariant(Z_DVAL_P(zv));
+   case IS_STRING:
+   {
+      zend_string *str = Z_STR_P(zv);
+      return QVariant(QString::fromUtf8(str->val, str->len));
+   }
+   case IS_ARRAY:
+      return map_array_zval(zv);
+   default:
+      return QVariant();
+   }
+}
+
 //
 // Signal parameter introspection
 //
