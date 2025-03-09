@@ -643,4 +643,26 @@ QT_REGISRER_NATIVE_TO_ZVAL(QWidget, ce_widget_QWidget)
 
 #endif /* __cplusplus */
 
+// php helpers
+static zend_always_inline zval *zend_call_method_with_params(zend_object *object, const char *function_name, zval *retval,
+                                                             int param_count, zval params[])
+{
+   zend_fcall_info fci;
+   zend_fcall_info_cache fcc;
+   memset(&fci, 0, sizeof(fci));
+   memset(&fcc, 0, sizeof(fcc));
+   fci.size = sizeof(fci);
+   fci.object = object;
+   fci.retval = retval;
+   fci.param_count = param_count;
+   fci.params = params;
+
+   zval fname;
+   ZVAL_STRINGL(&fname, function_name, strlen(function_name));
+   fci.function_name = fname;
+   zend_call_function(&fci, &fcc);
+   zval_ptr_dtor(&fname);
+   return retval;
+}
+
 #endif /* PHP_QT_H */

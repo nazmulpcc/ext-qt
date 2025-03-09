@@ -66,6 +66,16 @@ public:
         return zval_to_qvariant(&retval);
     }
 
+    inline QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
+    {
+        zval retval, params[3];
+        qt_cpp_to_zval(&params[0], section);
+        qt_cpp_to_zval(&params[1], (int)orientation);
+        qt_cpp_to_zval(&params[2], role);
+        zend_call_method_with_params(this->std, "headerData", &retval, 3, params);
+        return zval_to_qvariant(&retval);
+    }
+
     inline Qt::ItemFlags flags(const QModelIndex &index) const override
     {
         zval retval, zv_index;
