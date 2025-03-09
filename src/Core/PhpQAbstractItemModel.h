@@ -76,6 +76,11 @@ public:
         return zval_to_qvariant(&retval);
     }
 
+    inline QVariant nativeHeaderData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const
+    {
+        return BaseModel::headerData(section, orientation, role);
+    }
+
     inline Qt::ItemFlags flags(const QModelIndex &index) const override
     {
         zval retval, zv_index;

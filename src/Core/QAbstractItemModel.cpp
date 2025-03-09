@@ -102,7 +102,7 @@ ZEND_METHOD(Qt_Core_QAbstractItemModel, headerData)
     ZEND_PARSE_PARAMETERS_END();
 
     auto *container = QT_Object_P(ZEND_THIS, PhpQAbstractItemModel);
-    RETURN_QT(container->native->headerData(section, static_cast<Qt::Orientation>(orientation), static_cast<Qt::ItemDataRole>(role)));
+    RETURN_QT(container->native->nativeHeaderData(section, static_cast<Qt::Orientation>(orientation), static_cast<Qt::ItemDataRole>(role)));
 }
 
 ZEND_METHOD(Qt_Core_QAbstractItemModel, insertColumn)

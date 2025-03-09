@@ -275,6 +275,9 @@ inline void qt_cpp_to_zval<QVariant>(zval *z, const QVariant &value)
 {
    switch (value.type())
    {
+   case QVariant::Type::Invalid:
+      ZVAL_NULL(z);
+      break;
    case QVariant::Type::Bool:
       ZVAL_BOOL(z, value.toBool());
       break;
@@ -288,7 +291,7 @@ inline void qt_cpp_to_zval<QVariant>(zval *z, const QVariant &value)
       qt_cpp_to_zval(z, value.toString());
       break;
    default:
-      php_error_docref(nullptr, E_WARNING, "Failed to convert QVariant to PHP");
+      php_error_docref(nullptr, E_WARNING, "Failed to convert QVariant of type %d to PHP", value.type());
       ZVAL_NULL(z);
       break;
    }
