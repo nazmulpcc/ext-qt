@@ -206,6 +206,12 @@ namespace Qt\Core {
         public function parent(QModelIndex $index): QModelIndex;
     }
 
+    class QAbstractListModel extends QAbstractItemModel
+    {
+        public function __construct(?QObject $parent = null) {}
+    }
+
+
     class QCalendar
     {
         public const int Gregorian = 0;

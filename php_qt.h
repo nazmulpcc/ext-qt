@@ -73,6 +73,7 @@ extern "C"
    extern zend_class_entry *ce_widget_QLayout;
    extern zend_class_entry *ce_qabstractitemmodel;
    extern zend_class_entry *ce_qabstracttablemodel;
+   extern zend_class_entry *ce_qabstractlistmodel;
    extern zend_class_entry *ce_qmodelindex;
 
 #if defined(ZTS) && defined(COMPILE_DL_QT)

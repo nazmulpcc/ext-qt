@@ -138,6 +138,7 @@ public:
 };
 
 typedef PhpQAbstractModel<QAbstractTableModel> PhpQAbstractTableModel;
+typedef PhpQAbstractModel<QAbstractListModel> PhpQAbstractListModel;
 
 #endif // __cplusplus
 
