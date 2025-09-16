@@ -9,7 +9,8 @@ extern "C"
 #include <QtWidgets/QWidget>
 #include <QtCore/QString>
 
-class PhpQWidget final : public QWidget {
+class PhpQWidget final : public QWidget
+{
 public:
     explicit PhpQWidget(QWidget *parent = nullptr) : QWidget(parent) {}
     using QWidget::focusNextChild;
@@ -248,7 +249,21 @@ ZEND_METHOD(Qt_Widgets_QWidget, scroll)
 QT_METHOD_FORWARD_BOOL(Qt_Widgets_QWidget, QWidget, setAcceptDrops);
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setAccessibleDescription);
 QT_METHOD_FORWARD_STRING(Qt_Widgets_QWidget, QWidget, setAccessibleName);
-ZEND_METHOD(Qt_Widgets_QWidget, setAttribute);
+
+ZEND_METHOD(Qt_Widgets_QWidget, setAttribute)
+{
+    zend_long attribute;
+    bool on = true;
+    ZEND_PARSE_PARAMETERS_START(1, 2)
+    Z_PARAM_LONG(attribute)
+    Z_PARAM_OPTIONAL
+    Z_PARAM_BOOL(on)
+    ZEND_PARSE_PARAMETERS_END();
+
+    auto *container = QT_Object_P(ZEND_THIS, QWidget);
+    container->native->setAttribute(static_cast<Qt::WidgetAttribute>(attribute), on);
+}
+
 QT_METHOD_FORWARD_BOOL(Qt_Widgets_QWidget, QWidget, setAutoFillBackground);
 QT_METHOD_FORWARD_INT_ENUM(Qt_Widgets_QWidget, QWidget, setBackgroundRole, QPalette::ColorRole);
 

@@ -763,7 +763,7 @@ namespace Qt\Widgets {
         public function setAcceptDrops(bool $on): void {}
         public function setAccessibleDescription(string $description): void {}
         public function setAccessibleName(string $name): void {}
-        // public function setAttribute(int $attribute, bool $on = true): void {}
+        public function setAttribute(int $attribute, bool $on = true): void {}
         public function setAutoFillBackground(bool $enabled): void {}
         public function setBackgroundRole(int $role): void {}
         public function setBaseSize(int $basew, int $baseh): void {}
