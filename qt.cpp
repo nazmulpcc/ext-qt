@@ -189,6 +189,8 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qabstractitemview->create_object = qt_obj_create_handler;
 	auto ce_qtableview = register_class_Qt_Widgets_QTableView(ce_qabstractitemview);
 	ce_qtableview->create_object = qt_obj_create_handler;
+	auto ce_qtreeview = register_class_Qt_Widgets_QTreeView(ce_qabstractitemview);
+	ce_qtreeview->create_object = qt_obj_create_handler;
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;

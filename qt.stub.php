@@ -144,7 +144,7 @@ namespace Qt\Core {
         public function removeColumns(int $column, int $count, ?QModelIndex $parent = null): bool {}
         public function removeRow(int $row, ?QModelIndex $parent = null): bool {}
         public function removeRows(int $row, int $count, ?QModelIndex $parent = null): bool {}
-        public function rowCount(?QModelIndex $parent = null): int;
+        public function rowCount(?QModelIndex $parent = null): int {}
         public function setData(QModelIndex $index, mixed $value, int $role = 0): bool {}
         public function setHeaderData(int $section, int $orientation, mixed $value, int $role = 2): bool {}
         public function sibling(int $row, int $column, QModelIndex $index): QModelIndex {}
@@ -1060,6 +1060,30 @@ namespace Qt\Widgets {
     {
         public function __construct(?QWidget $parent = null) {}
         public function setModel(\Qt\Core\QAbstractItemModel $model): void {}
+    }
+
+    class QTreeView extends QAbstractItemView
+    {
+        public function __construct(?QWidget $parent = null) {}
+
+        public function collapse(QModelIndex $index): void {}
+        public function collapseAll(): void {}
+        public function expand(QModelIndex $index): void {}
+        public function expandAll(): void {}
+        // public function header(): ?\Qt\Widgets\QHeaderView {}
+        public function isAnimated(): bool {}
+        public function isExpanded(QModelIndex $index): bool {}
+        public function itemsExpandable(): bool {}
+        public function rootIsDecorated(): bool {}
+        public function setAnimated(bool $enable): void {}
+        public function setItemsExpandable(bool $expandable): void {}
+        public function setModel(\Qt\Core\QAbstractItemModel $model): void {}
+        public function setRootIsDecorated(bool $show): void {}
+        public function setSortingEnabled(bool $enable): void {}
+        public function setUniformRowHeights(bool $uniform): void {}
+        public function sortByColumn(int $column, int $order = 0): void {}
+        public function isSortingEnabled(): bool {}
+        public function uniformRowHeights(): bool {}
     }
 
     class QTextEdit extends QAbstractScrollArea

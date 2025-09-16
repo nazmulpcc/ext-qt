@@ -51,6 +51,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Core/QTimeZone.cpp \
     src/Widgets/QApplication.cpp \
     src/Widgets/QAbstractButton.cpp \
+    src/Widgets/QAbstractItemView.cpp \
     src/Widgets/QAbstractScrollArea.cpp \
     src/Widgets/QAbstractSpinBox.cpp \
     src/Widgets/QAbstractSlider.cpp \
@@ -75,6 +76,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QStackedWidget.cpp \
     src/Widgets/QTableView.cpp \
     src/Widgets/QTextEdit.cpp \
+    src/Widgets/QTreeView.cpp \
     src/Widgets/QWidget.cpp"
 
   PHP_NEW_EXTENSION([qt],

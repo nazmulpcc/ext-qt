@@ -283,6 +283,8 @@ inline void qt_cpp_to_zval<QVariant>(zval *z, const QVariant &value)
       ZVAL_BOOL(z, value.toBool());
       break;
    case QVariant::Type::Int:
+   case QVariant::Type::LongLong:
+   case QVariant::Type::ULongLong:
       ZVAL_LONG(z, value.toInt());
       break;
    case QVariant::Type::Double:
