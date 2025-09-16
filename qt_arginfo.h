@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 5b881161b6338d04bdc67ab4275dc5e3f42ece11 */
+ * Stub hash: 309351d8651317780a0b31ad13e07190fec00522 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -377,7 +377,10 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Core_QTimeZone_isValid arginfo_class_Qt_Core_QCalendar_isValid
 
-#define arginfo_class_Qt_Widgets_QApplication___construct arginfo_class_Qt_Core_QModelIndex___construct
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Widgets_QApplication___construct, 0, 0, 2)
+	ZEND_ARG_TYPE_INFO(0, argc, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, argv, IS_ARRAY, 0)
+ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QApplication_exec arginfo_class_Qt_Core_QModelIndex_column
 

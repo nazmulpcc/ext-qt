@@ -307,7 +307,7 @@ namespace Qt\Core {
 namespace Qt\Widgets {
     class QApplication
     {
-        public function __construct() {}
+        public function __construct(int $argc, array $argv) {}
         static public function exec(): int {}
     }
 
