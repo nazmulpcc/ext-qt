@@ -67,6 +67,7 @@ extern "C"
    extern zend_class_entry *ce_qsize;
    extern zend_class_entry *ce_qscrollbar;
    extern zend_class_entry *ce_qtextedit;
+   extern zend_class_entry *ce_qthread;
    extern zend_class_entry *ce_qtime;
    extern zend_class_entry *ce_qtimezone;
    extern zend_class_entry *ce_widget_QWidget;

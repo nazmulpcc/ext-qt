@@ -40,6 +40,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Core/QAbstractItemModel.cpp \
     src/Core/QAbstractListModel.cpp \
     src/Core/QAbstractTableModel.cpp \
+    src/Core/QThread.cpp \
     src/Core/QCalendar.cpp \
     src/Core/QDate.cpp \
     src/Core/QDateTime.cpp \

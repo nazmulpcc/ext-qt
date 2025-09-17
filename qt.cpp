@@ -37,6 +37,7 @@ zend_class_entry *ce_qrect = nullptr;
 zend_class_entry *ce_qscrollbar = nullptr;
 zend_class_entry *ce_qsize = nullptr;
 zend_class_entry *ce_qtextedit = nullptr;
+zend_class_entry *ce_qthread = nullptr;
 zend_class_entry *ce_qtime = nullptr;
 zend_class_entry *ce_qtimezone = nullptr;
 zend_class_entry *ce_widget_QWidget = nullptr;
@@ -136,6 +137,9 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qabstractlistmodel->create_object = qt_obj_create_handler;
 	ce_qmodelindex = register_class_Qt_Core_QModelIndex();
 	ce_qmodelindex->create_object = qt_qmodelindex_create_handler;
+
+	ce_qthread = register_class_Qt_Core_QThread(ce_qobject);
+	ce_qthread->create_object = qt_obj_create_handler;
 
 	auto ce_widget_QApplication = register_class_Qt_Widgets_QApplication();
 	ce_widget_QApplication->create_object = qt_obj_create_handler;
