@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 309351d8651317780a0b31ad13e07190fec00522 */
+ * Stub hash: e776fd8dd0f6588d6050276e47f44d062abe2f90 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
