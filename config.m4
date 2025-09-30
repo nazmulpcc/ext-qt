@@ -66,6 +66,8 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QLineEdit.cpp \
     src/Widgets/QLayout.cpp \
     src/Widgets/QMainWindow.cpp \
+    src/Widgets/QMenu.cpp \
+    src/Widgets/QMenuBar.cpp \
     src/Widgets/QProgressBar.cpp \
     src/Widgets/QPushButton.cpp \
     src/Widgets/QRadioButton.cpp \
@@ -78,7 +80,8 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QTableView.cpp \
     src/Widgets/QTextEdit.cpp \
     src/Widgets/QTreeView.cpp \
-    src/Widgets/QWidget.cpp"
+    src/Widgets/QWidget.cpp \
+    src/Gui/QAction.cpp"
 
   PHP_NEW_EXTENSION([qt],
     $qt_source_files,

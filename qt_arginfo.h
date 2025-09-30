@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: 25bd0671789efc3f145682b07f38c4fe2057ec9d */
+ * Stub hash: 1ca509631b218f76d96e9eb596d0fa901c37af08 */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -1029,6 +1029,10 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QWidget_activateWindow arginfo_class_Qt_Core_QAbstractItemModel_revert
 
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QWidget_addAction, 0, 1, IS_VOID, 0)
+	ZEND_ARG_OBJ_INFO(0, action, Qt\\Gui\\QAction, 0)
+ZEND_END_ARG_INFO()
+
 #define arginfo_class_Qt_Widgets_QWidget_adjustSize arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QWidget_autoFillBackground arginfo_class_Qt_Core_QCalendar_isValid
@@ -1543,7 +1547,26 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QMainWindow___construct arginfo_class_Qt_Widgets_QWidget___construct
 
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QMainWindow_menuBar, 0, 0, Qt\\Widgets\\QMenuBar, 0)
+ZEND_END_ARG_INFO()
+
 #define arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
+
+#define arginfo_class_Qt_Widgets_QMenu___construct arginfo_class_Qt_Widgets_QGroupBox___construct
+
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_class_Qt_Widgets_QMenu_addMenu, 0, 1, Qt\\Widgets\\QMenu, 0)
+	ZEND_ARG_TYPE_INFO(0, title, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QMenu_title arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QMenu_setTitle arginfo_class_Qt_Widgets_QGroupBox_setTitle
+
+#define arginfo_class_Qt_Widgets_QMenuBar___construct arginfo_class_Qt_Widgets_QComboBox___construct
+
+#define arginfo_class_Qt_Widgets_QMenuBar_addMenu arginfo_class_Qt_Widgets_QMenu_addMenu
+
+#define arginfo_class_Qt_Widgets_QMenuBar_clear arginfo_class_Qt_Core_QAbstractItemModel_revert
 
 #define arginfo_class_Qt_Widgets_QProgressBar___construct arginfo_class_Qt_Widgets_QComboBox___construct
 
@@ -1979,6 +2002,47 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Gui_QAction___construct, 0, 0, 0)
+	ZEND_ARG_TYPE_INFO_WITH_DEFAULT_VALUE(0, text, IS_STRING, 1, "null")
+	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Gui\\QObject, 1, "null")
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Gui_QAction_isCheckable arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Gui_QAction_isChecked arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Gui_QAction_isEnabled arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Gui_QAction_isSeparator arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Gui_QAction_isVisible arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Gui_QAction_shortcut arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Gui_QAction_setCheckable arginfo_class_Qt_Widgets_QGroupBox_setCheckable
+
+#define arginfo_class_Qt_Gui_QAction_setChecked arginfo_class_Qt_Widgets_QAbstractButton_setChecked
+
+#define arginfo_class_Qt_Gui_QAction_setEnabled arginfo_class_Qt_Widgets_QWidget_setAutoFillBackground
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Gui_QAction_setShortcut, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, shortcut, IS_STRING, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Gui_QAction_text arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Gui_QAction_toggle arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Gui_QAction_trigger arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Gui_QAction_onChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Gui_QAction_onHovered arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Gui_QAction_onToggled arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
+#define arginfo_class_Qt_Gui_QAction_onTriggered arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
 ZEND_METHOD(Qt_Core_QAbstractItemModel, __construct);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, buddy);
 ZEND_METHOD(Qt_Core_QAbstractItemModel, canFetchMore);
@@ -2332,6 +2396,7 @@ ZEND_METHOD(Qt_Widgets_QWidget, acceptDrops);
 ZEND_METHOD(Qt_Widgets_QWidget, accessibleDescription);
 ZEND_METHOD(Qt_Widgets_QWidget, accessibleName);
 ZEND_METHOD(Qt_Widgets_QWidget, activateWindow);
+ZEND_METHOD(Qt_Widgets_QWidget, addAction);
 ZEND_METHOD(Qt_Widgets_QWidget, adjustSize);
 ZEND_METHOD(Qt_Widgets_QWidget, autoFillBackground);
 ZEND_METHOD(Qt_Widgets_QWidget, backgroundRole);
@@ -2526,7 +2591,15 @@ ZEND_METHOD(Qt_Widgets_QLineEdit, redo);
 ZEND_METHOD(Qt_Widgets_QLineEdit, selectAll);
 ZEND_METHOD(Qt_Widgets_QLineEdit, undo);
 ZEND_METHOD(Qt_Widgets_QMainWindow, __construct);
+ZEND_METHOD(Qt_Widgets_QMainWindow, menuBar);
 ZEND_METHOD(Qt_Widgets_QMainWindow, setCentralWidget);
+ZEND_METHOD(Qt_Widgets_QMenu, __construct);
+ZEND_METHOD(Qt_Widgets_QMenu, addMenu);
+ZEND_METHOD(Qt_Widgets_QMenu, title);
+ZEND_METHOD(Qt_Widgets_QMenu, setTitle);
+ZEND_METHOD(Qt_Widgets_QMenuBar, __construct);
+ZEND_METHOD(Qt_Widgets_QMenuBar, addMenu);
+ZEND_METHOD(Qt_Widgets_QMenuBar, clear);
 ZEND_METHOD(Qt_Widgets_QProgressBar, __construct);
 ZEND_METHOD(Qt_Widgets_QProgressBar, alignment);
 ZEND_METHOD(Qt_Widgets_QProgressBar, format);
@@ -2703,6 +2776,24 @@ ZEND_METHOD(Qt_Widgets_QTextEdit, onRedoAvailable);
 ZEND_METHOD(Qt_Widgets_QTextEdit, onSelectionChanged);
 ZEND_METHOD(Qt_Widgets_QTextEdit, onTextChanged);
 ZEND_METHOD(Qt_Widgets_QTextEdit, onUndoAvailable);
+ZEND_METHOD(Qt_Gui_QAction, __construct);
+ZEND_METHOD(Qt_Gui_QAction, isCheckable);
+ZEND_METHOD(Qt_Gui_QAction, isChecked);
+ZEND_METHOD(Qt_Gui_QAction, isEnabled);
+ZEND_METHOD(Qt_Gui_QAction, isSeparator);
+ZEND_METHOD(Qt_Gui_QAction, isVisible);
+ZEND_METHOD(Qt_Gui_QAction, shortcut);
+ZEND_METHOD(Qt_Gui_QAction, setCheckable);
+ZEND_METHOD(Qt_Gui_QAction, setChecked);
+ZEND_METHOD(Qt_Gui_QAction, setEnabled);
+ZEND_METHOD(Qt_Gui_QAction, setShortcut);
+ZEND_METHOD(Qt_Gui_QAction, text);
+ZEND_METHOD(Qt_Gui_QAction, toggle);
+ZEND_METHOD(Qt_Gui_QAction, trigger);
+ZEND_METHOD(Qt_Gui_QAction, onChanged);
+ZEND_METHOD(Qt_Gui_QAction, onHovered);
+ZEND_METHOD(Qt_Gui_QAction, onToggled);
+ZEND_METHOD(Qt_Gui_QAction, onTriggered);
 
 static const zend_function_entry class_Qt_Core_QAbstractItemModel_methods[] = {
 	ZEND_ME(Qt_Core_QAbstractItemModel, __construct, arginfo_class_Qt_Core_QAbstractItemModel___construct, ZEND_ACC_PUBLIC)
@@ -3170,6 +3261,7 @@ static const zend_function_entry class_Qt_Widgets_QWidget_methods[] = {
 	ZEND_ME(Qt_Widgets_QWidget, accessibleDescription, arginfo_class_Qt_Widgets_QWidget_accessibleDescription, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, accessibleName, arginfo_class_Qt_Widgets_QWidget_accessibleName, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, activateWindow, arginfo_class_Qt_Widgets_QWidget_activateWindow, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QWidget, addAction, arginfo_class_Qt_Widgets_QWidget_addAction, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, adjustSize, arginfo_class_Qt_Widgets_QWidget_adjustSize, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, autoFillBackground, arginfo_class_Qt_Widgets_QWidget_autoFillBackground, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QWidget, backgroundRole, arginfo_class_Qt_Widgets_QWidget_backgroundRole, ZEND_ACC_PUBLIC)
@@ -3380,7 +3472,23 @@ static const zend_function_entry class_Qt_Widgets_QLineEdit_methods[] = {
 
 static const zend_function_entry class_Qt_Widgets_QMainWindow_methods[] = {
 	ZEND_ME(Qt_Widgets_QMainWindow, __construct, arginfo_class_Qt_Widgets_QMainWindow___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QMainWindow, menuBar, arginfo_class_Qt_Widgets_QMainWindow_menuBar, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QMainWindow, setCentralWidget, arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QMenu_methods[] = {
+	ZEND_ME(Qt_Widgets_QMenu, __construct, arginfo_class_Qt_Widgets_QMenu___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QMenu, addMenu, arginfo_class_Qt_Widgets_QMenu_addMenu, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QMenu, title, arginfo_class_Qt_Widgets_QMenu_title, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QMenu, setTitle, arginfo_class_Qt_Widgets_QMenu_setTitle, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QMenuBar_methods[] = {
+	ZEND_ME(Qt_Widgets_QMenuBar, __construct, arginfo_class_Qt_Widgets_QMenuBar___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QMenuBar, addMenu, arginfo_class_Qt_Widgets_QMenuBar_addMenu, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QMenuBar, clear, arginfo_class_Qt_Widgets_QMenuBar_clear, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -3601,6 +3709,28 @@ static const zend_function_entry class_Qt_Widgets_QTextEdit_methods[] = {
 	ZEND_ME(Qt_Widgets_QTextEdit, onSelectionChanged, arginfo_class_Qt_Widgets_QTextEdit_onSelectionChanged, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, onTextChanged, arginfo_class_Qt_Widgets_QTextEdit_onTextChanged, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QTextEdit, onUndoAvailable, arginfo_class_Qt_Widgets_QTextEdit_onUndoAvailable, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Gui_QAction_methods[] = {
+	ZEND_ME(Qt_Gui_QAction, __construct, arginfo_class_Qt_Gui_QAction___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, isCheckable, arginfo_class_Qt_Gui_QAction_isCheckable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, isChecked, arginfo_class_Qt_Gui_QAction_isChecked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, isEnabled, arginfo_class_Qt_Gui_QAction_isEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, isSeparator, arginfo_class_Qt_Gui_QAction_isSeparator, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, isVisible, arginfo_class_Qt_Gui_QAction_isVisible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, shortcut, arginfo_class_Qt_Gui_QAction_shortcut, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, setCheckable, arginfo_class_Qt_Gui_QAction_setCheckable, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, setChecked, arginfo_class_Qt_Gui_QAction_setChecked, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, setEnabled, arginfo_class_Qt_Gui_QAction_setEnabled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, setShortcut, arginfo_class_Qt_Gui_QAction_setShortcut, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, text, arginfo_class_Qt_Gui_QAction_text, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, toggle, arginfo_class_Qt_Gui_QAction_toggle, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, trigger, arginfo_class_Qt_Gui_QAction_trigger, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, onChanged, arginfo_class_Qt_Gui_QAction_onChanged, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, onHovered, arginfo_class_Qt_Gui_QAction_onHovered, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, onToggled, arginfo_class_Qt_Gui_QAction_onToggled, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Gui_QAction, onTriggered, arginfo_class_Qt_Gui_QAction_onTriggered, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -4770,6 +4900,26 @@ static zend_class_entry *register_class_Qt_Widgets_QMainWindow(zend_class_entry 
 	return class_entry;
 }
 
+static zend_class_entry *register_class_Qt_Widgets_QMenu(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QMenu", class_Qt_Widgets_QMenu_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QMenuBar(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QMenuBar", class_Qt_Widgets_QMenuBar_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+
+	return class_entry;
+}
+
 static zend_class_entry *register_class_Qt_Widgets_QProgressBar(zend_class_entry *class_entry_Qt_Widgets_QWidget)
 {
 	zend_class_entry ce, *class_entry;
@@ -4952,6 +5102,16 @@ static zend_class_entry *register_class_Qt_Widgets_QTextEdit(zend_class_entry *c
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QTextEdit", class_Qt_Widgets_QTextEdit_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QAbstractScrollArea, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Gui_QAction(zend_class_entry *class_entry_Qt_Gui_QObject)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Gui", "QAction", class_Qt_Gui_QAction_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Gui_QObject, 0);
 
 	return class_entry;
 }

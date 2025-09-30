@@ -31,4 +31,5 @@ ZEND_METHOD(Qt_Widgets_QMainWindow, __construct)
     container->native = new QMainWindow(parent, static_cast<Qt::WindowType>(windowFlags));
 }
 
+QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QMainWindow, QMainWindow, menuBar)
 QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QMainWindow, QMainWindow, setCentralWidget, QWidget, ce_widget_QWidget, 1)

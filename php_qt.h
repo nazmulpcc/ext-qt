@@ -34,6 +34,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+
+#include <QtGui/QAction>
 
 #endif
 
@@ -74,7 +78,11 @@ extern "C"
    extern zend_class_entry *ce_qabstractitemmodel;
    extern zend_class_entry *ce_qabstracttablemodel;
    extern zend_class_entry *ce_qabstractlistmodel;
+   extern zend_class_entry *ce_qmenu;
+   extern zend_class_entry *ce_qmenubar;
    extern zend_class_entry *ce_qmodelindex;
+
+   extern zend_class_entry *ce_qaction;
 
 #if defined(ZTS) && defined(COMPILE_DL_QT)
    ZEND_TSRMLS_CACHE_EXTERN()
@@ -646,6 +654,9 @@ QT_REGISRER_NATIVE_TO_ZVAL(QTextEdit, ce_qtextedit)
 QT_REGISRER_NATIVE_TO_ZVAL(QTime, ce_qtime)
 QT_REGISRER_NATIVE_TO_ZVAL(QTimeZone, ce_qtimezone)
 QT_REGISRER_NATIVE_TO_ZVAL(QWidget, ce_widget_QWidget)
+QT_REGISRER_NATIVE_TO_ZVAL(QMenu, ce_qmenu)
+QT_REGISRER_NATIVE_TO_ZVAL(QMenuBar, ce_qmenubar)
+QT_REGISRER_NATIVE_TO_ZVAL(QAction, ce_qaction)
 
 #endif /* __cplusplus */
 

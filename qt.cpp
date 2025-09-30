@@ -44,7 +44,10 @@ zend_class_entry *ce_widget_QLayout = nullptr;
 zend_class_entry *ce_qabstractitemmodel = nullptr;
 zend_class_entry *ce_qabstracttablemodel = nullptr;
 zend_class_entry *ce_qabstractlistmodel = nullptr;
+zend_class_entry *ce_qmenu = nullptr;
+zend_class_entry *ce_qmenubar = nullptr;
 zend_class_entry *ce_qmodelindex = nullptr;
+zend_class_entry *ce_qaction = nullptr;
 
 /* For compatibility with older PHP versions */
 #ifndef ZEND_PARSE_PARAMETERS_NONE
@@ -194,6 +197,10 @@ PHP_MINIT_FUNCTION(qt)
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;
+	ce_qmenubar = register_class_Qt_Widgets_QMenuBar(ce_widget_QWidget);
+	ce_qmenubar->create_object = qt_obj_create_handler;
+	ce_qmenu = register_class_Qt_Widgets_QMenu(ce_widget_QWidget);
+	ce_qmenu->create_object = qt_obj_create_handler;
 	auto ce_qprogressbar = register_class_Qt_Widgets_QProgressBar(ce_widget_QWidget);
 	ce_qprogressbar->create_object = qt_obj_create_handler;
 
@@ -209,6 +216,9 @@ PHP_MINIT_FUNCTION(qt)
 	ce_qvboxlayout->create_object = qt_obj_create_handler;
 
 	register_class_Qt_Widgets_QSizePolicy();
+
+	ce_qaction = register_class_Qt_Gui_QAction(ce_qobject);
+	ce_qaction->create_object = qt_obj_create_handler;
 
 	return SUCCESS;
 }

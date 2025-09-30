@@ -211,7 +211,6 @@ namespace Qt\Core {
         public function __construct(?QObject $parent = null) {}
     }
 
-
     class QCalendar
     {
         public const int Gregorian = 0;
@@ -694,7 +693,7 @@ namespace Qt\Widgets {
         public function accessibleName(): string {}
         // public function actions(): array {}
         public function activateWindow(): void {}
-        // public function addAction(QAction $action): void {}
+        public function addAction(\Qt\Gui\QAction $action): void {}
         // public function addActions(array $actions): void {}
         public function adjustSize(): void {}
         public function autoFillBackground(): bool {}
@@ -936,7 +935,23 @@ namespace Qt\Widgets {
     class QMainWindow extends QWidget
     {
         public function __construct(?QWidget $parent = null, int $windowFlags = 0) {}
+        public function menuBar(): QMenuBar {}
         public function setCentralWidget(QWidget $widget): void {}
+    }
+
+    class QMenu extends QWidget
+    {
+        public function __construct(?string $title = null, ?QWidget $parent = null) {}
+        public function addMenu(string $title): QMenu {}
+        public function title(): string {}
+        public function setTitle(string $title): void {}
+    }
+
+    class QMenuBar extends QWidget
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function addMenu(string $title): QMenu {}
+        public function clear(): void {}
     }
 
     class QProgressBar extends QWidget
@@ -1193,5 +1208,34 @@ namespace Qt\Widgets {
         public function onSelectionChanged(callable $callback): void {}
         public function onTextChanged(callable $callback): void {}
         public function onUndoAvailable(callable $callback): void {}
+    }
+}
+
+namespace Qt\Gui {
+    class QAction extends QObject
+    {
+        public function __construct(?string $text = null, ?QObject $parent = null) {}
+        public function isCheckable(): bool {}
+        public function isChecked(): bool {}
+        public function isEnabled(): bool {}
+        public function isSeparator(): bool {}
+        public function isVisible(): bool {}
+        public function shortcut(): string {}
+
+        public function setCheckable(bool $checkable): void {}
+        public function setChecked(bool $checked): void {}
+        public function setEnabled(bool $enabled): void {}
+        public function setShortcut(string $shortcut): void {}
+        public function text(): string {}
+
+        // Slots
+        public function toggle(): void {}
+        public function trigger(): void {}
+
+        // Signals
+        public function onChanged(callable $callback): void {}
+        public function onHovered(callable $callback): void {}
+        public function onToggled(callable $callback): void {}
+        public function onTriggered(callable $callback): void {}
     }
 }

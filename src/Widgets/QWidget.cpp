@@ -8,6 +8,7 @@ extern "C"
 
 #include <QtWidgets/QWidget>
 #include <QtCore/QString>
+#include <QtGui/QAction>
 
 class PhpQWidget final : public QWidget
 {
@@ -46,6 +47,7 @@ QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QWidget, QWidget, accessibleDescription
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QWidget, QWidget, accessibleName);
 // ZEND_METHOD(Qt_Widgets_QWidget, actions);
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, activateWindow);
+QT_METHOD_FORWARD_NATIVE_P_REF(Qt_Widgets_QWidget, QWidget, addAction, QAction, ce_qaction, 1);
 QT_METHOD_FORWARD(Qt_Widgets_QWidget, QWidget, adjustSize);
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QWidget, QWidget, autoFillBackground);
 QT_METHOD_FORWARD_RETURN_ZVAL(Qt_Widgets_QWidget, QWidget, backgroundRole);
