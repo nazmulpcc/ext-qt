@@ -1,5 +1,5 @@
 /* This is a generated file, edit the .stub.php file instead.
- * Stub hash: e776fd8dd0f6588d6050276e47f44d062abe2f90 */
+ * Stub hash: 25bd0671789efc3f145682b07f38c4fe2057ec9d */
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_class_Qt_Core_QAbstractItemModel___construct, 0, 0, 0)
 	ZEND_ARG_OBJ_INFO_WITH_DEFAULT_VALUE(0, parent, Qt\\Core\\QObject, 1, "null")
@@ -1545,6 +1545,56 @@ ZEND_END_ARG_INFO()
 
 #define arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget arginfo_class_Qt_Widgets_QAbstractScrollArea_setCornerWidget
 
+#define arginfo_class_Qt_Widgets_QProgressBar___construct arginfo_class_Qt_Widgets_QComboBox___construct
+
+#define arginfo_class_Qt_Widgets_QProgressBar_alignment arginfo_class_Qt_Core_QModelIndex_column
+
+#define arginfo_class_Qt_Widgets_QProgressBar_format arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QProgressBar_invertedAppearance arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QProgressBar_isTextVisible arginfo_class_Qt_Core_QCalendar_isValid
+
+#define arginfo_class_Qt_Widgets_QProgressBar_maximum arginfo_class_Qt_Core_QModelIndex_column
+
+#define arginfo_class_Qt_Widgets_QProgressBar_minimum arginfo_class_Qt_Core_QModelIndex_column
+
+#define arginfo_class_Qt_Widgets_QProgressBar_orientation arginfo_class_Qt_Core_QModelIndex_column
+
+#define arginfo_class_Qt_Widgets_QProgressBar_resetFormat arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setAlignment arginfo_class_Qt_Widgets_QAbstractSpinBox_setAlignment
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setFormat arginfo_class_Qt_Widgets_QDateTimeEdit_setDisplayFormat
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_class_Qt_Widgets_QProgressBar_setInvertedAppearance, 0, 1, IS_VOID, 0)
+	ZEND_ARG_TYPE_INFO(0, invert, _IS_BOOL, 0)
+ZEND_END_ARG_INFO()
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setTextDirection arginfo_class_Qt_Widgets_QBoxLayout_setDirection
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setTextVisible arginfo_class_Qt_Widgets_QDial_setNotchesVisible
+
+#define arginfo_class_Qt_Widgets_QProgressBar_text arginfo_class_Qt_Core_QObject_objectName
+
+#define arginfo_class_Qt_Widgets_QProgressBar_textDirection arginfo_class_Qt_Core_QModelIndex_column
+
+#define arginfo_class_Qt_Widgets_QProgressBar_value arginfo_class_Qt_Core_QModelIndex_column
+
+#define arginfo_class_Qt_Widgets_QProgressBar_reset arginfo_class_Qt_Core_QAbstractItemModel_revert
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setMaximum arginfo_class_Qt_Widgets_QAbstractSlider_setMaximum
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setMinimum arginfo_class_Qt_Widgets_QAbstractSlider_setMinimum
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setOrientation arginfo_class_Qt_Widgets_QAbstractSlider_setOrientation
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setRange arginfo_class_Qt_Widgets_QAbstractSlider_setRange
+
+#define arginfo_class_Qt_Widgets_QProgressBar_setValue arginfo_class_Qt_Widgets_QAbstractSlider_setValue
+
+#define arginfo_class_Qt_Widgets_QProgressBar_onValueChanged arginfo_class_Qt_Core_QAbstractItemModel_onColumnsAboutToBeInserted
+
 #define arginfo_class_Qt_Widgets_QPushButton___construct arginfo_class_Qt_Widgets_QCheckBox___construct
 
 #define arginfo_class_Qt_Widgets_QRadioButton___construct arginfo_class_Qt_Widgets_QCheckBox___construct
@@ -2477,6 +2527,30 @@ ZEND_METHOD(Qt_Widgets_QLineEdit, selectAll);
 ZEND_METHOD(Qt_Widgets_QLineEdit, undo);
 ZEND_METHOD(Qt_Widgets_QMainWindow, __construct);
 ZEND_METHOD(Qt_Widgets_QMainWindow, setCentralWidget);
+ZEND_METHOD(Qt_Widgets_QProgressBar, __construct);
+ZEND_METHOD(Qt_Widgets_QProgressBar, alignment);
+ZEND_METHOD(Qt_Widgets_QProgressBar, format);
+ZEND_METHOD(Qt_Widgets_QProgressBar, invertedAppearance);
+ZEND_METHOD(Qt_Widgets_QProgressBar, isTextVisible);
+ZEND_METHOD(Qt_Widgets_QProgressBar, maximum);
+ZEND_METHOD(Qt_Widgets_QProgressBar, minimum);
+ZEND_METHOD(Qt_Widgets_QProgressBar, orientation);
+ZEND_METHOD(Qt_Widgets_QProgressBar, resetFormat);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setAlignment);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setFormat);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setInvertedAppearance);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setTextDirection);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setTextVisible);
+ZEND_METHOD(Qt_Widgets_QProgressBar, text);
+ZEND_METHOD(Qt_Widgets_QProgressBar, textDirection);
+ZEND_METHOD(Qt_Widgets_QProgressBar, value);
+ZEND_METHOD(Qt_Widgets_QProgressBar, reset);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setMaximum);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setMinimum);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setOrientation);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setRange);
+ZEND_METHOD(Qt_Widgets_QProgressBar, setValue);
+ZEND_METHOD(Qt_Widgets_QProgressBar, onValueChanged);
 ZEND_METHOD(Qt_Widgets_QPushButton, __construct);
 ZEND_METHOD(Qt_Widgets_QRadioButton, __construct);
 ZEND_METHOD(Qt_Widgets_QScrollArea, __construct);
@@ -3307,6 +3381,34 @@ static const zend_function_entry class_Qt_Widgets_QLineEdit_methods[] = {
 static const zend_function_entry class_Qt_Widgets_QMainWindow_methods[] = {
 	ZEND_ME(Qt_Widgets_QMainWindow, __construct, arginfo_class_Qt_Widgets_QMainWindow___construct, ZEND_ACC_PUBLIC)
 	ZEND_ME(Qt_Widgets_QMainWindow, setCentralWidget, arginfo_class_Qt_Widgets_QMainWindow_setCentralWidget, ZEND_ACC_PUBLIC)
+	ZEND_FE_END
+};
+
+static const zend_function_entry class_Qt_Widgets_QProgressBar_methods[] = {
+	ZEND_ME(Qt_Widgets_QProgressBar, __construct, arginfo_class_Qt_Widgets_QProgressBar___construct, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, alignment, arginfo_class_Qt_Widgets_QProgressBar_alignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, format, arginfo_class_Qt_Widgets_QProgressBar_format, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, invertedAppearance, arginfo_class_Qt_Widgets_QProgressBar_invertedAppearance, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, isTextVisible, arginfo_class_Qt_Widgets_QProgressBar_isTextVisible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, maximum, arginfo_class_Qt_Widgets_QProgressBar_maximum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, minimum, arginfo_class_Qt_Widgets_QProgressBar_minimum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, orientation, arginfo_class_Qt_Widgets_QProgressBar_orientation, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, resetFormat, arginfo_class_Qt_Widgets_QProgressBar_resetFormat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setAlignment, arginfo_class_Qt_Widgets_QProgressBar_setAlignment, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setFormat, arginfo_class_Qt_Widgets_QProgressBar_setFormat, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setInvertedAppearance, arginfo_class_Qt_Widgets_QProgressBar_setInvertedAppearance, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setTextDirection, arginfo_class_Qt_Widgets_QProgressBar_setTextDirection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setTextVisible, arginfo_class_Qt_Widgets_QProgressBar_setTextVisible, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, text, arginfo_class_Qt_Widgets_QProgressBar_text, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, textDirection, arginfo_class_Qt_Widgets_QProgressBar_textDirection, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, value, arginfo_class_Qt_Widgets_QProgressBar_value, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, reset, arginfo_class_Qt_Widgets_QProgressBar_reset, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setMaximum, arginfo_class_Qt_Widgets_QProgressBar_setMaximum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setMinimum, arginfo_class_Qt_Widgets_QProgressBar_setMinimum, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setOrientation, arginfo_class_Qt_Widgets_QProgressBar_setOrientation, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setRange, arginfo_class_Qt_Widgets_QProgressBar_setRange, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, setValue, arginfo_class_Qt_Widgets_QProgressBar_setValue, ZEND_ACC_PUBLIC)
+	ZEND_ME(Qt_Widgets_QProgressBar, onValueChanged, arginfo_class_Qt_Widgets_QProgressBar_onValueChanged, ZEND_ACC_PUBLIC)
 	ZEND_FE_END
 };
 
@@ -4663,6 +4765,16 @@ static zend_class_entry *register_class_Qt_Widgets_QMainWindow(zend_class_entry 
 	zend_class_entry ce, *class_entry;
 
 	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QMainWindow", class_Qt_Widgets_QMainWindow_methods);
+	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
+
+	return class_entry;
+}
+
+static zend_class_entry *register_class_Qt_Widgets_QProgressBar(zend_class_entry *class_entry_Qt_Widgets_QWidget)
+{
+	zend_class_entry ce, *class_entry;
+
+	INIT_NS_CLASS_ENTRY(ce, "Qt\\Widgets", "QProgressBar", class_Qt_Widgets_QProgressBar_methods);
 	class_entry = zend_register_internal_class_with_flags(&ce, class_entry_Qt_Widgets_QWidget, 0);
 
 	return class_entry;

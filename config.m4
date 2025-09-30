@@ -66,6 +66,7 @@ AS_VAR_IF([PHP_QT], [no],, [
     src/Widgets/QLineEdit.cpp \
     src/Widgets/QLayout.cpp \
     src/Widgets/QMainWindow.cpp \
+    src/Widgets/QProgressBar.cpp \
     src/Widgets/QPushButton.cpp \
     src/Widgets/QRadioButton.cpp \
     src/Widgets/QScrollArea.cpp \

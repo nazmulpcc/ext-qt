@@ -194,6 +194,8 @@ PHP_MINIT_FUNCTION(qt)
 
 	auto ce_qmainwindow = register_class_Qt_Widgets_QMainWindow(ce_widget_QWidget);
 	ce_qmainwindow->create_object = qt_obj_create_handler;
+	auto ce_qprogressbar = register_class_Qt_Widgets_QProgressBar(ce_widget_QWidget);
+	ce_qprogressbar->create_object = qt_obj_create_handler;
 
 	register_class_Qt_Widgets_QGroupBox(ce_widget_QWidget);
 

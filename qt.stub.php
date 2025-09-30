@@ -939,6 +939,39 @@ namespace Qt\Widgets {
         public function setCentralWidget(QWidget $widget): void {}
     }
 
+    class QProgressBar extends QWidget
+    {
+        public function __construct(?QWidget $parent = null) {}
+        public function alignment(): int {}
+        public function format(): string {}
+        public function invertedAppearance(): bool {}
+        public function isTextVisible(): bool {}
+        public function maximum(): int {}
+        public function minimum(): int {}
+        public function orientation(): int {}
+        public function resetFormat(): void {}
+
+        public function setAlignment(int $alignment): void {}
+        public function setFormat(string $format): void {}
+        public function setInvertedAppearance(bool $invert): void {}
+        public function setTextDirection(int $direction): void {}
+        public function setTextVisible(bool $visible): void {}
+        public function text(): string {}
+        public function textDirection(): int {}
+        public function value(): int {}
+
+        // Slots
+        public function reset(): void {}
+        public function setMaximum(int $max): void {}
+        public function setMinimum(int $min): void {}
+        public function setOrientation(int $orientation): void {}
+        public function setRange(int $min, int $max): void {}
+        public function setValue(int $value): void {}
+
+        // Signals
+        public function onValueChanged(callable $callback): void {}
+    }
+
     class QPushButton extends QAbstractButton
     {
         public function __construct(?string $text = null, ?QWidget $parent = null) {}
