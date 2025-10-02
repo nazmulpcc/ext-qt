@@ -590,31 +590,31 @@ inline void qt_cpp_to_zval<QModelIndex>(zval *z, QModelIndex *value)
 //
 // Helper functions
 //
-inline void qt_clear_callback(qt_callback_t *cb)
+inline void qt_clear_callback(std::shared_ptr<qt_callback_t> cb)
 {
+   if (!cb)
+      return;
    zend_fcall_info_args_clear(&cb->fci, true);
    zval_ptr_dtor(&cb->fci.function_name);
-   efree(cb);
 }
 
 /**
  * Create a qt_callback_t for a given zval callback.
  * Also, registers a cleanup when the sender is destroyed.
  */
-inline qt_callback_t *qt_callback_create(const QObject *sender, zval *callback)
+inline std::shared_ptr<qt_callback_t> qt_callback_create(const QObject *sender, zval *callback)
 {
-   auto *cb = static_cast<qt_callback_t *>(emalloc(sizeof(qt_callback_t)));
+   auto cb = std::make_shared<qt_callback_t>();
    char *errstr = nullptr;
 
    if (zend_fcall_info_init(callback, 0, &cb->fci, &cb->fci_cache, nullptr, &errstr) != SUCCESS)
    {
       zend_error(E_WARNING, "Invalid callback: %s", errstr);
-      efree(cb);
       return nullptr;
    }
    Z_TRY_ADDREF(cb->fci.function_name);
 
-   QObject::connect(sender, &QObject::destroyed, [cb]
+   QObject::connect(sender, &QObject::destroyed, [cb]()
                     { qt_clear_callback(cb); });
 
    return cb;
@@ -626,38 +626,37 @@ inline void qt_connect_signal_to_callback(
     Func1 signal,
     zval *callback)
 {
-   auto cb = std::make_shared<qt_callback_t>(*qt_callback_create(sender, callback));
+   auto cb = qt_callback_create(sender, callback);
+   if (!cb)
+      return;
+
    using ParamTypes = typename SignalParameterTypes<Func1>::ParamTypes;
    constexpr int paramCount = std::tuple_size_v<ParamTypes>;
-   auto cb_wrapper = std::make_shared<qt_callback_wrapper>(cb.get());
 
    QObject::connect(sender, signal,
-                    [cb_wrapper, cb, sender, paramCount](auto... args)
+                    [cb, sender, paramCount](auto... args)
                     {
                        if (QThread::currentThread() != QCoreApplication::instance()->thread())
                        {
-                          php_printf("Not in GUI thread\n");
-                          // If we are not in the GUI thread
                           QMetaObject::invokeMethod(
                               qobject_cast<QObject *>(sender),
-                              [cb_wrapper, cb, paramCount, args...]()
+                              [cb, args..., paramCount]()
                               {
                                  zval retval, params[paramCount];
                                  int i = 0;
                                  (void)std::initializer_list<int>{
                                      (qt_cpp_to_zval(&params[i], args), ++i)...};
 
-                                 cb_wrapper->callback->fci.retval = &retval;
-                                 cb_wrapper->callback->fci.params = params;
-                                 cb_wrapper->callback->fci.param_count = paramCount;
-                                 zend_call_function(&cb_wrapper->callback->fci, &cb_wrapper->callback->fci_cache);
+                                 cb->fci.retval = &retval;
+                                 cb->fci.params = params;
+                                 cb->fci.param_count = paramCount;
+                                 zend_call_function(&cb->fci, &cb->fci_cache);
                                  zval_ptr_dtor(&retval);
                               },
                               Qt::QueuedConnection);
                        }
                        else
                        {
-                          // If we are in the GUI thread
                           zval retval, params[paramCount];
                           int i = 0;
                           (void)std::initializer_list<int>{
