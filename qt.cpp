@@ -28,6 +28,10 @@ extern "C"
 
 #include "src/Core/PhpQAbstractItemModel.h"
 #include <QtWidgets/QWidget>
+#include <QtCore/QObject>
+
+#include <unordered_map>
+std::unordered_map<QObject *, zval> qt_object_registry;
 
 zend_class_entry *ce_qcalendar = nullptr;
 zend_class_entry *ce_qdate = nullptr;
@@ -48,6 +52,38 @@ zend_class_entry *ce_qmenu = nullptr;
 zend_class_entry *ce_qmenubar = nullptr;
 zend_class_entry *ce_qmodelindex = nullptr;
 zend_class_entry *ce_qaction = nullptr;
+
+// Helper function to register native QObject* to zval
+void register_native_to_zval(QObject *native, zval *z, zend_class_entry *ce)
+{
+	if (!native)
+	{
+		ZVAL_NULL(z);
+		return;
+	}
+
+	auto it = qt_object_registry.find(native);
+	if (it != qt_object_registry.end())
+	{
+		ZVAL_COPY(z, &it->second);
+		return;
+	}
+
+	object_init_ex(z, ce);
+	QT_Object_P(z, QObject)->native = native;
+	QT_Object_P(z, QObject)->owned_by_php = false;
+
+	Z_ADDREF_P(z); // keep in registry
+	qt_object_registry[native] = *z;
+
+	QObject::connect(native, &QObject::destroyed, [native]()
+					 {
+        auto it = qt_object_registry.find(native);
+        if (it != qt_object_registry.end()) {
+            zval_ptr_dtor(&it->second);
+            qt_object_registry.erase(it);
+        } });
+}
 
 /* For compatibility with older PHP versions */
 #ifndef ZEND_PARSE_PARAMETERS_NONE
@@ -223,6 +259,16 @@ PHP_MINIT_FUNCTION(qt)
 	return SUCCESS;
 }
 
+PHP_MSHUTDOWN_FUNCTION(qt)
+{
+	for (auto &entry : qt_object_registry)
+	{
+		zval_ptr_dtor(&entry.second);
+	}
+	qt_object_registry.clear();
+	return SUCCESS;
+}
+
 PHP_MINFO_FUNCTION(qt)
 {
 	php_info_print_table_start();
@@ -232,14 +278,14 @@ PHP_MINFO_FUNCTION(qt)
 
 zend_module_entry qt_module_entry = {
 	STANDARD_MODULE_HEADER,
-	"qt",			/* Extension name */
-	NULL,			/* zend_function_entry */
-	PHP_MINIT(qt),	/* PHP_MINIT - Module initialization */
-	NULL,			/* PHP_MSHUTDOWN - Module shutdown */
-	PHP_RINIT(qt),	/* PHP_RINIT - Request initialization */
-	NULL,			/* PHP_RSHUTDOWN - Request shutdown */
-	PHP_MINFO(qt),	/* PHP_MINFO - Module info */
-	PHP_QT_VERSION, /* Version */
+	"qt",			   /* Extension name */
+	NULL,			   /* zend_function_entry */
+	PHP_MINIT(qt),	   /* PHP_MINIT - Module initialization */
+	PHP_MSHUTDOWN(qt), /* PHP_MSHUTDOWN - Module shutdown */
+	PHP_RINIT(qt),	   /* PHP_RINIT - Request initialization */
+	NULL,			   /* PHP_RSHUTDOWN - Request shutdown */
+	PHP_MINFO(qt),	   /* PHP_MINFO - Module info */
+	PHP_QT_VERSION,	   /* Version */
 	STANDARD_MODULE_PROPERTIES};
 
 #ifdef COMPILE_DL_QT

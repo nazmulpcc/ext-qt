@@ -38,6 +38,7 @@
 #include <QtWidgets/QMenuBar>
 
 #include <QtGui/QAction>
+#include <unordered_map>
 
 #endif
 
@@ -84,6 +85,13 @@ extern "C"
 
    extern zend_class_entry *ce_qaction;
 
+   // Registry mapping native QObject* -> PHP wrapper zval (kept with an extra ref)
+   extern std::unordered_map<QObject *, zval> qt_object_registry;
+
+   // Register a native QObject* into the registry and return/create the PHP wrapper zval.
+   // Implemented in qt.cpp
+   void register_native_to_zval(QObject *native, zval *z, zend_class_entry *ce);
+
 #if defined(ZTS) && defined(COMPILE_DL_QT)
    ZEND_TSRMLS_CACHE_EXTERN()
 #endif
@@ -101,6 +109,7 @@ template <typename T>
 struct qt_container_t
 {
    T *native;
+   bool owned_by_php{true};
    zend_object std{};
 };
 
@@ -221,9 +230,16 @@ static void qt_obj_free_handler(zend_object *object)
    auto *obj = (qt_container_t<QObject> *)((char *)object - XtOffsetOf(qt_container_t<QObject>, std));
    if (obj->native)
    {
-      // @todo: need to improve object deletion strategy.
-      // Deleting all objects causes issue if they are also referenced from QT.
-      // delete obj->native;
+      auto it = qt_object_registry.find(obj->native);
+      if (it != qt_object_registry.end())
+      {
+         qt_object_registry.erase(it);
+      }
+      if (obj->owned_by_php)
+      {
+         delete obj->native;
+      }
+
       obj->native = nullptr;
    }
    zend_object_std_dtor(object);
@@ -529,18 +545,32 @@ struct SignalParameterTypes<R (C::*)(Args...) const>
       qt_connect_signal_to_callback(container->native, &native_type::signal_name, callback); \
    }
 
-#define QT_REGISRER_NATIVE_TO_ZVAL(type, class_entry)            \
-   template <>                                                   \
-   inline void qt_cpp_to_zval<type>(zval * z, const type &value) \
-   {                                                             \
-      object_init_ex(z, class_entry);                            \
-      QT_Object_P(z, type)->native = const_cast<type *>(&value); \
-   }                                                             \
-   template <>                                                   \
-   inline void qt_cpp_to_zval<type>(zval * z, type * value)      \
-   {                                                             \
-      object_init_ex(z, class_entry);                            \
-      QT_Object_P(z, type)->native = value;                      \
+#define QT_REGISRER_NATIVE_TO_ZVAL(type, class_entry)                      \
+   template <>                                                             \
+   inline void qt_cpp_to_zval<type>(zval * z, const type &value)           \
+   {                                                                       \
+      register_native_to_zval(const_cast<type *>(&value), z, class_entry); \
+   }                                                                       \
+   template <>                                                             \
+   inline void qt_cpp_to_zval<type>(zval * z, type * value)                \
+   {                                                                       \
+      register_native_to_zval(value, z, class_entry);                      \
+   }
+
+#define QT_REGISTER_VALUE_TO_ZVAL(type, class_entry)              \
+   template <>                                                    \
+   inline void qt_cpp_to_zval<type>(zval * z, const type &value)  \
+   {                                                              \
+      object_init_ex(z, class_entry);                             \
+      auto container = QT_Object_P(z, type);                      \
+      container->native = new type(value); /* deep copy */        \
+   }                                                              \
+   template <>                                                    \
+   inline void qt_cpp_to_zval<type>(zval * z, type * value)       \
+   {                                                              \
+      object_init_ex(z, class_entry);                             \
+      auto container = QT_Object_P(z, type);                      \
+      container->native = new type(*value); /* copy for safety */ \
    }
 
 template <>
@@ -644,15 +674,14 @@ inline void qt_connect_signal_to_callback(
 
 // Register conversions
 QT_REGISRER_NATIVE_TO_ZVAL(QAbstractItemModel, ce_qabstractitemmodel)
-QT_REGISRER_NATIVE_TO_ZVAL(QCalendar, ce_qcalendar)
-QT_REGISRER_NATIVE_TO_ZVAL(QDate, ce_qdate)
-QT_REGISRER_NATIVE_TO_ZVAL(QDateTime, ce_qdatetime)
-// QT_REGISRER_NATIVE_TO_ZVAL(QModelIndex, ce_qmodelindex)
-QT_REGISRER_NATIVE_TO_ZVAL(QRect, ce_qrect)
-QT_REGISRER_NATIVE_TO_ZVAL(QSize, ce_qsize)
+QT_REGISTER_VALUE_TO_ZVAL(QCalendar, ce_qcalendar)
+QT_REGISTER_VALUE_TO_ZVAL(QDate, ce_qdate)
+QT_REGISTER_VALUE_TO_ZVAL(QDateTime, ce_qdatetime)
+QT_REGISTER_VALUE_TO_ZVAL(QRect, ce_qrect)
+QT_REGISTER_VALUE_TO_ZVAL(QSize, ce_qsize)
 QT_REGISRER_NATIVE_TO_ZVAL(QTextEdit, ce_qtextedit)
-QT_REGISRER_NATIVE_TO_ZVAL(QTime, ce_qtime)
-QT_REGISRER_NATIVE_TO_ZVAL(QTimeZone, ce_qtimezone)
+QT_REGISTER_VALUE_TO_ZVAL(QTime, ce_qtime)
+QT_REGISTER_VALUE_TO_ZVAL(QTimeZone, ce_qtimezone)
 QT_REGISRER_NATIVE_TO_ZVAL(QWidget, ce_widget_QWidget)
 QT_REGISRER_NATIVE_TO_ZVAL(QMenu, ce_qmenu)
 QT_REGISRER_NATIVE_TO_ZVAL(QMenuBar, ce_qmenubar)
