@@ -1,7 +1,91 @@
-ARG_ENABLE('qt', 'qt support', 'no');
+// vim:ft=javascript
 
-if (PHP_QT != 'no') {
-	AC_DEFINE('HAVE_QT', 1, "Define to 1 if the PHP extension 'qt' is available.");
+ARG_ENABLE("qt", "Enable Qt support", "no");
 
-	EXTENSION('qt', 'qt.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+if (PHP_QT != "no") {
+    var QTDIR    = "C:\\Qt\\Qt-6.8.2";
+    var QTINCDIR = QTDIR + "\\include";
+    var QTLIBDIR = QTDIR + "\\lib";
+
+    if (CHECK_HEADER_ADD_INCLUDE("QtCore/QtCore", "CFLAGS_QT", QTINCDIR) &&
+        CHECK_LIB("Qt6Core.lib", "qt", QTLIBDIR) &&
+        CHECK_LIB("Qt6Gui.lib", "qt", QTLIBDIR) &&
+        CHECK_LIB("Qt6Widgets.lib", "qt", QTLIBDIR)) {
+
+        // Always build shared (Qt DLL dependencies)
+        EXTENSION("qt", "qt.cpp", false,
+            "/I \"" + configure_module_dirname + "\" /DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+
+        // Core sources
+        ADD_SOURCES(configure_module_dirname + "/src/Core", "\
+            QAbstractItemModel.cpp \
+            QAbstractListModel.cpp \
+            QAbstractTableModel.cpp \
+            QCalendar.cpp \
+            QDate.cpp \
+            QDateTime.cpp \
+            QModelIndex.cpp \
+            QObject.cpp \
+            QRect.cpp \
+            QSize.cpp \
+            QTime.cpp \
+            QTimeZone.cpp \
+        ", "qt");
+
+        // Widgets sources
+        ADD_SOURCES(configure_module_dirname + "/src/Widgets", "\
+            QApplication.cpp \
+            QAbstractButton.cpp \
+            QAbstractItemView.cpp \
+            QAbstractScrollArea.cpp \
+            QAbstractSpinBox.cpp \
+            QAbstractSlider.cpp \
+            QBoxLayout.cpp \
+            QCheckbox.cpp \
+            QComboBox.cpp \
+            QDateTimeEdit.cpp \
+            QDial.cpp \
+            QFrame.cpp \
+            QGroupBox.cpp \
+            QLabel.cpp \
+            QLineEdit.cpp \
+            QLayout.cpp \
+            QMainWindow.cpp \
+            QMenu.cpp \
+            QMenuBar.cpp \
+            QProgressBar.cpp \
+            QPushButton.cpp \
+            QRadioButton.cpp \
+            QScrollArea.cpp \
+            QScrollBar.cpp \
+            QSlider.cpp \
+            QSplitter.cpp \
+            QSpinBox.cpp \
+            QStackedWidget.cpp \
+            QTableView.cpp \
+            QTextEdit.cpp \
+            QTreeView.cpp \
+            QWidget.cpp \
+        ", "qt");
+
+        // Gui sources
+        ADD_SOURCES(configure_module_dirname + "/src/Gui", "\
+            QAction.cpp \
+        ", "qt");
+
+        // Compiler & include flags
+        ADD_FLAG("CFLAGS_QT", "/std:c++17 /permissive- /EHsc");
+        ADD_FLAG("CFLAGS_QT", "/I\"" + QTINCDIR + "\"");
+        ADD_FLAG("CFLAGS_QT", "/I\"" + QTINCDIR + "\\QtCore\"");
+        ADD_FLAG("CFLAGS_QT", "/I\"" + QTINCDIR + "\\QtGui\"");
+        ADD_FLAG("CFLAGS_QT", "/I\"" + QTINCDIR + "\\QtWidgets\"");
+        ADD_FLAG("CFLAGS_QT", "/I\"" + configure_module_dirname + "\"");
+
+        // Link libraries
+        ADD_FLAG("LIBS_QT", "Qt6Core.lib Qt6Gui.lib Qt6Widgets.lib");
+
+        AC_DEFINE('HAVE_QT', 1, "Define to 1 if the PHP extension 'qt' is available.");
+    } else {
+        WARNING("qt not enabled; libraries and/or headers not found");
+    }
 }
