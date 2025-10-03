@@ -85,13 +85,6 @@ extern "C"
 
    extern zend_class_entry *ce_qaction;
 
-   // Registry mapping native QObject* -> PHP wrapper zval (kept with an extra ref)
-   extern std::unordered_map<QObject *, zval> qt_object_registry;
-
-   // Register a native QObject* into the registry and return/create the PHP wrapper zval.
-   // Implemented in qt.cpp
-   void register_native_to_zval(QObject *native, zval *z, zend_class_entry *ce);
-
 #if defined(ZTS) && defined(COMPILE_DL_QT)
    ZEND_TSRMLS_CACHE_EXTERN()
 #endif
@@ -104,6 +97,13 @@ extern "C"
  * C++-specific code (templates, inline C++ functions, Qt usage) goes under #ifdef __cplusplus.
  */
 #ifdef __cplusplus
+
+// Registry mapping native QObject* -> PHP wrapper zval (kept with an extra ref)
+extern std::unordered_map<QObject *, zval> qt_object_registry;
+
+// Register a native QObject* into the registry and return/create the PHP wrapper zval.
+// Implemented in qt.cpp
+void register_native_to_zval(QObject *native, zval *z, zend_class_entry *ce);
 
 template <typename T>
 struct qt_container_t
@@ -631,24 +631,26 @@ inline void qt_connect_signal_to_callback(
       return;
 
    using ParamTypes = typename SignalParameterTypes<Func1>::ParamTypes;
-   constexpr int paramCount = std::tuple_size_v<ParamTypes>;
 
    QObject::connect(sender, signal,
-                    [cb, sender, paramCount](auto... args)
+                    [cb, sender](auto... args)
                     {
+                       constexpr int paramCount = std::tuple_size_v<ParamTypes>;
                        if (QThread::currentThread() != QCoreApplication::instance()->thread())
                        {
                           QMetaObject::invokeMethod(
                               qobject_cast<QObject *>(sender),
-                              [cb, args..., paramCount]()
+                              [cb, args...]()
                               {
-                                 zval retval, params[paramCount];
+                                 constexpr int paramCount = std::tuple_size_v<ParamTypes>;
+                                 zval retval;
+                                 std::vector<zval> params(paramCount);
                                  int i = 0;
                                  (void)std::initializer_list<int>{
                                      (qt_cpp_to_zval(&params[i], args), ++i)...};
 
                                  cb->fci.retval = &retval;
-                                 cb->fci.params = params;
+                                 cb->fci.params = params.data();
                                  cb->fci.param_count = paramCount;
                                  zend_call_function(&cb->fci, &cb->fci_cache);
                                  zval_ptr_dtor(&retval);
@@ -657,13 +659,14 @@ inline void qt_connect_signal_to_callback(
                        }
                        else
                        {
-                          zval retval, params[paramCount];
+                          zval retval;
+                          std::vector<zval> params(paramCount);
                           int i = 0;
                           (void)std::initializer_list<int>{
                               (qt_cpp_to_zval(&params[i], args), ++i)...};
 
                           cb->fci.retval = &retval;
-                          cb->fci.params = params;
+                          cb->fci.params = params.data();
                           cb->fci.param_count = paramCount;
                           zend_call_function(&cb->fci, &cb->fci_cache);
                           zval_ptr_dtor(&retval);
