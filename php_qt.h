@@ -652,6 +652,10 @@ inline void qt_connect_signal_to_callback(
                                  cb->fci.param_count = paramCount;
                                  zend_call_function(&cb->fci, &cb->fci_cache);
                                  zval_ptr_dtor(&retval);
+                                 for (int j = 0; j < paramCount; ++j)
+                                 {
+                                    zval_ptr_dtor(&params[j]);
+                                 }
                               },
                               Qt::QueuedConnection);
                        }
@@ -667,6 +671,10 @@ inline void qt_connect_signal_to_callback(
                           cb->fci.param_count = paramCount;
                           zend_call_function(&cb->fci, &cb->fci_cache);
                           zval_ptr_dtor(&retval);
+                          for (int j = 0; j < paramCount; ++j)
+                          {
+                             zval_ptr_dtor(&params[j]);
+                          }
                        }
                     });
 }
