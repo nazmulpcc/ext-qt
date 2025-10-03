@@ -13,7 +13,7 @@ if (PHP_QT != "no") {
         CHECK_LIB("Qt6Widgets.lib", "qt", QTLIBDIR)) {
 
         // Always build shared (Qt DLL dependencies)
-        EXTENSION("qt", "qt.cpp", false,
+        EXTENSION("qt", "qt.cpp", PHP_QT_SHARED,
             "/I \"" + configure_module_dirname + "\" /DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
 
         // Core sources
