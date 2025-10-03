@@ -1,9 +1,10 @@
 // vim:ft=javascript
 
-ARG_ENABLE("qt", "Enable Qt support", "no");
+ARG_WITH("qt", "Enable Qt support", "no");
+ARG_ENABLE("qt-shared", "Build Qt extension as a dll library.", "no");
 
 if (PHP_QT != "no") {
-    var QTDIR    = "C:\\Qt\\Qt-6.8.2";
+    var QTDIR    = PHP_QT;
     var QTINCDIR = QTDIR + "\\include";
     var QTLIBDIR = QTDIR + "\\lib";
 
@@ -12,8 +13,8 @@ if (PHP_QT != "no") {
         CHECK_LIB("Qt6Gui.lib", "qt", QTLIBDIR) &&
         CHECK_LIB("Qt6Widgets.lib", "qt", QTLIBDIR)) {
 
-        // Always build shared (Qt DLL dependencies)
-        EXTENSION("qt", "qt.cpp", PHP_QT_SHARED,
+        var build_shared = (PHP_QT_SHARED == "yes");
+        EXTENSION("qt", "qt.cpp", build_shared,
             "/I \"" + configure_module_dirname + "\" /DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
 
         // Core sources
